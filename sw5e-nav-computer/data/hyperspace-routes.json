@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "name": "Perlemian Trade Route",
+      "from": "Coruscant",
+      "to": "Brentaal IV",
+      "distance": 1,
+      "travelTimeBase": 24,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Perlemian Trade Route",
+      "from": "Brentaal IV",
+      "to": "Chandrila",
+      "distance": 1,
+      "travelTimeBase": 18,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Perlemian Trade Route",
+      "from": "Chandrila",
+      "to": "Commenor",
+      "distance": 1,
+      "travelTimeBase": 14,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Corellian Trade Spine",
+      "from": "Commenor",
+      "to": "Corellia",
+      "distance": 1,
+      "travelTimeBase": 16,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Hydian Way",
+      "from": "Chandrila",
+      "to": "Kuat",
+      "distance": 2,
+      "travelTimeBase": 32,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Corellia",
+      "to": "Ord Mantell",
+      "distance": 2,
+      "travelTimeBase": 40,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Ord Mantell",
+      "to": "Malastare",
+      "distance": 1,
+      "travelTimeBase": 28,
+      "classification": "Class 2"
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Malastare",
+      "to": "Tatooine",
+      "distance": 1,
+      "travelTimeBase": 22,
+      "classification": "Class 2"
+    },
+    {
+      "name": "Rimma Trade Route",
+      "from": "Corellia",
+      "to": "Sullust",
+      "distance": 2,
+      "travelTimeBase": 44,
+      "classification": "Class 1"
+    },
+    {
+      "name": "Rimma Trade Route",
+      "from": "Sullust",
+      "to": "Naboo",
+      "distance": 2,
+      "travelTimeBase": 36,
+      "classification": "Class 1"
+    }
+  ]
+}

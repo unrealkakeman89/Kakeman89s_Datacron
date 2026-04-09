@@ -6,6 +6,7 @@ export const SETTING_KEYS = {
   randomEventChance: "randomEventChance",
   fuelPerHour: "fuelPerHour",
   foodPerCrewPerDay: "foodPerCrewPerDay",
+  pilotingFallbackSkill: "pilotingFallbackSkill",
   debugMode: "debugMode"
 };
 
@@ -62,6 +63,15 @@ export function registerSettings() {
     config: true,
     type: Number,
     default: 1
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.pilotingFallbackSkill, {
+    name: "SW5ENAVCOMPUTER.Settings.PilotingFallbackSkill.Name",
+    hint: "SW5ENAVCOMPUTER.Settings.PilotingFallbackSkill.Hint",
+    scope: "world",
+    config: true,
+    type: String,
+    default: "acr"
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.debugMode, {

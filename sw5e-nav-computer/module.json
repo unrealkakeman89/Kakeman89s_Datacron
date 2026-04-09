@@ -2,7 +2,7 @@
   "id": "sw5e-nav-computer",
   "title": "SW5e Nav Computer",
   "description": "A hyperspace navigation computer for SW5e beta campaigns. Calculate routes, travel times, travel resources, and optional random events across the Star Wars galaxy.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Caleb Kauble"

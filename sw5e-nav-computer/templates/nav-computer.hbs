@@ -2,10 +2,199 @@
   <header class="nav-computer-header">
     <p class="nav-computer-kicker">{{subtitle}}</p>
     <h1 class="nav-computer-title">{{title}}</h1>
+    <p class="nav-computer-meta">{{localize "SW5ENAVCOMPUTER.App.ModeLabel"}}: {{currentModeLabel}}</p>
   </header>
 
+  {{#if planetLoadWarning}}
+    <section class="nav-computer-panel nav-computer-warning" role="alert">
+      <p class="nav-computer-warning-text">{{planetLoadWarning}}</p>
+    </section>
+  {{/if}}
+
   <section class="nav-computer-panel nav-computer-panel-main">
-    <p class="nav-computer-placeholder">{{placeholderText}}</p>
+    <div class="nav-computer-grid">
+      <div class="nav-computer-field">
+        <label class="nav-computer-label" for="{{appId}}-origin">{{localize "SW5ENAVCOMPUTER.App.OriginLabel"}}</label>
+        <div class="nav-computer-combo" data-nav-combo="origin">
+          <input
+            type="text"
+            id="{{appId}}-origin"
+            class="nav-computer-combo-input"
+            data-nav-combo-input
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            {{#unless planets.length}}disabled{{/unless}}
+          />
+          <div class="nav-computer-combo-panel" data-nav-combo-panel hidden>
+            <ul class="nav-computer-combo-list" data-nav-combo-list role="listbox">
+              {{#each planets}}
+                <li class="nav-computer-combo-item" data-nav-combo-item data-value="{{name}}" role="option">{{name}}</li>
+              {{/each}}
+              <li class="nav-computer-combo-empty" data-nav-combo-empty hidden>{{comboNoMatches}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-computer-field">
+        <label class="nav-computer-label" for="{{appId}}-destination">{{localize "SW5ENAVCOMPUTER.App.DestinationLabel"}}</label>
+        <div class="nav-computer-combo" data-nav-combo="destination">
+          <input
+            type="text"
+            id="{{appId}}-destination"
+            class="nav-computer-combo-input"
+            data-nav-combo-input
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            {{#unless planets.length}}disabled{{/unless}}
+          />
+          <div class="nav-computer-combo-panel" data-nav-combo-panel hidden>
+            <ul class="nav-computer-combo-list" data-nav-combo-list role="listbox">
+              {{#each planets}}
+                <li class="nav-computer-combo-item" data-nav-combo-item data-value="{{name}}" role="option">{{name}}</li>
+              {{/each}}
+              <li class="nav-computer-combo-empty" data-nav-combo-empty hidden>{{comboNoMatches}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-computer-grid nav-computer-grid-actors">
+      <div class="nav-computer-field">
+        <label class="nav-computer-label" for="{{appId}}-pilot">{{localize "SW5ENAVCOMPUTER.App.PilotLabel"}}</label>
+        <select id="{{appId}}-pilot" class="nav-computer-select" data-nav-select-pilot>
+          <option value="">{{pilotPlaceholder}}</option>
+          {{#each pilotActorOptions}}
+            <option value="{{uuid}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="nav-computer-field">
+        <label class="nav-computer-label" for="{{appId}}-ship">{{localize "SW5ENAVCOMPUTER.App.ShipLabel"}}</label>
+        <select id="{{appId}}-ship" class="nav-computer-select" data-nav-select-ship>
+          <option value="">{{shipPlaceholder}}</option>
+          {{#each shipActorOptions}}
+            <option value="{{uuid}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    <div class="nav-computer-actions nav-computer-actions-row">
+      <button type="button" class="nav-computer-action-button" data-nav-calculate {{#unless canCalculate}}disabled{{/unless}}>
+        {{calculateLabel}}
+      </button>
+      <button type="button" class="nav-computer-action-button" data-nav-roll-piloting {{#unless canRollPiloting}}disabled{{/unless}}>
+        {{rollPilotingLabel}}
+      </button>
+    </div>
+  </section>
+
+  <section class="nav-computer-panel nav-computer-status">
+    <h2 class="nav-computer-section-title">{{localize "SW5ENAVCOMPUTER.App.ResultsLabel"}}</h2>
+    {{#if routeBasicResult}}
+      {{#if advancedCuratedFallback}}
+        <p class="nav-computer-advanced-fallback-banner" role="status">
+          {{localize "SW5ENAVCOMPUTER.App.AdvancedFallbackBanner"}}
+        </p>
+      {{/if}}
+      {{#if showAdvancedHyperlaneDetails}}
+        <p class="nav-computer-curated-note">{{localize "SW5ENAVCOMPUTER.App.AdvancedCuratedPrototypeNote"}}</p>
+      {{/if}}
+      <dl class="nav-computer-route-result">
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultOrigin"}}</dt>
+        <dd>{{routeBasicResult.originPlanet.name}}</dd>
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultDestination"}}</dt>
+        <dd>{{routeBasicResult.destinationPlanet.name}}</dd>
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultOriginRegion"}}</dt>
+        <dd>{{routeBasicResult.originRegion}}</dd>
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultDestinationRegion"}}</dt>
+        <dd>{{routeBasicResult.destinationRegion}}</dd>
+        {{#if showAdvancedHyperlaneDetails}}
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultAdvancedPath"}}</dt>
+          <dd class="nav-computer-advanced-path">
+            {{#each routeBasicResult.path}}{{#unless @first}} → {{/unless}}{{this}}{{/each}}
+          </dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultAdvancedLanes"}}</dt>
+          <dd>
+            {{#if routeBasicResult.routeNames.length}}
+              <ul class="nav-computer-lane-list">
+                {{#each routeBasicResult.routeNames}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            {{else}}
+              —
+            {{/if}}
+          </dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultHyperdriveMult"}}</dt>
+          <dd>×{{routeBasicResult.hyperdriveMult}}</dd>
+        {{/if}}
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultTravelHours"}}</dt>
+        <dd>{{routeBasicResult.travelTimeHours}}</dd>
+        {{#if routeBasicResult.travelResources}}
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultTravelDays"}}</dt>
+          <dd>{{routeBasicResult.travelResources.travelDaysDisplay}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultCrewSize"}}</dt>
+          <dd>{{routeBasicResult.travelResources.crewSize}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultFuelRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.fuelRequired}} {{routeBasicResult.travelResources.fuelUnit}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultFoodRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.foodRequired}} {{routeBasicResult.travelResources.foodUnit}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultSuppliesRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.suppliesRequired}}</dd>
+        {{/if}}
+        {{#if routeBasicResult.pilotingCheck}}
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultPilotingDc"}}</dt>
+          <dd>{{routeBasicResult.pilotingCheck.dc}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultPilotingDcModifiers"}}</dt>
+          <dd>
+            <ul class="nav-computer-dc-modifiers">
+              {{#each routeBasicResult.pilotingCheck.modifiers}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+        {{/if}}
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultRegionsCrossed"}}</dt>
+        <dd>
+          {{#if routeBasicResult.regionsCrossed.length}}
+            {{#each routeBasicResult.regionsCrossed}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}
+          {{else}}
+            —
+          {{/if}}
+        </dd>
+        {{#if routeBasicResult.planetsPassed.length}}
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultPlanetsPassed"}}</dt>
+          <dd>
+            {{#each routeBasicResult.planetsPassed}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}
+          </dd>
+        {{/if}}
+        <dt>{{localize "SW5ENAVCOMPUTER.App.ResultDescription"}}</dt>
+        <dd class="nav-computer-route-description">{{routeBasicResult.routeDescription}}</dd>
+        {{#if showRouteWarnings}}
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultWarnings"}}</dt>
+          <dd>
+            <ul class="nav-computer-route-warnings">
+              {{#each routeBasicResult.warnings}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+        {{/if}}
+      </dl>
+    {{else if routeError}}
+      <p class="nav-computer-status-text nav-computer-route-error">{{routeError}}</p>
+    {{else}}
+      <p class="nav-computer-status-text">{{resultsPlaceholder}}</p>
+    {{/if}}
   </section>
 
   <section class="nav-computer-panel nav-computer-status">

@@ -7,17 +7,71 @@
     "App": {
       "Title": "SW5e Nav Computer",
       "Subtitle": "Hyperspace Navigation Uplink",
-      "Placeholder": "Navigation controls, route calculation, actor selection, and travel reporting will be added in later phases. This scaffold confirms the application shell is loading correctly.",
+      "ModeLabel": "Mode",
+      "OriginLabel": "Origin Planet",
+      "DestinationLabel": "Destination Planet",
+      "SelectOrigin": "Select origin planet",
+      "SelectDestination": "Select destination planet",
+      "SearchPlanetsPlaceholder": "Search or choose a planet…",
+      "ComboNoMatches": "No matching planets",
+      "CalculateRoute": "Calculate Route",
+      "PilotLabel": "Pilot",
+      "ShipLabel": "Ship (optional)",
+      "PilotPlaceholder": "Select pilot…",
+      "ShipPlaceholder": "No ship — use default crew (4)",
+      "RollPilotingCheck": "Roll Piloting Check",
+      "RollErrorNoPilot": "Select a pilot before rolling.",
+      "RollErrorNoRoute": "Calculate a route first.",
+      "RollErrorPilotNotFound": "The selected pilot could not be found.",
+      "RollErrorNoSkill": "No piloting or fallback skill is available on {name}.",
+      "PilotRollSentGmOnly": "Piloting check sent as a private GM roll (players do not see it in chat).",
+      "RollErrorFailed": "The piloting check could not be completed. Check the console for errors.",
+      "ResultsLabel": "Results",
+      "ResultsPlaceholder": "Choose an origin and destination, then click Calculate Route for a Basic mode estimate.",
       "StatusLabel": "Status",
-      "StatusPlaceholder": "Awaiting origin, destination, and crew selection."
+      "StatusPlaceholder": "Awaiting origin, destination, and crew selection.",
+      "StatusRouteCalculated": "Route calculated (Basic mode).",
+      "StatusRouteCalculatedAdvanced": "Route calculated (Advanced — curated hyperlanes).",
+      "StatusRouteCalculatedAdvancedFallback": "Route calculated (Basic estimate; no curated hyperlane path).",
+      "RouteErrorSelectBoth": "Select both an origin and a destination before calculating.",
+      "RouteErrorUnknownPlanet": "No planet named {name} was found in navigation data.",
+      "AdvancedFallbackBanner": "No curated hyperspace lane route found. Falling back to region-based estimate.",
+      "AdvancedCuratedPrototypeNote": "Advanced mode uses a small curated lane graph, not full galaxy coverage.",
+      "ResultAdvancedPath": "Hyperlane path (worlds)",
+      "ResultAdvancedLanes": "Lanes used (per hop)",
+      "ResultHyperdriveMult": "Hyperdrive class (travel time multiplier)",
+      "ResultOrigin": "Origin",
+      "ResultDestination": "Destination",
+      "ResultOriginRegion": "Origin region",
+      "ResultDestinationRegion": "Destination region",
+      "ResultTravelHours": "Travel time (hours)",
+      "ResultTravelDays": "Travel duration (days)",
+      "ResultCrewSize": "Crew count (for provisions)",
+      "ResultFuelRequired": "Fuel required",
+      "ResultFoodRequired": "Food required",
+      "ResultSuppliesRequired": "Supplies required",
+      "ResultPilotingDc": "Recommended piloting check DC",
+      "ResultPilotingDcModifiers": "DC modifier notes",
+      "ResultRegionsCrossed": "Regions crossed",
+      "ResultPlanetsPassed": "Notable worlds along the way",
+      "ResultPlanetsPassedNone": "None (same region or no intermediate regions).",
+      "ResultDescription": "Route summary",
+      "ResultWarnings": "Warnings"
     },
     "Warning": {
       "MissingSw5e": "SW5E companion content was not detected as active. The module can still load, but SW5E-specific integrations may be unavailable.",
       "UnexpectedSystem": "This module is designed for the dnd5e system. Current system compatibility should be reviewed before use.",
-      "IncompleteEnvironment": "The runtime environment appears incomplete. Some integrations may be unavailable."
+      "IncompleteEnvironment": "The runtime environment appears incomplete. Some integrations may be unavailable.",
+      "PlanetDataLoadFailed": "Planet data could not be loaded. The local dataset is unavailable, so origin and destination selection has been disabled."
     },
     "Error": {
       "Generic": "An unexpected navigation computer error occurred."
+    },
+    "Travel": {
+      "DcModifierBase": "Base DC 10",
+      "DcModifierOutwardSteps": "+{total} ({steps} outward region step(s), +2 each)",
+      "DcModifierRemoteDestination": "+5 (destination in Wild Space or Unknown Regions)",
+      "DcModifierLaneHops": "+{total} ({hops} hyperspace lane hop(s), +1 DC each)"
     },
     "Settings": {
       "CalculationMode": {
@@ -47,6 +101,10 @@
       "DebugMode": {
         "Name": "Debug Logging",
         "Hint": "Enable additional debug logging for this client."
+      },
+      "PilotingFallbackSkill": {
+        "Name": "Piloting fallback skill",
+        "Hint": "If pil / piloting are missing on the pilot actor, rolls use this skill id (e.g. acr). SW5E also tries tec before failing."
       }
     }
   }

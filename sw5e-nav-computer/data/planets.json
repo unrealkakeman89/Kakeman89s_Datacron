@@ -1,42 +1,382 @@
 [
   {
-    "id": "coruscant",
-    "name": "Coruscant",
-    "region": "Core Worlds",
-    "sector": "Corusca",
-    "x": 0,
-    "y": 0
+    "name": "Ahch-To",
+    "grid": "S-18",
+    "sector": "Ahch Sector",
+    "region": "Unknown Regions",
+    "coordinates": { "x": 182, "y": 36 },
+    "type": "Oceanic",
+    "affiliation": "Independent",
+    "description": "A remote ocean world known for ancient Jedi lore."
   },
   {
-    "id": "kessel",
-    "name": "Kessel",
-    "region": "Outer Rim",
-    "sector": "Kessel",
-    "x": 78,
-    "y": 24
+    "name": "Alderaan",
+    "grid": "M-11",
+    "sector": "Alderaan Sector",
+    "region": "Core",
+    "coordinates": { "x": 16, "y": 12 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A peaceful Core World famed for diplomacy and natural beauty."
   },
   {
-    "id": "tatooine",
-    "name": "Tatooine",
-    "region": "Outer Rim",
-    "sector": "Arkanis",
-    "x": 96,
-    "y": 41
+    "name": "Balmorra",
+    "grid": "J-10",
+    "sector": "Balmorra Sector",
+    "region": "Expansion Region",
+    "coordinates": { "x": 44, "y": 24 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "An industrial world known for heavy manufacturing and arms production."
   },
   {
-    "id": "onderon",
-    "name": "Onderon",
+    "name": "Bakura",
+    "grid": "G-3",
+    "sector": "Bakura Sector",
+    "region": "Expansion Region",
+    "coordinates": { "x": 31, "y": 6 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Empire",
+    "description": "A frontier world positioned near the border of charted space."
+  },
+  {
+    "name": "Bothawui",
+    "grid": "K-7",
+    "sector": "Bothan Sector",
+    "region": "Mid Rim",
+    "coordinates": { "x": 58, "y": 18 },
+    "type": "Terrestrial",
+    "affiliation": "Bothan Spynet",
+    "description": "The homeworld of the Bothans and a major center of intelligence."
+  },
+  {
+    "name": "Brentaal IV",
+    "grid": "L-8",
+    "sector": "Brentaal Sector",
+    "region": "Colonies",
+    "coordinates": { "x": 28, "y": 15 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A major trade and shipping world near the Core hyperlanes."
+  },
+  {
+    "name": "Byss",
+    "grid": "N-4",
+    "sector": "Byss Sector",
+    "region": "Deep Core",
+    "coordinates": { "x": 7, "y": 5 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Empire",
+    "description": "A hidden Deep Core throne world associated with Imperial power."
+  },
+  {
+    "name": "Cato Neimoidia",
+    "grid": "M-7",
+    "sector": "Cato Neimoidia Sector",
+    "region": "Colonies",
+    "coordinates": { "x": 26, "y": 17 },
+    "type": "Terrestrial",
+    "affiliation": "Trade Federation",
+    "description": "A wealthy bridge-world with dense commercial traffic."
+  },
+  {
+    "name": "Chandrila",
+    "grid": "L-10",
+    "sector": "Bormea Sector",
+    "region": "Core",
+    "coordinates": { "x": 18, "y": 10 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A refined Core World with strong senatorial influence."
+  },
+  {
+    "name": "Christophsis",
+    "grid": "N-9",
+    "sector": "Savareen Sector",
     "region": "Inner Rim",
-    "sector": "Japrael",
-    "x": 42,
-    "y": 31
+    "coordinates": { "x": 36, "y": 20 },
+    "type": "Crystalline",
+    "affiliation": "Galactic Republic",
+    "description": "A crystalline world with strategic military value."
   },
   {
-    "id": "ryloth",
-    "name": "Ryloth",
+    "name": "Commenor",
+    "grid": "K-9",
+    "sector": "Commenor Sector",
+    "region": "Colonies",
+    "coordinates": { "x": 24, "y": 20 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A prosperous Colonies world on several major trade routes."
+  },
+  {
+    "name": "Corellia",
+    "grid": "M-9",
+    "sector": "Corellian Sector",
+    "region": "Core",
+    "coordinates": { "x": 14, "y": 14 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A shipbuilding powerhouse and cultural anchor of the Corellian Run."
+  },
+  {
+    "name": "Coruscant",
+    "grid": "L-9",
+    "sector": "Coruscant Sector",
+    "region": "Core",
+    "coordinates": { "x": 12, "y": 12 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A galactic capital world covered by a planet-wide city."
+  },
+  {
+    "name": "Csilla",
+    "grid": "U-14",
+    "sector": "Csilla System",
+    "region": "Unknown Regions",
+    "coordinates": { "x": 176, "y": 28 },
+    "type": "Ice",
+    "affiliation": "Chiss Ascendancy",
+    "description": "The icy redoubt of the Chiss in the Unknown Regions."
+  },
+  {
+    "name": "Dantooine",
+    "grid": "H-7",
+    "sector": "Dantooine Sector",
+    "region": "Expansion Region",
+    "coordinates": { "x": 48, "y": 18 },
+    "type": "Terrestrial",
+    "affiliation": "Independent",
+    "description": "A quiet agrarian world known for remote enclaves and open plains."
+  },
+  {
+    "name": "Empress Teta",
+    "grid": "N-5",
+    "sector": "Empress Teta Sector",
+    "region": "Deep Core",
+    "coordinates": { "x": 9, "y": 8 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "An ancient Deep Core world with long political and military history."
+  },
+  {
+    "name": "Exegol",
+    "grid": "V-18",
+    "sector": "Exegol Region",
+    "region": "Unknown Regions",
+    "coordinates": { "x": 194, "y": 40 },
+    "type": "Terrestrial",
+    "affiliation": "Sith Eternal",
+    "description": "A hidden world shrouded in dark side mysteries and storms."
+  },
+  {
+    "name": "Geonosis",
+    "grid": "R-8",
+    "sector": "Geonosian Sector",
     "region": "Outer Rim",
-    "sector": "Gaulus",
-    "x": 61,
-    "y": 55
+    "coordinates": { "x": 84, "y": 18 },
+    "type": "Rocky",
+    "affiliation": "Confederacy of Independent Systems",
+    "description": "A harsh foundry world known for droid factories and hives."
+  },
+  {
+    "name": "Hosnian Prime",
+    "grid": "M-10",
+    "sector": "Hosnian Sector",
+    "region": "Core",
+    "coordinates": { "x": 20, "y": 11 },
+    "type": "Terrestrial",
+    "affiliation": "New Republic",
+    "description": "A politically important Core World and later New Republic capital."
+  },
+  {
+    "name": "Ilum",
+    "grid": "T-16",
+    "sector": "Ilum System",
+    "region": "Unknown Regions",
+    "coordinates": { "x": 170, "y": 34 },
+    "type": "Ice",
+    "affiliation": "Jedi Order",
+    "description": "A frozen world once sacred to Jedi crystal pilgrimages."
+  },
+  {
+    "name": "Jedha",
+    "grid": "Q-10",
+    "sector": "Jedha Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 88, "y": 24 },
+    "type": "Desert",
+    "affiliation": "Independent",
+    "description": "A desert moon and historic crossroads for Force traditions."
+  },
+  {
+    "name": "Kamino",
+    "grid": "W-11",
+    "sector": "Kamino System",
+    "region": "Wild Space",
+    "coordinates": { "x": 148, "y": 26 },
+    "type": "Oceanic",
+    "affiliation": "Kaminoan Government",
+    "description": "An isolated ocean world renowned for cloning science."
+  },
+  {
+    "name": "Kashyyyk",
+    "grid": "L-13",
+    "sector": "Mytaranor Sector",
+    "region": "Mid Rim",
+    "coordinates": { "x": 56, "y": 30 },
+    "type": "Forest",
+    "affiliation": "Galactic Republic",
+    "description": "A towering forest world and home of the Wookiees."
+  },
+  {
+    "name": "Kessel",
+    "grid": "S-9",
+    "sector": "Kessel Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 98, "y": 20 },
+    "type": "Rocky",
+    "affiliation": "Galactic Empire",
+    "description": "A dangerous spice-mining world set amid unstable space lanes."
+  },
+  {
+    "name": "Kuat",
+    "grid": "L-11",
+    "sector": "Kuat Sector",
+    "region": "Core",
+    "coordinates": { "x": 17, "y": 13 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Empire",
+    "description": "A wealthy Core World famous for massive orbital shipyards."
+  },
+  {
+    "name": "Lothal",
+    "grid": "T-12",
+    "sector": "Lothal Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 102, "y": 28 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Empire",
+    "description": "An agricultural Outer Rim world with growing strategic importance."
+  },
+  {
+    "name": "Malastare",
+    "grid": "J-8",
+    "sector": "Malastare Sector",
+    "region": "Mid Rim",
+    "coordinates": { "x": 52, "y": 19 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A fuel-rich world known for podracing and political compromise."
+  },
+  {
+    "name": "Mandalore",
+    "grid": "R-9",
+    "sector": "Mandalore Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 90, "y": 22 },
+    "type": "Terrestrial",
+    "affiliation": "Mandalorian Clans",
+    "description": "A storied world at the heart of Mandalorian culture and warfare."
+  },
+  {
+    "name": "Mustafar",
+    "grid": "T-10",
+    "sector": "Atravis Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 96, "y": 24 },
+    "type": "Volcanic",
+    "affiliation": "Galactic Empire",
+    "description": "A fiery volcanic world infamous for lava rivers and fortress strongholds."
+  },
+  {
+    "name": "Naboo",
+    "grid": "N-12",
+    "sector": "Chommell Sector",
+    "region": "Mid Rim",
+    "coordinates": { "x": 60, "y": 26 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A cultured world of lakes, plains, and deep political significance."
+  },
+  {
+    "name": "Onderon",
+    "grid": "N-10",
+    "sector": "Japrael Sector",
+    "region": "Inner Rim",
+    "coordinates": { "x": 40, "y": 22 },
+    "type": "Terrestrial",
+    "affiliation": "Independent",
+    "description": "A jungle world defined by walled cities and frequent upheaval."
+  },
+  {
+    "name": "Ord Mantell",
+    "grid": "K-11",
+    "sector": "Bright Jewel Sector",
+    "region": "Mid Rim",
+    "coordinates": { "x": 54, "y": 25 },
+    "type": "Terrestrial",
+    "affiliation": "Independent",
+    "description": "A rough trade world with salvage markets and smuggler traffic."
+  },
+  {
+    "name": "Rendili",
+    "grid": "K-8",
+    "sector": "Rendili Sector",
+    "region": "Colonies",
+    "coordinates": { "x": 22, "y": 18 },
+    "type": "Terrestrial",
+    "affiliation": "Galactic Republic",
+    "description": "A shipbuilding center with deep ties to Republic naval logistics."
+  },
+  {
+    "name": "Ryloth",
+    "grid": "S-12",
+    "sector": "Gaulus Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 94, "y": 30 },
+    "type": "Terrestrial",
+    "affiliation": "Free Ryloth Movement",
+    "description": "A harsh world of twilight zones and tenacious resistance."
+  },
+  {
+    "name": "Scarif",
+    "grid": "U-10",
+    "sector": "Scarif System",
+    "region": "Outer Rim",
+    "coordinates": { "x": 106, "y": 23 },
+    "type": "Tropical",
+    "affiliation": "Galactic Empire",
+    "description": "A tropical archive world ringed by a heavily fortified shield gate."
+  },
+  {
+    "name": "Sullust",
+    "grid": "M-13",
+    "sector": "Sullust Sector",
+    "region": "Inner Rim",
+    "coordinates": { "x": 42, "y": 30 },
+    "type": "Volcanic",
+    "affiliation": "SoroSuub Corporation",
+    "description": "A volcanic industrial world with vast subterranean habitation."
+  },
+  {
+    "name": "Tatooine",
+    "grid": "R-16",
+    "sector": "Arkanis Sector",
+    "region": "Outer Rim",
+    "coordinates": { "x": 110, "y": 38 },
+    "type": "Desert",
+    "affiliation": "Hutt Cartel",
+    "description": "A remote desert world on the edge of major hyperspace routes."
+  },
+  {
+    "name": "Yavin 4",
+    "grid": "V-12",
+    "sector": "Gordian Reach",
+    "region": "Outer Rim",
+    "coordinates": { "x": 116, "y": 28 },
+    "type": "Jungle Moon",
+    "affiliation": "Rebel Alliance",
+    "description": "A jungle moon remembered as the site of an early Rebel victory."
   }
 ]
