@@ -1,0 +1,112 @@
+---
+alwaysApply: true
+---
+
+## SW5e Nav Computer — Shared Master Context (SW5e Beta / DND5e 5.2.5 Edition)
+
+You are building a Foundry Virtual Tabletop module named "SW5e Nav Computer" with module id "sw5e-nav-computer".
+
+### Target Stack (Authoritative for this Project)
+This project intentionally targets:
+- Foundry VTT Version 13
+- DND5E Version 5.2.5
+- SW5E Beta Module compatible with DND5E 5.2.5
+
+Treat this target stack as correct for the project.
+Do not question or replace this stack unless runtime inspection proves the local environment differs.
+
+### High-Level Goal
+Build a Foundry VTT module that allows a GM or player to:
+1. Select an origin planet
+2. Select a destination planet
+3. Select a pilot actor and optionally a ship actor
+4. Calculate hyperspace travel using either:
+   - Basic Mode: region-to-region travel time matrix
+   - Advanced Mode: graph-based hyperspace route pathfinding
+5. Display travel time, route details, planets/waypoints, fuel, supplies, and optional random events
+6. Optionally roll a piloting check and report the result in chat
+
+### CRITICAL PHASE 0 RULE
+Phase 0 exists to inspect live schema/API details in the SW5E beta environment, including:
+- actual actor types
+- actual piloting skill key
+- actual hyperdrive class path
+- actual crew size path
+- actual starship/vehicle data structure
+- whether SW5E beta overrides standard DND5E roll behavior
+
+Phase 0 is NOT for debating the target stack.
+It is for discovering runtime schema details so later phases can be implemented correctly.
+
+### Platform and Framework Rules
+- Use Foundry VTT Version 13 patterns
+- Use ApplicationV2 with HandlebarsApplicationMixin for the main UI window
+- Use JavaScript ES modules
+- Use Handlebars templates (.hbs)
+- Use CSS only
+- Avoid deprecated legacy Application patterns unless a specific compatibility reason is discovered during inspection
+- Prefer stable, readable architecture over cleverness
+
+### Foundry Packaging Rules
+- Use a valid module.json manifest
+- Use relationships.systems for supported systems
+- Use relationships.recommends for optional companion modules such as sw5e
+- Do not use invalid manifest keys such as relationships.modules
+
+### Development Strategy
+Build this module incrementally:
+1. Working scaffold
+2. Working app window
+3. Working local planet data
+4. Working Basic Mode route calculation
+5. Working travel resource outputs
+6. Working actor selection and piloting check
+7. Working Advanced Mode prototype
+8. Working random events
+9. Polish and QA
+
+### MVP Definition
+A valid MVP means:
+1. module loads without manifest/schema errors
+2. GM sees a scene control button
+3. clicking the button opens the app
+4. origin/destination can be selected
+5. Basic Mode returns a travel result
+6. travel result displays correctly in the UI
+
+### Data Rules
+- Runtime code must use local module data files only
+- Do not depend on external web calls at runtime
+- Use curated local JSON data first
+- Expand data coverage later
+- Keep data schema stable and documented
+
+### UI Rules
+- Use a single stable application window first
+- Prefer full rerendering during MVP rather than fancy partial render complexity
+- Make the UI readable, dark, and Star Wars-inspired
+- Do not over-engineer animations early
+
+### Roll Integration Rules
+- Do not assume the piloting skill key until Phase 0 confirms it
+- Prefer object-style roll calls such as actor.rollSkill({ skill: "..." }) unless inspection proves otherwise
+- If piloting is missing, fall back to a configured secondary skill
+- Always log a warning when using fallback behavior
+
+### Error Handling Rules
+All phases must:
+- fail gracefully
+- display user-facing notices for recoverable problems
+- log warnings/errors with the module prefix
+- avoid hard crashes due to missing data
+
+### Logging Prefix
+Use:
+[SW5e Nav Computer]
+
+### Code Quality Rules
+- Keep code modular and readable
+- Export focused helper functions
+- Prefer explicit logic over magic
+- Comment non-obvious logic
+- Avoid premature abstraction

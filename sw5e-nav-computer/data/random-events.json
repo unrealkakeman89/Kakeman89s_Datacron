@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sensor-ghost",
+    "title": "Sensor Ghost",
+    "severity": "low",
+    "description": "The navicomputer flags a drifting sensor echo and recommends a brief course verification."
+  },
+  {
+    "id": "micro-meteor-shear",
+    "title": "Micro-Meteor Shear",
+    "severity": "medium",
+    "description": "A thin debris field forces the ship to reduce speed and reroute for safety."
+  },
+  {
+    "id": "hyperspace-anomaly",
+    "title": "Hyperspace Anomaly",
+    "severity": "high",
+    "description": "A volatile gravity disturbance interrupts the projected route and demands pilot attention."
+  }
+]

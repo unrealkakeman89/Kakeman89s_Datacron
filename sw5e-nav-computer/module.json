@@ -1,0 +1,52 @@
+{
+  "id": "sw5e-nav-computer",
+  "title": "SW5e Nav Computer",
+  "description": "A hyperspace navigation computer for SW5e beta campaigns. Calculate routes, travel times, travel resources, and optional random events across the Star Wars galaxy.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Caleb Kauble"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.2.5",
+          "verified": "5.2.5"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "sw5e",
+        "type": "module"
+      },
+      {
+        "id": "sw5e-module",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/nav-computer.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": true,
+  "url": "https://github.com/placeholder/sw5e-nav-computer"
+}

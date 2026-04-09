@@ -1,0 +1,42 @@
+[
+  {
+    "id": "coruscant",
+    "name": "Coruscant",
+    "region": "Core Worlds",
+    "sector": "Corusca",
+    "x": 0,
+    "y": 0
+  },
+  {
+    "id": "kessel",
+    "name": "Kessel",
+    "region": "Outer Rim",
+    "sector": "Kessel",
+    "x": 78,
+    "y": 24
+  },
+  {
+    "id": "tatooine",
+    "name": "Tatooine",
+    "region": "Outer Rim",
+    "sector": "Arkanis",
+    "x": 96,
+    "y": 41
+  },
+  {
+    "id": "onderon",
+    "name": "Onderon",
+    "region": "Inner Rim",
+    "sector": "Japrael",
+    "x": 42,
+    "y": 31
+  },
+  {
+    "id": "ryloth",
+    "name": "Ryloth",
+    "region": "Outer Rim",
+    "sector": "Gaulus",
+    "x": 61,
+    "y": 55
+  }
+]
