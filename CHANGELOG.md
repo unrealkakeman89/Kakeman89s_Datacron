@@ -2,6 +2,18 @@
 
 All notable changes to **SW5e Nav Computer** are documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-04-10
+
+### Added
+
+- **`scripts/merge-planet-data.py`** — Merges repo-root `Star Wars Galaxy Map Grid Coordinates.xlsx` (sheet `planets`) into `sw5e-nav-computer/data/planets.json`: spreadsheet is primary for `grid`, `sector`, and `region` when non-empty; blank sheet cells use matching `planets.json` values; grid values normalized to hyphen form (e.g. `M10` → `M-10`); JSON-only worlds (no sheet row) are appended. Writes a timestamped backup and **`sw5e-nav-computer/data/planets-merge-report.txt`** when geographic fields disagree between sources.
+- **`.gitignore`** — Ignores `planets.json.backup-*` under module `data/` so large re-merge backups are not committed by mistake.
+
+### Changed
+
+- **Planet dataset** expanded to the full merged galaxy list (~2000+ worlds) while retaining enriched fields (`coordinates`, `type`, `affiliation`, `description`) for all previously curated entries that matched the spreadsheet by name.
+- **Module version** `1.0.1`.
+
 ## [1.0.0] - 2026-04-09
 
 ### Added

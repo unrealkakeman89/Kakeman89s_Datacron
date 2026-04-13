@@ -1,5 +1,15 @@
-import { buildGraph, loadHyperspaceRoutes } from "./hyperspace-routes.js";
+import { logDebug, MODULE_ID } from "./logger.js";
+import {
+  buildGraph,
+  filterHyperspaceRoutesForSettings,
+  loadHyperspaceRoutes
+} from "./hyperspace-routes.js";
 import { loadPlanetData } from "./planet-data.js";
+import { SETTING_KEYS } from "./settings.js";
+import { formatTravelTime } from "./time-display.js";
+
+/** Increase toward 1.0 for faster/more direct routes; decrease toward 0 for more optimal but slower pathfinding. At 0 this degrades to Dijkstra. */
+const HEURISTIC_WEIGHT = 0.5;
 
 export const REGION_ORDER = [
   "Deep Core",
@@ -12,6 +22,15 @@ export const REGION_ORDER = [
   "Wild Space",
   "Unknown Regions"
 ];
+
+/** @typedef {'NO_LANE_PATH' | 'MISSING_COORDINATES' | 'FILTERED_LANES_ONLY' | 'DATA_ERROR'} AdvancedFallbackReason */
+
+export const ADVANCED_FALLBACK_REASON = {
+  NO_LANE_PATH: "NO_LANE_PATH",
+  MISSING_COORDINATES: "MISSING_COORDINATES",
+  FILTERED_LANES_ONLY: "FILTERED_LANES_ONLY",
+  DATA_ERROR: "DATA_ERROR"
+};
 
 export const REGION_TRAVEL_MATRIX = {
   "Deep Core": {
@@ -119,6 +138,19 @@ function regionIndex(region) {
   return REGION_ORDER.indexOf(region);
 }
 
+/**
+ * Ring distance between two named regions; null if either is unknown on the chart.
+ * @param {string | null | undefined} regionA
+ * @param {string | null | undefined} regionB
+ * @returns {number | null}
+ */
+export function advancedRegionRingDistance(regionA, regionB) {
+  const i0 = regionIndex(regionA ?? "");
+  const i1 = regionIndex(regionB ?? "");
+  if (i0 < 0 || i1 < 0) return null;
+  return Math.abs(i0 - i1);
+}
+
 function buildRegionsCrossed(originRegion, destinationRegion) {
   const i0 = regionIndex(originRegion);
   const i1 = regionIndex(destinationRegion);
@@ -146,7 +178,7 @@ function buildRouteDescription({
     return `You are already at ${originName}. No hyperspace travel is required for this route in Basic mode.`;
   }
 
-  const hours = travelTimeHours;
+  const travelTimeFormatted = formatTravelTime(travelTimeHours);
   const middleRegions = intermediateRegions(regionsCrossed);
   let middlePhrase = "";
   if (middleRegions.length) {
@@ -158,14 +190,14 @@ function buildRouteDescription({
   }
 
   return (
-    `Basic mode estimates about ${hours} hours of hyperspace travel from ${originName} (${originRegion}) to ${destName} (${destRegion}).` +
+    `Basic mode estimates ${travelTimeFormatted} of hyperspace travel from ${originName} (${originRegion}) to ${destName} (${destRegion}).` +
     middlePhrase +
     " Figures are broad regional averages, not a map of individual hyperlanes."
   );
 }
 
 /**
- * @param {Map<string, Array<{ to: string, travelTimeBase: number, routeName: string }>>} graph
+ * @param {Map<string, Array<{ to: string, travelTimeBase: number, routeName: string, syntheticHop?: boolean }>>} graph
  */
 function collectGraphVertices(graph) {
   const vertices = new Set();
@@ -177,67 +209,200 @@ function collectGraphVertices(graph) {
 }
 
 /**
- * @param {Map<string, Array<{ to: string, travelTimeBase: number, routeName: string }>>} graph
+ * Grid to plane (x,y); matches scripts/build-hyperspace-graph.py parse_grid.
+ * @param {string | null | undefined} grid
+ * @returns {{ x: number, y: number } | null}
+ */
+function parseGridToPlaneXY(grid) {
+  if (!grid || typeof grid !== "string") return null;
+  const t = grid.trim().toUpperCase().replace(/\s+/g, "");
+  const m = /^([A-Z]+)-?(\d+)$/.exec(t);
+  if (!m) return null;
+  let col = 0;
+  for (let i = 0; i < m[1].length; i++) {
+    col = col * 26 + (m[1].charCodeAt(i) - 64);
+  }
+  const row = Number.parseInt(m[2], 10);
+  if (!Number.isFinite(row)) return null;
+  return { x: col * 8.0, y: row * 2.2 };
+}
+
+/**
+ * Same coordinate resolution as planet data + build script (coordinates.x/y or grid).
+ * Equivalent to records returned by getPlanetByName.
+ * @param {object | null | undefined} planet
+ * @returns {{ x: number, y: number } | null}
+ */
+function planetXYFromRecord(planet) {
+  if (!planet) return null;
+  const c = planet.coordinates;
+  if (c && typeof c === "object") {
+    const x = Number(c.x);
+    const y = Number(c.y);
+    if (Number.isFinite(x) && Number.isFinite(y)) return { x, y };
+  }
+  return parseGridToPlaneXY(planet.grid);
+}
+
+/**
+ * @param {string} nodeName
+ * @param {string} goalName
+ * @param {Map<string, { x: number, y: number }>} coordMap
+ */
+function heuristicDistanceToGoal(nodeName, goalName, coordMap) {
+  const g = coordMap.get(goalName);
+  const n = coordMap.get(nodeName);
+  if (!g || !n) return 0;
+  return HEURISTIC_WEIGHT * Math.hypot(n.x - g.x, n.y - g.y);
+}
+
+/**
+ * @param {Array<{ node: string, g: number, f: number }>} heap
+ * @param {number} i
+ */
+function heapSiftUp(heap, i) {
+  const item = heap[i];
+  while (i > 0) {
+    const p = (i - 1) >> 1;
+    const a = heap[p];
+    if (item.f > a.f || (item.f === a.f && item.node >= a.node)) break;
+    heap[i] = a;
+    i = p;
+  }
+  heap[i] = item;
+}
+
+/**
+ * @param {Array<{ node: string, g: number, f: number }>} heap
+ * @param {number} i
+ */
+function heapSiftDown(heap, i) {
+  const item = heap[i];
+  const n = heap.length;
+  while (true) {
+    let smallest = i;
+    const l = i * 2 + 1;
+    const r = l + 1;
+    if (l < n) {
+      const hl = heap[l];
+      const hs = heap[smallest];
+      if (hl.f < hs.f || (hl.f === hs.f && hl.node < hs.node)) smallest = l;
+    }
+    if (r < n) {
+      const hr = heap[r];
+      const hs = heap[smallest];
+      if (hr.f < hs.f || (hr.f === hs.f && hr.node < hs.node)) smallest = r;
+    }
+    if (smallest === i) break;
+    heap[i] = heap[smallest];
+    i = smallest;
+  }
+  heap[i] = item;
+}
+
+/** @param {Array<{ node: string, g: number, f: number }>} heap */
+function heapPush(heap, entry) {
+  heap.push(entry);
+  heapSiftUp(heap, heap.length - 1);
+}
+
+/** @param {Array<{ node: string, g: number, f: number }>} heap */
+function heapPop(heap) {
+  if (heap.length === 0) return null;
+  const top = heap[0];
+  const last = heap.pop();
+  if (heap.length > 0) {
+    heap[0] = last;
+    heapSiftDown(heap, 0);
+  }
+  return top;
+}
+
+/**
+ * @param {Map<string, Array<{ to: string, travelTimeBase: number, routeName: string, tier: number, dcBonus: number, syntheticHop: boolean }>>} graph
  * @param {string} start
  * @param {string} end
  * @param {number} hyperdriveMult
- * @returns {{ path: string[], routeNames: string[], travelTimeHours: number } | null}
+ * @param {Map<string, { x: number, y: number }>} coordMap planet positions (same fields as getPlanetByName / build script); missing entries => h=0
+ * @returns {{ path: string[], routeNames: string[], routeHopsSynthetic: boolean[], travelTimeHours: number, pathDcBonusTotal: number, pathMaxTier: number, tier5Hops: number } | null}
  */
-function dijkstraShortestPath(graph, start, end, hyperdriveMult) {
+function aStarShortestPath(graph, start, end, hyperdriveMult, coordMap) {
   const vertices = collectGraphVertices(graph);
   if (!vertices.has(start) || !vertices.has(end)) return null;
 
-  const dist = new Map();
-  /** @type {Map<string, { from: string, edge: { routeName: string, travelTimeBase: number } }>} */
-  const prev = new Map();
+  const gScore = new Map();
+  /** @type {Map<string, { from: string, edge: { routeName: string, travelTimeBase: number, tier: number, dcBonus: number, syntheticHop: boolean } }>} */
+  const cameFrom = new Map();
+  const closedSet = new Set();
 
-  for (const v of vertices) dist.set(v, Infinity);
-  dist.set(start, 0);
+  /** @type {Array<{ node: string, g: number, f: number }>} */
+  const openHeap = [];
 
-  const unvisited = new Set(vertices);
+  gScore.set(start, 0);
+  heapPush(openHeap, { node: start, g: 0, f: heuristicDistanceToGoal(start, end, coordMap) });
 
-  while (unvisited.size) {
-    let u = null;
-    let best = Infinity;
-    for (const v of unvisited) {
-      const d = dist.get(v) ?? Infinity;
-      if (d < best) {
-        best = d;
-        u = v;
-      }
-    }
-    if (u === null || best === Infinity) break;
-    unvisited.delete(u);
+  while (openHeap.length > 0) {
+    const current = heapPop(openHeap);
+    if (!current) break;
+    const { node: u, g: gU } = current;
+    const bestG = gScore.get(u) ?? Infinity;
+    if (gU > bestG + 1e-9) continue;
+    if (closedSet.has(u)) continue;
+    closedSet.add(u);
+
     if (u === end) break;
 
     for (const edge of graph.get(u) ?? []) {
       const w = edge.travelTimeBase * hyperdriveMult;
-      const alt = best + w;
-      const nextDist = dist.get(edge.to) ?? Infinity;
-      if (alt < nextDist) {
-        dist.set(edge.to, alt);
-        prev.set(edge.to, { from: u, edge });
-      }
+      if (!Number.isFinite(w)) continue;
+      const tentativeG = gU + w;
+      const v = edge.to;
+      const prevG = gScore.get(v) ?? Infinity;
+      if (tentativeG >= prevG - 1e-9) continue;
+      gScore.set(v, tentativeG);
+      cameFrom.set(v, { from: u, edge });
+      const h = heuristicDistanceToGoal(v, end, coordMap);
+      heapPush(openHeap, { node: v, g: tentativeG, f: tentativeG + h });
     }
   }
 
-  if ((dist.get(end) ?? Infinity) === Infinity) return null;
+  if ((gScore.get(end) ?? Infinity) === Infinity) return null;
 
   const path = [];
   const routeNames = [];
+  const routeHopsSynthetic = [];
+  let pathDcBonusTotal = 0;
+  let pathMaxTier = 0;
+  let tier5Hops = 0;
   let cur = end;
   while (cur !== start) {
-    const step = prev.get(cur);
+    const step = cameFrom.get(cur);
     if (!step) return null;
     path.push(cur);
     routeNames.push(step.edge.routeName);
+    routeHopsSynthetic.push(Boolean(step.edge.syntheticHop));
+    const t = Number(step.edge.tier ?? 3);
+    const safeT = Number.isFinite(t) ? t : 3;
+    pathMaxTier = Math.max(pathMaxTier, safeT);
+    const db = Number(step.edge.dcBonus ?? 0);
+    pathDcBonusTotal += Number.isFinite(db) ? db : 0;
+    if (safeT >= 5) tier5Hops += 1;
     cur = step.from;
   }
   path.push(start);
   path.reverse();
   routeNames.reverse();
+  routeHopsSynthetic.reverse();
 
-  return { path, routeNames, travelTimeHours: dist.get(end) ?? 0 };
+  return {
+    path,
+    routeNames,
+    routeHopsSynthetic,
+    travelTimeHours: gScore.get(end) ?? 0,
+    pathDcBonusTotal,
+    pathMaxTier,
+    tier5Hops
+  };
 }
 
 /**
@@ -256,21 +421,121 @@ function regionsAlongPath(regionByName, path) {
 function buildAdvancedRouteDescription({
   originName,
   destName,
-  travelTimeHours,
+  travelTimeFormatted,
   path,
   routeNames,
+  routeHopsSynthetic,
   hyperdriveMult
 }) {
   const hops = Math.max(0, path.length - 1);
-  const lanes =
-    routeNames.length === 0
-      ? ""
-      : ` Named lanes (${hops} hop${hops === 1 ? "" : "s"}): ${[...new Set(routeNames)].join(", ")}.`;
+  const synth = routeHopsSynthetic ?? [];
+  const namedUnique = [];
+  const seenNamed = new Set();
+  for (let i = 0; i < routeNames.length; i++) {
+    if (synth[i]) continue;
+    const n = routeNames[i];
+    if (!n || seenNamed.has(n)) continue;
+    seenNamed.add(n);
+    namedUnique.push(n);
+  }
+  let transitHops = 0;
+  for (let i = 0; i < routeNames.length; i++) {
+    if (synth[i]) transitHops++;
+  }
+  const laneParts = [];
+  if (namedUnique.length) {
+    laneParts.push(`Named lanes: ${namedUnique.join(", ")}`);
+  }
+  if (transitHops > 0) {
+    laneParts.push(
+      transitHops === 1
+        ? "(+ 1 transit corridor hop)"
+        : `(+ ${transitHops} transit corridor hops)`
+    );
+  }
+  const lanesPhrase =
+    hops === 0 ? "" : laneParts.length ? ` ${laneParts.join(" ")}.` : "";
+
   return (
-    `Advanced mode (curated prototype): about ${travelTimeHours} hours from ${originName} to ${destName}` +
-    ` using in-graph hyperlanes, with hyperdrive class multiplier ×${hyperdriveMult}.${lanes}` +
-    " Coverage is limited; worlds off the graph are not reachable in Advanced mode."
+    `Advanced mode: ${travelTimeFormatted} from ${originName} to ${destName}` +
+    ` with hyperdrive class multiplier ×${hyperdriveMult}.${lanesPhrase}` +
+    " Charted hyperlanes are preferred where they exist; unmapped segments use transit corridors or regional estimates."
   );
+}
+
+/**
+ * Last-resort regional matrix hop when the lane graph cannot produce a path on the filtered graph.
+ * @param {Map<string, string | undefined>} regionByName
+ * @param {{ reason: AdvancedFallbackReason, extraWarnings?: string[] }} opts
+ */
+function regionalAdvancedRouteFallback(
+  originPlanet,
+  destinationPlanet,
+  hyperdriveMult,
+  regionByName,
+  opts
+) {
+  const { reason, extraWarnings = [] } = opts;
+  const mult =
+    Number.isFinite(Number(hyperdriveMult)) && Number(hyperdriveMult) > 0 ? Number(hyperdriveMult) : 1;
+  const oReg = originPlanet.region ?? null;
+  const dReg = destinationPlanet.region ?? null;
+  let hours = 96;
+  if (oReg && dReg && REGION_TRAVEL_MATRIX[oReg]?.[dReg] != null) {
+    hours = REGION_TRAVEL_MATRIX[oReg][dReg];
+  }
+  const travelTimeHours = hours * mult;
+  const path = [originPlanet.name, destinationPlanet.name];
+  const hopName =
+    typeof game !== "undefined" && game?.i18n?.localize
+      ? game.i18n.localize("SW5ENAVCOMPUTER.Route.RegionalHyperspaceEstimate")
+      : "Regional hyperspace estimate (no lane-graph path)";
+  const routeNames = [hopName];
+  const routeHopsSynthetic = [true];
+  const planetsPassed = [];
+  const regionsCrossed = regionsAlongPath(regionByName, path);
+
+  /** @type {{ code: string, reason?: string, severity: string }[]} */
+  const routeUiWarnings = [
+    { code: "ADVANCED_FALLBACK", reason, severity: "warning" }
+  ];
+  const ringDiff = advancedRegionRingDistance(oReg, dReg);
+  const longSpanFallback =
+    ringDiff != null && ringDiff >= 3 && path.length === 2 && path[0] !== path[1];
+  if (longSpanFallback) {
+    routeUiWarnings.push({ code: "LONG_DISTANCE_FALLBACK_ESTIMATE", severity: "warning" });
+  }
+
+  return {
+    mode: "advanced",
+    advancedRouteFound: true,
+    originPlanet,
+    destinationPlanet,
+    originRegion: oReg,
+    destinationRegion: dReg,
+    path,
+    routeNames,
+    routeHopsSynthetic,
+    travelTimeHours,
+    regionsCrossed,
+    planetsPassed,
+    hyperdriveMult: mult,
+    pathMaxTier: 4,
+    pathDcBonusTotal: 2,
+    routeDescription: buildAdvancedRouteDescription({
+      originName: originPlanet.name,
+      destName: destinationPlanet.name,
+      travelTimeFormatted: formatTravelTime(travelTimeHours),
+      path,
+      routeNames,
+      routeHopsSynthetic,
+      hyperdriveMult: mult
+    }),
+    usedRegionalAdvancedFallback: true,
+    advancedFallbackReason: reason,
+    routeUiWarnings,
+    warnings: [...extraWarnings]
+  };
 }
 
 /**
@@ -292,11 +557,17 @@ export async function calculateRouteAdvanced(originPlanet, destinationPlanet, hy
     destinationRegion: destinationPlanet?.region ?? null,
     path: [],
     routeNames: [],
+    routeHopsSynthetic: [],
     travelTimeHours: 0,
     regionsCrossed: [],
     planetsPassed: [],
     hyperdriveMult: mult,
+    pathMaxTier: 0,
+    pathDcBonusTotal: 0,
     routeDescription: "",
+    usedRegionalAdvancedFallback: false,
+    advancedFallbackReason: null,
+    routeUiWarnings: [],
     warnings: [...warnings]
   });
 
@@ -315,46 +586,88 @@ export async function calculateRouteAdvanced(originPlanet, destinationPlanet, hy
       destinationRegion: destinationPlanet.region ?? null,
       path: [originPlanet.name],
       routeNames: [],
+      routeHopsSynthetic: [],
       travelTimeHours: 0,
       regionsCrossed: r ? [r] : [],
       planetsPassed: [],
       hyperdriveMult: mult,
+      pathMaxTier: 0,
+      pathDcBonusTotal: 0,
       routeDescription: `Curated hyperlanes: already at ${originPlanet.name}; no jump required.`,
+      usedRegionalAdvancedFallback: false,
+      advancedFallbackReason: null,
+      routeUiWarnings: [],
       warnings: []
     };
   }
 
-  let graph;
-  try {
-    const { routes } = await loadHyperspaceRoutes();
-    graph = buildGraph(routes);
-  } catch (_err) {
-    return fail([
-      "No curated hyperspace lane route found. Falling back to region-based estimate.",
-      "Hyperspace route data could not be loaded."
-    ]);
-  }
-
-  const solution = dijkstraShortestPath(graph, originPlanet.name, destinationPlanet.name, mult);
-  if (!solution) {
-    return fail([
-      "No curated hyperspace lane route found. Falling back to region-based estimate.",
-      "These worlds are not connected in the curated prototype hyperlane graph."
-    ]);
-  }
-
   /** @type {Map<string, string | undefined>} */
   const regionByName = new Map();
+  /** @type {Map<string, { x: number, y: number }>} */
+  const planetCoordMap = new Map();
   try {
     const planets = await loadPlanetData();
-    for (const p of planets) regionByName.set(p.name, p.region);
+    for (const p of planets) {
+      if (!p?.name) continue;
+      regionByName.set(p.name, p.region);
+      const xy = planetXYFromRecord(p);
+      if (xy) planetCoordMap.set(p.name, xy);
+    }
   } catch (_e) {
     /* regions list may stay empty */
   }
 
-  const { path, routeNames, travelTimeHours } = solution;
+  let routes = null;
+  let graph;
+  try {
+    const loaded = await loadHyperspaceRoutes();
+    routes = loaded.routes;
+    const filtered = filterHyperspaceRoutesForSettings(routes);
+    logDebug(`Advanced graph: ${routes.length} routes, ${filtered.length} after tier/obscure filter.`);
+    graph = buildGraph(filtered);
+  } catch (_err) {
+    return regionalAdvancedRouteFallback(originPlanet, destinationPlanet, mult, regionByName, {
+      reason: ADVANCED_FALLBACK_REASON.DATA_ERROR,
+      extraWarnings: []
+    });
+  }
+
+  const startName = originPlanet.name;
+  const endName = destinationPlanet.name;
+  let solution = aStarShortestPath(graph, startName, endName, mult, planetCoordMap);
+  if (!solution && routes) {
+    const fullGraph = buildGraph(routes);
+    const verts = collectGraphVertices(fullGraph);
+    /** @type {AdvancedFallbackReason} */
+    let fbReason = ADVANCED_FALLBACK_REASON.NO_LANE_PATH;
+    if (!verts.has(startName) || !verts.has(endName)) {
+      fbReason = ADVANCED_FALLBACK_REASON.MISSING_COORDINATES;
+    } else {
+      const fullSol = aStarShortestPath(fullGraph, startName, endName, mult, planetCoordMap);
+      if (fullSol) fbReason = ADVANCED_FALLBACK_REASON.FILTERED_LANES_ONLY;
+    }
+    return regionalAdvancedRouteFallback(originPlanet, destinationPlanet, mult, regionByName, {
+      reason: fbReason,
+      extraWarnings: []
+    });
+  }
+
+  const {
+    path,
+    routeNames,
+    routeHopsSynthetic,
+    travelTimeHours,
+    pathDcBonusTotal,
+    pathMaxTier,
+    tier5Hops
+  } = solution;
   const planetsPassed = path.slice(1, -1);
   const regionsCrossed = regionsAlongPath(regionByName, path);
+
+  const tier5Extra = Number(game.settings?.get?.(MODULE_ID, SETTING_KEYS.advancedTier5ExtraDc) ?? 0);
+  const safeExtra = Number.isFinite(tier5Extra) && tier5Extra > 0 ? tier5Extra : 0;
+  const extraFromTier5 = safeExtra * tier5Hops;
+  const totalLaneDcBonus = pathDcBonusTotal + extraFromTier5;
 
   return {
     mode: "advanced",
@@ -365,18 +678,25 @@ export async function calculateRouteAdvanced(originPlanet, destinationPlanet, hy
     destinationRegion: destinationPlanet.region ?? null,
     path,
     routeNames,
+    routeHopsSynthetic,
     travelTimeHours,
     regionsCrossed,
     planetsPassed,
     hyperdriveMult: mult,
+    pathMaxTier,
+    pathDcBonusTotal: totalLaneDcBonus,
     routeDescription: buildAdvancedRouteDescription({
       originName: originPlanet.name,
       destName: destinationPlanet.name,
-      travelTimeHours,
+      travelTimeFormatted: formatTravelTime(travelTimeHours),
       path,
       routeNames,
+      routeHopsSynthetic,
       hyperdriveMult: mult
     }),
+    usedRegionalAdvancedFallback: false,
+    advancedFallbackReason: null,
+    routeUiWarnings: [],
     warnings: []
   };
 }

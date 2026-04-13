@@ -15,6 +15,81 @@ import { calculateTravelResources, getPilotingCheckDC } from "./travel-calculato
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
+/**
+ * Collapse consecutive identical lane labels (same name and same synthetic flag).
+ * @param {string[]} names
+ * @param {boolean[]} syntheticFlags
+ */
+function collapseRouteLaneRows(names, syntheticFlags) {
+  const rows = [];
+  const synList = syntheticFlags ?? [];
+  const n = names?.length ?? 0;
+  let i = 0;
+  while (i < n) {
+    const laneName = names[i];
+    const syn = Boolean(synList[i]);
+    let count = 1;
+    while (
+      i + count < n &&
+      names[i + count] === laneName &&
+      Boolean(synList[i + count]) === syn
+    ) {
+      count++;
+    }
+    const label = count > 1 ? `${laneName} ×${count}` : laneName;
+    rows.push({
+      name: label,
+      synthetic: syn,
+      syntheticTitle: syn ? game.i18n.localize("SW5ENAVCOMPUTER.App.LaneSyntheticTooltip") : ""
+    });
+    i += count;
+  }
+  return rows;
+}
+
+const FALLBACK_REASON_TO_I18N = {
+  NO_LANE_PATH: "NoLanePath",
+  MISSING_COORDINATES: "MissingCoordinates",
+  FILTERED_LANES_ONLY: "FilteredLanesOnly",
+  DATA_ERROR: "DataError"
+};
+
+/**
+ * Localized inline banners for Advanced regional fallback (no modal UI).
+ * @param {object | null | undefined} routeResult
+ * @returns {{ message: string, emphasis: boolean }[]}
+ */
+function buildAdvancedInlineWarnings(routeResult) {
+  if (!routeResult || routeResult.mode !== "advanced" || !routeResult.usedRegionalAdvancedFallback) {
+    return [];
+  }
+  const out = [];
+  for (const w of routeResult.routeUiWarnings ?? []) {
+    if (w.code === "ADVANCED_FALLBACK" && w.reason && FALLBACK_REASON_TO_I18N[w.reason]) {
+      const key = `SW5ENAVCOMPUTER.App.AdvancedFallback.${FALLBACK_REASON_TO_I18N[w.reason]}`;
+      out.push({ message: game.i18n.localize(key), emphasis: false });
+    } else if (w.code === "LONG_DISTANCE_FALLBACK_ESTIMATE") {
+      out.push({
+        message: game.i18n.localize("SW5ENAVCOMPUTER.App.AdvancedFallback.LongDistanceEstimateWarning"),
+        emphasis: true
+      });
+    }
+  }
+  return out;
+}
+
+/** Regions: drop consecutive duplicates, then unique-only in first-seen order; display arc. */
+function buildRegionsJourneyArc(regions) {
+  if (!Array.isArray(regions) || !regions.length) return "";
+  const collapsed = [];
+  for (const r of regions) {
+    if (r == null || r === "") continue;
+    if (collapsed[collapsed.length - 1] !== r) collapsed.push(r);
+  }
+  const unique = [...new Set(collapsed)];
+  return unique.join(" → ");
+}
+
 export class NavComputerApp extends HandlebarsApplicationMixin(ApplicationV2) {
   selectedOrigin = "";
 
@@ -127,7 +202,8 @@ export class NavComputerApp extends HandlebarsApplicationMixin(ApplicationV2) {
       showAdvancedHyperlaneDetails: Boolean(
         this._routeBasicResult?.mode === "advanced" && this._routeBasicResult?.advancedRouteFound
       ),
-      advancedCuratedFallback: Boolean(this._routeBasicResult?.advancedCuratedFallback)
+      advancedCuratedFallback: Boolean(this._routeBasicResult?.advancedCuratedFallback),
+      advancedInlineWarnings: buildAdvancedInlineWarnings(this._routeBasicResult)
     };
   }
 
@@ -173,35 +249,47 @@ export class NavComputerApp extends HandlebarsApplicationMixin(ApplicationV2) {
     let result;
     if (currentMode === "advanced") {
       const advanced = await calculateRouteAdvanced(originPlanet, destinationPlanet, hyperMult);
-      if (advanced.advancedRouteFound) {
-        result = foundry.utils.deepClone(advanced);
-        result.advancedCuratedFallback = false;
-      } else {
-        result = foundry.utils.deepClone(calculateRouteBasic(originPlanet, destinationPlanet));
-        result.advancedCuratedFallback = true;
-        result.warnings = [...(result.warnings ?? []), ...(advanced.warnings ?? [])];
-      }
+      result = foundry.utils.deepClone(advanced);
+      result.advancedCuratedFallback = Boolean(result.usedRegionalAdvancedFallback);
     } else {
       result = calculateRouteBasic(originPlanet, destinationPlanet);
       result = foundry.utils.deepClone(result);
       result.advancedCuratedFallback = false;
+      result.usedRegionalAdvancedFallback = false;
+      result.advancedFallbackReason = null;
+      result.routeUiWarnings = [];
     }
 
+    const hopSynthetic = result.routeHopsSynthetic ?? [];
+    let curatedHops = 0;
+    let syntheticHops = 0;
+    for (let hi = 0; hi < hopSynthetic.length; hi++) {
+      if (hopSynthetic[hi]) syntheticHops++;
+      else curatedHops++;
+    }
+
+    const routeLaneRows = collapseRouteLaneRows(result.routeNames ?? [], hopSynthetic);
+    const regionsJourneyArc = buildRegionsJourneyArc(result.regionsCrossed ?? []);
+
     const travelResources = calculateTravelResources(result.travelTimeHours ?? 0, shipActor);
-    const laneHops =
-      result.mode === "advanced" && result.advancedRouteFound
-        ? Math.max(0, (result.path?.length ?? 1) - 1)
-        : 0;
+    const laneDcBonus = Number(result.pathDcBonusTotal ?? 0);
+    const pathMaxTier = Number(result.pathMaxTier ?? 0);
+    const advancedOk = currentMode === "advanced" && result.advancedRouteFound;
     const pilotingCheck = getPilotingCheckDC(
       result.originRegion,
       result.destinationRegion,
-      currentMode === "advanced" && result.advancedRouteFound ? "advanced" : "basic",
-      laneHops
+      advancedOk ? "advanced" : "basic",
+      advancedOk ? curatedHops : 0,
+      advancedOk ? syntheticHops : 0,
+      Number.isFinite(laneDcBonus) ? laneDcBonus : 0,
+      Number.isFinite(pathMaxTier) ? pathMaxTier : 0
     );
 
     this._routeBasicResult = foundry.utils.mergeObject(foundry.utils.deepClone(result), {
       travelResources,
-      pilotingCheck
+      pilotingCheck,
+      routeLaneRows,
+      regionsJourneyArc
     });
     this._routeError = null;
     await this.render(true);

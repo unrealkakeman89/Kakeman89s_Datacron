@@ -100,10 +100,13 @@
   <section class="nav-computer-panel nav-computer-status">
     <h2 class="nav-computer-section-title">{{localize "SW5ENAVCOMPUTER.App.ResultsLabel"}}</h2>
     {{#if routeBasicResult}}
-      {{#if advancedCuratedFallback}}
-        <p class="nav-computer-advanced-fallback-banner" role="status">
-          {{localize "SW5ENAVCOMPUTER.App.AdvancedFallbackBanner"}}
-        </p>
+      {{#if advancedInlineWarnings.length}}
+        {{#each advancedInlineWarnings}}
+          <p
+            class="nav-computer-inline-warning{{#if emphasis}} nav-computer-inline-warning--emphasis{{/if}}"
+            role="status"
+          >{{message}}</p>
+        {{/each}}
       {{/if}}
       {{#if showAdvancedHyperlaneDetails}}
         <p class="nav-computer-curated-note">{{localize "SW5ENAVCOMPUTER.App.AdvancedCuratedPrototypeNote"}}</p>
@@ -124,10 +127,22 @@
           </dd>
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultAdvancedLanes"}}</dt>
           <dd>
-            {{#if routeBasicResult.routeNames.length}}
+            {{#if routeBasicResult.routeLaneRows.length}}
+              <ul class="nav-computer-lane-list">
+                {{#each routeBasicResult.routeLaneRows}}
+                  <li
+                    class="{{#if synthetic}}nav-computer-lane-synthetic{{else}}nav-computer-lane-named{{/if}}"
+                    {{#if synthetic}}title="{{syntheticTitle}}"{{/if}}
+                  >
+                    {{#if synthetic}}<span class="nav-computer-lane-glyph" aria-hidden="true">~</span>{{else}}<span class="nav-computer-lane-glyph" aria-hidden="true">&#10022;</span>{{/if}}
+                    <span class="nav-computer-lane-label">{{name}}</span>
+                  </li>
+                {{/each}}
+              </ul>
+            {{else if routeBasicResult.routeNames.length}}
               <ul class="nav-computer-lane-list">
                 {{#each routeBasicResult.routeNames}}
-                  <li>{{this}}</li>
+                  <li class="nav-computer-lane-named"><span class="nav-computer-lane-glyph" aria-hidden="true">&#10022;</span> <span class="nav-computer-lane-label">{{this}}</span></li>
                 {{/each}}
               </ul>
             {{else}}
@@ -136,12 +151,18 @@
           </dd>
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultHyperdriveMult"}}</dt>
           <dd>×{{routeBasicResult.hyperdriveMult}}</dd>
+          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultPathMaxTier"}}</dt>
+          <dd>{{#if routeBasicResult.pathMaxTier}}{{routeBasicResult.pathMaxTier}}{{else}}—{{/if}}</dd>
         {{/if}}
         <dt>{{localize "SW5ENAVCOMPUTER.App.ResultTravelHours"}}</dt>
-        <dd>{{routeBasicResult.travelTimeHours}}</dd>
+        <dd>
+          {{#if routeBasicResult.travelResources}}
+            {{routeBasicResult.travelResources.travelTimeFormatted}}
+          {{else}}
+            {{routeBasicResult.travelTimeHours}}
+          {{/if}}
+        </dd>
         {{#if routeBasicResult.travelResources}}
-          <dt>{{localize "SW5ENAVCOMPUTER.App.ResultTravelDays"}}</dt>
-          <dd>{{routeBasicResult.travelResources.travelDaysDisplay}}</dd>
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultCrewSize"}}</dt>
           <dd>{{routeBasicResult.travelResources.crewSize}}</dd>
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultFuelRequired"}}</dt>
@@ -149,7 +170,7 @@
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultFoodRequired"}}</dt>
           <dd>{{routeBasicResult.travelResources.foodRequired}} {{routeBasicResult.travelResources.foodUnit}}</dd>
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultSuppliesRequired"}}</dt>
-          <dd>{{routeBasicResult.travelResources.suppliesRequired}}</dd>
+          <dd>{{routeBasicResult.travelResources.suppliesRequired}} {{localize "SWNAVCOMP.Results.SuppliesUnit"}}</dd>
         {{/if}}
         {{#if routeBasicResult.pilotingCheck}}
           <dt>{{localize "SW5ENAVCOMPUTER.App.ResultPilotingDc"}}</dt>
@@ -165,8 +186,8 @@
         {{/if}}
         <dt>{{localize "SW5ENAVCOMPUTER.App.ResultRegionsCrossed"}}</dt>
         <dd>
-          {{#if routeBasicResult.regionsCrossed.length}}
-            {{#each routeBasicResult.regionsCrossed}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}
+          {{#if routeBasicResult.regionsJourneyArc}}
+            {{routeBasicResult.regionsJourneyArc}}
           {{else}}
             —
           {{/if}}

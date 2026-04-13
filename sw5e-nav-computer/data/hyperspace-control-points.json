@@ -1,0 +1,11 @@
+{
+  "comment": "Affine calibration from planet (x,y) or synthetic grid xy to CRS84 on the GeoJSON map. Six well-spread anchors from `python scripts/build-hyperspace-graph.py --suggest-control-points` (nearest GeoJSON vertex per world). This set balanced connectivity in tests better than eight or ten bootstrap points; refine lon/lat from your source map when possible.",
+  "controlPoints": [
+    { "name": "Coruscant", "lon": -91.822377, "lat": 27.122494 },
+    { "name": "Tatooine", "lon": 31.454421, "lat": -54.0509 },
+    { "name": "Eriadu", "lon": 21.022582, "lat": -60.050939 },
+    { "name": "Kuat", "lon": -82.271146, "lat": 23.659766 },
+    { "name": "Naboo", "lon": -12.743948, "lat": -7.50472 },
+    { "name": "Ryloth", "lon": 21.03689, "lat": -23.587203 }
+  ]
+}

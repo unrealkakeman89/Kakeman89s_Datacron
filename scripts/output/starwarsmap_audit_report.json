@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "generatedBy": "starwarsmap_audit.py",
+    "starwarsmapRoot": "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\StarWarsMap",
+    "sourceFilesInspected": [
+      "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\StarWarsMap\\map_api\\data\\hyperlanes_db.json",
+      "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\StarWarsMap\\map_api\\data\\grid_db.json",
+      "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\StarWarsMap\\map_api\\data\\regions_db.json",
+      "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\sw5e-nav-computer\\data\\planets.json",
+      "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\sw5e-nav-computer\\data\\hyperspace-routes.json"
+    ],
+    "safeForImportPlanning": true
+  },
+  "schemas": {
+    "hyperlanes_db": {
+      "topLevelType": "dict",
+      "interpretation": "Object mapping route name (string) -> ordered list of planet name strings; each list is an implicit path along that lane (consecutive pairs would be hops). No per-hop metadata (tier, travel time, region) at this level. Directionality is implicit: lists are ordered; bidirectional travel is not stated in file.",
+      "routeCount": 60,
+      "valueShapes": [],
+      "notes": [],
+      "sampleKeys": [
+        "Rimma Trade Route",
+        "Corellinan Run",
+        "Corellian Trade Spine",
+        "Hydian Way",
+        "Perlemian Trade Route"
+      ],
+      "maxChainLength": 86
+    },
+    "grid_db": {
+      "topLevelType": "dict",
+      "interpretation": "Object mapping grid cell id (e.g. 'K-9') -> list of planet records. Each record typically has name, coords ([x,y] floats in map space), is_canon. This is not the same keying as hyperlanes_db (planet names vs grid cells).",
+      "topLevelKeyCount": 240,
+      "sampleKeys": [
+        "K-9",
+        "M-8",
+        "P-8",
+        "C-16",
+        "S-9",
+        "K-10",
+        "K-11",
+        "K-12"
+      ],
+      "entryFieldKeys": [
+        "coords",
+        "is_canon",
+        "name"
+      ],
+      "notes": []
+    },
+    "regions_db": {
+      "topLevelType": "dict",
+      "interpretation": "Object mapping region name -> object mapping sector name -> list of planet records (name, coords, is_canon). Independent hierarchy from hyperlanes_db.",
+      "regionCount": 10,
+      "sampleRegions": [
+        "Core",
+        "Inner Rim",
+        "Mid Rim",
+        "Unknown Regions",
+        "Deep Core"
+      ],
+      "sectorEntryFields": [
+        "coords",
+        "is_canon",
+        "name"
+      ],
+      "notes": []
+    }
+  },
+  "counts": {
+    "starwarsmapPlanetsReferenced": 707,
+    "starwarsmapUniqueLaneNames": 60,
+    "localPlanets": 2028,
+    "localRouteSegments": 2094,
+    "missingPlanetExactMatches": 1,
+    "missingLaneNameExactMatches": 3,
+    "localPlanetsWithoutCoords": 3,
+    "sourcePlanetsWithoutCoords": 0
+  },
+  "examples": {
+    "sampleLaneNames": [
+      "Ado Spine",
+      "Ansion Spur",
+      "Bothan Run",
+      "Byss Run",
+      "Celanon Spur",
+      "Cerean Reach",
+      "Commenor Run",
+      "Corellian Trade Spine",
+      "Corellinan Run",
+      "D'aelgoth Trade Route",
+      "Duros Space Run",
+      "Elgit-M'Hanna Corridor",
+      "Enarc Run",
+      "Entralla Route",
+      "Fedalle Run"
+    ],
+    "sampleUnmatchedPlanetNames": [
+      "Kailor V"
+    ],
+    "sampleUnmatchedLaneNames": [
+      "Corellinan Run",
+      "Path Of The Houses",
+      "Way Of Schesa"
+    ]
+  },
+  "notes": [
+    "All five JSON files parsed; hyperlanes_db/grid_db/regions_db match expected top-level types."
+  ]
+}

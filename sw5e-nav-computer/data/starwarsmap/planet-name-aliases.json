@@ -1,0 +1,6 @@
+{
+  "comment": "Map StarWarsMap hyperlane world labels to names in planets.json when they differ.",
+  "aliases": {
+    "Kailor V": "Kailor"
+  }
+}

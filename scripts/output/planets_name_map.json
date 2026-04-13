@@ -1,0 +1,8203 @@
+{
+  "metadata": {
+    "generatedBy": "normalize_planet_names.py",
+    "doNotEditBlindly": true,
+    "starwarsmapRoot": "C:\\Users\\ckauble\\OneDrive - Riverside Bank of Dublin\\Documents\\GitHub\\NaviComputer\\StarWarsMap",
+    "sourcePlanetCount": 2048,
+    "localPlanetCount": 2029
+  },
+  "matches": {
+    "A-Foroon": {
+      "status": "exact_match",
+      "mappedTo": "A-Foroon"
+    },
+    "Aaeton": {
+      "status": "exact_match",
+      "mappedTo": "Aaeton"
+    },
+    "Aargau": {
+      "status": "exact_match",
+      "mappedTo": "Aargau"
+    },
+    "Aargonar": {
+      "status": "exact_match",
+      "mappedTo": "Aargonar"
+    },
+    "Abafar": {
+      "status": "exact_match",
+      "mappedTo": "Abafar"
+    },
+    "Abbaji": {
+      "status": "exact_match",
+      "mappedTo": "Abbaji"
+    },
+    "Abhean": {
+      "status": "exact_match",
+      "mappedTo": "Abhean"
+    },
+    "Abo Dreth": {
+      "status": "exact_match",
+      "mappedTo": "Abo Dreth"
+    },
+    "Abraxas": {
+      "status": "exact_match",
+      "mappedTo": "Abraxas"
+    },
+    "Abregado-rae": {
+      "status": "exact_match",
+      "mappedTo": "Abregado-rae"
+    },
+    "Abridon": {
+      "status": "exact_match",
+      "mappedTo": "Abridon"
+    },
+    "Absit": {
+      "status": "exact_match",
+      "mappedTo": "Absit"
+    },
+    "Adari": {
+      "status": "exact_match",
+      "mappedTo": "Adari"
+    },
+    "Adarlon": {
+      "status": "exact_match",
+      "mappedTo": "Adarlon"
+    },
+    "Adin": {
+      "status": "exact_match",
+      "mappedTo": "Adin"
+    },
+    "Adoris": {
+      "status": "exact_match",
+      "mappedTo": "Adoris"
+    },
+    "Aduba": {
+      "status": "exact_match",
+      "mappedTo": "Aduba"
+    },
+    "Adumar": {
+      "status": "exact_match",
+      "mappedTo": "Adumar"
+    },
+    "Aeneid": {
+      "status": "exact_match",
+      "mappedTo": "Aeneid"
+    },
+    "Aeten": {
+      "status": "exact_match",
+      "mappedTo": "Aeten"
+    },
+    "Af'El": {
+      "status": "exact_match",
+      "mappedTo": "Af'El"
+    },
+    "Affa": {
+      "status": "exact_match",
+      "mappedTo": "Affa"
+    },
+    "Affavan": {
+      "status": "exact_match",
+      "mappedTo": "Affavan"
+    },
+    "Agamar": {
+      "status": "exact_match",
+      "mappedTo": "Agamar"
+    },
+    "Agon": {
+      "status": "exact_match",
+      "mappedTo": "Agon"
+    },
+    "Aguarl": {
+      "status": "exact_match",
+      "mappedTo": "Aguarl"
+    },
+    "Ahakista": {
+      "status": "exact_match",
+      "mappedTo": "Ahakista"
+    },
+    "Ahch-To": {
+      "status": "exact_match",
+      "mappedTo": "Ahch-To"
+    },
+    "Aikhibba": {
+      "status": "exact_match",
+      "mappedTo": "Aikhibba"
+    },
+    "Ailon": {
+      "status": "exact_match",
+      "mappedTo": "Ailon"
+    },
+    "Ajan Kloss": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Akrit'tar": {
+      "status": "exact_match",
+      "mappedTo": "Akrit'tar"
+    },
+    "Akuria": {
+      "status": "exact_match",
+      "mappedTo": "Akuria"
+    },
+    "Alakatha": {
+      "status": "exact_match",
+      "mappedTo": "Alakatha"
+    },
+    "Alashan": {
+      "status": "exact_match",
+      "mappedTo": "Alashan"
+    },
+    "Alassa Major": {
+      "status": "exact_match",
+      "mappedTo": "Alassa Major"
+    },
+    "Alderaan": {
+      "status": "exact_match",
+      "mappedTo": "Alderaan"
+    },
+    "Aldraig": {
+      "status": "exact_match",
+      "mappedTo": "Aldraig"
+    },
+    "Alee": {
+      "status": "exact_match",
+      "mappedTo": "Alee"
+    },
+    "Aleen": {
+      "status": "exact_match",
+      "mappedTo": "Aleen"
+    },
+    "Algara": {
+      "status": "exact_match",
+      "mappedTo": "Algara"
+    },
+    "Algarian": {
+      "status": "exact_match",
+      "mappedTo": "Algarian"
+    },
+    "Algnadesh": {
+      "status": "exact_match",
+      "mappedTo": "Algnadesh"
+    },
+    "Algor": {
+      "status": "exact_match",
+      "mappedTo": "Algor"
+    },
+    "Alland": {
+      "status": "exact_match",
+      "mappedTo": "Alland"
+    },
+    "Allanteen": {
+      "status": "exact_match",
+      "mappedTo": "Allanteen"
+    },
+    "Allyuen": {
+      "status": "exact_match",
+      "mappedTo": "Allyuen"
+    },
+    "Almania": {
+      "status": "exact_match",
+      "mappedTo": "Almania"
+    },
+    "Alpheridies": {
+      "status": "exact_match",
+      "mappedTo": "Alpheridies"
+    },
+    "Alsakan": {
+      "status": "exact_match",
+      "mappedTo": "Alsakan"
+    },
+    "Altier": {
+      "status": "exact_match",
+      "mappedTo": "Altier"
+    },
+    "Altor": {
+      "status": "exact_match",
+      "mappedTo": "Altor"
+    },
+    "Altratonne": {
+      "status": "exact_match",
+      "mappedTo": "Altratonne"
+    },
+    "Altyr V": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Alui": {
+      "status": "exact_match",
+      "mappedTo": "Alui"
+    },
+    "Alzoc": {
+      "status": "exact_match",
+      "mappedTo": "Alzoc"
+    },
+    "Amarin": {
+      "status": "exact_match",
+      "mappedTo": "Amarin"
+    },
+    "Ambria": {
+      "status": "exact_match",
+      "mappedTo": "Ambria"
+    },
+    "Ammuud": {
+      "status": "exact_match",
+      "mappedTo": "Ammuud"
+    },
+    "Anantapar": {
+      "status": "exact_match",
+      "mappedTo": "Anantapar"
+    },
+    "Anaxes": {
+      "status": "exact_match",
+      "mappedTo": "Anaxes"
+    },
+    "Andalasa": {
+      "status": "exact_match",
+      "mappedTo": "Andalasa"
+    },
+    "Andalia": {
+      "status": "exact_match",
+      "mappedTo": "Andalia"
+    },
+    "Andara": {
+      "status": "exact_match",
+      "mappedTo": "Andara"
+    },
+    "Andelm IV": {
+      "status": "exact_match",
+      "mappedTo": "Andelm IV"
+    },
+    "Ando": {
+      "status": "exact_match",
+      "mappedTo": "Ando"
+    },
+    "Andooweel": {
+      "status": "exact_match",
+      "mappedTo": "Andooweel"
+    },
+    "Andosha": {
+      "status": "exact_match",
+      "mappedTo": "Andosha"
+    },
+    "Anemcoro": {
+      "status": "exact_match",
+      "mappedTo": "Anemcoro"
+    },
+    "Angor": {
+      "status": "exact_match",
+      "mappedTo": "Angor"
+    },
+    "Angratha": {
+      "status": "exact_match",
+      "mappedTo": "Angratha"
+    },
+    "Ank Kit'aar": {
+      "status": "exact_match",
+      "mappedTo": "Ank Kit'aar"
+    },
+    "Ankus": {
+      "status": "exact_match",
+      "mappedTo": "Ankus"
+    },
+    "Annaj": {
+      "status": "exact_match",
+      "mappedTo": "Annaj"
+    },
+    "Anoat": {
+      "status": "exact_match",
+      "mappedTo": "Anoat"
+    },
+    "Anobis": {
+      "status": "exact_match",
+      "mappedTo": "Anobis"
+    },
+    "Anorelga": {
+      "status": "exact_match",
+      "mappedTo": "Anorelga"
+    },
+    "Anoth": {
+      "status": "exact_match",
+      "mappedTo": "Anoth"
+    },
+    "Ansion": {
+      "status": "exact_match",
+      "mappedTo": "Ansion"
+    },
+    "Anstares": {
+      "status": "exact_match",
+      "mappedTo": "Anstares"
+    },
+    "Antar": {
+      "status": "exact_match",
+      "mappedTo": "Antar"
+    },
+    "Anteevy": {
+      "status": "exact_match",
+      "mappedTo": "Anteevy"
+    },
+    "Antemeridias": {
+      "status": "exact_match",
+      "mappedTo": "Antemeridias"
+    },
+    "Antipose": {
+      "status": "exact_match",
+      "mappedTo": "Antipose"
+    },
+    "Antiquity": {
+      "status": "exact_match",
+      "mappedTo": "Antiquity"
+    },
+    "Anturus": {
+      "status": "exact_match",
+      "mappedTo": "Anturus"
+    },
+    "Anx Minor": {
+      "status": "exact_match",
+      "mappedTo": "Anx Minor"
+    },
+    "Anzat": {
+      "status": "exact_match",
+      "mappedTo": "Anzat"
+    },
+    "Apatros": {
+      "status": "exact_match",
+      "mappedTo": "Apatros"
+    },
+    "Aphran": {
+      "status": "exact_match",
+      "mappedTo": "Aphran"
+    },
+    "Aquaris": {
+      "status": "exact_match",
+      "mappedTo": "Aquaris"
+    },
+    "Aquella": {
+      "status": "exact_match",
+      "mappedTo": "Aquella"
+    },
+    "Aquilae": {
+      "status": "exact_match",
+      "mappedTo": "Aquilae"
+    },
+    "Arabanth": {
+      "status": "exact_match",
+      "mappedTo": "Arabanth"
+    },
+    "Aradia": {
+      "status": "exact_match",
+      "mappedTo": "Aradia"
+    },
+    "Arami": {
+      "status": "exact_match",
+      "mappedTo": "Arami"
+    },
+    "Arat Fraca": {
+      "status": "exact_match",
+      "mappedTo": "Arat Fraca"
+    },
+    "Arbra": {
+      "status": "exact_match",
+      "mappedTo": "Arbra"
+    },
+    "Arcan": {
+      "status": "exact_match",
+      "mappedTo": "Arcan"
+    },
+    "Archais": {
+      "status": "exact_match",
+      "mappedTo": "Archais"
+    },
+    "Arda": {
+      "status": "exact_match",
+      "mappedTo": "Arda"
+    },
+    "Argai": {
+      "status": "exact_match",
+      "mappedTo": "Argai"
+    },
+    "Argai Minor": {
+      "status": "exact_match",
+      "mappedTo": "Argai Minor"
+    },
+    "Argazda": {
+      "status": "exact_match",
+      "mappedTo": "Argazda"
+    },
+    "Argovia": {
+      "status": "exact_match",
+      "mappedTo": "Argovia"
+    },
+    "Argul": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Argus": {
+      "status": "exact_match",
+      "mappedTo": "Argus"
+    },
+    "Aridus": {
+      "status": "exact_match",
+      "mappedTo": "Aridus"
+    },
+    "Aris": {
+      "status": "exact_match",
+      "mappedTo": "Aris"
+    },
+    "Arkam": {
+      "status": "exact_match",
+      "mappedTo": "Arkam"
+    },
+    "Arkania": {
+      "status": "exact_match",
+      "mappedTo": "Arkania"
+    },
+    "Arkanis": {
+      "status": "exact_match",
+      "mappedTo": "Arkanis"
+    },
+    "Arkuda": {
+      "status": "exact_match",
+      "mappedTo": "Arkuda"
+    },
+    "Arleen": {
+      "status": "exact_match",
+      "mappedTo": "Arleen"
+    },
+    "Arporatal-Lanin": {
+      "status": "exact_match",
+      "mappedTo": "Arporatal-Lanin"
+    },
+    "Arrgaw": {
+      "status": "exact_match",
+      "mappedTo": "Arrgaw"
+    },
+    "Artesia": {
+      "status": "exact_match",
+      "mappedTo": "Artesia"
+    },
+    "Aruza": {
+      "status": "exact_match",
+      "mappedTo": "Aruza"
+    },
+    "Asation": {
+      "status": "exact_match",
+      "mappedTo": "Asation"
+    },
+    "Ashas Ree": {
+      "status": "exact_match",
+      "mappedTo": "Ashas Ree"
+    },
+    "Askaj": {
+      "status": "exact_match",
+      "mappedTo": "Askaj"
+    },
+    "Asmeru": {
+      "status": "exact_match",
+      "mappedTo": "Asmeru"
+    },
+    "Asmeru Anomaly": {
+      "status": "exact_match",
+      "mappedTo": "Asmeru Anomaly"
+    },
+    "Asrat": {
+      "status": "exact_match",
+      "mappedTo": "Asrat"
+    },
+    "Ast Kikorie": {
+      "status": "exact_match",
+      "mappedTo": "Ast Kikorie"
+    },
+    "Atapap I": {
+      "status": "exact_match",
+      "mappedTo": "Atapap I"
+    },
+    "Atchorb": {
+      "status": "exact_match",
+      "mappedTo": "Atchorb"
+    },
+    "Athiss": {
+      "status": "exact_match",
+      "mappedTo": "Athiss"
+    },
+    "Atollon": {
+      "status": "exact_match",
+      "mappedTo": "Atollon"
+    },
+    "Ator": {
+      "status": "exact_match",
+      "mappedTo": "Ator"
+    },
+    "Atorra": {
+      "status": "exact_match",
+      "mappedTo": "Atorra"
+    },
+    "Atravis": {
+      "status": "exact_match",
+      "mappedTo": "Atravis"
+    },
+    "Atron": {
+      "status": "exact_match",
+      "mappedTo": "Atron"
+    },
+    "Attahox": {
+      "status": "exact_match",
+      "mappedTo": "Attahox"
+    },
+    "Atzerri": {
+      "status": "exact_match",
+      "mappedTo": "Atzerri"
+    },
+    "Austan": {
+      "status": "exact_match",
+      "mappedTo": "Austan"
+    },
+    "Avenelle": {
+      "status": "exact_match",
+      "mappedTo": "Avenelle"
+    },
+    "Averam": {
+      "status": "exact_match",
+      "mappedTo": "Averam"
+    },
+    "Avidich": {
+      "status": "exact_match",
+      "mappedTo": "Avidich"
+    },
+    "Axxila": {
+      "status": "exact_match",
+      "mappedTo": "Axxila"
+    },
+    "Aylayl": {
+      "status": "exact_match",
+      "mappedTo": "Aylayl"
+    },
+    "Azbrian": {
+      "status": "exact_match",
+      "mappedTo": "Azbrian"
+    },
+    "Aztubek": {
+      "status": "exact_match",
+      "mappedTo": "Aztubek"
+    },
+    "Azure": {
+      "status": "exact_match",
+      "mappedTo": "Azure"
+    },
+    "Azzameen Station": {
+      "status": "exact_match",
+      "mappedTo": "Azzameen Station"
+    },
+    "B'trilla": {
+      "status": "exact_match",
+      "mappedTo": "B'trilla"
+    },
+    "B-Foroon": {
+      "status": "exact_match",
+      "mappedTo": "B-Foroon"
+    },
+    "Babbadod": {
+      "status": "exact_match",
+      "mappedTo": "Babbadod"
+    },
+    "Bacrana": {
+      "status": "exact_match",
+      "mappedTo": "Bacrana"
+    },
+    "Bahalian": {
+      "status": "exact_match",
+      "mappedTo": "Bahalian"
+    },
+    "Bajic": {
+      "status": "exact_match",
+      "mappedTo": "Bajic"
+    },
+    "Bakura": {
+      "status": "exact_match",
+      "mappedTo": "Bakura"
+    },
+    "Balamak": {
+      "status": "exact_match",
+      "mappedTo": "Balamak"
+    },
+    "Baldavia": {
+      "status": "exact_match",
+      "mappedTo": "Baldavia"
+    },
+    "Balis-Baurgh": {
+      "status": "exact_match",
+      "mappedTo": "Balis-Baurgh"
+    },
+    "Balmorra": {
+      "status": "exact_match",
+      "mappedTo": "Balmorra"
+    },
+    "Balnab": {
+      "status": "exact_match",
+      "mappedTo": "Balnab"
+    },
+    "Balosar": {
+      "status": "exact_match",
+      "mappedTo": "Balosar"
+    },
+    "Baltizaar": {
+      "status": "exact_match",
+      "mappedTo": "Baltizaar"
+    },
+    "Ban-Satir": {
+      "status": "exact_match",
+      "mappedTo": "Ban-Satir"
+    },
+    "Bandomeer": {
+      "status": "exact_match",
+      "mappedTo": "Bandomeer"
+    },
+    "Bannistar Station": {
+      "status": "exact_match",
+      "mappedTo": "Bannistar Station"
+    },
+    "Barab": {
+      "status": "exact_match",
+      "mappedTo": "Barab"
+    },
+    "Baraboo": {
+      "status": "exact_match",
+      "mappedTo": "Baraboo"
+    },
+    "Baradas": {
+      "status": "exact_match",
+      "mappedTo": "Baradas"
+    },
+    "Barcaria": {
+      "status": "exact_match",
+      "mappedTo": "Barcaria"
+    },
+    "Bardotta": {
+      "status": "exact_match",
+      "mappedTo": "Bardotta"
+    },
+    "Barenth": {
+      "status": "exact_match",
+      "mappedTo": "Barenth"
+    },
+    "Barison": {
+      "status": "exact_match",
+      "mappedTo": "Barison"
+    },
+    "Barkhesh": {
+      "status": "exact_match",
+      "mappedTo": "Barkhesh"
+    },
+    "Barlok": {
+      "status": "exact_match",
+      "mappedTo": "Barlok"
+    },
+    "Baroli": {
+      "status": "exact_match",
+      "mappedTo": "Baroli"
+    },
+    "Baros": {
+      "status": "exact_match",
+      "mappedTo": "Baros"
+    },
+    "Barseg": {
+      "status": "exact_match",
+      "mappedTo": "Barseg"
+    },
+    "Basilisk": {
+      "status": "exact_match",
+      "mappedTo": "Basilisk"
+    },
+    "Bassadro": {
+      "status": "exact_match",
+      "mappedTo": "Bassadro"
+    },
+    "Bastion": {
+      "status": "exact_match",
+      "mappedTo": "Bastion"
+    },
+    "Bastooine": {
+      "status": "exact_match",
+      "mappedTo": "Bastooine"
+    },
+    "Bator Bai": {
+      "status": "exact_match",
+      "mappedTo": "Bator Bai"
+    },
+    "Batorine": {
+      "status": "exact_match",
+      "mappedTo": "Batorine"
+    },
+    "Batuu": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Baummu": {
+      "status": "exact_match",
+      "mappedTo": "Baummu"
+    },
+    "Bavva": {
+      "status": "exact_match",
+      "mappedTo": "Bavva"
+    },
+    "Bedlam": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Begeren": {
+      "status": "exact_match",
+      "mappedTo": "Begeren"
+    },
+    "Belasco": {
+      "status": "exact_match",
+      "mappedTo": "Belasco"
+    },
+    "Belassar": {
+      "status": "exact_match",
+      "mappedTo": "Belassar"
+    },
+    "Belazura": {
+      "status": "exact_match",
+      "mappedTo": "Belazura"
+    },
+    "Belderone": {
+      "status": "exact_match",
+      "mappedTo": "Belderone"
+    },
+    "Belgaroth": {
+      "status": "exact_match",
+      "mappedTo": "Belgaroth"
+    },
+    "Belkadan": {
+      "status": "exact_match",
+      "mappedTo": "Belkadan"
+    },
+    "Bellassa": {
+      "status": "exact_match",
+      "mappedTo": "Bellassa"
+    },
+    "Belnar": {
+      "status": "exact_match",
+      "mappedTo": "Belnar"
+    },
+    "Belsavis": {
+      "status": "exact_match",
+      "mappedTo": "Belsavis"
+    },
+    "Beltrix III": {
+      "status": "exact_match",
+      "mappedTo": "Beltrix III"
+    },
+    "Bendeluum": {
+      "status": "exact_match",
+      "mappedTo": "Bendeluum"
+    },
+    "Bengat": {
+      "status": "exact_match",
+      "mappedTo": "Bengat"
+    },
+    "Berchest": {
+      "status": "exact_match",
+      "mappedTo": "Berchest"
+    },
+    "Beris": {
+      "status": "exact_match",
+      "mappedTo": "Beris"
+    },
+    "Berri": {
+      "status": "exact_match",
+      "mappedTo": "Berri"
+    },
+    "Berrol's Donn": {
+      "status": "exact_match",
+      "mappedTo": "Berrol's Donn"
+    },
+    "Besberra": {
+      "status": "exact_match",
+      "mappedTo": "Besberra"
+    },
+    "Bescane": {
+      "status": "exact_match",
+      "mappedTo": "Bescane"
+    },
+    "Besero": {
+      "status": "exact_match",
+      "mappedTo": "Besero"
+    },
+    "Besnia": {
+      "status": "exact_match",
+      "mappedTo": "Besnia"
+    },
+    "Bespin": {
+      "status": "exact_match",
+      "mappedTo": "Bespin"
+    },
+    "Bestine": {
+      "status": "exact_match",
+      "mappedTo": "Bestine"
+    },
+    "Betha": {
+      "status": "exact_match",
+      "mappedTo": "Betha"
+    },
+    "Betshish": {
+      "status": "exact_match",
+      "mappedTo": "Betshish"
+    },
+    "Bettel": {
+      "status": "exact_match",
+      "mappedTo": "Bettel"
+    },
+    "Bextar": {
+      "status": "exact_match",
+      "mappedTo": "Bextar"
+    },
+    "Bhargebba": {
+      "status": "exact_match",
+      "mappedTo": "Bhargebba"
+    },
+    "Bheriz": {
+      "status": "exact_match",
+      "mappedTo": "Bheriz"
+    },
+    "Biewa": {
+      "status": "exact_match",
+      "mappedTo": "Biewa"
+    },
+    "Biitu": {
+      "status": "exact_match",
+      "mappedTo": "Biitu"
+    },
+    "Bilbringi": {
+      "status": "exact_match",
+      "mappedTo": "Bilbringi"
+    },
+    "Bimin Three": {
+      "status": "exact_match",
+      "mappedTo": "Bimin Three"
+    },
+    "Bimmiel": {
+      "status": "exact_match",
+      "mappedTo": "Bimmiel"
+    },
+    "Bimmisaari": {
+      "status": "exact_match",
+      "mappedTo": "Bimmisaari"
+    },
+    "Birgis": {
+      "status": "exact_match",
+      "mappedTo": "Birgis"
+    },
+    "Bisellia": {
+      "status": "exact_match",
+      "mappedTo": "Bisellia"
+    },
+    "Bissillirus": {
+      "status": "exact_match",
+      "mappedTo": "Bissillirus"
+    },
+    "Bith": {
+      "status": "exact_match",
+      "mappedTo": "Bith"
+    },
+    "Blenjeel": {
+      "status": "exact_match",
+      "mappedTo": "Blenjeel"
+    },
+    "Blimph": {
+      "status": "exact_match",
+      "mappedTo": "Blimph"
+    },
+    "Bnar": {
+      "status": "exact_match",
+      "mappedTo": "Bnar"
+    },
+    "Bogden": {
+      "status": "exact_match",
+      "mappedTo": "Bogden"
+    },
+    "Bogo Rai": {
+      "status": "exact_match",
+      "mappedTo": "Bogo Rai"
+    },
+    "Bomis Koori": {
+      "status": "exact_match",
+      "mappedTo": "Bomis Koori"
+    },
+    "Bonadan": {
+      "status": "exact_match",
+      "mappedTo": "Bonadan"
+    },
+    "Boonta": {
+      "status": "exact_match",
+      "mappedTo": "Boonta"
+    },
+    "Boordii": {
+      "status": "exact_match",
+      "mappedTo": "Boordii"
+    },
+    "Bootana Shagplan": {
+      "status": "exact_match",
+      "mappedTo": "Bootana Shagplan"
+    },
+    "Boranda": {
+      "status": "exact_match",
+      "mappedTo": "Boranda"
+    },
+    "Borao": {
+      "status": "exact_match",
+      "mappedTo": "Borao"
+    },
+    "Borgo Prime": {
+      "status": "exact_match",
+      "mappedTo": "Borgo Prime"
+    },
+    "Borkyne": {
+      "status": "exact_match",
+      "mappedTo": "Borkyne"
+    },
+    "Borleias": {
+      "status": "exact_match",
+      "mappedTo": "Borleias"
+    },
+    "Boro-borosa": {
+      "status": "exact_match",
+      "mappedTo": "Boro-borosa"
+    },
+    "Borosk": {
+      "status": "exact_match",
+      "mappedTo": "Borosk"
+    },
+    "Bortras": {
+      "status": "exact_match",
+      "mappedTo": "Bortras"
+    },
+    "Bosph": {
+      "status": "exact_match",
+      "mappedTo": "Bosph"
+    },
+    "Bosthirda": {
+      "status": "exact_match",
+      "mappedTo": "Bosthirda"
+    },
+    "Botajef": {
+      "status": "exact_match",
+      "mappedTo": "Botajef"
+    },
+    "Bothawui": {
+      "status": "exact_match",
+      "mappedTo": "Bothawui"
+    },
+    "Botor": {
+      "status": "exact_match",
+      "mappedTo": "Botor"
+    },
+    "Boudolayz": {
+      "status": "exact_match",
+      "mappedTo": "Boudolayz"
+    },
+    "Bovo Yagen": {
+      "status": "exact_match",
+      "mappedTo": "Bovo Yagen"
+    },
+    "Boz Pity": {
+      "status": "exact_match",
+      "mappedTo": "Boz Pity"
+    },
+    "Bpfassh": {
+      "status": "exact_match",
+      "mappedTo": "Bpfassh"
+    },
+    "Brentaal": {
+      "status": "exact_match",
+      "mappedTo": "Brentaal"
+    },
+    "Bresnia": {
+      "status": "exact_match",
+      "mappedTo": "Bresnia"
+    },
+    "Brevost": {
+      "status": "exact_match",
+      "mappedTo": "Brevost"
+    },
+    "Brigia": {
+      "status": "exact_match",
+      "mappedTo": "Brigia"
+    },
+    "Brochiib": {
+      "status": "exact_match",
+      "mappedTo": "Brochiib"
+    },
+    "Brodo Asogi": {
+      "status": "exact_match",
+      "mappedTo": "Brodo Asogi"
+    },
+    "Broest": {
+      "status": "exact_match",
+      "mappedTo": "Broest"
+    },
+    "Bronsoon": {
+      "status": "exact_match",
+      "mappedTo": "Bronsoon"
+    },
+    "Brosi": {
+      "status": "exact_match",
+      "mappedTo": "Brosi"
+    },
+    "Bryexx": {
+      "status": "exact_match",
+      "mappedTo": "Bryexx"
+    },
+    "Bryx": {
+      "status": "exact_match",
+      "mappedTo": "Bryx"
+    },
+    "Bseto": {
+      "status": "exact_match",
+      "mappedTo": "Bseto"
+    },
+    "Buchich": {
+      "status": "exact_match",
+      "mappedTo": "Buchich"
+    },
+    "Budpock": {
+      "status": "exact_match",
+      "mappedTo": "Budpock"
+    },
+    "Bunduki": {
+      "status": "exact_match",
+      "mappedTo": "Bunduki"
+    },
+    "Burnin Konn": {
+      "status": "exact_match",
+      "mappedTo": "Burnin Konn"
+    },
+    "Burska": {
+      "status": "exact_match",
+      "mappedTo": "Burska"
+    },
+    "Byblos": {
+      "status": "exact_match",
+      "mappedTo": "Byblos"
+    },
+    "Byss": {
+      "status": "exact_match",
+      "mappedTo": "Byss"
+    },
+    "C-Foroon": {
+      "status": "exact_match",
+      "mappedTo": "C-Foroon"
+    },
+    "Caamas": {
+      "status": "exact_match",
+      "mappedTo": "Caamas"
+    },
+    "Cademimu": {
+      "status": "exact_match",
+      "mappedTo": "Cademimu"
+    },
+    "Cadinth": {
+      "status": "exact_match",
+      "mappedTo": "Cadinth"
+    },
+    "Cadma": {
+      "status": "exact_match",
+      "mappedTo": "Cadma"
+    },
+    "Cadomai": {
+      "status": "exact_match",
+      "mappedTo": "Cadomai"
+    },
+    "Cal-Seti": {
+      "status": "exact_match",
+      "mappedTo": "Cal-Seti"
+    },
+    "Calfa": {
+      "status": "exact_match",
+      "mappedTo": "Calfa"
+    },
+    "Calonica": {
+      "status": "exact_match",
+      "mappedTo": "Calonica"
+    },
+    "Caltinia": {
+      "status": "exact_match",
+      "mappedTo": "Caltinia"
+    },
+    "Calus": {
+      "status": "exact_match",
+      "mappedTo": "Calus"
+    },
+    "Caluula": {
+      "status": "exact_match",
+      "mappedTo": "Caluula"
+    },
+    "Cambria": {
+      "status": "exact_match",
+      "mappedTo": "Cambria"
+    },
+    "Camden": {
+      "status": "exact_match",
+      "mappedTo": "Camden"
+    },
+    "Candoria": {
+      "status": "exact_match",
+      "mappedTo": "Candoria"
+    },
+    "Cantonica": {
+      "status": "exact_match",
+      "mappedTo": "Cantonica"
+    },
+    "Cantras Gola": {
+      "status": "exact_match",
+      "mappedTo": "Cantras Gola"
+    },
+    "Cantros": {
+      "status": "exact_match",
+      "mappedTo": "Cantros"
+    },
+    "Capella": {
+      "status": "exact_match",
+      "mappedTo": "Capella"
+    },
+    "Capza": {
+      "status": "exact_match",
+      "mappedTo": "Capza"
+    },
+    "Carcel": {
+      "status": "exact_match",
+      "mappedTo": "Carcel"
+    },
+    "Carest": {
+      "status": "exact_match",
+      "mappedTo": "Carest"
+    },
+    "Cargamalis": {
+      "status": "exact_match",
+      "mappedTo": "Cargamalis"
+    },
+    "Carida": {
+      "status": "exact_match",
+      "mappedTo": "Carida"
+    },
+    "Carlac": {
+      "status": "exact_match",
+      "mappedTo": "Carlac"
+    },
+    "Carlania": {
+      "status": "exact_match",
+      "mappedTo": "Carlania"
+    },
+    "Carnovia": {
+      "status": "exact_match",
+      "mappedTo": "Carnovia"
+    },
+    "Carosi": {
+      "status": "exact_match",
+      "mappedTo": "Carosi"
+    },
+    "Carratos": {
+      "status": "exact_match",
+      "mappedTo": "Carratos"
+    },
+    "Carsanza": {
+      "status": "exact_match",
+      "mappedTo": "Carsanza"
+    },
+    "Cartao": {
+      "status": "exact_match",
+      "mappedTo": "Cartao"
+    },
+    "Casfield": {
+      "status": "exact_match",
+      "mappedTo": "Casfield"
+    },
+    "Cassander": {
+      "status": "exact_match",
+      "mappedTo": "Cassander"
+    },
+    "Castell": {
+      "status": "exact_match",
+      "mappedTo": "Castell"
+    },
+    "Cathar": {
+      "status": "exact_match",
+      "mappedTo": "Cathar"
+    },
+    "Cato Neimoidia": {
+      "status": "exact_match",
+      "mappedTo": "Cato Neimoidia"
+    },
+    "Celanon": {
+      "status": "exact_match",
+      "mappedTo": "Celanon"
+    },
+    "Celdaru": {
+      "status": "exact_match",
+      "mappedTo": "Celdaru"
+    },
+    "Celegia": {
+      "status": "exact_match",
+      "mappedTo": "Celegia"
+    },
+    "Celwis": {
+      "status": "exact_match",
+      "mappedTo": "Celwis"
+    },
+    "Centares": {
+      "status": "exact_match",
+      "mappedTo": "Centares"
+    },
+    "Cerea": {
+      "status": "exact_match",
+      "mappedTo": "Cerea"
+    },
+    "Cerenia": {
+      "status": "exact_match",
+      "mappedTo": "Cerenia"
+    },
+    "Cezith": {
+      "status": "exact_match",
+      "mappedTo": "Cezith"
+    },
+    "Ch'hodos": {
+      "status": "exact_match",
+      "mappedTo": "Ch'hodos"
+    },
+    "Chad": {
+      "status": "exact_match",
+      "mappedTo": "Chad"
+    },
+    "Chalacta": {
+      "status": "exact_match",
+      "mappedTo": "Chalacta"
+    },
+    "Chalcedon": {
+      "status": "exact_match",
+      "mappedTo": "Chalcedon"
+    },
+    "Challon": {
+      "status": "exact_match",
+      "mappedTo": "Challon"
+    },
+    "Chamble": {
+      "status": "exact_match",
+      "mappedTo": "Chamble"
+    },
+    "Chamm": {
+      "status": "exact_match",
+      "mappedTo": "Chamm"
+    },
+    "Champala": {
+      "status": "exact_match",
+      "mappedTo": "Champala"
+    },
+    "Chandaar": {
+      "status": "exact_match",
+      "mappedTo": "Chandaar"
+    },
+    "Chandrila": {
+      "status": "exact_match",
+      "mappedTo": "Chandrila"
+    },
+    "Chanosant": {
+      "status": "exact_match",
+      "mappedTo": "Chanosant"
+    },
+    "Chardaan": {
+      "status": "exact_match",
+      "mappedTo": "Chardaan"
+    },
+    "Charra": {
+      "status": "exact_match",
+      "mappedTo": "Charra"
+    },
+    "Charros": {
+      "status": "exact_match",
+      "mappedTo": "Charros"
+    },
+    "Charubah": {
+      "status": "exact_match",
+      "mappedTo": "Charubah"
+    },
+    "Chasin": {
+      "status": "exact_match",
+      "mappedTo": "Chasin"
+    },
+    "Chazwa": {
+      "status": "exact_match",
+      "mappedTo": "Chazwa"
+    },
+    "Cheelit": {
+      "status": "exact_match",
+      "mappedTo": "Cheelit"
+    },
+    "Cheku": {
+      "status": "exact_match",
+      "mappedTo": "Cheku"
+    },
+    "Chenowei": {
+      "status": "exact_match",
+      "mappedTo": "Chenowei"
+    },
+    "Cheruba": {
+      "status": "exact_match",
+      "mappedTo": "Cheruba"
+    },
+    "Chibias": {
+      "status": "exact_match",
+      "mappedTo": "Chibias"
+    },
+    "Chiron": {
+      "status": "exact_match",
+      "mappedTo": "Chiron"
+    },
+    "Chokan": {
+      "status": "exact_match",
+      "mappedTo": "Chokan"
+    },
+    "Cholganna": {
+      "status": "exact_match",
+      "mappedTo": "Cholganna"
+    },
+    "Chorax": {
+      "status": "exact_match",
+      "mappedTo": "Chorax"
+    },
+    "Chosper": {
+      "status": "exact_match",
+      "mappedTo": "Chosper"
+    },
+    "Chrellis": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Christophsis": {
+      "status": "exact_match",
+      "mappedTo": "Christophsis"
+    },
+    "Chroma Zed": {
+      "status": "exact_match",
+      "mappedTo": "Chroma Zed"
+    },
+    "Chryya": {
+      "status": "exact_match",
+      "mappedTo": "Chryya"
+    },
+    "Churruma": {
+      "status": "exact_match",
+      "mappedTo": "Churruma"
+    },
+    "Cilpar": {
+      "status": "exact_match",
+      "mappedTo": "Cilpar"
+    },
+    "Cioral": {
+      "status": "exact_match",
+      "mappedTo": "Cioral"
+    },
+    "Circumtore": {
+      "status": "exact_match",
+      "mappedTo": "Circumtore"
+    },
+    "Cirrus": {
+      "status": "exact_match",
+      "mappedTo": "Cirrus"
+    },
+    "Cirus": {
+      "status": "exact_match",
+      "mappedTo": "Cirus"
+    },
+    "Ciutric": {
+      "status": "exact_match",
+      "mappedTo": "Ciutric"
+    },
+    "Clantaano": {
+      "status": "exact_match",
+      "mappedTo": "Clantaano"
+    },
+    "Cmaoli Di": {
+      "status": "exact_match",
+      "mappedTo": "Cmaoli Di"
+    },
+    "Coachelle": {
+      "status": "exact_match",
+      "mappedTo": "Coachelle"
+    },
+    "Codia": {
+      "status": "exact_match",
+      "mappedTo": "Codia"
+    },
+    "Colla IV": {
+      "status": "exact_match",
+      "mappedTo": "Colla IV"
+    },
+    "Colonial Station Cam'co": {
+      "status": "exact_match",
+      "mappedTo": "Colonial Station Cam'co"
+    },
+    "Colonial Station Chaf": {
+      "status": "exact_match",
+      "mappedTo": "Colonial Station Chaf"
+    },
+    "Columex": {
+      "status": "exact_match",
+      "mappedTo": "Columex"
+    },
+    "Columus": {
+      "status": "exact_match",
+      "mappedTo": "Columus"
+    },
+    "Comkin V": {
+      "status": "exact_match",
+      "mappedTo": "Comkin V"
+    },
+    "Commenor": {
+      "status": "exact_match",
+      "mappedTo": "Commenor"
+    },
+    "Comra": {
+      "status": "exact_match",
+      "mappedTo": "Comra"
+    },
+    "Cona": {
+      "status": "exact_match",
+      "mappedTo": "Cona"
+    },
+    "Concord Dawn": {
+      "status": "exact_match",
+      "mappedTo": "Concord Dawn"
+    },
+    "Condular": {
+      "status": "exact_match",
+      "mappedTo": "Condular"
+    },
+    "Constancia": {
+      "status": "exact_match",
+      "mappedTo": "Constancia"
+    },
+    "Contruum": {
+      "status": "exact_match",
+      "mappedTo": "Contruum"
+    },
+    "Coonee": {
+      "status": "exact_match",
+      "mappedTo": "Coonee"
+    },
+    "Copero": {
+      "status": "exact_match",
+      "mappedTo": "Copero"
+    },
+    "Cophrigin": {
+      "status": "exact_match",
+      "mappedTo": "Cophrigin"
+    },
+    "Copperline": {
+      "status": "exact_match",
+      "mappedTo": "Copperline"
+    },
+    "Corann": {
+      "status": "exact_match",
+      "mappedTo": "Corann"
+    },
+    "Corbett CLuster": {
+      "status": "exact_match",
+      "mappedTo": "Corbett CLuster"
+    },
+    "Corbos": {
+      "status": "exact_match",
+      "mappedTo": "Corbos"
+    },
+    "Corellia": {
+      "status": "exact_match",
+      "mappedTo": "Corellia"
+    },
+    "Corlass": {
+      "status": "exact_match",
+      "mappedTo": "Corlass"
+    },
+    "Cormit": {
+      "status": "exact_match",
+      "mappedTo": "Cormit"
+    },
+    "Corroth": {
+      "status": "exact_match",
+      "mappedTo": "Corroth"
+    },
+    "Corsin": {
+      "status": "exact_match",
+      "mappedTo": "Corsin"
+    },
+    "Cortina": {
+      "status": "exact_match",
+      "mappedTo": "Cortina"
+    },
+    "Corulag": {
+      "status": "exact_match",
+      "mappedTo": "Corulag"
+    },
+    "Coruscant": {
+      "status": "exact_match",
+      "mappedTo": "Coruscant"
+    },
+    "Corva Yag": {
+      "status": "exact_match",
+      "mappedTo": "Corva Yag"
+    },
+    "Corvanni IV": {
+      "status": "exact_match",
+      "mappedTo": "Corvanni IV"
+    },
+    "Corvis Minor": {
+      "status": "exact_match",
+      "mappedTo": "Corvis Minor"
+    },
+    "Cotellier": {
+      "status": "exact_match",
+      "mappedTo": "Cotellier"
+    },
+    "Council": {
+      "status": "exact_match",
+      "mappedTo": "Council"
+    },
+    "Coveway": {
+      "status": "exact_match",
+      "mappedTo": "Coveway"
+    },
+    "Craci": {
+      "status": "exact_match",
+      "mappedTo": "Craci"
+    },
+    "Crait": {
+      "status": "exact_match",
+      "mappedTo": "Crait"
+    },
+    "Crakull": {
+      "status": "exact_match",
+      "mappedTo": "Crakull"
+    },
+    "Cranan": {
+      "status": "exact_match",
+      "mappedTo": "Cranan"
+    },
+    "Criton's Point": {
+      "status": "exact_match",
+      "mappedTo": "Criton's Point"
+    },
+    "Crovna": {
+      "status": "exact_match",
+      "mappedTo": "Crovna"
+    },
+    "Crustai": {
+      "status": "exact_match",
+      "mappedTo": "Crustai"
+    },
+    "Crystan": {
+      "status": "exact_match",
+      "mappedTo": "Crystan"
+    },
+    "Csaus": {
+      "status": "exact_match",
+      "mappedTo": "Csaus"
+    },
+    "Csilla": {
+      "status": "exact_match",
+      "mappedTo": "Csilla"
+    },
+    "Cularin": {
+      "status": "exact_match",
+      "mappedTo": "Cularin"
+    },
+    "Cuvacia": {
+      "status": "exact_match",
+      "mappedTo": "Cuvacia"
+    },
+    "Cybloc": {
+      "status": "exact_match",
+      "mappedTo": "Cybloc"
+    },
+    "Cyborrea": {
+      "status": "exact_match",
+      "mappedTo": "Cyborrea"
+    },
+    "Cyimarra": {
+      "status": "exact_match",
+      "mappedTo": "Cyimarra"
+    },
+    "Cyphar": {
+      "status": "exact_match",
+      "mappedTo": "Cyphar"
+    },
+    "Cyrillia": {
+      "status": "exact_match",
+      "mappedTo": "Cyrillia"
+    },
+    "D'ian": {
+      "status": "exact_match",
+      "mappedTo": "D'ian"
+    },
+    "D'Qar": {
+      "status": "exact_match",
+      "mappedTo": "D'Qar"
+    },
+    "D'rinba": {
+      "status": "exact_match",
+      "mappedTo": "D'rinba"
+    },
+    "Da Soocha": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Daalang": {
+      "status": "exact_match",
+      "mappedTo": "Daalang"
+    },
+    "Daan/Melida": {
+      "status": "exact_match",
+      "mappedTo": "Daan/Melida"
+    },
+    "Dachat": {
+      "status": "exact_match",
+      "mappedTo": "Dachat"
+    },
+    "Dactruria": {
+      "status": "exact_match",
+      "mappedTo": "Dactruria"
+    },
+    "Daemen": {
+      "status": "exact_match",
+      "mappedTo": "Daemen"
+    },
+    "Dagary Minor": {
+      "status": "exact_match",
+      "mappedTo": "Dagary Minor"
+    },
+    "Dagelin Minor": {
+      "status": "exact_match",
+      "mappedTo": "Dagelin Minor"
+    },
+    "Dagobah": {
+      "status": "exact_match",
+      "mappedTo": "Dagobah"
+    },
+    "Dahrtag": {
+      "status": "exact_match",
+      "mappedTo": "Dahrtag"
+    },
+    "Dakshee": {
+      "status": "exact_match",
+      "mappedTo": "Dakshee"
+    },
+    "Dalchon": {
+      "status": "exact_match",
+      "mappedTo": "Dalchon"
+    },
+    "Dalcretti": {
+      "status": "exact_match",
+      "mappedTo": "Dalcretti"
+    },
+    "Dalisor": {
+      "status": "exact_match",
+      "mappedTo": "Dalisor"
+    },
+    "Dalron": {
+      "status": "exact_match",
+      "mappedTo": "Dalron"
+    },
+    "Daluuj": {
+      "status": "exact_match",
+      "mappedTo": "Daluuj"
+    },
+    "Damendine": {
+      "status": "exact_match",
+      "mappedTo": "Damendine"
+    },
+    "Damoria": {
+      "status": "exact_match",
+      "mappedTo": "Damoria"
+    },
+    "Dankayo": {
+      "status": "exact_match",
+      "mappedTo": "Dankayo"
+    },
+    "Danteel": {
+      "status": "exact_match",
+      "mappedTo": "Danteel"
+    },
+    "Dantooine": {
+      "status": "exact_match",
+      "mappedTo": "Dantooine"
+    },
+    "Danuta": {
+      "status": "exact_match",
+      "mappedTo": "Danuta"
+    },
+    "Darada": {
+      "status": "exact_match",
+      "mappedTo": "Darada"
+    },
+    "Darek": {
+      "status": "exact_match",
+      "mappedTo": "Darek"
+    },
+    "Dargulli": {
+      "status": "exact_match",
+      "mappedTo": "Dargulli"
+    },
+    "Darkknell": {
+      "status": "exact_match",
+      "mappedTo": "Darkknell"
+    },
+    "Darlyn Boda": {
+      "status": "exact_match",
+      "mappedTo": "Darlyn Boda"
+    },
+    "Dartessex IV": {
+      "status": "exact_match",
+      "mappedTo": "Dartessex IV"
+    },
+    "Daruvvia": {
+      "status": "exact_match",
+      "mappedTo": "Daruvvia"
+    },
+    "Dasoor": {
+      "status": "exact_match",
+      "mappedTo": "Dasoor"
+    },
+    "Datar": {
+      "status": "exact_match",
+      "mappedTo": "Datar"
+    },
+    "Dathomir": {
+      "status": "exact_match",
+      "mappedTo": "Dathomir"
+    },
+    "Daupherm": {
+      "status": "exact_match",
+      "mappedTo": "Daupherm"
+    },
+    "Davirien": {
+      "status": "exact_match",
+      "mappedTo": "Davirien"
+    },
+    "Dela": {
+      "status": "exact_match",
+      "mappedTo": "Dela"
+    },
+    "Delacrix": {
+      "status": "exact_match",
+      "mappedTo": "Delacrix"
+    },
+    "Delephr": {
+      "status": "exact_match",
+      "mappedTo": "Delephr"
+    },
+    "Dellalt": {
+      "status": "exact_match",
+      "mappedTo": "Dellalt"
+    },
+    "Delle": {
+      "status": "exact_match",
+      "mappedTo": "Delle"
+    },
+    "Delphon": {
+      "status": "exact_match",
+      "mappedTo": "Delphon"
+    },
+    "Delrakkin": {
+      "status": "exact_match",
+      "mappedTo": "Delrakkin"
+    },
+    "Deltooine": {
+      "status": "exact_match",
+      "mappedTo": "Deltooine"
+    },
+    "Deminol": {
+      "status": "exact_match",
+      "mappedTo": "Deminol"
+    },
+    "Demophon": {
+      "status": "exact_match",
+      "mappedTo": "Demophon"
+    },
+    "Demos": {
+      "status": "exact_match",
+      "mappedTo": "Demos"
+    },
+    "Denab": {
+      "status": "exact_match",
+      "mappedTo": "Denab"
+    },
+    "Denarii Station": {
+      "status": "exact_match",
+      "mappedTo": "Denarii Station"
+    },
+    "Deneba": {
+      "status": "exact_match",
+      "mappedTo": "Deneba"
+    },
+    "Denebia": {
+      "status": "exact_match",
+      "mappedTo": "Denebia"
+    },
+    "Denevar": {
+      "status": "exact_match",
+      "mappedTo": "Denevar"
+    },
+    "Dennaskar": {
+      "status": "exact_match",
+      "mappedTo": "Dennaskar"
+    },
+    "Dennogra": {
+      "status": "exact_match",
+      "mappedTo": "Dennogra"
+    },
+    "Denon": {
+      "status": "exact_match",
+      "mappedTo": "Denon"
+    },
+    "Denova": {
+      "status": "exact_match",
+      "mappedTo": "Denova"
+    },
+    "Dentaal": {
+      "status": "exact_match",
+      "mappedTo": "Dentaal"
+    },
+    "Derellium": {
+      "status": "exact_match",
+      "mappedTo": "Derellium"
+    },
+    "Derra": {
+      "status": "exact_match",
+      "mappedTo": "Derra"
+    },
+    "Desevro": {
+      "status": "exact_match",
+      "mappedTo": "Desevro"
+    },
+    "Devaron": {
+      "status": "exact_match",
+      "mappedTo": "Devaron"
+    },
+    "Devon": {
+      "status": "exact_match",
+      "mappedTo": "Devon"
+    },
+    "Deysum": {
+      "status": "exact_match",
+      "mappedTo": "Deysum"
+    },
+    "Diab": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Diamal": {
+      "status": "exact_match",
+      "mappedTo": "Diamal"
+    },
+    "Dica": {
+      "status": "exact_match",
+      "mappedTo": "Dica"
+    },
+    "Dilbana": {
+      "status": "exact_match",
+      "mappedTo": "Dilbana"
+    },
+    "Dilonexa": {
+      "status": "exact_match",
+      "mappedTo": "Dilonexa"
+    },
+    "Din Pulsar": {
+      "status": "exact_match",
+      "mappedTo": "Din Pulsar"
+    },
+    "Dioll": {
+      "status": "exact_match",
+      "mappedTo": "Dioll"
+    },
+    "Dirha": {
+      "status": "exact_match",
+      "mappedTo": "Dirha"
+    },
+    "Divora": {
+      "status": "exact_match",
+      "mappedTo": "Divora"
+    },
+    "Diyu": {
+      "status": "exact_match",
+      "mappedTo": "Diyu"
+    },
+    "Djurmo": {
+      "status": "exact_match",
+      "mappedTo": "Djurmo"
+    },
+    "Doan": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Dohlban": {
+      "status": "exact_match",
+      "mappedTo": "Dohlban"
+    },
+    "Dohu": {
+      "status": "exact_match",
+      "mappedTo": "Dohu"
+    },
+    "Doldrums": {
+      "status": "exact_match",
+      "mappedTo": "Doldrums"
+    },
+    "Doldur": {
+      "status": "exact_match",
+      "mappedTo": "Doldur"
+    },
+    "Dolis": {
+      "status": "exact_match",
+      "mappedTo": "Dolis"
+    },
+    "Dolla": {
+      "status": "exact_match",
+      "mappedTo": "Dolla"
+    },
+    "Donadus": {
+      "status": "exact_match",
+      "mappedTo": "Donadus"
+    },
+    "Doniphon": {
+      "status": "exact_match",
+      "mappedTo": "Doniphon"
+    },
+    "Donovia": {
+      "status": "exact_match",
+      "mappedTo": "Donovia"
+    },
+    "Doreen": {
+      "status": "exact_match",
+      "mappedTo": "Doreen"
+    },
+    "Dorin": {
+      "status": "exact_match",
+      "mappedTo": "Dorin"
+    },
+    "Dorlo": {
+      "status": "exact_match",
+      "mappedTo": "Dorlo"
+    },
+    "Dornea": {
+      "status": "exact_match",
+      "mappedTo": "Dornea"
+    },
+    "Dorvalla": {
+      "status": "exact_match",
+      "mappedTo": "Dorvalla"
+    },
+    "Dosuun": {
+      "status": "exact_match",
+      "mappedTo": "Dosuun"
+    },
+    "Douglas": {
+      "status": "exact_match",
+      "mappedTo": "Douglas"
+    },
+    "Dra": {
+      "status": "exact_match",
+      "mappedTo": "Dra"
+    },
+    "Drackmar": {
+      "status": "exact_match",
+      "mappedTo": "Drackmar"
+    },
+    "Dractu": {
+      "status": "exact_match",
+      "mappedTo": "Dractu"
+    },
+    "Dramassia": {
+      "status": "exact_match",
+      "mappedTo": "Dramassia"
+    },
+    "Draria": {
+      "status": "exact_match",
+      "mappedTo": "Draria"
+    },
+    "Draukyze": {
+      "status": "exact_match",
+      "mappedTo": "Draukyze"
+    },
+    "Dravian Station": {
+      "status": "exact_match",
+      "mappedTo": "Dravian Station"
+    },
+    "Drearia": {
+      "status": "exact_match",
+      "mappedTo": "Drearia"
+    },
+    "Dreena": {
+      "status": "exact_match",
+      "mappedTo": "Dreena"
+    },
+    "Dremulae": {
+      "status": "exact_match",
+      "mappedTo": "Dremulae"
+    },
+    "Dressel": {
+      "status": "exact_match",
+      "mappedTo": "Dressel"
+    },
+    "Drexel": {
+      "status": "exact_match",
+      "mappedTo": "Drexel"
+    },
+    "Droecil": {
+      "status": "exact_match",
+      "mappedTo": "Droecil"
+    },
+    "Drog": {
+      "status": "exact_match",
+      "mappedTo": "Drog"
+    },
+    "Drogheda": {
+      "status": "exact_match",
+      "mappedTo": "Drogheda"
+    },
+    "Dromund Kaas": {
+      "status": "exact_match",
+      "mappedTo": "Dromund Kaas"
+    },
+    "Drongar": {
+      "status": "exact_match",
+      "mappedTo": "Drongar"
+    },
+    "Droxu": {
+      "status": "exact_match",
+      "mappedTo": "Droxu"
+    },
+    "Drualkiin": {
+      "status": "exact_match",
+      "mappedTo": "Drualkiin"
+    },
+    "Druckenwell": {
+      "status": "exact_match",
+      "mappedTo": "Druckenwell"
+    },
+    "Drurish": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Du Hutta": {
+      "status": "exact_match",
+      "mappedTo": "Du Hutta"
+    },
+    "Dubrava": {
+      "status": "exact_match",
+      "mappedTo": "Dubrava"
+    },
+    "Dubrillion": {
+      "status": "exact_match",
+      "mappedTo": "Dubrillion"
+    },
+    "Duinarbulon": {
+      "status": "exact_match",
+      "mappedTo": "Duinarbulon"
+    },
+    "Dulathia": {
+      "status": "exact_match",
+      "mappedTo": "Dulathia"
+    },
+    "Dulin": {
+      "status": "exact_match",
+      "mappedTo": "Dulin"
+    },
+    "Dulvoyinn": {
+      "status": "exact_match",
+      "mappedTo": "Dulvoyinn"
+    },
+    "Durgen's Star": {
+      "status": "exact_match",
+      "mappedTo": "Durgen's Star"
+    },
+    "Durkteel": {
+      "status": "exact_match",
+      "mappedTo": "Durkteel"
+    },
+    "Duro": {
+      "status": "exact_match",
+      "mappedTo": "Duro"
+    },
+    "Duroon": {
+      "status": "exact_match",
+      "mappedTo": "Duroon"
+    },
+    "Dweem": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Eadu": {
+      "status": "exact_match",
+      "mappedTo": "Eadu"
+    },
+    "Eamus": {
+      "status": "exact_match",
+      "mappedTo": "Eamus"
+    },
+    "Ebaq": {
+      "status": "exact_match",
+      "mappedTo": "Ebaq"
+    },
+    "Ebra": {
+      "status": "exact_match",
+      "mappedTo": "Ebra"
+    },
+    "Echnos": {
+      "status": "exact_match",
+      "mappedTo": "Echnos"
+    },
+    "Eclipse": {
+      "status": "exact_match",
+      "mappedTo": "Eclipse"
+    },
+    "Ediorung": {
+      "status": "exact_match",
+      "mappedTo": "Ediorung"
+    },
+    "Edusa": {
+      "status": "exact_match",
+      "mappedTo": "Edusa"
+    },
+    "Eiattu": {
+      "status": "exact_match",
+      "mappedTo": "Eiattu"
+    },
+    "Eibon": {
+      "status": "exact_match",
+      "mappedTo": "Eibon"
+    },
+    "Ejolus": {
+      "status": "exact_match",
+      "mappedTo": "Ejolus"
+    },
+    "Ekibo": {
+      "status": "exact_match",
+      "mappedTo": "Ekibo"
+    },
+    "Elamposnia": {
+      "status": "exact_match",
+      "mappedTo": "Elamposnia"
+    },
+    "Elbara": {
+      "status": "exact_match",
+      "mappedTo": "Elbara"
+    },
+    "Elgit": {
+      "status": "exact_match",
+      "mappedTo": "Elgit"
+    },
+    "Eliad": {
+      "status": "exact_match",
+      "mappedTo": "Eliad"
+    },
+    "Elom": {
+      "status": "exact_match",
+      "mappedTo": "Elom"
+    },
+    "Elrood": {
+      "status": "exact_match",
+      "mappedTo": "Elrood"
+    },
+    "Elshandruu Pica": {
+      "status": "exact_match",
+      "mappedTo": "Elshandruu Pica"
+    },
+    "Emberlene": {
+      "status": "exact_match",
+      "mappedTo": "Emberlene"
+    },
+    "Emmer": {
+      "status": "exact_match",
+      "mappedTo": "Emmer"
+    },
+    "Empress Teta": {
+      "status": "exact_match",
+      "mappedTo": "Empress Teta"
+    },
+    "Enarc": {
+      "status": "exact_match",
+      "mappedTo": "Enarc"
+    },
+    "Endex": {
+      "status": "exact_match",
+      "mappedTo": "Endex"
+    },
+    "Endor": {
+      "status": "exact_match",
+      "mappedTo": "Endor"
+    },
+    "Endor Gate": {
+      "status": "exact_match",
+      "mappedTo": "Endor Gate"
+    },
+    "Endoraan": {
+      "status": "exact_match",
+      "mappedTo": "Endoraan"
+    },
+    "Endregaad": {
+      "status": "exact_match",
+      "mappedTo": "Endregaad"
+    },
+    "Enisca": {
+      "status": "exact_match",
+      "mappedTo": "Enisca"
+    },
+    "Entralla": {
+      "status": "exact_match",
+      "mappedTo": "Entralla"
+    },
+    "Entuur": {
+      "status": "exact_match",
+      "mappedTo": "Entuur"
+    },
+    "Eol Sha": {
+      "status": "exact_match",
+      "mappedTo": "Eol Sha"
+    },
+    "Epica": {
+      "status": "exact_match",
+      "mappedTo": "Epica"
+    },
+    "Equanus": {
+      "status": "exact_match",
+      "mappedTo": "Equanus"
+    },
+    "Er'Kit": {
+      "status": "exact_match",
+      "mappedTo": "Er'Kit"
+    },
+    "Erai": {
+      "status": "exact_match",
+      "mappedTo": "Erai"
+    },
+    "Eredenn": {
+      "status": "exact_match",
+      "mappedTo": "Eredenn"
+    },
+    "Ereesus": {
+      "status": "exact_match",
+      "mappedTo": "Ereesus"
+    },
+    "Eriadu": {
+      "status": "exact_match",
+      "mappedTo": "Eriadu"
+    },
+    "Eridicon": {
+      "status": "exact_match",
+      "mappedTo": "Eridicon"
+    },
+    "Erilnar": {
+      "status": "exact_match",
+      "mappedTo": "Erilnar"
+    },
+    "Ertegas": {
+      "status": "exact_match",
+      "mappedTo": "Ertegas"
+    },
+    "Erysthes": {
+      "status": "exact_match",
+      "mappedTo": "Erysthes"
+    },
+    "Esfandia": {
+      "status": "exact_match",
+      "mappedTo": "Esfandia"
+    },
+    "Eshan": {
+      "status": "exact_match",
+      "mappedTo": "Eshan"
+    },
+    "Esseles": {
+      "status": "exact_match",
+      "mappedTo": "Esseles"
+    },
+    "Ession": {
+      "status": "exact_match",
+      "mappedTo": "Ession"
+    },
+    "Etti": {
+      "status": "exact_match",
+      "mappedTo": "Etti"
+    },
+    "Euceron": {
+      "status": "exact_match",
+      "mappedTo": "Euceron"
+    },
+    "Excarga": {
+      "status": "exact_match",
+      "mappedTo": "Excarga"
+    },
+    "Exegol": {
+      "status": "exact_match",
+      "mappedTo": "Exegol"
+    },
+    "Exodeen": {
+      "status": "exact_match",
+      "mappedTo": "Exodeen"
+    },
+    "Fabrin": {
+      "status": "exact_match",
+      "mappedTo": "Fabrin"
+    },
+    "Fadden": {
+      "status": "exact_match",
+      "mappedTo": "Fadden"
+    },
+    "Faldos": {
+      "status": "exact_match",
+      "mappedTo": "Faldos"
+    },
+    "Falko": {
+      "status": "exact_match",
+      "mappedTo": "Falko"
+    },
+    "Falleen": {
+      "status": "exact_match",
+      "mappedTo": "Falleen"
+    },
+    "Far Indosa": {
+      "status": "exact_match",
+      "mappedTo": "Far Indosa"
+    },
+    "Far Pando": {
+      "status": "exact_match",
+      "mappedTo": "Far Pando"
+    },
+    "Farana": {
+      "status": "exact_match",
+      "mappedTo": "Farana"
+    },
+    "Farnica": {
+      "status": "exact_match",
+      "mappedTo": "Farnica"
+    },
+    "Faro": {
+      "status": "exact_match",
+      "mappedTo": "Faro"
+    },
+    "Farquar": {
+      "status": "exact_match",
+      "mappedTo": "Farquar"
+    },
+    "Farrfin": {
+      "status": "exact_match",
+      "mappedTo": "Farrfin"
+    },
+    "Farstine": {
+      "status": "exact_match",
+      "mappedTo": "Farstine"
+    },
+    "Farstone": {
+      "status": "exact_match",
+      "mappedTo": "Farstone"
+    },
+    "Febrini": {
+      "status": "exact_match",
+      "mappedTo": "Febrini"
+    },
+    "Fedalle": {
+      "status": "exact_match",
+      "mappedTo": "Fedalle"
+    },
+    "Fedje": {
+      "status": "exact_match",
+      "mappedTo": "Fedje"
+    },
+    "Feena": {
+      "status": "exact_match",
+      "mappedTo": "Feena"
+    },
+    "Feenix": {
+      "status": "exact_match",
+      "mappedTo": "Feenix"
+    },
+    "Feldwes": {
+      "status": "exact_match",
+      "mappedTo": "Feldwes"
+    },
+    "Felucia": {
+      "status": "exact_match",
+      "mappedTo": "Felucia"
+    },
+    "Fengrine": {
+      "status": "exact_match",
+      "mappedTo": "Fengrine"
+    },
+    "Fennesa": {
+      "status": "exact_match",
+      "mappedTo": "Fennesa"
+    },
+    "Ferro": {
+      "status": "exact_match",
+      "mappedTo": "Ferro"
+    },
+    "Fest": {
+      "status": "exact_match",
+      "mappedTo": "Fest"
+    },
+    "Feswe Corridor": {
+      "status": "exact_match",
+      "mappedTo": "Feswe Corridor"
+    },
+    "Feswe Minor": {
+      "status": "exact_match",
+      "mappedTo": "Feswe Minor"
+    },
+    "Feswe Prime": {
+      "status": "exact_match",
+      "mappedTo": "Feswe Prime"
+    },
+    "Fether": {
+      "status": "exact_match",
+      "mappedTo": "Fether"
+    },
+    "Fibuli": {
+      "status": "exact_match",
+      "mappedTo": "Fibuli"
+    },
+    "Filordis": {
+      "status": "exact_match",
+      "mappedTo": "Filordis"
+    },
+    "Firrerre": {
+      "status": "exact_match",
+      "mappedTo": "Firrerre"
+    },
+    "Florn": {
+      "status": "exact_match",
+      "mappedTo": "Florn"
+    },
+    "Florrum": {
+      "status": "exact_match",
+      "mappedTo": "Florrum"
+    },
+    "Fodro": {
+      "status": "exact_match",
+      "mappedTo": "Fodro"
+    },
+    "Foerost": {
+      "status": "exact_match",
+      "mappedTo": "Foerost"
+    },
+    "Foless": {
+      "status": "exact_match",
+      "mappedTo": "Foless"
+    },
+    "Fondor": {
+      "status": "exact_match",
+      "mappedTo": "Fondor"
+    },
+    "Formos": {
+      "status": "exact_match",
+      "mappedTo": "Formos"
+    },
+    "Fornax": {
+      "status": "exact_match",
+      "mappedTo": "Fornax"
+    },
+    "Forsen": {
+      "status": "exact_match",
+      "mappedTo": "Forsen"
+    },
+    "Foundry": {
+      "status": "exact_match",
+      "mappedTo": "Foundry"
+    },
+    "Frego": {
+      "status": "exact_match",
+      "mappedTo": "Frego"
+    },
+    "Fresia": {
+      "status": "exact_match",
+      "mappedTo": "Fresia"
+    },
+    "Froswythe": {
+      "status": "exact_match",
+      "mappedTo": "Froswythe"
+    },
+    "Fwatna": {
+      "status": "exact_match",
+      "mappedTo": "Fwatna"
+    },
+    "Fwillsving": {
+      "status": "exact_match",
+      "mappedTo": "Fwillsving"
+    },
+    "G'wenee": {
+      "status": "exact_match",
+      "mappedTo": "G'wenee"
+    },
+    "Gabredor": {
+      "status": "exact_match",
+      "mappedTo": "Gabredor"
+    },
+    "Gacerian": {
+      "status": "exact_match",
+      "mappedTo": "Gacerian"
+    },
+    "Gala": {
+      "status": "exact_match",
+      "mappedTo": "Gala"
+    },
+    "Galactic Center": {
+      "status": "exact_match",
+      "mappedTo": "Galactic Center"
+    },
+    "Galand": {
+      "status": "exact_match",
+      "mappedTo": "Galand"
+    },
+    "Galantos": {
+      "status": "exact_match",
+      "mappedTo": "Galantos"
+    },
+    "Galidraan": {
+      "status": "exact_match",
+      "mappedTo": "Galidraan"
+    },
+    "Gallinore": {
+      "status": "exact_match",
+      "mappedTo": "Gallinore"
+    },
+    "Galvoni": {
+      "status": "exact_match",
+      "mappedTo": "Galvoni"
+    },
+    "Gama": {
+      "status": "exact_match",
+      "mappedTo": "Gama"
+    },
+    "Gamor": {
+      "status": "exact_match",
+      "mappedTo": "Gamor"
+    },
+    "Gamorr": {
+      "status": "exact_match",
+      "mappedTo": "Gamorr"
+    },
+    "Ganath": {
+      "status": "exact_match",
+      "mappedTo": "Ganath"
+    },
+    "Gand": {
+      "status": "exact_match",
+      "mappedTo": "Gand"
+    },
+    "Gandeal": {
+      "status": "exact_match",
+      "mappedTo": "Gandeal"
+    },
+    "Gandolo": {
+      "status": "exact_match",
+      "mappedTo": "Gandolo"
+    },
+    "Gannaria": {
+      "status": "exact_match",
+      "mappedTo": "Gannaria"
+    },
+    "Ganthel": {
+      "status": "exact_match",
+      "mappedTo": "Ganthel"
+    },
+    "Garel": {
+      "status": "exact_match",
+      "mappedTo": "Garel"
+    },
+    "Gargon": {
+      "status": "exact_match",
+      "mappedTo": "Gargon"
+    },
+    "Garnib": {
+      "status": "exact_match",
+      "mappedTo": "Garnib"
+    },
+    "Garos": {
+      "status": "exact_match",
+      "mappedTo": "Garos"
+    },
+    "Garqi": {
+      "status": "exact_match",
+      "mappedTo": "Garqi"
+    },
+    "Gaulus": {
+      "status": "exact_match",
+      "mappedTo": "Gaulus"
+    },
+    "Gaurick": {
+      "status": "exact_match",
+      "mappedTo": "Gaurick"
+    },
+    "Gavryn": {
+      "status": "exact_match",
+      "mappedTo": "Gavryn"
+    },
+    "Gbu": {
+      "status": "exact_match",
+      "mappedTo": "Gbu"
+    },
+    "Gedi": {
+      "status": "exact_match",
+      "mappedTo": "Gedi"
+    },
+    "Gelda": {
+      "status": "exact_match",
+      "mappedTo": "Gelda"
+    },
+    "Gelviddis Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Gelviddis Cluster"
+    },
+    "Genassa": {
+      "status": "exact_match",
+      "mappedTo": "Genassa"
+    },
+    "Gendrah-Narvin": {
+      "status": "exact_match",
+      "mappedTo": "Gendrah-Narvin"
+    },
+    "Generis": {
+      "status": "exact_match",
+      "mappedTo": "Generis"
+    },
+    "Genian": {
+      "status": "exact_match",
+      "mappedTo": "Genian"
+    },
+    "Genon": {
+      "status": "exact_match",
+      "mappedTo": "Genon"
+    },
+    "Geonosis": {
+      "status": "exact_match",
+      "mappedTo": "Geonosis"
+    },
+    "Geris": {
+      "status": "exact_match",
+      "mappedTo": "Geris"
+    },
+    "Geroon": {
+      "status": "exact_match",
+      "mappedTo": "Geroon"
+    },
+    "Gerrard": {
+      "status": "exact_match",
+      "mappedTo": "Gerrard"
+    },
+    "Gerrenthum": {
+      "status": "exact_match",
+      "mappedTo": "Gerrenthum"
+    },
+    "Gestrex": {
+      "status": "exact_match",
+      "mappedTo": "Gestrex"
+    },
+    "Gholondreine": {
+      "status": "exact_match",
+      "mappedTo": "Gholondreine"
+    },
+    "Ghorman": {
+      "status": "exact_match",
+      "mappedTo": "Ghorman"
+    },
+    "Gibbela": {
+      "status": "exact_match",
+      "mappedTo": "Gibbela"
+    },
+    "Gigor": {
+      "status": "exact_match",
+      "mappedTo": "Gigor"
+    },
+    "Giju": {
+      "status": "exact_match",
+      "mappedTo": "Giju"
+    },
+    "Gilatter": {
+      "status": "exact_match",
+      "mappedTo": "Gilatter"
+    },
+    "Gizer": {
+      "status": "exact_match",
+      "mappedTo": "Gizer"
+    },
+    "Glade": {
+      "status": "exact_match",
+      "mappedTo": "Glade"
+    },
+    "Glee Anselm": {
+      "status": "exact_match",
+      "mappedTo": "Glee Anselm"
+    },
+    "Glithnos": {
+      "status": "exact_match",
+      "mappedTo": "Glithnos"
+    },
+    "Glom Tho": {
+      "status": "exact_match",
+      "mappedTo": "Glom Tho"
+    },
+    "Glottal": {
+      "status": "exact_match",
+      "mappedTo": "Glottal"
+    },
+    "Golden Nyss": {
+      "status": "exact_match",
+      "mappedTo": "Golden Nyss"
+    },
+    "Gonmore": {
+      "status": "exact_match",
+      "mappedTo": "Gonmore"
+    },
+    "Goorla": {
+      "status": "exact_match",
+      "mappedTo": "Goorla"
+    },
+    "Gorno": {
+      "status": "exact_match",
+      "mappedTo": "Gorno"
+    },
+    "Goroth": {
+      "status": "exact_match",
+      "mappedTo": "Goroth"
+    },
+    "Gorse": {
+      "status": "exact_match",
+      "mappedTo": "Gorse"
+    },
+    "Gorsh": {
+      "status": "exact_match",
+      "mappedTo": "Gorsh"
+    },
+    "Gos Hutta": {
+      "status": "exact_match",
+      "mappedTo": "Gos Hutta"
+    },
+    "Grakouine": {
+      "status": "exact_match",
+      "mappedTo": "Grakouine"
+    },
+    "Grandine": {
+      "status": "exact_match",
+      "mappedTo": "Grandine"
+    },
+    "Gravan Seven": {
+      "status": "exact_match",
+      "mappedTo": "Gravan Seven"
+    },
+    "Gravlex Med": {
+      "status": "exact_match",
+      "mappedTo": "Gravlex Med"
+    },
+    "Gree": {
+      "status": "exact_match",
+      "mappedTo": "Gree"
+    },
+    "Grizmallt": {
+      "status": "exact_match",
+      "mappedTo": "Grizmallt"
+    },
+    "Gromas": {
+      "status": "exact_match",
+      "mappedTo": "Gromas"
+    },
+    "Groth": {
+      "status": "exact_match",
+      "mappedTo": "Groth"
+    },
+    "Guiteica": {
+      "status": "exact_match",
+      "mappedTo": "Guiteica"
+    },
+    "Gulma": {
+      "status": "exact_match",
+      "mappedTo": "Gulma"
+    },
+    "Gulvitch": {
+      "status": "exact_match",
+      "mappedTo": "Gulvitch"
+    },
+    "Gwori": {
+      "status": "exact_match",
+      "mappedTo": "Gwori"
+    },
+    "Gyndine": {
+      "status": "exact_match",
+      "mappedTo": "Gyndine"
+    },
+    "H'ratth": {
+      "status": "exact_match",
+      "mappedTo": "H'ratth"
+    },
+    "Habassa": {
+      "status": "exact_match",
+      "mappedTo": "Habassa"
+    },
+    "Had Abbadon": {
+      "status": "exact_match",
+      "mappedTo": "Had Abbadon"
+    },
+    "Hakassi": {
+      "status": "exact_match",
+      "mappedTo": "Hakassi"
+    },
+    "Halm": {
+      "status": "exact_match",
+      "mappedTo": "Halm"
+    },
+    "Halmad": {
+      "status": "exact_match",
+      "mappedTo": "Halmad"
+    },
+    "Handooine": {
+      "status": "exact_match",
+      "mappedTo": "Handooine"
+    },
+    "Hapes": {
+      "status": "exact_match",
+      "mappedTo": "Hapes"
+    },
+    "Har Binande": {
+      "status": "exact_match",
+      "mappedTo": "Har Binande"
+    },
+    "Harloen": {
+      "status": "exact_match",
+      "mappedTo": "Harloen"
+    },
+    "Harrin": {
+      "status": "exact_match",
+      "mappedTo": "Harrin"
+    },
+    "Harterra": {
+      "status": "exact_match",
+      "mappedTo": "Harterra"
+    },
+    "Haruun Kal": {
+      "status": "exact_match",
+      "mappedTo": "Haruun Kal"
+    },
+    "Haseria": {
+      "status": "exact_match",
+      "mappedTo": "Haseria"
+    },
+    "Hast": {
+      "status": "exact_match",
+      "mappedTo": "Hast"
+    },
+    "Haverling": {
+      "status": "exact_match",
+      "mappedTo": "Haverling"
+    },
+    "Havricus": {
+      "status": "exact_match",
+      "mappedTo": "Havricus"
+    },
+    "Heffrin": {
+      "status": "exact_match",
+      "mappedTo": "Heffrin"
+    },
+    "Helska": {
+      "status": "exact_match",
+      "mappedTo": "Helska"
+    },
+    "Hemei": {
+      "status": "exact_match",
+      "mappedTo": "Hemei"
+    },
+    "Hensara": {
+      "status": "exact_match",
+      "mappedTo": "Hensara"
+    },
+    "Heptalia": {
+      "status": "exact_match",
+      "mappedTo": "Heptalia"
+    },
+    "Herdessa": {
+      "status": "exact_match",
+      "mappedTo": "Herdessa"
+    },
+    "Herzob": {
+      "status": "exact_match",
+      "mappedTo": "Herzob"
+    },
+    "Hestria": {
+      "status": "exact_match",
+      "mappedTo": "Hestria"
+    },
+    "Hethar": {
+      "status": "exact_match",
+      "mappedTo": "Hethar"
+    },
+    "Hewett": {
+      "status": "exact_match",
+      "mappedTo": "Hewett"
+    },
+    "High Chunah": {
+      "status": "exact_match",
+      "mappedTo": "High Chunah"
+    },
+    "Hiit": {
+      "status": "exact_match",
+      "mappedTo": "Hiit"
+    },
+    "Hijado": {
+      "status": "exact_match",
+      "mappedTo": "Hijado"
+    },
+    "Hijarna": {
+      "status": "exact_match",
+      "mappedTo": "Hijarna"
+    },
+    "Hijo": {
+      "status": "exact_match",
+      "mappedTo": "Hijo"
+    },
+    "Hillindor": {
+      "status": "exact_match",
+      "mappedTo": "Hillindor"
+    },
+    "Hilo": {
+      "status": "exact_match",
+      "mappedTo": "Hilo"
+    },
+    "Hinakuu": {
+      "status": "exact_match",
+      "mappedTo": "Hinakuu"
+    },
+    "Hirsi": {
+      "status": "exact_match",
+      "mappedTo": "Hirsi"
+    },
+    "Hishyim": {
+      "status": "exact_match",
+      "mappedTo": "Hishyim"
+    },
+    "Hjaff": {
+      "status": "exact_match",
+      "mappedTo": "Hjaff"
+    },
+    "Hok": {
+      "status": "exact_match",
+      "mappedTo": "Hok"
+    },
+    "Holess": {
+      "status": "exact_match",
+      "mappedTo": "Holess"
+    },
+    "Hollastin": {
+      "status": "exact_match",
+      "mappedTo": "Hollastin"
+    },
+    "Honoghr": {
+      "status": "exact_match",
+      "mappedTo": "Honoghr"
+    },
+    "Horuz": {
+      "status": "exact_match",
+      "mappedTo": "Horuz"
+    },
+    "Hosko": {
+      "status": "exact_match",
+      "mappedTo": "Hosko"
+    },
+    "Hosnian Prime": {
+      "status": "exact_match",
+      "mappedTo": "Hosnian Prime"
+    },
+    "Hosrel": {
+      "status": "exact_match",
+      "mappedTo": "Hosrel"
+    },
+    "Hoth": {
+      "status": "exact_match",
+      "mappedTo": "Hoth"
+    },
+    "Houche": {
+      "status": "exact_match",
+      "mappedTo": "Houche"
+    },
+    "Hovan": {
+      "status": "exact_match",
+      "mappedTo": "Hovan"
+    },
+    "Hoylin": {
+      "status": "exact_match",
+      "mappedTo": "Hoylin"
+    },
+    "Huk": {
+      "status": "exact_match",
+      "mappedTo": "Huk"
+    },
+    "Huldamun": {
+      "status": "exact_match",
+      "mappedTo": "Huldamun"
+    },
+    "Hull's Star": {
+      "status": "exact_match",
+      "mappedTo": "Hull's Star"
+    },
+    "Huloon": {
+      "status": "exact_match",
+      "mappedTo": "Huloon"
+    },
+    "Humbarine": {
+      "status": "exact_match",
+      "mappedTo": "Humbarine"
+    },
+    "Hutlar": {
+      "status": "exact_match",
+      "mappedTo": "Hutlar"
+    },
+    "Hyabb": {
+      "status": "exact_match",
+      "mappedTo": "Hyabb"
+    },
+    "Hynah": {
+      "status": "exact_match",
+      "mappedTo": "Hynah"
+    },
+    "Hypori": {
+      "status": "exact_match",
+      "mappedTo": "Hypori"
+    },
+    "Iast": {
+      "status": "exact_match",
+      "mappedTo": "Iast"
+    },
+    "Ibanjji": {
+      "status": "exact_match",
+      "mappedTo": "Ibanjji"
+    },
+    "Ichtor": {
+      "status": "exact_match",
+      "mappedTo": "Ichtor"
+    },
+    "Iego": {
+      "status": "exact_match",
+      "mappedTo": "Iego"
+    },
+    "Ifmix": {
+      "status": "exact_match",
+      "mappedTo": "Ifmix"
+    },
+    "Iktotchon": {
+      "status": "exact_match",
+      "mappedTo": "Iktotchon"
+    },
+    "Iliabath": {
+      "status": "exact_match",
+      "mappedTo": "Iliabath"
+    },
+    "Illarreen": {
+      "status": "exact_match",
+      "mappedTo": "Illarreen"
+    },
+    "Illodia": {
+      "status": "exact_match",
+      "mappedTo": "Illodia"
+    },
+    "Illoud": {
+      "status": "exact_match",
+      "mappedTo": "Illoud"
+    },
+    "Ilos": {
+      "status": "exact_match",
+      "mappedTo": "Ilos"
+    },
+    "Ilos Minor": {
+      "status": "exact_match",
+      "mappedTo": "Ilos Minor"
+    },
+    "Ilum": {
+      "status": "exact_match",
+      "mappedTo": "Ilum"
+    },
+    "Immalia": {
+      "status": "exact_match",
+      "mappedTo": "Immalia"
+    },
+    "Imynusoph": {
+      "status": "exact_match",
+      "mappedTo": "Imynusoph"
+    },
+    "Indellian": {
+      "status": "exact_match",
+      "mappedTo": "Indellian"
+    },
+    "Indobok": {
+      "status": "exact_match",
+      "mappedTo": "Indobok"
+    },
+    "Indu San": {
+      "status": "exact_match",
+      "mappedTo": "Indu San"
+    },
+    "Indupar": {
+      "status": "exact_match",
+      "mappedTo": "Indupar"
+    },
+    "Ingo": {
+      "status": "exact_match",
+      "mappedTo": "Ingo"
+    },
+    "Inysh": {
+      "status": "exact_match",
+      "mappedTo": "Inysh"
+    },
+    "Ione": {
+      "status": "exact_match",
+      "mappedTo": "Ione"
+    },
+    "Iope": {
+      "status": "exact_match",
+      "mappedTo": "Iope"
+    },
+    "Iotra": {
+      "status": "exact_match",
+      "mappedTo": "Iotra"
+    },
+    "Iphigin": {
+      "status": "exact_match",
+      "mappedTo": "Iphigin"
+    },
+    "Iridium": {
+      "status": "exact_match",
+      "mappedTo": "Iridium"
+    },
+    "Iridonia": {
+      "status": "exact_match",
+      "mappedTo": "Iridonia"
+    },
+    "Irith": {
+      "status": "exact_match",
+      "mappedTo": "Irith"
+    },
+    "Isde Naha": {
+      "status": "exact_match",
+      "mappedTo": "Isde Naha"
+    },
+    "Iseno": {
+      "status": "exact_match",
+      "mappedTo": "Iseno"
+    },
+    "Ishanna": {
+      "status": "exact_match",
+      "mappedTo": "Ishanna"
+    },
+    "Isiring": {
+      "status": "exact_match",
+      "mappedTo": "Isiring"
+    },
+    "Isis": {
+      "status": "exact_match",
+      "mappedTo": "Isis"
+    },
+    "Iskalon": {
+      "status": "exact_match",
+      "mappedTo": "Iskalon"
+    },
+    "Ison": {
+      "status": "exact_match",
+      "mappedTo": "Ison"
+    },
+    "Issagra": {
+      "status": "exact_match",
+      "mappedTo": "Issagra"
+    },
+    "Issor": {
+      "status": "exact_match",
+      "mappedTo": "Issor"
+    },
+    "Itani": {
+      "status": "exact_match",
+      "mappedTo": "Itani"
+    },
+    "Ithor": {
+      "status": "exact_match",
+      "mappedTo": "Ithor"
+    },
+    "Ithull": {
+      "status": "exact_match",
+      "mappedTo": "Ithull"
+    },
+    "Ixtlar": {
+      "status": "exact_match",
+      "mappedTo": "Ixtlar"
+    },
+    "J't'p'tan": {
+      "status": "exact_match",
+      "mappedTo": "J't'p'tan"
+    },
+    "Jabiim": {
+      "status": "exact_match",
+      "mappedTo": "Jabiim"
+    },
+    "Jaciprus": {
+      "status": "exact_match",
+      "mappedTo": "Jaciprus"
+    },
+    "Jaemus": {
+      "status": "exact_match",
+      "mappedTo": "Jaemus"
+    },
+    "Jagomir": {
+      "status": "exact_match",
+      "mappedTo": "Jagomir"
+    },
+    "Jaguada": {
+      "status": "exact_match",
+      "mappedTo": "Jaguada"
+    },
+    "Jakku": {
+      "status": "exact_match",
+      "mappedTo": "Jakku"
+    },
+    "Jalarren": {
+      "status": "exact_match",
+      "mappedTo": "Jalarren"
+    },
+    "Jaminere": {
+      "status": "exact_match",
+      "mappedTo": "Jaminere"
+    },
+    "Jamiron": {
+      "status": "exact_match",
+      "mappedTo": "Jamiron"
+    },
+    "Janara": {
+      "status": "exact_match",
+      "mappedTo": "Janara"
+    },
+    "Jandur": {
+      "status": "exact_match",
+      "mappedTo": "Jandur"
+    },
+    "JanFathal": {
+      "status": "exact_match",
+      "mappedTo": "JanFathal"
+    },
+    "Janodral Mizar": {
+      "status": "exact_match",
+      "mappedTo": "Janodral Mizar"
+    },
+    "Jarnollen": {
+      "status": "exact_match",
+      "mappedTo": "Jarnollen"
+    },
+    "Jatir": {
+      "status": "exact_match",
+      "mappedTo": "Jatir"
+    },
+    "Javin": {
+      "status": "exact_match",
+      "mappedTo": "Javin"
+    },
+    "Jazbina": {
+      "status": "exact_match",
+      "mappedTo": "Jazbina"
+    },
+    "Jedha": {
+      "status": "exact_match",
+      "mappedTo": "Jedha"
+    },
+    "Jelucan": {
+      "status": "exact_match",
+      "mappedTo": "Jelucan"
+    },
+    "Jendorn": {
+      "status": "exact_match",
+      "mappedTo": "Jendorn"
+    },
+    "Jerne": {
+      "status": "exact_match",
+      "mappedTo": "Jerne"
+    },
+    "Jerrilek": {
+      "status": "exact_match",
+      "mappedTo": "Jerrilek"
+    },
+    "Jerrist": {
+      "status": "exact_match",
+      "mappedTo": "Jerrist"
+    },
+    "Jestan": {
+      "status": "exact_match",
+      "mappedTo": "Jestan"
+    },
+    "Jeyell": {
+      "status": "exact_match",
+      "mappedTo": "Jeyell"
+    },
+    "Jilrua": {
+      "status": "exact_match",
+      "mappedTo": "Jilrua"
+    },
+    "Jiroch": {
+      "status": "exact_match",
+      "mappedTo": "Jiroch"
+    },
+    "Jodaka": {
+      "status": "exact_match",
+      "mappedTo": "Jodaka"
+    },
+    "Joiol": {
+      "status": "exact_match",
+      "mappedTo": "Joiol"
+    },
+    "Jomark": {
+      "status": "exact_match",
+      "mappedTo": "Jomark"
+    },
+    "Joodrudda": {
+      "status": "exact_match",
+      "mappedTo": "Joodrudda"
+    },
+    "Jovan": {
+      "status": "exact_match",
+      "mappedTo": "Jovan"
+    },
+    "Jovaria": {
+      "status": "exact_match",
+      "mappedTo": "Jovaria"
+    },
+    "Jubilar": {
+      "status": "exact_match",
+      "mappedTo": "Jubilar"
+    },
+    "Junction": {
+      "status": "exact_match",
+      "mappedTo": "Junction"
+    },
+    "Junkfort Station": {
+      "status": "exact_match",
+      "mappedTo": "Junkfort Station"
+    },
+    "Jurzan": {
+      "status": "exact_match",
+      "mappedTo": "Jurzan"
+    },
+    "Juvex": {
+      "status": "exact_match",
+      "mappedTo": "Juvex"
+    },
+    "K'ath": {
+      "status": "exact_match",
+      "mappedTo": "K'ath"
+    },
+    "k'Farri": {
+      "status": "exact_match",
+      "mappedTo": "k'Farri"
+    },
+    "K'taktaxka": {
+      "status": "exact_match",
+      "mappedTo": "K'taktaxka"
+    },
+    "Kaal": {
+      "status": "exact_match",
+      "mappedTo": "Kaal"
+    },
+    "Kabal": {
+      "status": "exact_match",
+      "mappedTo": "Kabal"
+    },
+    "Kabray": {
+      "status": "exact_match",
+      "mappedTo": "Kabray"
+    },
+    "Kadavo": {
+      "status": "exact_match",
+      "mappedTo": "Kadavo"
+    },
+    "Kafane": {
+      "status": "exact_match",
+      "mappedTo": "Kafane"
+    },
+    "Kaikielius": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Kail": {
+      "status": "exact_match",
+      "mappedTo": "Kail"
+    },
+    "Kailor V": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Kal'Shebbol": {
+      "status": "exact_match",
+      "mappedTo": "Kal'Shebbol"
+    },
+    "Kalaan": {
+      "status": "exact_match",
+      "mappedTo": "Kalaan"
+    },
+    "Kalarba": {
+      "status": "exact_match",
+      "mappedTo": "Kalarba"
+    },
+    "Kalee": {
+      "status": "exact_match",
+      "mappedTo": "Kalee"
+    },
+    "Kalevala": {
+      "status": "exact_match",
+      "mappedTo": "Kalevala"
+    },
+    "Kalgo": {
+      "status": "exact_match",
+      "mappedTo": "Kalgo"
+    },
+    "Kaliida Shoals": {
+      "status": "exact_match",
+      "mappedTo": "Kaliida Shoals"
+    },
+    "Kalinda": {
+      "status": "exact_match",
+      "mappedTo": "Kalinda"
+    },
+    "Kalishik": {
+      "status": "exact_match",
+      "mappedTo": "Kalishik"
+    },
+    "Kalist": {
+      "status": "exact_match",
+      "mappedTo": "Kalist"
+    },
+    "Kalki Nebula": {
+      "status": "exact_match",
+      "mappedTo": "Kalki Nebula"
+    },
+    "Kalkovak": {
+      "status": "exact_match",
+      "mappedTo": "Kalkovak"
+    },
+    "Kalla": {
+      "status": "exact_match",
+      "mappedTo": "Kalla"
+    },
+    "Kalsunor": {
+      "status": "exact_match",
+      "mappedTo": "Kalsunor"
+    },
+    "Kamar": {
+      "status": "exact_match",
+      "mappedTo": "Kamar"
+    },
+    "Kamdon": {
+      "status": "exact_match",
+      "mappedTo": "Kamdon"
+    },
+    "Kamino": {
+      "status": "exact_match",
+      "mappedTo": "Kamino"
+    },
+    "Kamur": {
+      "status": "exact_match",
+      "mappedTo": "Kamur"
+    },
+    "Kanaver": {
+      "status": "exact_match",
+      "mappedTo": "Kanaver"
+    },
+    "Kaon": {
+      "status": "exact_match",
+      "mappedTo": "Kaon"
+    },
+    "Karazak": {
+      "status": "exact_match",
+      "mappedTo": "Karazak"
+    },
+    "Kardura": {
+      "status": "exact_match",
+      "mappedTo": "Kardura"
+    },
+    "Karfeddion": {
+      "status": "exact_match",
+      "mappedTo": "Karfeddion"
+    },
+    "Karideph": {
+      "status": "exact_match",
+      "mappedTo": "Karideph"
+    },
+    "Karlinus": {
+      "status": "exact_match",
+      "mappedTo": "Karlinus"
+    },
+    "Karra": {
+      "status": "exact_match",
+      "mappedTo": "Karra"
+    },
+    "Karsten's World": {
+      "status": "exact_match",
+      "mappedTo": "Karsten's World"
+    },
+    "Karvoss": {
+      "status": "exact_match",
+      "mappedTo": "Karvoss"
+    },
+    "Kashyyyk": {
+      "status": "exact_match",
+      "mappedTo": "Kashyyyk"
+    },
+    "Kassido": {
+      "status": "exact_match",
+      "mappedTo": "Kassido"
+    },
+    "Katarr": {
+      "status": "exact_match",
+      "mappedTo": "Katarr"
+    },
+    "Kath": {
+      "status": "exact_match",
+      "mappedTo": "Kath"
+    },
+    "Katraasii": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Kattada": {
+      "status": "exact_match",
+      "mappedTo": "Kattada"
+    },
+    "Kayri": {
+      "status": "exact_match",
+      "mappedTo": "Kayri"
+    },
+    "Kedorzha": {
+      "status": "exact_match",
+      "mappedTo": "Kedorzha"
+    },
+    "Keeara Major": {
+      "status": "exact_match",
+      "mappedTo": "Keeara Major"
+    },
+    "Keeper's World": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Kegan": {
+      "status": "exact_match",
+      "mappedTo": "Kegan"
+    },
+    "Keitum": {
+      "status": "exact_match",
+      "mappedTo": "Keitum"
+    },
+    "Kelada": {
+      "status": "exact_match",
+      "mappedTo": "Kelada"
+    },
+    "Keldooine": {
+      "status": "exact_match",
+      "mappedTo": "Keldooine"
+    },
+    "Kelrodo-Ai": {
+      "status": "exact_match",
+      "mappedTo": "Kelrodo-Ai"
+    },
+    "Kemal Station": {
+      "status": "exact_match",
+      "mappedTo": "Kemal Station"
+    },
+    "Kerkoidia": {
+      "status": "exact_match",
+      "mappedTo": "Kerkoidia"
+    },
+    "Kesh": {
+      "status": "exact_match",
+      "mappedTo": "Kesh"
+    },
+    "Keskin": {
+      "status": "exact_match",
+      "mappedTo": "Keskin"
+    },
+    "Kesmere": {
+      "status": "exact_match",
+      "mappedTo": "Kesmere"
+    },
+    "Kesmere Minor": {
+      "status": "exact_match",
+      "mappedTo": "Kesmere Minor"
+    },
+    "Kessel": {
+      "status": "exact_match",
+      "mappedTo": "Kessel"
+    },
+    "Ket": {
+      "status": "exact_match",
+      "mappedTo": "Ket"
+    },
+    "Ketal": {
+      "status": "exact_match",
+      "mappedTo": "Ketal"
+    },
+    "Ketaris": {
+      "status": "exact_match",
+      "mappedTo": "Ketaris"
+    },
+    "Khar Delba": {
+      "status": "exact_match",
+      "mappedTo": "Khar Delba"
+    },
+    "Khomm": {
+      "status": "exact_match",
+      "mappedTo": "Khomm"
+    },
+    "Khubeaie": {
+      "status": "exact_match",
+      "mappedTo": "Khubeaie"
+    },
+    "Kidiet Olgo": {
+      "status": "exact_match",
+      "mappedTo": "Kidiet Olgo"
+    },
+    "Kidriff": {
+      "status": "exact_match",
+      "mappedTo": "Kidriff"
+    },
+    "Kiffu": {
+      "status": "exact_match",
+      "mappedTo": "Kiffu"
+    },
+    "Kijimi": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Kile": {
+      "status": "exact_match",
+      "mappedTo": "Kile"
+    },
+    "Kimm Aurek": {
+      "status": "exact_match",
+      "mappedTo": "Kimm Aurek"
+    },
+    "Kimm Besh": {
+      "status": "exact_match",
+      "mappedTo": "Kimm Besh"
+    },
+    "Kimm Cresh": {
+      "status": "exact_match",
+      "mappedTo": "Kimm Cresh"
+    },
+    "Kinooine": {
+      "status": "exact_match",
+      "mappedTo": "Kinooine"
+    },
+    "Kinoss": {
+      "status": "exact_match",
+      "mappedTo": "Kinoss"
+    },
+    "Kinyen": {
+      "status": "exact_match",
+      "mappedTo": "Kinyen"
+    },
+    "Kir": {
+      "status": "exact_match",
+      "mappedTo": "Kir"
+    },
+    "Kira": {
+      "status": "exact_match",
+      "mappedTo": "Kira"
+    },
+    "Kirdo": {
+      "status": "exact_match",
+      "mappedTo": "Kirdo"
+    },
+    "Kiribi": {
+      "status": "exact_match",
+      "mappedTo": "Kiribi"
+    },
+    "Kiros": {
+      "status": "exact_match",
+      "mappedTo": "Kiros"
+    },
+    "Kirtania": {
+      "status": "exact_match",
+      "mappedTo": "Kirtania"
+    },
+    "Kirtarkin": {
+      "status": "exact_match",
+      "mappedTo": "Kirtarkin"
+    },
+    "Kitel Phard": {
+      "status": "exact_match",
+      "mappedTo": "Kitel Phard"
+    },
+    "Kiva": {
+      "status": "exact_match",
+      "mappedTo": "Kiva"
+    },
+    "Klasse Ephemora": {
+      "status": "exact_match",
+      "mappedTo": "Klasse Ephemora"
+    },
+    "Klatooine": {
+      "status": "exact_match",
+      "mappedTo": "Klatooine"
+    },
+    "Kleeva": {
+      "status": "exact_match",
+      "mappedTo": "Kleeva"
+    },
+    "Kli'aar": {
+      "status": "exact_match",
+      "mappedTo": "Kli'aar"
+    },
+    "Kloper": {
+      "status": "exact_match",
+      "mappedTo": "Kloper"
+    },
+    "Kluistar": {
+      "status": "exact_match",
+      "mappedTo": "Kluistar"
+    },
+    "Knolstee": {
+      "status": "exact_match",
+      "mappedTo": "Knolstee"
+    },
+    "Knores": {
+      "status": "exact_match",
+      "mappedTo": "Knores"
+    },
+    "Koba": {
+      "status": "exact_match",
+      "mappedTo": "Koba"
+    },
+    "Kobaria": {
+      "status": "exact_match",
+      "mappedTo": "Kobaria"
+    },
+    "Koda Station": {
+      "status": "exact_match",
+      "mappedTo": "Koda Station"
+    },
+    "Kodai": {
+      "status": "exact_match",
+      "mappedTo": "Kodai"
+    },
+    "Koensayr": {
+      "status": "exact_match",
+      "mappedTo": "Koensayr"
+    },
+    "Koiogra": {
+      "status": "exact_match",
+      "mappedTo": "Koiogra"
+    },
+    "Kokash": {
+      "status": "exact_match",
+      "mappedTo": "Kokash"
+    },
+    "Kol Huro": {
+      "status": "exact_match",
+      "mappedTo": "Kol Huro"
+    },
+    "Kolanda Station": {
+      "status": "exact_match",
+      "mappedTo": "Kolanda Station"
+    },
+    "Komnor": {
+      "status": "exact_match",
+      "mappedTo": "Komnor"
+    },
+    "Kooriva": {
+      "status": "exact_match",
+      "mappedTo": "Kooriva"
+    },
+    "Kor Anjiliac": {
+      "status": "exact_match",
+      "mappedTo": "Kor Anjiliac"
+    },
+    "Kor Besadii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Besadii"
+    },
+    "Kor Desilijic": {
+      "status": "exact_match",
+      "mappedTo": "Kor Desilijic"
+    },
+    "Kor Gejalli": {
+      "status": "exact_match",
+      "mappedTo": "Kor Gejalli"
+    },
+    "Kor Hestilic": {
+      "status": "exact_match",
+      "mappedTo": "Kor Hestilic"
+    },
+    "Kor Hunamma": {
+      "status": "exact_match",
+      "mappedTo": "Kor Hunamma"
+    },
+    "Kor Jiramma": {
+      "status": "exact_match",
+      "mappedTo": "Kor Jiramma"
+    },
+    "Kor Nasirii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Nasirii"
+    },
+    "Kor Nijiladii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Nijiladii"
+    },
+    "Kor Oktanivii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Oktanivii"
+    },
+    "Kor Trinivii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Trinivii"
+    },
+    "Kor Usilic": {
+      "status": "exact_match",
+      "mappedTo": "Kor Usilic"
+    },
+    "Kor Utoradii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Utoradii"
+    },
+    "Kor Vosadii": {
+      "status": "exact_match",
+      "mappedTo": "Kor Vosadii"
+    },
+    "Korbin": {
+      "status": "exact_match",
+      "mappedTo": "Korbin"
+    },
+    "Korda Six": {
+      "status": "exact_match",
+      "mappedTo": "Korda Six"
+    },
+    "Korev VII": {
+      "status": "exact_match",
+      "mappedTo": "Korev VII"
+    },
+    "Korfo": {
+      "status": "exact_match",
+      "mappedTo": "Korfo"
+    },
+    "Korphir": {
+      "status": "exact_match",
+      "mappedTo": "Korphir"
+    },
+    "Korriban": {
+      "status": "exact_match",
+      "mappedTo": "Korriban"
+    },
+    "Korriz": {
+      "status": "exact_match",
+      "mappedTo": "Korriz"
+    },
+    "Korvaii": {
+      "status": "exact_match",
+      "mappedTo": "Korvaii"
+    },
+    "Kothlis": {
+      "status": "exact_match",
+      "mappedTo": "Kothlis"
+    },
+    "Kowak": {
+      "status": "exact_match",
+      "mappedTo": "Kowak"
+    },
+    "Krann": {
+      "status": "exact_match",
+      "mappedTo": "Krann"
+    },
+    "Krant": {
+      "status": "exact_match",
+      "mappedTo": "Krant"
+    },
+    "Krayiss": {
+      "status": "exact_match",
+      "mappedTo": "Krayiss"
+    },
+    "Kril'Dor": {
+      "status": "exact_match",
+      "mappedTo": "Kril'Dor"
+    },
+    "Krinemonen": {
+      "status": "exact_match",
+      "mappedTo": "Krinemonen"
+    },
+    "Kriselist": {
+      "status": "exact_match",
+      "mappedTo": "Kriselist"
+    },
+    "Kroctar": {
+      "status": "exact_match",
+      "mappedTo": "Kroctar"
+    },
+    "Kromus": {
+      "status": "exact_match",
+      "mappedTo": "Kromus"
+    },
+    "Krownest": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Krylon": {
+      "status": "exact_match",
+      "mappedTo": "Krylon"
+    },
+    "Ktil": {
+      "status": "exact_match",
+      "mappedTo": "Ktil"
+    },
+    "Kuar": {
+      "status": "exact_match",
+      "mappedTo": "Kuar"
+    },
+    "Kuat": {
+      "status": "exact_match",
+      "mappedTo": "Kuat"
+    },
+    "Kubindi": {
+      "status": "exact_match",
+      "mappedTo": "Kubindi"
+    },
+    "Kumru": {
+      "status": "exact_match",
+      "mappedTo": "Kumru"
+    },
+    "Kuna's Eye": {
+      "status": "exact_match",
+      "mappedTo": "Kuna's Eye"
+    },
+    "Kuna's Fist": {
+      "status": "exact_match",
+      "mappedTo": "Kuna's Fist"
+    },
+    "Kuna's Horn": {
+      "status": "exact_match",
+      "mappedTo": "Kuna's Horn"
+    },
+    "Kuna's Tail": {
+      "status": "exact_match",
+      "mappedTo": "Kuna's Tail"
+    },
+    "Kuna's Tooth": {
+      "status": "exact_match",
+      "mappedTo": "Kuna's Tooth"
+    },
+    "Kushibah": {
+      "status": "exact_match",
+      "mappedTo": "Kushibah"
+    },
+    "Kwenn": {
+      "status": "exact_match",
+      "mappedTo": "Kwenn"
+    },
+    "Kwevron": {
+      "status": "exact_match",
+      "mappedTo": "Kwevron"
+    },
+    "Kwookrrr": {
+      "status": "exact_match",
+      "mappedTo": "Kwookrrr"
+    },
+    "Laakteen Depot": {
+      "status": "exact_match",
+      "mappedTo": "Laakteen Depot"
+    },
+    "Laboi II": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Ladarra": {
+      "status": "exact_match",
+      "mappedTo": "Ladarra"
+    },
+    "Laertos": {
+      "status": "exact_match",
+      "mappedTo": "Laertos"
+    },
+    "Lafra": {
+      "status": "exact_match",
+      "mappedTo": "Lafra"
+    },
+    "Lah'mu": {
+      "status": "exact_match",
+      "mappedTo": "Lah'mu"
+    },
+    "Lahag Erli": {
+      "status": "exact_match",
+      "mappedTo": "Lahag Erli"
+    },
+    "Lahsbane": {
+      "status": "exact_match",
+      "mappedTo": "Lahsbane"
+    },
+    "Lalmy'ash": {
+      "status": "exact_match",
+      "mappedTo": "Lalmy'ash"
+    },
+    "Lamaredd": {
+      "status": "exact_match",
+      "mappedTo": "Lamaredd"
+    },
+    "Langoona": {
+      "status": "exact_match",
+      "mappedTo": "Langoona"
+    },
+    "Lankashiir": {
+      "status": "exact_match",
+      "mappedTo": "Lankashiir"
+    },
+    "Lannik": {
+      "status": "exact_match",
+      "mappedTo": "Lannik"
+    },
+    "Lansono": {
+      "status": "exact_match",
+      "mappedTo": "Lansono"
+    },
+    "Lant": {
+      "status": "exact_match",
+      "mappedTo": "Lant"
+    },
+    "Lanteeb": {
+      "status": "exact_match",
+      "mappedTo": "Lanteeb"
+    },
+    "Lanthe": {
+      "status": "exact_match",
+      "mappedTo": "Lanthe"
+    },
+    "Lantillies": {
+      "status": "exact_match",
+      "mappedTo": "Lantillies"
+    },
+    "Las Lagon": {
+      "status": "exact_match",
+      "mappedTo": "Las Lagon"
+    },
+    "Lasan": {
+      "status": "exact_match",
+      "mappedTo": "Lasan"
+    },
+    "Lavisar": {
+      "status": "exact_match",
+      "mappedTo": "Lavisar"
+    },
+    "Lazerian": {
+      "status": "exact_match",
+      "mappedTo": "Lazerian"
+    },
+    "Lekua": {
+      "status": "exact_match",
+      "mappedTo": "Lekua"
+    },
+    "Lelmra": {
+      "status": "exact_match",
+      "mappedTo": "Lelmra"
+    },
+    "Lemmi": {
+      "status": "exact_match",
+      "mappedTo": "Lemmi"
+    },
+    "Lenico IV": {
+      "status": "exact_match",
+      "mappedTo": "Lenico IV"
+    },
+    "Lequabis": {
+      "status": "exact_match",
+      "mappedTo": "Lequabis"
+    },
+    "Leria Kerlsil": {
+      "status": "exact_match",
+      "mappedTo": "Leria Kerlsil"
+    },
+    "Leritor": {
+      "status": "exact_match",
+      "mappedTo": "Leritor"
+    },
+    "Lettow": {
+      "status": "exact_match",
+      "mappedTo": "Lettow"
+    },
+    "Levian": {
+      "status": "exact_match",
+      "mappedTo": "Levian"
+    },
+    "Lexrul": {
+      "status": "exact_match",
+      "mappedTo": "Lexrul"
+    },
+    "Lialic": {
+      "status": "exact_match",
+      "mappedTo": "Lialic"
+    },
+    "Lianna": {
+      "status": "exact_match",
+      "mappedTo": "Lianna"
+    },
+    "Linuri": {
+      "status": "exact_match",
+      "mappedTo": "Linuri"
+    },
+    "Lipsec": {
+      "status": "exact_match",
+      "mappedTo": "Lipsec"
+    },
+    "Lirra": {
+      "status": "exact_match",
+      "mappedTo": "Lirra"
+    },
+    "Listehol": {
+      "status": "exact_match",
+      "mappedTo": "Listehol"
+    },
+    "Little Capella": {
+      "status": "exact_match",
+      "mappedTo": "Little Capella"
+    },
+    "Little Kessel": {
+      "status": "exact_match",
+      "mappedTo": "Little Kessel"
+    },
+    "Little Talhovi": {
+      "status": "exact_match",
+      "mappedTo": "Little Talhovi"
+    },
+    "Livien": {
+      "status": "exact_match",
+      "mappedTo": "Livien"
+    },
+    "Llanic": {
+      "status": "exact_match",
+      "mappedTo": "Llanic"
+    },
+    "Llon Nebulae": {
+      "status": "exact_match",
+      "mappedTo": "Llon Nebulae"
+    },
+    "Lo'Uran": {
+      "status": "exact_match",
+      "mappedTo": "Lo'Uran"
+    },
+    "Loedorvia": {
+      "status": "exact_match",
+      "mappedTo": "Loedorvia"
+    },
+    "Lohopa": {
+      "status": "exact_match",
+      "mappedTo": "Lohopa"
+    },
+    "Lok": {
+      "status": "exact_match",
+      "mappedTo": "Lok"
+    },
+    "Lola Sayu": {
+      "status": "exact_match",
+      "mappedTo": "Lola Sayu"
+    },
+    "Lolnar": {
+      "status": "exact_match",
+      "mappedTo": "Lolnar"
+    },
+    "Lonnaw": {
+      "status": "exact_match",
+      "mappedTo": "Lonnaw"
+    },
+    "Loovria": {
+      "status": "exact_match",
+      "mappedTo": "Loovria"
+    },
+    "Lorahns": {
+      "status": "exact_match",
+      "mappedTo": "Lorahns"
+    },
+    "Loretto": {
+      "status": "exact_match",
+      "mappedTo": "Loretto"
+    },
+    "Loronar": {
+      "status": "exact_match",
+      "mappedTo": "Loronar"
+    },
+    "Lorrd": {
+      "status": "exact_match",
+      "mappedTo": "Lorrd"
+    },
+    "Lorta": {
+      "status": "exact_match",
+      "mappedTo": "Lorta"
+    },
+    "Lothal": {
+      "status": "exact_match",
+      "mappedTo": "Lothal"
+    },
+    "Lotho Minor": {
+      "status": "exact_match",
+      "mappedTo": "Lotho Minor"
+    },
+    "Lovola": {
+      "status": "exact_match",
+      "mappedTo": "Lovola"
+    },
+    "Low'n": {
+      "status": "exact_match",
+      "mappedTo": "Low'n"
+    },
+    "Lowick": {
+      "status": "exact_match",
+      "mappedTo": "Lowick"
+    },
+    "Lucazec": {
+      "status": "exact_match",
+      "mappedTo": "Lucazec"
+    },
+    "Lujo": {
+      "status": "exact_match",
+      "mappedTo": "Lujo"
+    },
+    "Lur": {
+      "status": "exact_match",
+      "mappedTo": "Lur"
+    },
+    "Lutrillia": {
+      "status": "exact_match",
+      "mappedTo": "Lutrillia"
+    },
+    "Lwhekk": {
+      "status": "exact_match",
+      "mappedTo": "Lwhekk"
+    },
+    "Lyran": {
+      "status": "exact_match",
+      "mappedTo": "Lyran"
+    },
+    "Lythos": {
+      "status": "exact_match",
+      "mappedTo": "Lythos"
+    },
+    "M'haeli": {
+      "status": "exact_match",
+      "mappedTo": "M'haeli"
+    },
+    "M'Hanna": {
+      "status": "exact_match",
+      "mappedTo": "M'Hanna"
+    },
+    "Ma'ar Shaddam": {
+      "status": "exact_match",
+      "mappedTo": "Ma'ar Shaddam"
+    },
+    "Maires": {
+      "status": "exact_match",
+      "mappedTo": "Maires"
+    },
+    "Majoor": {
+      "status": "exact_match",
+      "mappedTo": "Majoor"
+    },
+    "Makeb": {
+      "status": "exact_match",
+      "mappedTo": "Makeb"
+    },
+    "Makem Te": {
+      "status": "exact_match",
+      "mappedTo": "Makem Te"
+    },
+    "Malachor": {
+      "status": "exact_match",
+      "mappedTo": "Malachor"
+    },
+    "Malador": {
+      "status": "exact_match",
+      "mappedTo": "Malador"
+    },
+    "Malagarr": {
+      "status": "exact_match",
+      "mappedTo": "Malagarr"
+    },
+    "Malastare": {
+      "status": "exact_match",
+      "mappedTo": "Malastare"
+    },
+    "Maldra": {
+      "status": "exact_match",
+      "mappedTo": "Maldra"
+    },
+    "Malestrom Nebula": {
+      "status": "exact_match",
+      "mappedTo": "Malestrom Nebula"
+    },
+    "Mall'ordian": {
+      "status": "exact_match",
+      "mappedTo": "Mall'ordian"
+    },
+    "Malrev IV": {
+      "status": "exact_match",
+      "mappedTo": "Malrev IV"
+    },
+    "Maltha Obex": {
+      "status": "exact_match",
+      "mappedTo": "Maltha Obex"
+    },
+    "Mamendin": {
+      "status": "exact_match",
+      "mappedTo": "Mamendin"
+    },
+    "Manaan": {
+      "status": "exact_match",
+      "mappedTo": "Manaan"
+    },
+    "Manda": {
+      "status": "exact_match",
+      "mappedTo": "Manda"
+    },
+    "Mandalore": {
+      "status": "exact_match",
+      "mappedTo": "Mandalore"
+    },
+    "Mandell": {
+      "status": "exact_match",
+      "mappedTo": "Mandell"
+    },
+    "Manforgon": {
+      "status": "exact_match",
+      "mappedTo": "Manforgon"
+    },
+    "Mannova": {
+      "status": "exact_match",
+      "mappedTo": "Mannova"
+    },
+    "Manpha": {
+      "status": "exact_match",
+      "mappedTo": "Manpha"
+    },
+    "Manress": {
+      "status": "exact_match",
+      "mappedTo": "Manress"
+    },
+    "Mantan": {
+      "status": "exact_match",
+      "mappedTo": "Mantan"
+    },
+    "Mantessa": {
+      "status": "exact_match",
+      "mappedTo": "Mantessa"
+    },
+    "Mantooine": {
+      "status": "exact_match",
+      "mappedTo": "Mantooine"
+    },
+    "Manwess": {
+      "status": "exact_match",
+      "mappedTo": "Manwess"
+    },
+    "Maridun": {
+      "status": "exact_match",
+      "mappedTo": "Maridun"
+    },
+    "Markbee's Star": {
+      "status": "exact_match",
+      "mappedTo": "Markbee's Star"
+    },
+    "Marmoth": {
+      "status": "exact_match",
+      "mappedTo": "Marmoth"
+    },
+    "Marquarra": {
+      "status": "exact_match",
+      "mappedTo": "Marquarra"
+    },
+    "Marrovia": {
+      "status": "exact_match",
+      "mappedTo": "Marrovia"
+    },
+    "Maryo": {
+      "status": "exact_match",
+      "mappedTo": "Maryo"
+    },
+    "Marzoon": {
+      "status": "exact_match",
+      "mappedTo": "Marzoon"
+    },
+    "Masterra": {
+      "status": "exact_match",
+      "mappedTo": "Masterra"
+    },
+    "Mataou": {
+      "status": "exact_match",
+      "mappedTo": "Mataou"
+    },
+    "Matra": {
+      "status": "exact_match",
+      "mappedTo": "Matra"
+    },
+    "Mattri": {
+      "status": "exact_match",
+      "mappedTo": "Mattri"
+    },
+    "Mawan": {
+      "status": "exact_match",
+      "mappedTo": "Mawan"
+    },
+    "Maya Kovel": {
+      "status": "exact_match",
+      "mappedTo": "Maya Kovel"
+    },
+    "Mayvitch": {
+      "status": "exact_match",
+      "mappedTo": "Mayvitch"
+    },
+    "Meastrinnar": {
+      "status": "exact_match",
+      "mappedTo": "Meastrinnar"
+    },
+    "Mechis III": {
+      "status": "exact_match",
+      "mappedTo": "Mechis III"
+    },
+    "Media": {
+      "status": "exact_match",
+      "mappedTo": "Media"
+    },
+    "Medth": {
+      "status": "exact_match",
+      "mappedTo": "Medth"
+    },
+    "Mek va Uil": {
+      "status": "exact_match",
+      "mappedTo": "Mek va Uil"
+    },
+    "Melnea's World": {
+      "status": "exact_match",
+      "mappedTo": "Melnea's World"
+    },
+    "Mendicat": {
+      "status": "exact_match",
+      "mappedTo": "Mendicat"
+    },
+    "Mephout": {
+      "status": "exact_match",
+      "mappedTo": "Mephout"
+    },
+    "Merakai": {
+      "status": "exact_match",
+      "mappedTo": "Merakai"
+    },
+    "Merren": {
+      "status": "exact_match",
+      "mappedTo": "Merren"
+    },
+    "Merson": {
+      "status": "exact_match",
+      "mappedTo": "Merson"
+    },
+    "Meryx Minor": {
+      "status": "exact_match",
+      "mappedTo": "Meryx Minor"
+    },
+    "Messert": {
+      "status": "exact_match",
+      "mappedTo": "Messert"
+    },
+    "Metalorn": {
+      "status": "exact_match",
+      "mappedTo": "Metalorn"
+    },
+    "Metellos": {
+      "status": "exact_match",
+      "mappedTo": "Metellos"
+    },
+    "Mev": {
+      "status": "exact_match",
+      "mappedTo": "Mev"
+    },
+    "Mexeluine": {
+      "status": "exact_match",
+      "mappedTo": "Mexeluine"
+    },
+    "Mijos": {
+      "status": "exact_match",
+      "mappedTo": "Mijos"
+    },
+    "Mika": {
+      "status": "exact_match",
+      "mappedTo": "Mika"
+    },
+    "Milagro": {
+      "status": "exact_match",
+      "mappedTo": "Milagro"
+    },
+    "Milarian": {
+      "status": "exact_match",
+      "mappedTo": "Milarian"
+    },
+    "Millinar": {
+      "status": "exact_match",
+      "mappedTo": "Millinar"
+    },
+    "Milvayne": {
+      "status": "exact_match",
+      "mappedTo": "Milvayne"
+    },
+    "Mimban": {
+      "status": "exact_match",
+      "mappedTo": "Mimban"
+    },
+    "Minashee": {
+      "status": "exact_match",
+      "mappedTo": "Minashee"
+    },
+    "Mindabaal": {
+      "status": "exact_match",
+      "mappedTo": "Mindabaal"
+    },
+    "Mindor": {
+      "status": "exact_match",
+      "mappedTo": "Mindor"
+    },
+    "Minntooine": {
+      "status": "exact_match",
+      "mappedTo": "Minntooine"
+    },
+    "Mirial": {
+      "status": "exact_match",
+      "mappedTo": "Mirial"
+    },
+    "Miztoc": {
+      "status": "exact_match",
+      "mappedTo": "Miztoc"
+    },
+    "Modus": {
+      "status": "exact_match",
+      "mappedTo": "Modus"
+    },
+    "Mogoshyn": {
+      "status": "exact_match",
+      "mappedTo": "Mogoshyn"
+    },
+    "Mokk IX": {
+      "status": "exact_match",
+      "mappedTo": "Mokk IX"
+    },
+    "Molavar": {
+      "status": "exact_match",
+      "mappedTo": "Molavar"
+    },
+    "Moltok": {
+      "status": "exact_match",
+      "mappedTo": "Moltok"
+    },
+    "Momansi": {
+      "status": "exact_match",
+      "mappedTo": "Momansi"
+    },
+    "Mon Calamari": {
+      "status": "exact_match",
+      "mappedTo": "Mon Calamari"
+    },
+    "Mon Gazza": {
+      "status": "exact_match",
+      "mappedTo": "Mon Gazza"
+    },
+    "Monastery": {
+      "status": "exact_match",
+      "mappedTo": "Monastery"
+    },
+    "Mondress": {
+      "status": "exact_match",
+      "mappedTo": "Mondress"
+    },
+    "Monhudle": {
+      "status": "exact_match",
+      "mappedTo": "Monhudle"
+    },
+    "Monor": {
+      "status": "exact_match",
+      "mappedTo": "Monor"
+    },
+    "Montitia": {
+      "status": "exact_match",
+      "mappedTo": "Montitia"
+    },
+    "Moonus": {
+      "status": "exact_match",
+      "mappedTo": "Moonus"
+    },
+    "Moorja": {
+      "status": "exact_match",
+      "mappedTo": "Moorja"
+    },
+    "Moralan": {
+      "status": "exact_match",
+      "mappedTo": "Moralan"
+    },
+    "Mordagon": {
+      "status": "exact_match",
+      "mappedTo": "Mordagon"
+    },
+    "Morellia": {
+      "status": "exact_match",
+      "mappedTo": "Morellia"
+    },
+    "Morishim": {
+      "status": "exact_match",
+      "mappedTo": "Morishim"
+    },
+    "Mortis": {
+      "status": "exact_match",
+      "mappedTo": "Mortis"
+    },
+    "Mossak": {
+      "status": "exact_match",
+      "mappedTo": "Mossak"
+    },
+    "Motexx": {
+      "status": "exact_match",
+      "mappedTo": "Motexx"
+    },
+    "Mrlsst": {
+      "status": "exact_match",
+      "mappedTo": "Mrlsst"
+    },
+    "Msst": {
+      "status": "exact_match",
+      "mappedTo": "Msst"
+    },
+    "Mugaar": {
+      "status": "exact_match",
+      "mappedTo": "Mugaar"
+    },
+    "Mulatan": {
+      "status": "exact_match",
+      "mappedTo": "Mulatan"
+    },
+    "Mullan": {
+      "status": "exact_match",
+      "mappedTo": "Mullan"
+    },
+    "Munto Codru": {
+      "status": "exact_match",
+      "mappedTo": "Munto Codru"
+    },
+    "Murgo": {
+      "status": "exact_match",
+      "mappedTo": "Murgo"
+    },
+    "Murk": {
+      "status": "exact_match",
+      "mappedTo": "Murk"
+    },
+    "Murkhana": {
+      "status": "exact_match",
+      "mappedTo": "Murkhana"
+    },
+    "Mussubir": {
+      "status": "exact_match",
+      "mappedTo": "Mussubir"
+    },
+    "Mustafar": {
+      "status": "exact_match",
+      "mappedTo": "Mustafar"
+    },
+    "Muunilinst": {
+      "status": "exact_match",
+      "mappedTo": "Muunilinst"
+    },
+    "Muzara": {
+      "status": "exact_match",
+      "mappedTo": "Muzara"
+    },
+    "Mygeeto": {
+      "status": "exact_match",
+      "mappedTo": "Mygeeto"
+    },
+    "Myomar": {
+      "status": "exact_match",
+      "mappedTo": "Myomar"
+    },
+    "Myrkr": {
+      "status": "exact_match",
+      "mappedTo": "Myrkr"
+    },
+    "Mytaranor": {
+      "status": "exact_match",
+      "mappedTo": "Mytaranor"
+    },
+    "Mytus": {
+      "status": "exact_match",
+      "mappedTo": "Mytus"
+    },
+    "N'Zoth": {
+      "status": "exact_match",
+      "mappedTo": "N'Zoth"
+    },
+    "Naalol": {
+      "status": "exact_match",
+      "mappedTo": "Naalol"
+    },
+    "Naboo": {
+      "status": "exact_match",
+      "mappedTo": "Naboo"
+    },
+    "Nadiem": {
+      "status": "exact_match",
+      "mappedTo": "Nadiem"
+    },
+    "Najarka": {
+      "status": "exact_match",
+      "mappedTo": "Najarka"
+    },
+    "Najiba": {
+      "status": "exact_match",
+      "mappedTo": "Najiba"
+    },
+    "Nal Hutta & Nar Shaddaa": {
+      "status": "exact_match",
+      "mappedTo": "Nal Hutta & Nar Shaddaa"
+    },
+    "Nam Chorios": {
+      "status": "exact_match",
+      "mappedTo": "Nam Chorios"
+    },
+    "Nam'ta": {
+      "status": "exact_match",
+      "mappedTo": "Nam'ta"
+    },
+    "Namadii": {
+      "status": "exact_match",
+      "mappedTo": "Namadii"
+    },
+    "Nantama": {
+      "status": "exact_match",
+      "mappedTo": "Nantama"
+    },
+    "Nanth'ri": {
+      "status": "exact_match",
+      "mappedTo": "Nanth'ri"
+    },
+    "Nantuker": {
+      "status": "exact_match",
+      "mappedTo": "Nantuker"
+    },
+    "Naos": {
+      "status": "exact_match",
+      "mappedTo": "Naos"
+    },
+    "Naporar": {
+      "status": "exact_match",
+      "mappedTo": "Naporar"
+    },
+    "Nar Bo Sholla": {
+      "status": "exact_match",
+      "mappedTo": "Nar Bo Sholla"
+    },
+    "Nar Chunna": {
+      "status": "exact_match",
+      "mappedTo": "Nar Chunna"
+    },
+    "Nar Haaska": {
+      "status": "exact_match",
+      "mappedTo": "Nar Haaska"
+    },
+    "Nar Kaaga": {
+      "status": "exact_match",
+      "mappedTo": "Nar Kaaga"
+    },
+    "Nar Kreeta": {
+      "status": "exact_match",
+      "mappedTo": "Nar Kreeta"
+    },
+    "Nara": {
+      "status": "exact_match",
+      "mappedTo": "Nara"
+    },
+    "Nars": {
+      "status": "exact_match",
+      "mappedTo": "Nars"
+    },
+    "Natalon": {
+      "status": "exact_match",
+      "mappedTo": "Natalon"
+    },
+    "Nathema": {
+      "status": "exact_match",
+      "mappedTo": "Nathema"
+    },
+    "Nazzri": {
+      "status": "exact_match",
+      "mappedTo": "Nazzri"
+    },
+    "Near Indosa": {
+      "status": "exact_match",
+      "mappedTo": "Near Indosa"
+    },
+    "Near Pando": {
+      "status": "exact_match",
+      "mappedTo": "Near Pando"
+    },
+    "Nedij": {
+      "status": "exact_match",
+      "mappedTo": "Nedij"
+    },
+    "Needan": {
+      "status": "exact_match",
+      "mappedTo": "Needan"
+    },
+    "Neelanon": {
+      "status": "exact_match",
+      "mappedTo": "Neelanon"
+    },
+    "Neelgaimon": {
+      "status": "exact_match",
+      "mappedTo": "Neelgaimon"
+    },
+    "Neimoidia": {
+      "status": "exact_match",
+      "mappedTo": "Neimoidia"
+    },
+    "Nelvaan": {
+      "status": "exact_match",
+      "mappedTo": "Nelvaan"
+    },
+    "Nentan": {
+      "status": "exact_match",
+      "mappedTo": "Nentan"
+    },
+    "Nepoy": {
+      "status": "exact_match",
+      "mappedTo": "Nepoy"
+    },
+    "Neshtab": {
+      "status": "exact_match",
+      "mappedTo": "Neshtab"
+    },
+    "Nessem": {
+      "status": "exact_match",
+      "mappedTo": "Nessem"
+    },
+    "New Alderaan": {
+      "status": "exact_match",
+      "mappedTo": "New Alderaan"
+    },
+    "New Apsolon": {
+      "status": "exact_match",
+      "mappedTo": "New Apsolon"
+    },
+    "New Ator": {
+      "status": "exact_match",
+      "mappedTo": "New Ator"
+    },
+    "New Bakstre": {
+      "status": "exact_match",
+      "mappedTo": "New Bakstre"
+    },
+    "New Balosar": {
+      "status": "exact_match",
+      "mappedTo": "New Balosar"
+    },
+    "New Cov": {
+      "status": "exact_match",
+      "mappedTo": "New Cov"
+    },
+    "New Cylimba": {
+      "status": "exact_match",
+      "mappedTo": "New Cylimba"
+    },
+    "New Heurkea": {
+      "status": "exact_match",
+      "mappedTo": "New Heurkea"
+    },
+    "New Holstice": {
+      "status": "exact_match",
+      "mappedTo": "New Holstice"
+    },
+    "Nexus Ortai": {
+      "status": "exact_match",
+      "mappedTo": "Nexus Ortai"
+    },
+    "Nez Peron": {
+      "status": "exact_match",
+      "mappedTo": "Nez Peron"
+    },
+    "Nfolgai": {
+      "status": "exact_match",
+      "mappedTo": "Nfolgai"
+    },
+    "Nicht Ka": {
+      "status": "exact_match",
+      "mappedTo": "Nicht Ka"
+    },
+    "Nierport": {
+      "status": "exact_match",
+      "mappedTo": "Nierport"
+    },
+    "Nigel": {
+      "status": "exact_match",
+      "mappedTo": "Nigel"
+    },
+    "Nim Drovis": {
+      "status": "exact_match",
+      "mappedTo": "Nim Drovis"
+    },
+    "Nimat": {
+      "status": "exact_match",
+      "mappedTo": "Nimat"
+    },
+    "Nimban": {
+      "status": "exact_match",
+      "mappedTo": "Nimban"
+    },
+    "Nimia": {
+      "status": "exact_match",
+      "mappedTo": "Nimia"
+    },
+    "Ninn": {
+      "status": "exact_match",
+      "mappedTo": "Ninn"
+    },
+    "Ninzan": {
+      "status": "exact_match",
+      "mappedTo": "Ninzan"
+    },
+    "Nirauan": {
+      "status": "exact_match",
+      "mappedTo": "Nirauan"
+    },
+    "Nivek": {
+      "status": "exact_match",
+      "mappedTo": "Nivek"
+    },
+    "Nixor": {
+      "status": "exact_match",
+      "mappedTo": "Nixor"
+    },
+    "Nkllon": {
+      "status": "exact_match",
+      "mappedTo": "Nkllon"
+    },
+    "Noe'ha'on": {
+      "status": "exact_match",
+      "mappedTo": "Noe'ha'on"
+    },
+    "Nooli": {
+      "status": "exact_match",
+      "mappedTo": "Nooli"
+    },
+    "Noonar": {
+      "status": "exact_match",
+      "mappedTo": "Noonar"
+    },
+    "Noquivzor": {
+      "status": "exact_match",
+      "mappedTo": "Noquivzor"
+    },
+    "Norah": {
+      "status": "exact_match",
+      "mappedTo": "Norah"
+    },
+    "Noris": {
+      "status": "exact_match",
+      "mappedTo": "Noris"
+    },
+    "Norkronia": {
+      "status": "exact_match",
+      "mappedTo": "Norkronia"
+    },
+    "Norval": {
+      "status": "exact_match",
+      "mappedTo": "Norval"
+    },
+    "Nothoiin": {
+      "status": "exact_match",
+      "mappedTo": "Nothoiin"
+    },
+    "Nouane": {
+      "status": "exact_match",
+      "mappedTo": "Nouane"
+    },
+    "Novi": {
+      "status": "exact_match",
+      "mappedTo": "Novi"
+    },
+    "Nubia": {
+      "status": "exact_match",
+      "mappedTo": "Nubia"
+    },
+    "Null": {
+      "status": "exact_match",
+      "mappedTo": "Null"
+    },
+    "Nuralee": {
+      "status": "exact_match",
+      "mappedTo": "Nuralee"
+    },
+    "Nuswatta": {
+      "status": "exact_match",
+      "mappedTo": "Nuswatta"
+    },
+    "Nuvar": {
+      "status": "exact_match",
+      "mappedTo": "Nuvar"
+    },
+    "Nyny": {
+      "status": "exact_match",
+      "mappedTo": "Nyny"
+    },
+    "Oba Diah": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Obana": {
+      "status": "exact_match",
+      "mappedTo": "Obana"
+    },
+    "Obredaan": {
+      "status": "exact_match",
+      "mappedTo": "Obredaan"
+    },
+    "Obroa-skai": {
+      "status": "exact_match",
+      "mappedTo": "Obroa-skai"
+    },
+    "Ocsin": {
+      "status": "exact_match",
+      "mappedTo": "Ocsin"
+    },
+    "Odacer-Faustin": {
+      "status": "exact_match",
+      "mappedTo": "Odacer-Faustin"
+    },
+    "Odik": {
+      "status": "exact_match",
+      "mappedTo": "Odik"
+    },
+    "Ogem": {
+      "status": "exact_match",
+      "mappedTo": "Ogem"
+    },
+    "OHS1782-03": {
+      "status": "exact_match",
+      "mappedTo": "OHS1782-03"
+    },
+    "OHS2132-04": {
+      "status": "exact_match",
+      "mappedTo": "OHS2132-04"
+    },
+    "OHS3842-03": {
+      "status": "exact_match",
+      "mappedTo": "OHS3842-03"
+    },
+    "OHS4140-02": {
+      "status": "exact_match",
+      "mappedTo": "OHS4140-02"
+    },
+    "Ojom": {
+      "status": "exact_match",
+      "mappedTo": "Ojom"
+    },
+    "Old Mankoo": {
+      "status": "exact_match",
+      "mappedTo": "Old Mankoo"
+    },
+    "Omar": {
+      "status": "exact_match",
+      "mappedTo": "Omar"
+    },
+    "Omonoth": {
+      "status": "exact_match",
+      "mappedTo": "Omonoth"
+    },
+    "Ompersan": {
+      "status": "exact_match",
+      "mappedTo": "Ompersan"
+    },
+    "Omwat": {
+      "status": "exact_match",
+      "mappedTo": "Omwat"
+    },
+    "Onderon & Dxun": {
+      "status": "exact_match",
+      "mappedTo": "Onderon & Dxun"
+    },
+    "Ool": {
+      "status": "exact_match",
+      "mappedTo": "Ool"
+    },
+    "Ooo-temiuk": {
+      "status": "exact_match",
+      "mappedTo": "Ooo-temiuk"
+    },
+    "Oovo": {
+      "status": "exact_match",
+      "mappedTo": "Oovo"
+    },
+    "Ophideraan": {
+      "status": "exact_match",
+      "mappedTo": "Ophideraan"
+    },
+    "Opiteihr": {
+      "status": "exact_match",
+      "mappedTo": "Opiteihr"
+    },
+    "Orax": {
+      "status": "exact_match",
+      "mappedTo": "Orax"
+    },
+    "Ord Antalaha": {
+      "status": "exact_match",
+      "mappedTo": "Ord Antalaha"
+    },
+    "Ord Biniir": {
+      "status": "exact_match",
+      "mappedTo": "Ord Biniir"
+    },
+    "Ord Canfre": {
+      "status": "exact_match",
+      "mappedTo": "Ord Canfre"
+    },
+    "Ord Cantrell": {
+      "status": "exact_match",
+      "mappedTo": "Ord Cantrell"
+    },
+    "Ord Cestus": {
+      "status": "exact_match",
+      "mappedTo": "Ord Cestus"
+    },
+    "Ord Grovner": {
+      "status": "exact_match",
+      "mappedTo": "Ord Grovner"
+    },
+    "Ord Ibanna": {
+      "status": "exact_match",
+      "mappedTo": "Ord Ibanna"
+    },
+    "Ord Lithone": {
+      "status": "exact_match",
+      "mappedTo": "Ord Lithone"
+    },
+    "Ord Mantell": {
+      "status": "exact_match",
+      "mappedTo": "Ord Mantell"
+    },
+    "Ord Mirit": {
+      "status": "exact_match",
+      "mappedTo": "Ord Mirit"
+    },
+    "Ord Pardron": {
+      "status": "exact_match",
+      "mappedTo": "Ord Pardron"
+    },
+    "Ord Radama": {
+      "status": "exact_match",
+      "mappedTo": "Ord Radama"
+    },
+    "Ord Sedra": {
+      "status": "exact_match",
+      "mappedTo": "Ord Sedra"
+    },
+    "Ord Sigatt": {
+      "status": "exact_match",
+      "mappedTo": "Ord Sigatt"
+    },
+    "Ord Tessebok": {
+      "status": "exact_match",
+      "mappedTo": "Ord Tessebok"
+    },
+    "Ord Thoden": {
+      "status": "exact_match",
+      "mappedTo": "Ord Thoden"
+    },
+    "Ord Tiddell": {
+      "status": "exact_match",
+      "mappedTo": "Ord Tiddell"
+    },
+    "Ord Trasi": {
+      "status": "exact_match",
+      "mappedTo": "Ord Trasi"
+    },
+    "Ord Varee": {
+      "status": "exact_match",
+      "mappedTo": "Ord Varee"
+    },
+    "Ord Vaug": {
+      "status": "exact_match",
+      "mappedTo": "Ord Vaug"
+    },
+    "Ord Vaxal": {
+      "status": "exact_match",
+      "mappedTo": "Ord Vaxal"
+    },
+    "Ordo": {
+      "status": "exact_match",
+      "mappedTo": "Ordo"
+    },
+    "Orelon": {
+      "status": "exact_match",
+      "mappedTo": "Orelon"
+    },
+    "Oricon": {
+      "status": "exact_match",
+      "mappedTo": "Oricon"
+    },
+    "Orinda": {
+      "status": "exact_match",
+      "mappedTo": "Orinda"
+    },
+    "Orleon": {
+      "status": "exact_match",
+      "mappedTo": "Orleon"
+    },
+    "Orn Kios": {
+      "status": "exact_match",
+      "mappedTo": "Orn Kios"
+    },
+    "Ornfra": {
+      "status": "exact_match",
+      "mappedTo": "Ornfra"
+    },
+    "Orondia": {
+      "status": "exact_match",
+      "mappedTo": "Orondia"
+    },
+    "Orron": {
+      "status": "exact_match",
+      "mappedTo": "Orron"
+    },
+    "Orto": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Orto Plutonia": {
+      "status": "exact_match",
+      "mappedTo": "Orto Plutonia"
+    },
+    "Orvax": {
+      "status": "exact_match",
+      "mappedTo": "Orvax"
+    },
+    "Osadia": {
+      "status": "exact_match",
+      "mappedTo": "Osadia"
+    },
+    "Oseon": {
+      "status": "exact_match",
+      "mappedTo": "Oseon"
+    },
+    "Oslumpex": {
+      "status": "exact_match",
+      "mappedTo": "Oslumpex"
+    },
+    "Osmani": {
+      "status": "exact_match",
+      "mappedTo": "Osmani"
+    },
+    "Ossel": {
+      "status": "exact_match",
+      "mappedTo": "Ossel"
+    },
+    "Ossiathora": {
+      "status": "exact_match",
+      "mappedTo": "Ossiathora"
+    },
+    "Osssorck Nebulae": {
+      "status": "exact_match",
+      "mappedTo": "Osssorck Nebulae"
+    },
+    "Ossus": {
+      "status": "exact_match",
+      "mappedTo": "Ossus"
+    },
+    "Ota": {
+      "status": "exact_match",
+      "mappedTo": "Ota"
+    },
+    "Ottabesk": {
+      "status": "exact_match",
+      "mappedTo": "Ottabesk"
+    },
+    "Outland Transit": {
+      "status": "exact_match",
+      "mappedTo": "Outland Transit"
+    },
+    "Ovise": {
+      "status": "exact_match",
+      "mappedTo": "Ovise"
+    },
+    "Oyokal": {
+      "status": "exact_match",
+      "mappedTo": "Oyokal"
+    },
+    "Ozu": {
+      "status": "exact_match",
+      "mappedTo": "Ozu"
+    },
+    "Pa Tho": {
+      "status": "exact_match",
+      "mappedTo": "Pa Tho"
+    },
+    "Pakuuni": {
+      "status": "exact_match",
+      "mappedTo": "Pakuuni"
+    },
+    "Palanhi": {
+      "status": "exact_match",
+      "mappedTo": "Palanhi"
+    },
+    "Palawa": {
+      "status": "exact_match",
+      "mappedTo": "Palawa"
+    },
+    "Pallaxides": {
+      "status": "exact_match",
+      "mappedTo": "Pallaxides"
+    },
+    "Pammant": {
+      "status": "exact_match",
+      "mappedTo": "Pammant"
+    },
+    "Pamorjal": {
+      "status": "exact_match",
+      "mappedTo": "Pamorjal"
+    },
+    "Panatha": {
+      "status": "exact_match",
+      "mappedTo": "Panatha"
+    },
+    "Pantolomin": {
+      "status": "exact_match",
+      "mappedTo": "Pantolomin"
+    },
+    "Pantora": {
+      "status": "exact_match",
+      "mappedTo": "Pantora"
+    },
+    "Paonid": {
+      "status": "exact_match",
+      "mappedTo": "Paonid"
+    },
+    "Paqualis III": {
+      "status": "exact_match",
+      "mappedTo": "Paqualis III"
+    },
+    "Paqwepor Major": {
+      "status": "exact_match",
+      "mappedTo": "Paqwepor Major"
+    },
+    "Parada": {
+      "status": "exact_match",
+      "mappedTo": "Parada"
+    },
+    "Paramatan": {
+      "status": "exact_match",
+      "mappedTo": "Paramatan"
+    },
+    "Parcellus Minor": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Parkis": {
+      "status": "exact_match",
+      "mappedTo": "Parkis"
+    },
+    "Parshoone": {
+      "status": "exact_match",
+      "mappedTo": "Parshoone"
+    },
+    "Parthovian Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Parthovian Cluster"
+    },
+    "Pasaana": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Pasmin": {
+      "status": "exact_match",
+      "mappedTo": "Pasmin"
+    },
+    "Patitite Pattuna": {
+      "status": "exact_match",
+      "mappedTo": "Patitite Pattuna"
+    },
+    "Paulking": {
+      "status": "exact_match",
+      "mappedTo": "Paulking"
+    },
+    "Pavo Prime": {
+      "status": "exact_match",
+      "mappedTo": "Pavo Prime"
+    },
+    "Pax": {
+      "status": "exact_match",
+      "mappedTo": "Pax"
+    },
+    "Peg Shar": {
+      "status": "exact_match",
+      "mappedTo": "Peg Shar"
+    },
+    "Pencael": {
+      "status": "exact_match",
+      "mappedTo": "Pencael"
+    },
+    "Pendari": {
+      "status": "exact_match",
+      "mappedTo": "Pendari"
+    },
+    "Pengalan": {
+      "status": "exact_match",
+      "mappedTo": "Pengalan"
+    },
+    "Per Lupelo": {
+      "status": "exact_match",
+      "mappedTo": "Per Lupelo"
+    },
+    "Peragus II": {
+      "status": "exact_match",
+      "mappedTo": "Peragus II"
+    },
+    "Pergitor": {
+      "status": "exact_match",
+      "mappedTo": "Pergitor"
+    },
+    "Perin": {
+      "status": "exact_match",
+      "mappedTo": "Perin"
+    },
+    "Perithal VI": {
+      "status": "exact_match",
+      "mappedTo": "Perithal VI"
+    },
+    "Perma": {
+      "status": "exact_match",
+      "mappedTo": "Perma"
+    },
+    "Pesfavri": {
+      "status": "exact_match",
+      "mappedTo": "Pesfavri"
+    },
+    "Pesmenben": {
+      "status": "exact_match",
+      "mappedTo": "Pesmenben"
+    },
+    "Petabys Station": {
+      "status": "exact_match",
+      "mappedTo": "Petabys Station"
+    },
+    "Phaeda": {
+      "status": "exact_match",
+      "mappedTo": "Phaeda"
+    },
+    "Phaegon_III": {
+      "status": "exact_match",
+      "mappedTo": "Phaegon_III"
+    },
+    "Phaseera": {
+      "status": "exact_match",
+      "mappedTo": "Phaseera"
+    },
+    "Phateem": {
+      "status": "exact_match",
+      "mappedTo": "Phateem"
+    },
+    "Phelope": {
+      "status": "exact_match",
+      "mappedTo": "Phelope"
+    },
+    "Phindar": {
+      "status": "exact_match",
+      "mappedTo": "Phindar"
+    },
+    "Pho Ph'eah": {
+      "status": "exact_match",
+      "mappedTo": "Pho Ph'eah"
+    },
+    "Phu": {
+      "status": "exact_match",
+      "mappedTo": "Phu"
+    },
+    "Pieldi": {
+      "status": "exact_match",
+      "mappedTo": "Pieldi"
+    },
+    "Pii": {
+      "status": "exact_match",
+      "mappedTo": "Pii"
+    },
+    "Pinperu": {
+      "status": "exact_match",
+      "mappedTo": "Pinperu"
+    },
+    "Pirin": {
+      "status": "exact_match",
+      "mappedTo": "Pirin"
+    },
+    "Piroket": {
+      "status": "exact_match",
+      "mappedTo": "Piroket"
+    },
+    "Pirralor": {
+      "status": "exact_match",
+      "mappedTo": "Pirralor"
+    },
+    "Pitrolea": {
+      "status": "exact_match",
+      "mappedTo": "Pitrolea"
+    },
+    "Pizilis": {
+      "status": "exact_match",
+      "mappedTo": "Pizilis"
+    },
+    "Plesstil": {
+      "status": "exact_match",
+      "mappedTo": "Plesstil"
+    },
+    "Plexis": {
+      "status": "exact_match",
+      "mappedTo": "Plexis"
+    },
+    "Ploo": {
+      "status": "exact_match",
+      "mappedTo": "Ploo"
+    },
+    "Plooma": {
+      "status": "exact_match",
+      "mappedTo": "Plooma"
+    },
+    "Pluthan": {
+      "status": "exact_match",
+      "mappedTo": "Pluthan"
+    },
+    "Plympto": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Poderis": {
+      "status": "exact_match",
+      "mappedTo": "Poderis"
+    },
+    "Polis Massa": {
+      "status": "exact_match",
+      "mappedTo": "Polis Massa"
+    },
+    "Pollillus": {
+      "status": "exact_match",
+      "mappedTo": "Pollillus"
+    },
+    "Polmanar": {
+      "status": "exact_match",
+      "mappedTo": "Polmanar"
+    },
+    "Poln System": {
+      "status": "exact_match",
+      "mappedTo": "Poln System"
+    },
+    "Polus": {
+      "status": "exact_match",
+      "mappedTo": "Polus"
+    },
+    "Pondut Station": {
+      "status": "exact_match",
+      "mappedTo": "Pondut Station"
+    },
+    "Porchello": {
+      "status": "exact_match",
+      "mappedTo": "Porchello"
+    },
+    "Port Evokk": {
+      "status": "exact_match",
+      "mappedTo": "Port Evokk"
+    },
+    "Porus Vida": {
+      "status": "exact_match",
+      "mappedTo": "Porus Vida"
+    },
+    "Poseidenna": {
+      "status": "exact_match",
+      "mappedTo": "Poseidenna"
+    },
+    "Povanaria": {
+      "status": "exact_match",
+      "mappedTo": "Povanaria"
+    },
+    "Poviduze": {
+      "status": "exact_match",
+      "mappedTo": "Poviduze"
+    },
+    "Poytta": {
+      "status": "exact_match",
+      "mappedTo": "Poytta"
+    },
+    "Praadost": {
+      "status": "exact_match",
+      "mappedTo": "Praadost"
+    },
+    "Praesitlyn": {
+      "status": "exact_match",
+      "mappedTo": "Praesitlyn"
+    },
+    "Prakith": {
+      "status": "exact_match",
+      "mappedTo": "Prakith"
+    },
+    "Prazhi": {
+      "status": "exact_match",
+      "mappedTo": "Prazhi"
+    },
+    "Prefsbelt": {
+      "status": "exact_match",
+      "mappedTo": "Prefsbelt"
+    },
+    "Presbalin": {
+      "status": "exact_match",
+      "mappedTo": "Presbalin"
+    },
+    "Presteen": {
+      "status": "exact_match",
+      "mappedTo": "Presteen"
+    },
+    "Pria": {
+      "status": "exact_match",
+      "mappedTo": "Pria"
+    },
+    "Primus Goluud": {
+      "status": "exact_match",
+      "mappedTo": "Primus Goluud"
+    },
+    "Prishella": {
+      "status": "exact_match",
+      "mappedTo": "Prishella"
+    },
+    "Pusat Station": {
+      "status": "exact_match",
+      "mappedTo": "Pusat Station"
+    },
+    "Pybus": {
+      "status": "exact_match",
+      "mappedTo": "Pybus"
+    },
+    "Pygorix": {
+      "status": "exact_match",
+      "mappedTo": "Pygorix"
+    },
+    "Pypin": {
+      "status": "exact_match",
+      "mappedTo": "Pypin"
+    },
+    "Pzob": {
+      "status": "exact_match",
+      "mappedTo": "Pzob"
+    },
+    "Q'mara": {
+      "status": "exact_match",
+      "mappedTo": "Q'mara"
+    },
+    "Qat Chrystac": {
+      "status": "exact_match",
+      "mappedTo": "Qat Chrystac"
+    },
+    "Qiilura": {
+      "status": "exact_match",
+      "mappedTo": "Qiilura"
+    },
+    "Qina": {
+      "status": "exact_match",
+      "mappedTo": "Qina"
+    },
+    "Qonto": {
+      "status": "exact_match",
+      "mappedTo": "Qonto"
+    },
+    "Quaensan Prime": {
+      "status": "exact_match",
+      "mappedTo": "Quaensan Prime"
+    },
+    "Quamar": {
+      "status": "exact_match",
+      "mappedTo": "Quamar"
+    },
+    "Quarzite": {
+      "status": "exact_match",
+      "mappedTo": "Quarzite"
+    },
+    "Quas Killam": {
+      "status": "exact_match",
+      "mappedTo": "Quas Killam"
+    },
+    "Quelii": {
+      "status": "exact_match",
+      "mappedTo": "Quelii"
+    },
+    "Quell": {
+      "status": "exact_match",
+      "mappedTo": "Quell"
+    },
+    "Quellor": {
+      "status": "exact_match",
+      "mappedTo": "Quellor"
+    },
+    "Quermia": {
+      "status": "exact_match",
+      "mappedTo": "Quermia"
+    },
+    "Ques": {
+      "status": "exact_match",
+      "mappedTo": "Ques"
+    },
+    "Quesaya": {
+      "status": "exact_match",
+      "mappedTo": "Quesaya"
+    },
+    "Quesh": {
+      "status": "exact_match",
+      "mappedTo": "Quesh"
+    },
+    "Questal": {
+      "status": "exact_match",
+      "mappedTo": "Questal"
+    },
+    "Queyta": {
+      "status": "exact_match",
+      "mappedTo": "Queyta"
+    },
+    "Quintas": {
+      "status": "exact_match",
+      "mappedTo": "Quintas"
+    },
+    "R'alla": {
+      "status": "exact_match",
+      "mappedTo": "R'alla"
+    },
+    "R-Duba": {
+      "status": "exact_match",
+      "mappedTo": "R-Duba"
+    },
+    "Radnor": {
+      "status": "exact_match",
+      "mappedTo": "Radnor"
+    },
+    "Rafa": {
+      "status": "exact_match",
+      "mappedTo": "Rafa"
+    },
+    "Ragith": {
+      "status": "exact_match",
+      "mappedTo": "Ragith"
+    },
+    "Ragna": {
+      "status": "exact_match",
+      "mappedTo": "Ragna"
+    },
+    "Rago": {
+      "status": "exact_match",
+      "mappedTo": "Rago"
+    },
+    "Ragoon": {
+      "status": "exact_match",
+      "mappedTo": "Ragoon"
+    },
+    "Rainboh": {
+      "status": "exact_match",
+      "mappedTo": "Rainboh"
+    },
+    "Rainos CLuster": {
+      "status": "exact_match",
+      "mappedTo": "Rainos CLuster"
+    },
+    "Raithal": {
+      "status": "exact_match",
+      "mappedTo": "Raithal"
+    },
+    "Rakata Prime": {
+      "status": "exact_match",
+      "mappedTo": "Rakata Prime"
+    },
+    "Rakhuuun": {
+      "status": "exact_match",
+      "mappedTo": "Rakhuuun"
+    },
+    "Ralltiir": {
+      "status": "exact_match",
+      "mappedTo": "Ralltiir"
+    },
+    "Ramordia": {
+      "status": "exact_match",
+      "mappedTo": "Ramordia"
+    },
+    "Rampa": {
+      "status": "exact_match",
+      "mappedTo": "Rampa"
+    },
+    "Rampa Minor": {
+      "status": "exact_match",
+      "mappedTo": "Rampa Minor"
+    },
+    "Randon": {
+      "status": "exact_match",
+      "mappedTo": "Randon"
+    },
+    "Rannon": {
+      "status": "exact_match",
+      "mappedTo": "Rannon"
+    },
+    "Ranroon": {
+      "status": "exact_match",
+      "mappedTo": "Ranroon"
+    },
+    "Rasterous": {
+      "status": "exact_match",
+      "mappedTo": "Rasterous"
+    },
+    "Rattatak": {
+      "status": "exact_match",
+      "mappedTo": "Rattatak"
+    },
+    "Raxus": {
+      "status": "exact_match",
+      "mappedTo": "Raxus"
+    },
+    "Raxxa": {
+      "status": "exact_match",
+      "mappedTo": "Raxxa"
+    },
+    "Raydonia": {
+      "status": "exact_match",
+      "mappedTo": "Raydonia"
+    },
+    "Rbollea": {
+      "status": "exact_match",
+      "mappedTo": "Rbollea"
+    },
+    "Rearqu Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Rearqu Cluster"
+    },
+    "Reboam": {
+      "status": "exact_match",
+      "mappedTo": "Reboam"
+    },
+    "Recopia": {
+      "status": "exact_match",
+      "mappedTo": "Recopia"
+    },
+    "Red Nebula": {
+      "status": "exact_match",
+      "mappedTo": "Red Nebula"
+    },
+    "Reecee": {
+      "status": "exact_match",
+      "mappedTo": "Reecee"
+    },
+    "Refnar": {
+      "status": "exact_match",
+      "mappedTo": "Refnar"
+    },
+    "Reginard": {
+      "status": "exact_match",
+      "mappedTo": "Reginard"
+    },
+    "Rehemsa": {
+      "status": "exact_match",
+      "mappedTo": "Rehemsa"
+    },
+    "Rekkiad": {
+      "status": "exact_match",
+      "mappedTo": "Rekkiad"
+    },
+    "Relatta": {
+      "status": "exact_match",
+      "mappedTo": "Relatta"
+    },
+    "Relephon": {
+      "status": "exact_match",
+      "mappedTo": "Relephon"
+    },
+    "Reltooine": {
+      "status": "exact_match",
+      "mappedTo": "Reltooine"
+    },
+    "Renatasia": {
+      "status": "exact_match",
+      "mappedTo": "Renatasia"
+    },
+    "Rendili": {
+      "status": "exact_match",
+      "mappedTo": "Rendili"
+    },
+    "Renillis": {
+      "status": "exact_match",
+      "mappedTo": "Renillis"
+    },
+    "Rentor": {
+      "status": "exact_match",
+      "mappedTo": "Rentor"
+    },
+    "Resht": {
+      "status": "exact_match",
+      "mappedTo": "Resht"
+    },
+    "Resti Kel": {
+      "status": "exact_match",
+      "mappedTo": "Resti Kel"
+    },
+    "Retep": {
+      "status": "exact_match",
+      "mappedTo": "Retep"
+    },
+    "Rettna": {
+      "status": "exact_match",
+      "mappedTo": "Rettna"
+    },
+    "Reuss": {
+      "status": "exact_match",
+      "mappedTo": "Reuss"
+    },
+    "Revyia": {
+      "status": "exact_match",
+      "mappedTo": "Revyia"
+    },
+    "Reytha": {
+      "status": "exact_match",
+      "mappedTo": "Reytha"
+    },
+    "Rhelg": {
+      "status": "exact_match",
+      "mappedTo": "Rhelg"
+    },
+    "Rhen Var": {
+      "status": "exact_match",
+      "mappedTo": "Rhen Var"
+    },
+    "Rhigar": {
+      "status": "exact_match",
+      "mappedTo": "Rhigar"
+    },
+    "Rhinnal": {
+      "status": "exact_match",
+      "mappedTo": "Rhinnal"
+    },
+    "Rhommamool": {
+      "status": "exact_match",
+      "mappedTo": "Rhommamool"
+    },
+    "Riflor": {
+      "status": "exact_match",
+      "mappedTo": "Riflor"
+    },
+    "Riileb": {
+      "status": "exact_match",
+      "mappedTo": "Riileb"
+    },
+    "Rimcee Station": {
+      "status": "exact_match",
+      "mappedTo": "Rimcee Station"
+    },
+    "Rindao": {
+      "status": "exact_match",
+      "mappedTo": "Rindao"
+    },
+    "Ring of Kafrene": {
+      "status": "exact_match",
+      "mappedTo": "Ring of Kafrene"
+    },
+    "Ringneldia": {
+      "status": "exact_match",
+      "mappedTo": "Ringneldia"
+    },
+    "Ringo Vinda": {
+      "status": "exact_match",
+      "mappedTo": "Ringo Vinda"
+    },
+    "Rinn": {
+      "status": "exact_match",
+      "mappedTo": "Rinn"
+    },
+    "Rintonne": {
+      "status": "exact_match",
+      "mappedTo": "Rintonne"
+    },
+    "Rishi": {
+      "status": "exact_match",
+      "mappedTo": "Rishi"
+    },
+    "Rnda": {
+      "status": "exact_match",
+      "mappedTo": "Rnda"
+    },
+    "Roche": {
+      "status": "exact_match",
+      "mappedTo": "Roche"
+    },
+    "Rodia": {
+      "status": "exact_match",
+      "mappedTo": "Rodia"
+    },
+    "Roldalna": {
+      "status": "exact_match",
+      "mappedTo": "Roldalna"
+    },
+    "Romin": {
+      "status": "exact_match",
+      "mappedTo": "Romin"
+    },
+    "Rondai": {
+      "status": "exact_match",
+      "mappedTo": "Rondai"
+    },
+    "Ronyards": {
+      "status": "exact_match",
+      "mappedTo": "Ronyards"
+    },
+    "Roon": {
+      "status": "exact_match",
+      "mappedTo": "Roon"
+    },
+    "Roona": {
+      "status": "exact_match",
+      "mappedTo": "Roona"
+    },
+    "Ropagi": {
+      "status": "exact_match",
+      "mappedTo": "Ropagi"
+    },
+    "Roqoo Depot": {
+      "status": "exact_match",
+      "mappedTo": "Roqoo Depot"
+    },
+    "Rorak": {
+      "status": "exact_match",
+      "mappedTo": "Rorak"
+    },
+    "Rorgam": {
+      "status": "exact_match",
+      "mappedTo": "Rorgam"
+    },
+    "Rothana": {
+      "status": "exact_match",
+      "mappedTo": "Rothana"
+    },
+    "Roundtree": {
+      "status": "exact_match",
+      "mappedTo": "Roundtree"
+    },
+    "Roxuli": {
+      "status": "exact_match",
+      "mappedTo": "Roxuli"
+    },
+    "Rrulinn": {
+      "status": "exact_match",
+      "mappedTo": "Rrulinn"
+    },
+    "Ruan": {
+      "status": "exact_match",
+      "mappedTo": "Ruan"
+    },
+    "Rudrig": {
+      "status": "exact_match",
+      "mappedTo": "Rudrig"
+    },
+    "Rugosa": {
+      "status": "exact_match",
+      "mappedTo": "Rugosa"
+    },
+    "Ruisto": {
+      "status": "exact_match",
+      "mappedTo": "Ruisto"
+    },
+    "Rulaar": {
+      "status": "exact_match",
+      "mappedTo": "Rulaar"
+    },
+    "Runaway Prince": {
+      "status": "exact_match",
+      "mappedTo": "Runaway Prince"
+    },
+    "Rustibar": {
+      "status": "exact_match",
+      "mappedTo": "Rustibar"
+    },
+    "Rutan": {
+      "status": "exact_match",
+      "mappedTo": "Rutan"
+    },
+    "Ruul": {
+      "status": "exact_match",
+      "mappedTo": "Ruul"
+    },
+    "Ruuria": {
+      "status": "exact_match",
+      "mappedTo": "Ruuria"
+    },
+    "Ruusan": {
+      "status": "exact_match",
+      "mappedTo": "Ruusan"
+    },
+    "Rydonni Prime": {
+      "status": "exact_match",
+      "mappedTo": "Rydonni Prime"
+    },
+    "Ryloon": {
+      "status": "exact_match",
+      "mappedTo": "Ryloon"
+    },
+    "Ryloth": {
+      "status": "exact_match",
+      "mappedTo": "Ryloth"
+    },
+    "Ryndellia": {
+      "status": "exact_match",
+      "mappedTo": "Ryndellia"
+    },
+    "Rynmar": {
+      "status": "exact_match",
+      "mappedTo": "Rynmar"
+    },
+    "Ryoone": {
+      "status": "exact_match",
+      "mappedTo": "Ryoone"
+    },
+    "Ryvellia": {
+      "status": "exact_match",
+      "mappedTo": "Ryvellia"
+    },
+    "Saclas": {
+      "status": "exact_match",
+      "mappedTo": "Saclas"
+    },
+    "Sacorria": {
+      "status": "exact_match",
+      "mappedTo": "Sacorria"
+    },
+    "Saffalore": {
+      "status": "exact_match",
+      "mappedTo": "Saffalore"
+    },
+    "Sagar": {
+      "status": "exact_match",
+      "mappedTo": "Sagar"
+    },
+    "Saijo": {
+      "status": "exact_match",
+      "mappedTo": "Saijo"
+    },
+    "Saila Na": {
+      "status": "exact_match",
+      "mappedTo": "Saila Na"
+    },
+    "Sakidopa": {
+      "status": "exact_match",
+      "mappedTo": "Sakidopa"
+    },
+    "Sakiduba": {
+      "status": "exact_match",
+      "mappedTo": "Sakiduba"
+    },
+    "Sakifwanna": {
+      "status": "exact_match",
+      "mappedTo": "Sakifwanna"
+    },
+    "Sakiya": {
+      "status": "exact_match",
+      "mappedTo": "Sakiya"
+    },
+    "Saleucami": {
+      "status": "exact_match",
+      "mappedTo": "Saleucami"
+    },
+    "Salient": {
+      "status": "exact_match",
+      "mappedTo": "Salient"
+    },
+    "Salin": {
+      "status": "exact_match",
+      "mappedTo": "Salin"
+    },
+    "Salliche": {
+      "status": "exact_match",
+      "mappedTo": "Salliche"
+    },
+    "Salvara": {
+      "status": "exact_match",
+      "mappedTo": "Salvara"
+    },
+    "Samaria": {
+      "status": "exact_match",
+      "mappedTo": "Samaria"
+    },
+    "Sanbra": {
+      "status": "exact_match",
+      "mappedTo": "Sanbra"
+    },
+    "Sanctuary": {
+      "status": "exact_match",
+      "mappedTo": "Sanctuary"
+    },
+    "Sanjin": {
+      "status": "exact_match",
+      "mappedTo": "Sanjin"
+    },
+    "Sanrafsix": {
+      "status": "exact_match",
+      "mappedTo": "Sanrafsix"
+    },
+    "Sanyassa": {
+      "status": "exact_match",
+      "mappedTo": "Sanyassa"
+    },
+    "Sanza": {
+      "status": "exact_match",
+      "mappedTo": "Sanza"
+    },
+    "Saqqar": {
+      "status": "exact_match",
+      "mappedTo": "Saqqar"
+    },
+    "Sarapin": {
+      "status": "exact_match",
+      "mappedTo": "Sarapin"
+    },
+    "Sargon": {
+      "status": "exact_match",
+      "mappedTo": "Sargon"
+    },
+    "Sarka": {
+      "status": "exact_match",
+      "mappedTo": "Sarka"
+    },
+    "Sarko": {
+      "status": "exact_match",
+      "mappedTo": "Sarko"
+    },
+    "Sarrish": {
+      "status": "exact_match",
+      "mappedTo": "Sarrish"
+    },
+    "Sarvchi": {
+      "status": "exact_match",
+      "mappedTo": "Sarvchi"
+    },
+    "Savareen": {
+      "status": "exact_match",
+      "mappedTo": "Savareen"
+    },
+    "Scardia": {
+      "status": "exact_match",
+      "mappedTo": "Scardia"
+    },
+    "Scarif": {
+      "status": "exact_match",
+      "mappedTo": "Scarif"
+    },
+    "Schesa": {
+      "status": "exact_match",
+      "mappedTo": "Schesa"
+    },
+    "Scillal": {
+      "status": "exact_match",
+      "mappedTo": "Scillal"
+    },
+    "Scipio": {
+      "status": "exact_match",
+      "mappedTo": "Scipio"
+    },
+    "Sedesia": {
+      "status": "exact_match",
+      "mappedTo": "Sedesia"
+    },
+    "Sedratis": {
+      "status": "exact_match",
+      "mappedTo": "Sedratis"
+    },
+    "Seelos": {
+      "status": "exact_match",
+      "mappedTo": "Seelos"
+    },
+    "Selab": {
+      "status": "exact_match",
+      "mappedTo": "Selab"
+    },
+    "Selenius": {
+      "status": "exact_match",
+      "mappedTo": "Selenius"
+    },
+    "Seline": {
+      "status": "exact_match",
+      "mappedTo": "Seline"
+    },
+    "Selitan": {
+      "status": "exact_match",
+      "mappedTo": "Selitan"
+    },
+    "Selsor": {
+      "status": "exact_match",
+      "mappedTo": "Selsor"
+    },
+    "Seltos": {
+      "status": "exact_match",
+      "mappedTo": "Seltos"
+    },
+    "Selvaris": {
+      "status": "exact_match",
+      "mappedTo": "Selvaris"
+    },
+    "Sembla": {
+      "status": "exact_match",
+      "mappedTo": "Sembla"
+    },
+    "Senex": {
+      "status": "exact_match",
+      "mappedTo": "Senex"
+    },
+    "Sennex": {
+      "status": "exact_match",
+      "mappedTo": "Sennex"
+    },
+    "Seoul": {
+      "status": "exact_match",
+      "mappedTo": "Seoul"
+    },
+    "Sepan": {
+      "status": "exact_match",
+      "mappedTo": "Sepan"
+    },
+    "Serat": {
+      "status": "exact_match",
+      "mappedTo": "Serat"
+    },
+    "Serenno": {
+      "status": "exact_match",
+      "mappedTo": "Serenno"
+    },
+    "Sermeria": {
+      "status": "exact_match",
+      "mappedTo": "Sermeria"
+    },
+    "Sernpidal": {
+      "status": "exact_match",
+      "mappedTo": "Sernpidal"
+    },
+    "Serroco": {
+      "status": "exact_match",
+      "mappedTo": "Serroco"
+    },
+    "Sestria": {
+      "status": "exact_match",
+      "mappedTo": "Sestria"
+    },
+    "Sev Tok": {
+      "status": "exact_match",
+      "mappedTo": "Sev Tok"
+    },
+    "Sevarcos": {
+      "status": "exact_match",
+      "mappedTo": "Sevarcos"
+    },
+    "Seyugi": {
+      "status": "exact_match",
+      "mappedTo": "Seyugi"
+    },
+    "Shadda-Bi Boran": {
+      "status": "exact_match",
+      "mappedTo": "Shadda-Bi Boran"
+    },
+    "Shador": {
+      "status": "exact_match",
+      "mappedTo": "Shador"
+    },
+    "Shalam": {
+      "status": "exact_match",
+      "mappedTo": "Shalam"
+    },
+    "Sharb": {
+      "status": "exact_match",
+      "mappedTo": "Sharb"
+    },
+    "Sharlissia": {
+      "status": "exact_match",
+      "mappedTo": "Sharlissia"
+    },
+    "Shasfath": {
+      "status": "exact_match",
+      "mappedTo": "Shasfath"
+    },
+    "Shaum Hii": {
+      "status": "exact_match",
+      "mappedTo": "Shaum Hii"
+    },
+    "Shawken": {
+      "status": "exact_match",
+      "mappedTo": "Shawken"
+    },
+    "Shaylin": {
+      "status": "exact_match",
+      "mappedTo": "Shaylin"
+    },
+    "Shedu Maad": {
+      "status": "exact_match",
+      "mappedTo": "Shedu Maad"
+    },
+    "Shelkonwa": {
+      "status": "exact_match",
+      "mappedTo": "Shelkonwa"
+    },
+    "Shibric": {
+      "status": "exact_match",
+      "mappedTo": "Shibric"
+    },
+    "Shiffrin": {
+      "status": "exact_match",
+      "mappedTo": "Shiffrin"
+    },
+    "Shihon": {
+      "status": "exact_match",
+      "mappedTo": "Shihon"
+    },
+    "Shili": {
+      "status": "exact_match",
+      "mappedTo": "Shili"
+    },
+    "Shimia": {
+      "status": "exact_match",
+      "mappedTo": "Shimia"
+    },
+    "Shinbone": {
+      "status": "exact_match",
+      "mappedTo": "Shinbone"
+    },
+    "Shiva": {
+      "status": "exact_match",
+      "mappedTo": "Shiva"
+    },
+    "Shola": {
+      "status": "exact_match",
+      "mappedTo": "Shola"
+    },
+    "Shoon": {
+      "status": "exact_match",
+      "mappedTo": "Shoon"
+    },
+    "Shuldene": {
+      "status": "exact_match",
+      "mappedTo": "Shuldene"
+    },
+    "Shulstine": {
+      "status": "exact_match",
+      "mappedTo": "Shulstine"
+    },
+    "Shulxi": {
+      "status": "exact_match",
+      "mappedTo": "Shulxi"
+    },
+    "Shumavar": {
+      "status": "exact_match",
+      "mappedTo": "Shumavar"
+    },
+    "Shumogi": {
+      "status": "exact_match",
+      "mappedTo": "Shumogi"
+    },
+    "Shusugaunt": {
+      "status": "exact_match",
+      "mappedTo": "Shusugaunt"
+    },
+    "Shuxl": {
+      "status": "exact_match",
+      "mappedTo": "Shuxl"
+    },
+    "Sif-Uwana": {
+      "status": "exact_match",
+      "mappedTo": "Sif-Uwana"
+    },
+    "Sika": {
+      "status": "exact_match",
+      "mappedTo": "Sika"
+    },
+    "Sikurd": {
+      "status": "exact_match",
+      "mappedTo": "Sikurd"
+    },
+    "Sil'Lume": {
+      "status": "exact_match",
+      "mappedTo": "Sil'Lume"
+    },
+    "Silken": {
+      "status": "exact_match",
+      "mappedTo": "Silken"
+    },
+    "Simoom": {
+      "status": "exact_match",
+      "mappedTo": "Simoom"
+    },
+    "Simpla": {
+      "status": "exact_match",
+      "mappedTo": "Simpla"
+    },
+    "Sinsang": {
+      "status": "exact_match",
+      "mappedTo": "Sinsang"
+    },
+    "Sinta": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Sinton": {
+      "status": "exact_match",
+      "mappedTo": "Sinton"
+    },
+    "Sionia": {
+      "status": "exact_match",
+      "mappedTo": "Sionia"
+    },
+    "Sirpar": {
+      "status": "exact_match",
+      "mappedTo": "Sirpar"
+    },
+    "Siskeen": {
+      "status": "exact_match",
+      "mappedTo": "Siskeen"
+    },
+    "Sivoria": {
+      "status": "exact_match",
+      "mappedTo": "Sivoria"
+    },
+    "Skako": {
+      "status": "exact_match",
+      "mappedTo": "Skako"
+    },
+    "Skartis": {
+      "status": "exact_match",
+      "mappedTo": "Skartis"
+    },
+    "Skeebo": {
+      "status": "exact_match",
+      "mappedTo": "Skeebo"
+    },
+    "Skor": {
+      "status": "exact_match",
+      "mappedTo": "Skor"
+    },
+    "Skorrupon": {
+      "status": "exact_match",
+      "mappedTo": "Skorrupon"
+    },
+    "Skustell Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Skustell Cluster"
+    },
+    "Skye": {
+      "status": "exact_match",
+      "mappedTo": "Skye"
+    },
+    "Skynara": {
+      "status": "exact_match",
+      "mappedTo": "Skynara"
+    },
+    "Sleheyron": {
+      "status": "exact_match",
+      "mappedTo": "Sleheyron"
+    },
+    "Sluis Van": {
+      "status": "exact_match",
+      "mappedTo": "Sluis Van"
+    },
+    "Smarteel": {
+      "status": "exact_match",
+      "mappedTo": "Smarteel"
+    },
+    "Smuggler's Run": {
+      "status": "exact_match",
+      "mappedTo": "Smuggler's Run"
+    },
+    "Sneeve": {
+      "status": "exact_match",
+      "mappedTo": "Sneeve"
+    },
+    "Sochi": {
+      "status": "exact_match",
+      "mappedTo": "Sochi"
+    },
+    "Socorro": {
+      "status": "exact_match",
+      "mappedTo": "Socorro"
+    },
+    "Solibus": {
+      "status": "exact_match",
+      "mappedTo": "Solibus"
+    },
+    "Somov Rit": {
+      "status": "exact_match",
+      "mappedTo": "Somov Rit"
+    },
+    "Sorjus": {
+      "status": "exact_match",
+      "mappedTo": "Sorjus"
+    },
+    "Sorrus": {
+      "status": "exact_match",
+      "mappedTo": "Sorrus"
+    },
+    "Soullex": {
+      "status": "exact_match",
+      "mappedTo": "Soullex"
+    },
+    "Soun": {
+      "status": "exact_match",
+      "mappedTo": "Soun"
+    },
+    "Spefik": {
+      "status": "exact_match",
+      "mappedTo": "Spefik"
+    },
+    "Spice Terminus": {
+      "status": "exact_match",
+      "mappedTo": "Spice Terminus"
+    },
+    "Spintir": {
+      "status": "exact_match",
+      "mappedTo": "Spintir"
+    },
+    "Spira": {
+      "status": "exact_match",
+      "mappedTo": "Spira"
+    },
+    "Spirador": {
+      "status": "exact_match",
+      "mappedTo": "Spirador"
+    },
+    "Spirana": {
+      "status": "exact_match",
+      "mappedTo": "Spirana"
+    },
+    "Sposia": {
+      "status": "exact_match",
+      "mappedTo": "Sposia"
+    },
+    "Sriluur": {
+      "status": "exact_match",
+      "mappedTo": "Sriluur"
+    },
+    "Stalsinek": {
+      "status": "exact_match",
+      "mappedTo": "Stalsinek"
+    },
+    "StarForge Nebula": {
+      "status": "exact_match",
+      "mappedTo": "StarForge Nebula"
+    },
+    "Starswarm Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Starswarm Cluster"
+    },
+    "Stassia": {
+      "status": "exact_match",
+      "mappedTo": "Stassia"
+    },
+    "Station 88": {
+      "status": "exact_match",
+      "mappedTo": "Station 88"
+    },
+    "Steelious": {
+      "status": "exact_match",
+      "mappedTo": "Steelious"
+    },
+    "Stend": {
+      "status": "exact_match",
+      "mappedTo": "Stend"
+    },
+    "Stenos": {
+      "status": "exact_match",
+      "mappedTo": "Stenos"
+    },
+    "Stobar": {
+      "status": "exact_match",
+      "mappedTo": "Stobar"
+    },
+    "Stygeon Prime": {
+      "status": "exact_match",
+      "mappedTo": "Stygeon Prime"
+    },
+    "Suarbi": {
+      "status": "exact_match",
+      "mappedTo": "Suarbi"
+    },
+    "Subterrel": {
+      "status": "exact_match",
+      "mappedTo": "Subterrel"
+    },
+    "Sukkult": {
+      "status": "exact_match",
+      "mappedTo": "Sukkult"
+    },
+    "Suliana": {
+      "status": "exact_match",
+      "mappedTo": "Suliana"
+    },
+    "Sullust": {
+      "status": "exact_match",
+      "mappedTo": "Sullust"
+    },
+    "Sump": {
+      "status": "exact_match",
+      "mappedTo": "Sump"
+    },
+    "Surcaris": {
+      "status": "exact_match",
+      "mappedTo": "Surcaris"
+    },
+    "Surron": {
+      "status": "exact_match",
+      "mappedTo": "Surron"
+    },
+    "Svivren": {
+      "status": "exact_match",
+      "mappedTo": "Svivren"
+    },
+    "Svolten": {
+      "status": "exact_match",
+      "mappedTo": "Svolten"
+    },
+    "Swellen": {
+      "status": "exact_match",
+      "mappedTo": "Swellen"
+    },
+    "Sy Myrth": {
+      "status": "exact_match",
+      "mappedTo": "Sy Myrth"
+    },
+    "Symbia": {
+      "status": "exact_match",
+      "mappedTo": "Symbia"
+    },
+    "Syned": {
+      "status": "exact_match",
+      "mappedTo": "Syned"
+    },
+    "Syngia": {
+      "status": "exact_match",
+      "mappedTo": "Syngia"
+    },
+    "Syvris": {
+      "status": "exact_match",
+      "mappedTo": "Syvris"
+    },
+    "T'surr": {
+      "status": "exact_match",
+      "mappedTo": "T'surr"
+    },
+    "Taanab": {
+      "status": "exact_match",
+      "mappedTo": "Taanab"
+    },
+    "Taboon": {
+      "status": "exact_match",
+      "mappedTo": "Taboon"
+    },
+    "Takodana": {
+      "status": "exact_match",
+      "mappedTo": "Takodana"
+    },
+    "Tal Nami": {
+      "status": "exact_match",
+      "mappedTo": "Tal Nami"
+    },
+    "Tala": {
+      "status": "exact_match",
+      "mappedTo": "Tala"
+    },
+    "Talasea": {
+      "status": "exact_match",
+      "mappedTo": "Talasea"
+    },
+    "Talay": {
+      "status": "exact_match",
+      "mappedTo": "Talay"
+    },
+    "Talcene": {
+      "status": "exact_match",
+      "mappedTo": "Talcene"
+    },
+    "Talcharaim": {
+      "status": "exact_match",
+      "mappedTo": "Talcharaim"
+    },
+    "Talhovi": {
+      "status": "exact_match",
+      "mappedTo": "Talhovi"
+    },
+    "Taloraan": {
+      "status": "exact_match",
+      "mappedTo": "Taloraan"
+    },
+    "Talravin": {
+      "status": "exact_match",
+      "mappedTo": "Talravin"
+    },
+    "Tamban": {
+      "status": "exact_match",
+      "mappedTo": "Tamban"
+    },
+    "Tammar": {
+      "status": "exact_match",
+      "mappedTo": "Tammar"
+    },
+    "Tammuz-an": {
+      "status": "exact_match",
+      "mappedTo": "Tammuz-an"
+    },
+    "Tandankin": {
+      "status": "exact_match",
+      "mappedTo": "Tandankin"
+    },
+    "Tandun": {
+      "status": "exact_match",
+      "mappedTo": "Tandun"
+    },
+    "Tangrene": {
+      "status": "exact_match",
+      "mappedTo": "Tangrene"
+    },
+    "Tanjay": {
+      "status": "exact_match",
+      "mappedTo": "Tanjay"
+    },
+    "Tantive": {
+      "status": "exact_match",
+      "mappedTo": "Tantive"
+    },
+    "Tar Mordren": {
+      "status": "exact_match",
+      "mappedTo": "Tar Mordren"
+    },
+    "Tarabba": {
+      "status": "exact_match",
+      "mappedTo": "Tarabba"
+    },
+    "Taral V": {
+      "status": "exact_match",
+      "mappedTo": "Taral V"
+    },
+    "Targon": {
+      "status": "exact_match",
+      "mappedTo": "Targon"
+    },
+    "Tarhassan": {
+      "status": "exact_match",
+      "mappedTo": "Tarhassan"
+    },
+    "Taris": {
+      "status": "exact_match",
+      "mappedTo": "Taris"
+    },
+    "Tarmidia": {
+      "status": "exact_match",
+      "mappedTo": "Tarmidia"
+    },
+    "Tarnoonga": {
+      "status": "exact_match",
+      "mappedTo": "Tarnoonga"
+    },
+    "Taroon": {
+      "status": "exact_match",
+      "mappedTo": "Taroon"
+    },
+    "Tarsa": {
+      "status": "exact_match",
+      "mappedTo": "Tarsa"
+    },
+    "Tarsunt": {
+      "status": "exact_match",
+      "mappedTo": "Tarsunt"
+    },
+    "Tasariq": {
+      "status": "exact_match",
+      "mappedTo": "Tasariq"
+    },
+    "Tashtor Seneca": {
+      "status": "exact_match",
+      "mappedTo": "Tashtor Seneca"
+    },
+    "Taskeed": {
+      "status": "exact_match",
+      "mappedTo": "Taskeed"
+    },
+    "Taspir III": {
+      "status": "exact_match",
+      "mappedTo": "Taspir III"
+    },
+    "Tatooine": {
+      "status": "exact_match",
+      "mappedTo": "Tatooine"
+    },
+    "Tauber": {
+      "status": "exact_match",
+      "mappedTo": "Tauber"
+    },
+    "Taul": {
+      "status": "exact_match",
+      "mappedTo": "Taul"
+    },
+    "Teardrop": {
+      "status": "exact_match",
+      "mappedTo": "Teardrop"
+    },
+    "Tekurr'k": {
+      "status": "exact_match",
+      "mappedTo": "Tekurr'k"
+    },
+    "Telaris": {
+      "status": "exact_match",
+      "mappedTo": "Telaris"
+    },
+    "Telerath": {
+      "status": "exact_match",
+      "mappedTo": "Telerath"
+    },
+    "Telkur Station": {
+      "status": "exact_match",
+      "mappedTo": "Telkur Station"
+    },
+    "Telos": {
+      "status": "exact_match",
+      "mappedTo": "Telos"
+    },
+    "Telti": {
+      "status": "exact_match",
+      "mappedTo": "Telti"
+    },
+    "Tenara": {
+      "status": "exact_match",
+      "mappedTo": "Tenara"
+    },
+    "Tepasi": {
+      "status": "exact_match",
+      "mappedTo": "Tepasi"
+    },
+    "Terephon": {
+      "status": "exact_match",
+      "mappedTo": "Terephon"
+    },
+    "Terman": {
+      "status": "exact_match",
+      "mappedTo": "Terman"
+    },
+    "Terminus": {
+      "status": "exact_match",
+      "mappedTo": "Terminus"
+    },
+    "Terr'Skiar": {
+      "status": "exact_match",
+      "mappedTo": "Terr'Skiar"
+    },
+    "Terrijo": {
+      "status": "exact_match",
+      "mappedTo": "Terrijo"
+    },
+    "Tertiary Feswe": {
+      "status": "exact_match",
+      "mappedTo": "Tertiary Feswe"
+    },
+    "Tertiary Kesmere": {
+      "status": "exact_match",
+      "mappedTo": "Tertiary Kesmere"
+    },
+    "Teth": {
+      "status": "exact_match",
+      "mappedTo": "Teth"
+    },
+    "Teya IV": {
+      "status": "exact_match",
+      "mappedTo": "Teya IV"
+    },
+    "Teyr Vulvarch": {
+      "status": "exact_match",
+      "mappedTo": "Teyr Vulvarch"
+    },
+    "Thaere": {
+      "status": "exact_match",
+      "mappedTo": "Thaere"
+    },
+    "Thakwaa": {
+      "status": "exact_match",
+      "mappedTo": "Thakwaa"
+    },
+    "Thalassia": {
+      "status": "exact_match",
+      "mappedTo": "Thalassia"
+    },
+    "Thanium": {
+      "status": "exact_match",
+      "mappedTo": "Thanium"
+    },
+    "Thape": {
+      "status": "exact_match",
+      "mappedTo": "Thape"
+    },
+    "The Cometwash": {
+      "status": "exact_match",
+      "mappedTo": "The Cometwash"
+    },
+    "The Godsheart": {
+      "status": "exact_match",
+      "mappedTo": "The Godsheart"
+    },
+    "The Maw": {
+      "status": "exact_match",
+      "mappedTo": "The Maw"
+    },
+    "The Red Twins": {
+      "status": "exact_match",
+      "mappedTo": "The Red Twins"
+    },
+    "The Redoubt": {
+      "status": "exact_match",
+      "mappedTo": "The Redoubt"
+    },
+    "The Ring": {
+      "status": "exact_match",
+      "mappedTo": "The Ring"
+    },
+    "The Wheel": {
+      "status": "exact_match",
+      "mappedTo": "The Wheel"
+    },
+    "Thearterra": {
+      "status": "exact_match",
+      "mappedTo": "Thearterra"
+    },
+    "Thebeon": {
+      "status": "exact_match",
+      "mappedTo": "Thebeon"
+    },
+    "Thermon": {
+      "status": "exact_match",
+      "mappedTo": "Thermon"
+    },
+    "Theselon": {
+      "status": "exact_match",
+      "mappedTo": "Theselon"
+    },
+    "Thesme": {
+      "status": "exact_match",
+      "mappedTo": "Thesme"
+    },
+    "Thila": {
+      "status": "exact_match",
+      "mappedTo": "Thila"
+    },
+    "Thisspias": {
+      "status": "exact_match",
+      "mappedTo": "Thisspias"
+    },
+    "Thoadeye": {
+      "status": "exact_match",
+      "mappedTo": "Thoadeye"
+    },
+    "Thokos": {
+      "status": "exact_match",
+      "mappedTo": "Thokos"
+    },
+    "Thokosia": {
+      "status": "exact_match",
+      "mappedTo": "Thokosia"
+    },
+    "Tholatin": {
+      "status": "exact_match",
+      "mappedTo": "Tholatin"
+    },
+    "Tholoth": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Thomork": {
+      "status": "exact_match",
+      "mappedTo": "Thomork"
+    },
+    "ThonBoka": {
+      "status": "exact_match",
+      "mappedTo": "ThonBoka"
+    },
+    "Thonner": {
+      "status": "exact_match",
+      "mappedTo": "Thonner"
+    },
+    "Thoran": {
+      "status": "exact_match",
+      "mappedTo": "Thoran"
+    },
+    "Thorgeld": {
+      "status": "exact_match",
+      "mappedTo": "Thorgeld"
+    },
+    "Thosa": {
+      "status": "exact_match",
+      "mappedTo": "Thosa"
+    },
+    "Thracior": {
+      "status": "exact_match",
+      "mappedTo": "Thracior"
+    },
+    "Thrakia": {
+      "status": "exact_match",
+      "mappedTo": "Thrakia"
+    },
+    "Thrantin": {
+      "status": "exact_match",
+      "mappedTo": "Thrantin"
+    },
+    "Thule": {
+      "status": "exact_match",
+      "mappedTo": "Thule"
+    },
+    "Thull's Vault": {
+      "status": "exact_match",
+      "mappedTo": "Thull's Vault"
+    },
+    "Thustra": {
+      "status": "exact_match",
+      "mappedTo": "Thustra"
+    },
+    "Thyferra": {
+      "status": "exact_match",
+      "mappedTo": "Thyferra"
+    },
+    "Tibrin": {
+      "status": "exact_match",
+      "mappedTo": "Tibrin"
+    },
+    "Tibro": {
+      "status": "exact_match",
+      "mappedTo": "Tibro"
+    },
+    "Tierfon": {
+      "status": "exact_match",
+      "mappedTo": "Tierfon"
+    },
+    "Timora": {
+      "status": "exact_match",
+      "mappedTo": "Timora"
+    },
+    "Tinallis": {
+      "status": "exact_match",
+      "mappedTo": "Tinallis"
+    },
+    "Tinnel": {
+      "status": "exact_match",
+      "mappedTo": "Tinnel"
+    },
+    "Tinoon": {
+      "status": "exact_match",
+      "mappedTo": "Tinoon"
+    },
+    "Tinta": {
+      "status": "exact_match",
+      "mappedTo": "Tinta"
+    },
+    "Tion": {
+      "status": "exact_match",
+      "mappedTo": "Tion"
+    },
+    "Tirahnn": {
+      "status": "exact_match",
+      "mappedTo": "Tirahnn"
+    },
+    "Tirsa": {
+      "status": "exact_match",
+      "mappedTo": "Tirsa"
+    },
+    "Tisht": {
+      "status": "exact_match",
+      "mappedTo": "Tisht"
+    },
+    "Tiss'sharl": {
+      "status": "exact_match",
+      "mappedTo": "Tiss'sharl"
+    },
+    "Tlactehon": {
+      "status": "exact_match",
+      "mappedTo": "Tlactehon"
+    },
+    "Togominda": {
+      "status": "exact_match",
+      "mappedTo": "Togominda"
+    },
+    "Togoria": {
+      "status": "exact_match",
+      "mappedTo": "Togoria"
+    },
+    "Tokmia": {
+      "status": "exact_match",
+      "mappedTo": "Tokmia"
+    },
+    "Tol Amn": {
+      "status": "exact_match",
+      "mappedTo": "Tol Amn"
+    },
+    "Tomo-Reth": {
+      "status": "exact_match",
+      "mappedTo": "Tomo-Reth"
+    },
+    "Toola": {
+      "status": "exact_match",
+      "mappedTo": "Toola"
+    },
+    "Toong'l": {
+      "status": "exact_match",
+      "mappedTo": "Toong'l"
+    },
+    "Toprawa": {
+      "status": "exact_match",
+      "mappedTo": "Toprawa"
+    },
+    "Torn Station": {
+      "status": "exact_match",
+      "mappedTo": "Torn Station"
+    },
+    "Torolis": {
+      "status": "exact_match",
+      "mappedTo": "Torolis"
+    },
+    "Torque": {
+      "status": "exact_match",
+      "mappedTo": "Torque"
+    },
+    "Tosste": {
+      "status": "exact_match",
+      "mappedTo": "Tosste"
+    },
+    "Tothis": {
+      "status": "exact_match",
+      "mappedTo": "Tothis"
+    },
+    "Tovarskl": {
+      "status": "exact_match",
+      "mappedTo": "Tovarskl"
+    },
+    "Toydaria": {
+      "status": "exact_match",
+      "mappedTo": "Toydaria"
+    },
+    "Trammen": {
+      "status": "exact_match",
+      "mappedTo": "Trammen"
+    },
+    "Trammis": {
+      "status": "exact_match",
+      "mappedTo": "Trammis"
+    },
+    "Trancret": {
+      "status": "exact_match",
+      "mappedTo": "Trancret"
+    },
+    "Trandosha": {
+      "status": "exact_match",
+      "mappedTo": "Trandosha"
+    },
+    "Transel": {
+      "status": "exact_match",
+      "mappedTo": "Transel"
+    },
+    "Tranthellix": {
+      "status": "exact_match",
+      "mappedTo": "Tranthellix"
+    },
+    "Trantor": {
+      "status": "exact_match",
+      "mappedTo": "Trantor"
+    },
+    "Trasse": {
+      "status": "exact_match",
+      "mappedTo": "Trasse"
+    },
+    "Trassitan": {
+      "status": "exact_match",
+      "mappedTo": "Trassitan"
+    },
+    "Tregillis": {
+      "status": "exact_match",
+      "mappedTo": "Tregillis"
+    },
+    "Trellen": {
+      "status": "exact_match",
+      "mappedTo": "Trellen"
+    },
+    "Trenwyth": {
+      "status": "exact_match",
+      "mappedTo": "Trenwyth"
+    },
+    "Trevi": {
+      "status": "exact_match",
+      "mappedTo": "Trevi"
+    },
+    "Trevura": {
+      "status": "exact_match",
+      "mappedTo": "Trevura"
+    },
+    "Trian": {
+      "status": "exact_match",
+      "mappedTo": "Trian"
+    },
+    "Triewahl": {
+      "status": "exact_match",
+      "mappedTo": "Triewahl"
+    },
+    "Triffis": {
+      "status": "exact_match",
+      "mappedTo": "Triffis"
+    },
+    "Trigalis": {
+      "status": "exact_match",
+      "mappedTo": "Trigalis"
+    },
+    "Trindello": {
+      "status": "exact_match",
+      "mappedTo": "Trindello"
+    },
+    "Trinovat": {
+      "status": "exact_match",
+      "mappedTo": "Trinovat"
+    },
+    "Triton": {
+      "status": "exact_match",
+      "mappedTo": "Triton"
+    },
+    "Trogan": {
+      "status": "exact_match",
+      "mappedTo": "Trogan"
+    },
+    "Troiken": {
+      "status": "exact_match",
+      "mappedTo": "Troiken"
+    },
+    "Troos": {
+      "status": "exact_match",
+      "mappedTo": "Troos"
+    },
+    "Troska": {
+      "status": "exact_match",
+      "mappedTo": "Troska"
+    },
+    "Trunska": {
+      "status": "exact_match",
+      "mappedTo": "Trunska"
+    },
+    "Truuine": {
+      "status": "exact_match",
+      "mappedTo": "Truuine"
+    },
+    "Tshindral": {
+      "status": "exact_match",
+      "mappedTo": "Tshindral"
+    },
+    "Tsoss Beacon": {
+      "status": "exact_match",
+      "mappedTo": "Tsoss Beacon"
+    },
+    "Tsyk": {
+      "status": "exact_match",
+      "mappedTo": "Tsyk"
+    },
+    "Tumani": {
+      "status": "exact_match",
+      "mappedTo": "Tumani"
+    },
+    "Tund": {
+      "status": "exact_match",
+      "mappedTo": "Tund"
+    },
+    "Turkana": {
+      "status": "exact_match",
+      "mappedTo": "Turkana"
+    },
+    "Twith": {
+      "status": "exact_match",
+      "mappedTo": "Twith"
+    },
+    "Tyed Kant": {
+      "status": "exact_match",
+      "mappedTo": "Tyed Kant"
+    },
+    "Tyluun": {
+      "status": "exact_match",
+      "mappedTo": "Tyluun"
+    },
+    "Tynna": {
+      "status": "exact_match",
+      "mappedTo": "Tynna"
+    },
+    "Tythe": {
+      "status": "exact_match",
+      "mappedTo": "Tythe"
+    },
+    "Tython": {
+      "status": "exact_match",
+      "mappedTo": "Tython"
+    },
+    "Tyus Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Tyus Cluster"
+    },
+    "Uaua": {
+      "status": "exact_match",
+      "mappedTo": "Uaua"
+    },
+    "Uba": {
+      "status": "exact_match",
+      "mappedTo": "Uba"
+    },
+    "Ubrikkia": {
+      "status": "exact_match",
+      "mappedTo": "Ubrikkia"
+    },
+    "Ukatis": {
+      "status": "exact_match",
+      "mappedTo": "Ukatis"
+    },
+    "Ukio": {
+      "status": "exact_match",
+      "mappedTo": "Ukio"
+    },
+    "Ulda Frav": {
+      "status": "exact_match",
+      "mappedTo": "Ulda Frav"
+    },
+    "Ulicia": {
+      "status": "exact_match",
+      "mappedTo": "Ulicia"
+    },
+    "Ulmatra": {
+      "status": "exact_match",
+      "mappedTo": "Ulmatra"
+    },
+    "Ultaar": {
+      "status": "exact_match",
+      "mappedTo": "Ultaar"
+    },
+    "Umbara": {
+      "status": "exact_match",
+      "mappedTo": "Umbara"
+    },
+    "Umgul": {
+      "status": "exact_match",
+      "mappedTo": "Umgul"
+    },
+    "Umthyg": {
+      "status": "exact_match",
+      "mappedTo": "Umthyg"
+    },
+    "Unagin": {
+      "status": "exact_match",
+      "mappedTo": "Unagin"
+    },
+    "Uogo'cor": {
+      "status": "exact_match",
+      "mappedTo": "Uogo'cor"
+    },
+    "Uphrades": {
+      "status": "exact_match",
+      "mappedTo": "Uphrades"
+    },
+    "Uquine": {
+      "status": "exact_match",
+      "mappedTo": "Uquine"
+    },
+    "UR-1060": {
+      "status": "exact_match",
+      "mappedTo": "UR-1060"
+    },
+    "UR-2650": {
+      "status": "exact_match",
+      "mappedTo": "UR-2650"
+    },
+    "UR-3741": {
+      "status": "exact_match",
+      "mappedTo": "UR-3741"
+    },
+    "UR-8827": {
+      "status": "exact_match",
+      "mappedTo": "UR-8827"
+    },
+    "UR-9353": {
+      "status": "exact_match",
+      "mappedTo": "UR-9353"
+    },
+    "Urce": {
+      "status": "exact_match",
+      "mappedTo": "Urce"
+    },
+    "Urdur": {
+      "status": "exact_match",
+      "mappedTo": "Urdur"
+    },
+    "Usk": {
+      "status": "exact_match",
+      "mappedTo": "Usk"
+    },
+    "Usnia": {
+      "status": "exact_match",
+      "mappedTo": "Usnia"
+    },
+    "Usta": {
+      "status": "exact_match",
+      "mappedTo": "Usta"
+    },
+    "Ut": {
+      "status": "exact_match",
+      "mappedTo": "Ut"
+    },
+    "Utapau": {
+      "status": "exact_match",
+      "mappedTo": "Utapau"
+    },
+    "Utaruun": {
+      "status": "exact_match",
+      "mappedTo": "Utaruun"
+    },
+    "Utegetu Nebula": {
+      "status": "exact_match",
+      "mappedTo": "Utegetu Nebula"
+    },
+    "Utrost": {
+      "status": "exact_match",
+      "mappedTo": "Utrost"
+    },
+    "Uvena Prime": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Uviuy Exen": {
+      "status": "exact_match",
+      "mappedTo": "Uviuy Exen"
+    },
+    "Uyter": {
+      "status": "exact_match",
+      "mappedTo": "Uyter"
+    },
+    "Vaal": {
+      "status": "exact_match",
+      "mappedTo": "Vaal"
+    },
+    "Vaathkree": {
+      "status": "exact_match",
+      "mappedTo": "Vaathkree"
+    },
+    "Vaced": {
+      "status": "exact_match",
+      "mappedTo": "Vaced"
+    },
+    "Vactooine": {
+      "status": "exact_match",
+      "mappedTo": "Vactooine"
+    },
+    "Vakkar": {
+      "status": "exact_match",
+      "mappedTo": "Vakkar"
+    },
+    "Vaklin": {
+      "status": "exact_match",
+      "mappedTo": "Vaklin"
+    },
+    "Valc": {
+      "status": "exact_match",
+      "mappedTo": "Valc"
+    },
+    "Valgauth": {
+      "status": "exact_match",
+      "mappedTo": "Valgauth"
+    },
+    "Vallusk Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Vallusk Cluster"
+    },
+    "Valorsi": {
+      "status": "exact_match",
+      "mappedTo": "Valorsi"
+    },
+    "Valrar": {
+      "status": "exact_match",
+      "mappedTo": "Valrar"
+    },
+    "Vandelhelm": {
+      "status": "exact_match",
+      "mappedTo": "Vandelhelm"
+    },
+    "Vandor": {
+      "status": "exact_match",
+      "mappedTo": "Vandor"
+    },
+    "Vandyne": {
+      "status": "exact_match",
+      "mappedTo": "Vandyne"
+    },
+    "Vanik": {
+      "status": "exact_match",
+      "mappedTo": "Vanik"
+    },
+    "Vanjervalis": {
+      "status": "exact_match",
+      "mappedTo": "Vanjervalis"
+    },
+    "Vanquo": {
+      "status": "exact_match",
+      "mappedTo": "Vanquo"
+    },
+    "Varadan": {
+      "status": "exact_match",
+      "mappedTo": "Varadan"
+    },
+    "Varl": {
+      "status": "exact_match",
+      "mappedTo": "Varl"
+    },
+    "Varonat": {
+      "status": "exact_match",
+      "mappedTo": "Varonat"
+    },
+    "Varristad": {
+      "status": "exact_match",
+      "mappedTo": "Varristad"
+    },
+    "Varvrona": {
+      "status": "exact_match",
+      "mappedTo": "Varvrona"
+    },
+    "Vasch": {
+      "status": "exact_match",
+      "mappedTo": "Vasch"
+    },
+    "Vasha": {
+      "status": "exact_match",
+      "mappedTo": "Vasha"
+    },
+    "Vassek": {
+      "status": "exact_match",
+      "mappedTo": "Vassek"
+    },
+    "Vaykaaris": {
+      "status": "exact_match",
+      "mappedTo": "Vaykaaris"
+    },
+    "Vaynai": {
+      "status": "exact_match",
+      "mappedTo": "Vaynai"
+    },
+    "Velabri": {
+      "status": "exact_match",
+      "mappedTo": "Velabri"
+    },
+    "Velga": {
+      "status": "exact_match",
+      "mappedTo": "Velga"
+    },
+    "Velmor": {
+      "status": "exact_match",
+      "mappedTo": "Velmor"
+    },
+    "Velusia": {
+      "status": "exact_match",
+      "mappedTo": "Velusia"
+    },
+    "Vena": {
+      "status": "exact_match",
+      "mappedTo": "Vena"
+    },
+    "Venaari": {
+      "status": "exact_match",
+      "mappedTo": "Venaari"
+    },
+    "Vendaxa": {
+      "status": "exact_match",
+      "mappedTo": "Vendaxa"
+    },
+    "Venestria": {
+      "status": "exact_match",
+      "mappedTo": "Venestria"
+    },
+    "Venjagga": {
+      "status": "exact_match",
+      "mappedTo": "Venjagga"
+    },
+    "Ventooine": {
+      "status": "exact_match",
+      "mappedTo": "Ventooine"
+    },
+    "Veragi": {
+      "status": "exact_match",
+      "mappedTo": "Veragi"
+    },
+    "Verdanth": {
+      "status": "exact_match",
+      "mappedTo": "Verdanth"
+    },
+    "Vergesso": {
+      "status": "exact_match",
+      "mappedTo": "Vergesso"
+    },
+    "Vergill": {
+      "status": "exact_match",
+      "mappedTo": "Vergill"
+    },
+    "Vernet": {
+      "status": "exact_match",
+      "mappedTo": "Vernet"
+    },
+    "Veron": {
+      "status": "exact_match",
+      "mappedTo": "Veron"
+    },
+    "Vestar": {
+      "status": "exact_match",
+      "mappedTo": "Vestar"
+    },
+    "Vex": {
+      "status": "exact_match",
+      "mappedTo": "Vex"
+    },
+    "Vexta": {
+      "status": "exact_match",
+      "mappedTo": "Vexta"
+    },
+    "Vicondor": {
+      "status": "exact_match",
+      "mappedTo": "Vicondor"
+    },
+    "Vindalia": {
+      "status": "exact_match",
+      "mappedTo": "Vindalia"
+    },
+    "Vinsoth": {
+      "status": "exact_match",
+      "mappedTo": "Vinsoth"
+    },
+    "Virgillia": {
+      "status": "exact_match",
+      "mappedTo": "Virgillia"
+    },
+    "Virujansi": {
+      "status": "exact_match",
+      "mappedTo": "Virujansi"
+    },
+    "Vjun": {
+      "status": "exact_match",
+      "mappedTo": "Vjun"
+    },
+    "Vladet": {
+      "status": "exact_match",
+      "mappedTo": "Vladet"
+    },
+    "Vodran": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Vogel": {
+      "status": "exact_match",
+      "mappedTo": "Vogel"
+    },
+    "Vohai": {
+      "status": "exact_match",
+      "mappedTo": "Vohai"
+    },
+    "Void Station": {
+      "status": "exact_match",
+      "mappedTo": "Void Station"
+    },
+    "Voktunma": {
+      "status": "exact_match",
+      "mappedTo": "Voktunma"
+    },
+    "Voltare": {
+      "status": "exact_match",
+      "mappedTo": "Voltare"
+    },
+    "Von-Alai": {
+      "status": "exact_match",
+      "mappedTo": "Von-Alai"
+    },
+    "Vondarc": {
+      "status": "exact_match",
+      "mappedTo": "Vondarc"
+    },
+    "Vontor": {
+      "status": "exact_match",
+      "mappedTo": "Vontor"
+    },
+    "Voon": {
+      "status": "exact_match",
+      "mappedTo": "Voon"
+    },
+    "Voorsbain": {
+      "status": "exact_match",
+      "mappedTo": "Voorsbain"
+    },
+    "Vor Deo": {
+      "status": "exact_match",
+      "mappedTo": "Vor Deo"
+    },
+    "Vorsia": {
+      "status": "exact_match",
+      "mappedTo": "Vorsia"
+    },
+    "Vortex": {
+      "status": "exact_match",
+      "mappedTo": "Vortex"
+    },
+    "Vorzyd": {
+      "status": "exact_match",
+      "mappedTo": "Vorzyd"
+    },
+    "Voss": {
+      "status": "exact_match",
+      "mappedTo": "Voss"
+    },
+    "Vuchelle": {
+      "status": "exact_match",
+      "mappedTo": "Vuchelle"
+    },
+    "Vulcar": {
+      "status": "exact_match",
+      "mappedTo": "Vulcar"
+    },
+    "Vulpter": {
+      "status": "exact_match",
+      "mappedTo": "Vulpter"
+    },
+    "Vulta": {
+      "status": "exact_match",
+      "mappedTo": "Vulta"
+    },
+    "Vultar": {
+      "status": "exact_match",
+      "mappedTo": "Vultar"
+    },
+    "Vuma": {
+      "status": "exact_match",
+      "mappedTo": "Vuma"
+    },
+    "Vurdon Ka": {
+      "status": "exact_match",
+      "mappedTo": "Vurdon Ka"
+    },
+    "Vuzsa": {
+      "status": "exact_match",
+      "mappedTo": "Vuzsa"
+    },
+    "Vykos": {
+      "status": "exact_match",
+      "mappedTo": "Vykos"
+    },
+    "Wakeelmui": {
+      "status": "exact_match",
+      "mappedTo": "Wakeelmui"
+    },
+    "Walalla": {
+      "status": "exact_match",
+      "mappedTo": "Walalla"
+    },
+    "Walinor": {
+      "status": "exact_match",
+      "mappedTo": "Walinor"
+    },
+    "Wann Tsir": {
+      "status": "exact_match",
+      "mappedTo": "Wann Tsir"
+    },
+    "Wayland": {
+      "status": "exact_match",
+      "mappedTo": "Wayland"
+    },
+    "Weerden": {
+      "status": "exact_match",
+      "mappedTo": "Weerden"
+    },
+    "Wetyin's Colony": {
+      "status": "exact_match",
+      "mappedTo": "Wetyin's Colony"
+    },
+    "Whelori": {
+      "status": "exact_match",
+      "mappedTo": "Whelori"
+    },
+    "Widek": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Wistril": {
+      "status": "exact_match",
+      "mappedTo": "Wistril"
+    },
+    "Wobani": {
+      "status": "exact_match",
+      "mappedTo": "Wobani"
+    },
+    "Wodan": {
+      "status": "exact_match",
+      "mappedTo": "Wodan"
+    },
+    "Womrik": {
+      "status": "exact_match",
+      "mappedTo": "Womrik"
+    },
+    "Woostri": {
+      "status": "exact_match",
+      "mappedTo": "Woostri"
+    },
+    "Worru'du": {
+      "status": "exact_match",
+      "mappedTo": "Worru'du"
+    },
+    "Wrea": {
+      "status": "exact_match",
+      "mappedTo": "Wrea"
+    },
+    "Wroona": {
+      "status": "exact_match",
+      "mappedTo": "Wroona"
+    },
+    "Wukkar": {
+      "status": "exact_match",
+      "mappedTo": "Wukkar"
+    },
+    "Wyndigal": {
+      "status": "exact_match",
+      "mappedTo": "Wyndigal"
+    },
+    "Xa Fel": {
+      "status": "exact_match",
+      "mappedTo": "Xa Fel"
+    },
+    "Xagobah": {
+      "status": "exact_match",
+      "mappedTo": "Xagobah"
+    },
+    "Xeron": {
+      "status": "exact_match",
+      "mappedTo": "Xeron"
+    },
+    "Xerton": {
+      "status": "exact_match",
+      "mappedTo": "Xerton"
+    },
+    "Xo": {
+      "status": "exact_match",
+      "mappedTo": "Xo"
+    },
+    "Xobome": {
+      "status": "exact_match",
+      "mappedTo": "Xobome"
+    },
+    "Xochtl": {
+      "status": "exact_match",
+      "mappedTo": "Xochtl"
+    },
+    "Xolu": {
+      "status": "exact_match",
+      "mappedTo": "Xolu"
+    },
+    "Xoman": {
+      "status": "exact_match",
+      "mappedTo": "Xoman"
+    },
+    "Xorth": {
+      "status": "exact_match",
+      "mappedTo": "Xorth"
+    },
+    "Yabol Opa": {
+      "status": "exact_match",
+      "mappedTo": "Yabol Opa"
+    },
+    "Yag'Dhul": {
+      "status": "exact_match",
+      "mappedTo": "Yag'Dhul"
+    },
+    "Yaga Minor": {
+      "status": "exact_match",
+      "mappedTo": "Yaga Minor"
+    },
+    "Yalara": {
+      "status": "exact_match",
+      "mappedTo": "Yalara"
+    },
+    "Yanibar": {
+      "status": "manual_required",
+      "mappedTo": null
+    },
+    "Yashuvhu": {
+      "status": "exact_match",
+      "mappedTo": "Yashuvhu"
+    },
+    "Yavin": {
+      "status": "exact_match",
+      "mappedTo": "Yavin"
+    },
+    "Yetoom": {
+      "status": "exact_match",
+      "mappedTo": "Yetoom"
+    },
+    "Yhifar": {
+      "status": "exact_match",
+      "mappedTo": "Yhifar"
+    },
+    "Yinchorr": {
+      "status": "exact_match",
+      "mappedTo": "Yinchorr"
+    },
+    "Yitabo": {
+      "status": "exact_match",
+      "mappedTo": "Yitabo"
+    },
+    "Ylesia": {
+      "status": "exact_match",
+      "mappedTo": "Ylesia"
+    },
+    "Ylix": {
+      "status": "exact_match",
+      "mappedTo": "Ylix"
+    },
+    "Yn": {
+      "status": "exact_match",
+      "mappedTo": "Yn"
+    },
+    "Yoribuunt": {
+      "status": "exact_match",
+      "mappedTo": "Yoribuunt"
+    },
+    "Yout": {
+      "status": "exact_match",
+      "mappedTo": "Yout"
+    },
+    "Yulant": {
+      "status": "exact_match",
+      "mappedTo": "Yulant"
+    },
+    "Yutan": {
+      "status": "exact_match",
+      "mappedTo": "Yutan"
+    },
+    "Yutusk": {
+      "status": "exact_match",
+      "mappedTo": "Yutusk"
+    },
+    "Zadaria": {
+      "status": "exact_match",
+      "mappedTo": "Zadaria"
+    },
+    "Zaddja": {
+      "status": "exact_match",
+      "mappedTo": "Zaddja"
+    },
+    "Zakuul": {
+      "status": "exact_match",
+      "mappedTo": "Zakuul"
+    },
+    "Zalori": {
+      "status": "exact_match",
+      "mappedTo": "Zalori"
+    },
+    "Zaloriis": {
+      "status": "exact_match",
+      "mappedTo": "Zaloriis"
+    },
+    "Zamael": {
+      "status": "exact_match",
+      "mappedTo": "Zamael"
+    },
+    "Zanbar": {
+      "status": "exact_match",
+      "mappedTo": "Zanbar"
+    },
+    "Zardossa Stix": {
+      "status": "exact_match",
+      "mappedTo": "Zardossa Stix"
+    },
+    "Zaria": {
+      "status": "exact_match",
+      "mappedTo": "Zaria"
+    },
+    "Zchtek": {
+      "status": "exact_match",
+      "mappedTo": "Zchtek"
+    },
+    "Zebitrope": {
+      "status": "exact_match",
+      "mappedTo": "Zebitrope"
+    },
+    "ZeHeth": {
+      "status": "exact_match",
+      "mappedTo": "ZeHeth"
+    },
+    "Zeltros": {
+      "status": "exact_match",
+      "mappedTo": "Zeltros"
+    },
+    "Zenox Cluster": {
+      "status": "exact_match",
+      "mappedTo": "Zenox Cluster"
+    },
+    "Zephry": {
+      "status": "exact_match",
+      "mappedTo": "Zephry"
+    },
+    "Zerm": {
+      "status": "exact_match",
+      "mappedTo": "Zerm"
+    },
+    "Zeta": {
+      "status": "exact_match",
+      "mappedTo": "Zeta"
+    },
+    "Zhanox": {
+      "status": "exact_match",
+      "mappedTo": "Zhanox"
+    },
+    "Zhar": {
+      "status": "exact_match",
+      "mappedTo": "Zhar"
+    },
+    "Zigoola": {
+      "status": "exact_match",
+      "mappedTo": "Zigoola"
+    },
+    "Ziost": {
+      "status": "exact_match",
+      "mappedTo": "Ziost"
+    },
+    "Zirulast": {
+      "status": "exact_match",
+      "mappedTo": "Zirulast"
+    },
+    "Zisia": {
+      "status": "exact_match",
+      "mappedTo": "Zisia"
+    },
+    "Ziugen": {
+      "status": "exact_match",
+      "mappedTo": "Ziugen"
+    },
+    "Zolan": {
+      "status": "exact_match",
+      "mappedTo": "Zolan"
+    },
+    "Zonama Sekot": {
+      "status": "exact_match",
+      "mappedTo": "Zonama Sekot"
+    },
+    "Zonju": {
+      "status": "exact_match",
+      "mappedTo": "Zonju"
+    },
+    "Zorbia": {
+      "status": "exact_match",
+      "mappedTo": "Zorbia"
+    },
+    "Zygerria": {
+      "status": "exact_match",
+      "mappedTo": "Zygerria"
+    },
+    "Zygia": {
+      "status": "exact_match",
+      "mappedTo": "Zygia"
+    },
+    "Zyluria": {
+      "status": "exact_match",
+      "mappedTo": "Zyluria"
+    }
+  }
+}

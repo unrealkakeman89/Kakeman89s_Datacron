@@ -1,0 +1,17 @@
+{
+  "comment": "Legends-style tier hints keyed by hyperspace route name (matches GeoJSON properties.hyperspace). Used by build-hyperspace-graph.py; absent names use zoom_level fallback.",
+  "routes": {
+    "Perlemian Trade Route": { "tier": 1, "obscure": false, "dcBonus": 0 },
+    "Corellian Run": { "tier": 1, "obscure": false, "dcBonus": 0 },
+    "Corellian Trade Spine": { "tier": 1, "obscure": false, "dcBonus": 0 },
+    "Hydian Way": { "tier": 1, "obscure": false, "dcBonus": 0 },
+    "Rimma Trade Route": { "tier": 1, "obscure": false, "dcBonus": 0 },
+    "Byss Run": { "tier": 5, "obscure": false, "dcBonus": 4 },
+    "Koros Trunk Line": { "tier": 5, "obscure": false, "dcBonus": 3 },
+    "Daragon Trail": { "tier": 5, "obscure": false, "dcBonus": 3 },
+    "Carbonite Run": { "tier": 5, "obscure": false, "dcBonus": 2 },
+    "Shaltin Tunnels": { "tier": 4, "obscure": true, "dcBonus": 3 },
+    "Death Wind Corridor": { "tier": 4, "obscure": true, "dcBonus": 3 },
+    "Kessel Run": { "tier": 3, "obscure": false, "dcBonus": 1 }
+  }
+}

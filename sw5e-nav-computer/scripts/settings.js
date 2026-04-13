@@ -7,7 +7,10 @@ export const SETTING_KEYS = {
   fuelPerHour: "fuelPerHour",
   foodPerCrewPerDay: "foodPerCrewPerDay",
   pilotingFallbackSkill: "pilotingFallbackSkill",
-  debugMode: "debugMode"
+  debugMode: "debugMode",
+  advancedMaxTier: "advancedMaxTier",
+  advancedIncludeObscureRoutes: "advancedIncludeObscureRoutes",
+  advancedTier5ExtraDc: "advancedTier5ExtraDc"
 };
 
 export function registerSettings() {
@@ -81,5 +84,34 @@ export function registerSettings() {
     config: true,
     type: Boolean,
     default: false
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.advancedMaxTier, {
+    name: "SW5ENAVCOMPUTER.Settings.AdvancedMaxTier.Name",
+    hint: "SW5ENAVCOMPUTER.Settings.AdvancedMaxTier.Hint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 3,
+    range: { min: 1, max: 5, step: 1 }
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.advancedIncludeObscureRoutes, {
+    name: "SW5ENAVCOMPUTER.Settings.AdvancedIncludeObscureRoutes.Name",
+    hint: "SW5ENAVCOMPUTER.Settings.AdvancedIncludeObscureRoutes.Hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.advancedTier5ExtraDc, {
+    name: "SW5ENAVCOMPUTER.Settings.AdvancedTier5ExtraDc.Name",
+    hint: "SW5ENAVCOMPUTER.Settings.AdvancedTier5ExtraDc.Hint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 0,
+    range: { min: 0, max: 10, step: 1 }
   });
 }

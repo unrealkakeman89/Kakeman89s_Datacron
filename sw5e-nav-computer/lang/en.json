@@ -1,4 +1,11 @@
 {
+  "SWNAVCOMP": {
+    "Results": {
+      "UnknownTime": "Unknown duration",
+      "LessThanOneMinute": "Less than 1 minute",
+      "SuppliesUnit": "Supply Packs"
+    }
+  },
   "SW5ENAVCOMPUTER": {
     "ModuleTitle": "SW5e Nav Computer",
     "SceneControl": {
@@ -36,16 +43,24 @@
       "RouteErrorSelectBoth": "Select both an origin and a destination before calculating.",
       "RouteErrorUnknownPlanet": "No planet named {name} was found in navigation data.",
       "AdvancedFallbackBanner": "No curated hyperspace lane route found. Falling back to region-based estimate.",
-      "AdvancedCuratedPrototypeNote": "Advanced mode uses a small curated lane graph, not full galaxy coverage.",
+      "AdvancedFallback": {
+        "NoLanePath": "No continuous hyperlane path connects these worlds on the current map. Travel time uses a regional estimate instead of a lane-by-lane route.",
+        "MissingCoordinates": "One or both worlds are not on the hyperspace lane network in this dataset. Travel time uses a regional estimate.",
+        "FilteredLanesOnly": "A lane-graph path exists only through routes filtered out by your Advanced settings (tier or obscure lanes). Travel time uses a regional estimate—try relaxing those filters if you expected a hyperlane route.",
+        "DataError": "Hyperspace route data could not be loaded. Travel time uses a regional estimate only.",
+        "LongDistanceEstimateWarning": "This route used a regional estimate because no valid lane-graph path was found. The map may be incomplete for this corridor."
+      },
+      "AdvancedCuratedPrototypeNote": "Advanced mode prefers charted hyperlanes; unmapped hops use transit corridors (grey in the lane list).",
+      "LaneSyntheticTooltip": "No charted lane exists here; this hop was added for connectivity or proximity.",
       "ResultAdvancedPath": "Hyperlane path (worlds)",
       "ResultAdvancedLanes": "Lanes used (per hop)",
       "ResultHyperdriveMult": "Hyperdrive class (travel time multiplier)",
+      "ResultPathMaxTier": "Highest lane tier on path",
       "ResultOrigin": "Origin",
       "ResultDestination": "Destination",
       "ResultOriginRegion": "Origin region",
       "ResultDestinationRegion": "Destination region",
-      "ResultTravelHours": "Travel time (hours)",
-      "ResultTravelDays": "Travel duration (days)",
+      "ResultTravelHours": "Travel time",
       "ResultCrewSize": "Crew count (for provisions)",
       "ResultFuelRequired": "Fuel required",
       "ResultFoodRequired": "Food required",
@@ -67,11 +82,19 @@
     "Error": {
       "Generic": "An unexpected navigation computer error occurred."
     },
+    "Route": {
+      "RegionalHyperspaceEstimate": "Regional hyperspace estimate (no lane-graph path)"
+    },
     "Travel": {
       "DcModifierBase": "Base DC 10",
       "DcModifierOutwardSteps": "+{total} ({steps} outward region step(s), +2 each)",
       "DcModifierRemoteDestination": "+5 (destination in Wild Space or Unknown Regions)",
-      "DcModifierLaneHops": "+{total} ({hops} hyperspace lane hop(s), +1 DC each)"
+      "DcModifierLaneHops": "+{total} ({hops} hyperspace lane hop(s), +1 DC each)",
+      "DcModifierHyperspaceHops": "+{total} ({curated} charted hop(s) at +1 DC, {synthetic} synthetic at +2 DC)",
+      "DcModifierHyperspaceHopsCapped": "+{total} (hyperspace hops, capped at maximum of {max})",
+      "DcModifierLaneRouteBonus": "+{total} (lane danger / minor-route modifiers along the curated path)",
+      "DcModifierLaneRouteBonusCapped": "+{total} (lane danger / minor-route modifiers, capped at maximum of {max})",
+      "DcModifierPathMaxTierNote": "Highest lane tier on path: {tier} (1 = major trade spines, 5 = hazardous)"
     },
     "Settings": {
       "CalculationMode": {
@@ -105,6 +128,18 @@
       "PilotingFallbackSkill": {
         "Name": "Piloting fallback skill",
         "Hint": "If pil / piloting are missing on the pilot actor, rolls use this skill id (e.g. acr). SW5E also tries tec before failing."
+      },
+      "AdvancedMaxTier": {
+        "Name": "Advanced mode — maximum hyperspace tier",
+        "Hint": "Lanes above this tier are excluded from pathfinding except segments marked essential for connectivity (transit corridors, regional connectors). 1 = broadest major routes, 5 = narrowest."
+      },
+      "AdvancedIncludeObscureRoutes": {
+        "Name": "Advanced mode — include obscure routes",
+        "Hint": "When enabled, lanes marked obscure (e.g. regional connectors, back routes) can appear in pathfinding."
+      },
+      "AdvancedTier5ExtraDc": {
+        "Name": "Advanced mode — extra DC per tier-5 hop",
+        "Hint": "Added to the piloting DC once for each hop that uses a tier-5 lane, on top of any per-lane DC bonus in the data. Use 0 to rely on data only."
       }
     }
   }

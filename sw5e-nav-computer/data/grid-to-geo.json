@@ -1,0 +1,4 @@
+{
+  "comment": "Optional CRS84 lon/lat per map grid cell. When a planet's `grid` field normalizes to a key here (e.g. K-12), that position overrides bbox/affine mapping for snapping only. Leave cells empty to use only coordinates + grid→synthetic xy + control-point affine. Keys: letter column and row like M-10 (see normalize_grid_key in build-hyperspace-graph.py).",
+  "cells": {}
+}

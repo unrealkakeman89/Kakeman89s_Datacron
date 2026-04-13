@@ -1,0 +1,17 @@
+{
+  "comment": "Authoring reference: Legends-style hyperspace names and tier metadata. Pathfinding uses hyperspace-routes.json (built from GeoJSON + this data via route-tier-overrides.json).",
+  "routes": [
+    { "name": "Perlemian Trade Route", "tier": 1, "obscure": false, "dcBonus": 0 },
+    { "name": "Corellian Run", "tier": 1, "obscure": false, "dcBonus": 0 },
+    { "name": "Corellian Trade Spine", "tier": 1, "obscure": false, "dcBonus": 0 },
+    { "name": "Hydian Way", "tier": 1, "obscure": false, "dcBonus": 0 },
+    { "name": "Rimma Trade Route", "tier": 1, "obscure": false, "dcBonus": 0 },
+    { "name": "Byss Run", "tier": 5, "obscure": false, "dcBonus": 4 },
+    { "name": "Koros Trunk Line", "tier": 5, "obscure": false, "dcBonus": 3 },
+    { "name": "Daragon Trail", "tier": 5, "obscure": false, "dcBonus": 3 },
+    { "name": "Carbonite Run", "tier": 5, "obscure": false, "dcBonus": 2 },
+    { "name": "Shaltin Tunnels", "tier": 4, "obscure": true, "dcBonus": 3 },
+    { "name": "Death Wind Corridor", "tier": 4, "obscure": true, "dcBonus": 3 },
+    { "name": "Kessel Run", "tier": 3, "obscure": false, "dcBonus": 1 }
+  ]
+}

@@ -1,0 +1,488 @@
+{
+  "1. Produce a concise report of all modifications already made to:": {
+    "bullets": [
+      {
+        "path": "scripts/build-hyperspace-graph.py",
+        "note": "Not tracked in git on this branch (untracked/ignored); present locally for StarWarsMap / hyperspace graph integration."
+      },
+      {
+        "path": "sw5e-nav-computer/data/starwarsmap/hyperlanes_db.json",
+        "note": "Not tracked in git on this branch (untracked/ignored); present locally for StarWarsMap / hyperspace graph integration."
+      },
+      {
+        "path": "sw5e-nav-computer/data/starwarsmap/planet-name-aliases.json",
+        "note": "Not tracked in git on this branch (untracked/ignored); present locally for StarWarsMap / hyperspace graph integration."
+      },
+      {
+        "path": "README.md",
+        "note": "Tracked; differs from `5e1b967` in the working tree: 1 file changed, 21 insertions(+), 7 deletions(-)."
+      },
+      {
+        "path": "docs/hyperspace-coordinate-transform.md",
+        "note": "Not tracked in git on this branch (untracked/ignored); present locally for StarWarsMap / hyperspace graph integration."
+      }
+    ]
+  },
+  "2. List every route-name normalization rule currently applied in the build pipeline.": {
+    "rules": [
+      "StarWarsMap route labels (`hyperlanes_db.json` keys; also `properties.hyperspace` when checked against the authoritative set): `str(name).strip()` then apply `STARWARSMAP_ROUTE_NAME_FIXES` in `scripts/build-hyperspace-graph.py` (`Corellinan Run` -> `Corellian Run`, `Way Of Schesa` -> `Way of Schesa`, `Path Of The Houses` -> `Path of the Houses`).",
+      "StarWarsMap chain worlds: `str(w).strip()`; consecutive duplicates are removed.",
+      "GeoJSON-derived edges store `properties.hyperspace` / vertex labels without running `normalize_starwarsmap_route_name` on the persisted edge name (that normalization is only used for membership checks against StarWarsMap keys).",
+      "Planet grid keys use `normalize_grid_key` (uppercase, strip spaces, canonical `AA-12` form) for lon/lat anchoring; not a hyperspace lane label rule but part of the same build.",
+      "`route-tier-overrides.json` keys and `hyperspace-routes.hand.json` names are used as authored (no automatic spelling pass)."
+    ]
+  },
+  "3. List every explicit planet alias currently applied and explain why.": {
+    "aliases": [
+      {
+        "alias": "Kailor V",
+        "canonical": "Kailor",
+        "why": "StarWarsMap labels this world `Kailor V` while `planets.json` uses `Kailor`. JSON comment: Map StarWarsMap hyperlane world labels to names in planets.json when they differ."
+      }
+    ]
+  },
+  "4. Confirm whether authoritative=True only replaces edges with the exact same (from, to, name) key...": {
+    "text": "`authoritative=True` does **not** use a literal `(from, to, name)` key. `add_edge` uses `key = tuple(sorted([a, b]) + [route_name])`, so the identity is the unordered planet pair plus the exact route name string; directional `from`/`to` order in the stored record is whatever `add_edge(a,b,...)` passed in. Authoritative writes always assign `edges_map[key]`. Non-authoritative writes keep an existing edge if its `travelTimeBase` is already <= the candidate."
+  },
+  "5. Generate a report of all StarWarsMap route names imported that do NOT already exist by exact name in our prior hyperspace-routes.json (git 5e1b967).": {
+    "count": 56,
+    "names": [
+      "Ado Spine",
+      "Ansion Spur",
+      "Bothan Run",
+      "Byss Run",
+      "Celanon Spur",
+      "Cerean Reach",
+      "Commenor Run",
+      "Corellinan Run",
+      "D'aelgoth Trade Route",
+      "Duros Space Run",
+      "Elgit-M'Hanna Corridor",
+      "Enarc Run",
+      "Entralla Route",
+      "Fedalle Run",
+      "Great Gran Run",
+      "Great Kashyyyk Branch",
+      "Guu Run",
+      "Hapan Spine",
+      "Harrin Trade Corridor",
+      "Kegan Run",
+      "Kessel Run",
+      "Koda Spur",
+      "Lesser Lantillian Route",
+      "Lipsec Run",
+      "Listehol Run",
+      "Llanic Spice Run",
+      "Lorell Route",
+      "Namadii Corridor",
+      "Nanth'ri Route",
+      "Nothoiin Corridor",
+      "Ootmian Pabol",
+      "Overic Griplink",
+      "Pabol Hutta",
+      "Pabol Sleheyron",
+      "Path Of The Houses",
+      "Quellor Run",
+      "Randon Run",
+      "Reena Trade Route",
+      "Rynmar Trail",
+      "Salin Corridor",
+      "Sanrafsix Corridor",
+      "Shag Pabol",
+      "Shaltin Tunnels",
+      "Shipwrights' Trace",
+      "Shiritoku Way",
+      "Shwuy Exchange",
+      "Spar Trade Route",
+      "Terr'Skiar Pass",
+      "Trax Tube",
+      "Trellen Trade Route",
+      "Trellent Trade Route",
+      "Triellus Trade Route",
+      "Triellus Trade Run",
+      "Varl Run",
+      "Veragi Trade Route",
+      "Way Of Schesa"
+    ]
+  },
+  "6. Generate a report of all local curated route names that still do not exist in StarWarsMap data.": {
+    "count": 8,
+    "names": [
+      "Carbonite Run",
+      "Chasdemonus Route",
+      "Corellian Run",
+      "Daragon Trail",
+      "Death Wind Corridor",
+      "Koros Trunk Line",
+      "Path of the Houses",
+      "Way of Schesa"
+    ]
+  },
+  "7. Run a diagnostic for Coruscant -> Exegol and report: curated path exists, path worlds, named lane list, region arc, curated hop count, synthetic hop count, whether regionalAdvancedRouteFallback is still being triggered.": {
+    "curated_path_exists": "True",
+    "path_worlds": [
+      "Coruscant",
+      "Brentaal IV",
+      "Chandrila",
+      "Commenor",
+      "Corellia",
+      "Ord Mantell",
+      "Korvaii",
+      "Ithor",
+      "Noonar",
+      "Cademimu",
+      "Agamar",
+      "Shaum Hii",
+      "Vinsoth",
+      "Salin",
+      "Ciutric",
+      "Corvis Minor",
+      "Argazda",
+      "Bimmiel",
+      "Birgis",
+      "Seline",
+      "Sernpidal",
+      "Veragi",
+      "Trassitan",
+      "Dubrillion",
+      "Ahakista",
+      "Dantooine",
+      "Schesa",
+      "Noris",
+      "Ornfra",
+      "Naporar",
+      "Sposia",
+      "Csilla",
+      "Ahch-To",
+      "Exegol"
+    ],
+    "named_lane_list": [
+      "Perlemian Trade Route",
+      "Perlemian Trade Route",
+      "Perlemian Trade Route",
+      "Corellian Trade Spine",
+      "Corellian Run",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Celanon Spur",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Veragi Trade Route",
+      "Transit corridor (unmapped)",
+      "Way of Schesa",
+      "Way of Schesa",
+      "Path of the Houses",
+      "Path of the Houses",
+      "Path of the Houses",
+      "Transit corridor (unmapped)",
+      "Transit corridor (unmapped)"
+    ],
+    "region_arc": [
+      "Core",
+      "Colonies",
+      "Mid Rim",
+      "Outer Rim",
+      "Unknown Regions"
+    ],
+    "curated_hop_count": 30,
+    "synthetic_hop_count": 3,
+    "regional_advanced_route_fallback_triggered": "False",
+    "total_travel_time_base": 441.52,
+    "hops_detail": [
+      {
+        "from": "Coruscant",
+        "to": "Brentaal IV",
+        "routeName": "Perlemian Trade Route",
+        "travelTimeBase": 24.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Brentaal IV",
+        "to": "Chandrila",
+        "routeName": "Perlemian Trade Route",
+        "travelTimeBase": 18.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Chandrila",
+        "to": "Commenor",
+        "routeName": "Perlemian Trade Route",
+        "travelTimeBase": 14.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Commenor",
+        "to": "Corellia",
+        "routeName": "Corellian Trade Spine",
+        "travelTimeBase": 16.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Corellia",
+        "to": "Ord Mantell",
+        "routeName": "Corellian Run",
+        "travelTimeBase": 40.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Ord Mantell",
+        "to": "Korvaii",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 23.7,
+        "syntheticHop": false
+      },
+      {
+        "from": "Korvaii",
+        "to": "Ithor",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Ithor",
+        "to": "Noonar",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Noonar",
+        "to": "Cademimu",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Cademimu",
+        "to": "Agamar",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Agamar",
+        "to": "Shaum Hii",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Shaum Hii",
+        "to": "Vinsoth",
+        "routeName": "Celanon Spur",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Vinsoth",
+        "to": "Salin",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Salin",
+        "to": "Ciutric",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Ciutric",
+        "to": "Corvis Minor",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Corvis Minor",
+        "to": "Argazda",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Argazda",
+        "to": "Bimmiel",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Bimmiel",
+        "to": "Birgis",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Birgis",
+        "to": "Seline",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Seline",
+        "to": "Sernpidal",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Sernpidal",
+        "to": "Veragi",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Veragi",
+        "to": "Trassitan",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Trassitan",
+        "to": "Dubrillion",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Dubrillion",
+        "to": "Ahakista",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Ahakista",
+        "to": "Dantooine",
+        "routeName": "Veragi Trade Route",
+        "travelTimeBase": 22.88,
+        "syntheticHop": false
+      },
+      {
+        "from": "Dantooine",
+        "to": "Schesa",
+        "routeName": "Transit corridor (unmapped)",
+        "travelTimeBase": 8.0,
+        "syntheticHop": true
+      },
+      {
+        "from": "Schesa",
+        "to": "Noris",
+        "routeName": "Way of Schesa",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Noris",
+        "to": "Ornfra",
+        "routeName": "Way of Schesa",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Ornfra",
+        "to": "Naporar",
+        "routeName": "Path of the Houses",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Naporar",
+        "to": "Sposia",
+        "routeName": "Path of the Houses",
+        "travelTimeBase": 8.0,
+        "syntheticHop": false
+      },
+      {
+        "from": "Sposia",
+        "to": "Csilla",
+        "routeName": "Path of the Houses",
+        "travelTimeBase": 70.63,
+        "syntheticHop": false
+      },
+      {
+        "from": "Csilla",
+        "to": "Ahch-To",
+        "routeName": "Transit corridor (unmapped)",
+        "travelTimeBase": 12.5,
+        "syntheticHop": true
+      },
+      {
+        "from": "Ahch-To",
+        "to": "Exegol",
+        "routeName": "Transit corridor (unmapped)",
+        "travelTimeBase": 15.81,
+        "syntheticHop": true
+      }
+    ],
+    "regions_along_path": [
+      "Core",
+      "Colonies",
+      "Core",
+      "Colonies",
+      "Core",
+      "Mid Rim",
+      "Mid Rim",
+      "Mid Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Outer Rim",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions",
+      "Unknown Regions"
+    ],
+    "filter": "essentialConnectivity OR (tier<=3 AND NOT obscure); maxTier=3; includeObscure=false",
+    "fallback_notes": "`regionalAdvancedRouteFallback` in `sw5e-nav-computer/scripts/route-calculator.js` runs when hyperspace JSON cannot be loaded for the graph build, or when `aStarShortestPath` returns no solution after `filterHyperspaceRoutesForSettings`. This script does not execute Foundry; it mirrors the tier/obscure filter and runs a nonnegative shortest-path search on the same undirected edge list. If a path exists here, Advanced mode would not hit the no-path fallback for this pair unless graph data or filtering diverges."
+  },
+  "meta": {
+    "git_prior_spec": "5e1b967:sw5e-nav-computer/data/hyperspace-routes.json",
+    "loaded_files": [
+      "sw5e-nav-computer\\data\\hyperspace-routes.json",
+      "sw5e-nav-computer\\data\\planets.json",
+      "sw5e-nav-computer\\data\\starwarsmap\\hyperlanes_db.json",
+      "sw5e-nav-computer\\data\\starwarsmap\\planet-name-aliases.json",
+      "sw5e-nav-computer\\data\\route-tier-overrides.json",
+      "sw5e-nav-computer\\data\\hyperspace-routes.hand.json"
+    ]
+  }
+}

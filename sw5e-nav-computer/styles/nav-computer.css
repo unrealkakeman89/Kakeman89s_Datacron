@@ -236,7 +236,8 @@
   color: #ffb87a;
 }
 
-.nav-computer-advanced-fallback-banner {
+.nav-computer-advanced-fallback-banner,
+.nav-computer-inline-warning {
   margin: 0 0 0.75rem;
   padding: 0.65rem 0.75rem;
   border-radius: 8px;
@@ -245,6 +246,13 @@
   color: #ffd596;
   font-size: 0.9rem;
   line-height: 1.4;
+}
+
+.nav-computer-inline-warning--emphasis {
+  border-color: rgba(255, 120, 72, 0.55);
+  background: rgba(72, 28, 12, 0.45);
+  color: #ffcca8;
+  font-weight: 600;
 }
 
 .nav-computer-curated-note {
@@ -263,6 +271,25 @@
   margin: 0;
   padding-left: 1.1rem;
   color: #c8e6ff;
+}
+
+.nav-computer-lane-named .nav-computer-lane-glyph {
+  color: #78c3ff;
+  margin-right: 0.35rem;
+}
+
+.nav-computer-lane-synthetic {
+  opacity: 0.78;
+  color: #9aa8b8;
+}
+
+.nav-computer-lane-synthetic .nav-computer-lane-glyph {
+  color: #7a8a9c;
+  margin-right: 0.35rem;
+}
+
+.nav-computer-lane-label {
+  vertical-align: middle;
 }
 
 .sw5e-nav-computer-app .nav-computer-action-button:not(:disabled) {
