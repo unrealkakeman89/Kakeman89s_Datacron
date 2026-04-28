@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Build sw5e-nav-computer/data/hyperspace-routes.json from GeoJSON + planets + tier overrides
-+ StarWarsMap authoritative hyperlane chains (see sw5e-nav-computer/data/starwarsmap/).
+Build kakeman89s-datacron/data/hyperspace-routes.json from GeoJSON + planets + tier overrides
++ StarWarsMap authoritative hyperlane chains (see kakeman89s-datacron/data/starwarsmap/).
 See repo docs/hyperspace-coordinate-transform.md for coordinate reconciliation.
 
 Run from repo root: python scripts/build-hyperspace-graph.py
@@ -19,14 +19,14 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 GEOJSON_PATH = REPO / "hyperspace_singlepart_new.json"
-PLANETS_PATH = REPO / "sw5e-nav-computer" / "data" / "planets.json"
-TIER_OVERRIDES_PATH = REPO / "sw5e-nav-computer" / "data" / "route-tier-overrides.json"
-CONTROL_POINTS_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-control-points.json"
-GRID_TO_GEO_PATH = REPO / "sw5e-nav-computer" / "data" / "grid-to-geo.json"
-OUTPUT_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.json"
-HAND_ROUTES_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.hand.json"
-STARWARSMAP_HYPERLANES_PATH = REPO / "sw5e-nav-computer" / "data" / "starwarsmap" / "hyperlanes_db.json"
-STARWARSMAP_ALIASES_PATH = REPO / "sw5e-nav-computer" / "data" / "starwarsmap" / "planet-name-aliases.json"
+PLANETS_PATH = REPO / "kakeman89s-datacron" / "data" / "planets.json"
+TIER_OVERRIDES_PATH = REPO / "kakeman89s-datacron" / "data" / "route-tier-overrides.json"
+CONTROL_POINTS_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-control-points.json"
+GRID_TO_GEO_PATH = REPO / "kakeman89s-datacron" / "data" / "grid-to-geo.json"
+OUTPUT_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.json"
+HAND_ROUTES_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.hand.json"
+STARWARSMAP_HYPERLANES_PATH = REPO / "kakeman89s-datacron" / "data" / "starwarsmap" / "hyperlanes_db.json"
+STARWARSMAP_ALIASES_PATH = REPO / "kakeman89s-datacron" / "data" / "starwarsmap" / "planet-name-aliases.json"
 # Travel hours per unit of planet-plane distance (same space as coordinates.x/y and parse_grid); clamped to MIN/MAX.
 STARWARSMAP_HOURS_PER_GRID_UNIT = 0.55
 

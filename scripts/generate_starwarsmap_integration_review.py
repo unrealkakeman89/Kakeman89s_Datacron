@@ -11,22 +11,22 @@ from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
 
-ROUTES_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.json"
-PLANETS_PATH = REPO / "sw5e-nav-computer" / "data" / "planets.json"
+ROUTES_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.json"
+PLANETS_PATH = REPO / "kakeman89s-datacron" / "data" / "planets.json"
 STARWARSMAP_HYPERLANES_PATH = (
-    REPO / "sw5e-nav-computer" / "data" / "starwarsmap" / "hyperlanes_db.json"
+    REPO / "kakeman89s-datacron" / "data" / "starwarsmap" / "hyperlanes_db.json"
 )
 STARWARSMAP_ALIASES_PATH = (
-    REPO / "sw5e-nav-computer" / "data" / "starwarsmap" / "planet-name-aliases.json"
+    REPO / "kakeman89s-datacron" / "data" / "starwarsmap" / "planet-name-aliases.json"
 )
-TIER_OVERRIDES_PATH = REPO / "sw5e-nav-computer" / "data" / "route-tier-overrides.json"
-HAND_ROUTES_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.hand.json"
+TIER_OVERRIDES_PATH = REPO / "kakeman89s-datacron" / "data" / "route-tier-overrides.json"
+HAND_ROUTES_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.hand.json"
 
 OUTPUT_DIR = REPO / "scripts" / "output"
 OUTPUT_JSON = OUTPUT_DIR / "starwarsmap_integration_review.json"
 OUTPUT_MD = OUTPUT_DIR / "starwarsmap_integration_review.md"
 
-GIT_SPEC = "5e1b967:sw5e-nav-computer/data/hyperspace-routes.json"
+GIT_SPEC = "5e1b967:kakeman89s-datacron/data/hyperspace-routes.json"
 GIT_COMMIT = "5e1b967"
 
 FIXES: dict[str, str] = {
@@ -440,7 +440,7 @@ def main() -> None:
 
     fallback_triggered = not path_exists
     fallback_notes = (
-        "`regionalAdvancedRouteFallback` in `sw5e-nav-computer/scripts/route-calculator.js` "
+        "`regionalAdvancedRouteFallback` in `kakeman89s-datacron/scripts/route-calculator.js` "
         "runs when hyperspace JSON cannot be loaded for the graph build, or when "
         "`aStarShortestPath` returns no solution after `filterHyperspaceRoutesForSettings`. "
         "This script does not execute Foundry; it mirrors the tier/obscure filter and runs "
@@ -452,13 +452,13 @@ def main() -> None:
     section1_targets = [
         ("scripts/build-hyperspace-graph.py", summarize_modifications_for_file("scripts/build-hyperspace-graph.py")),
         (
-            "sw5e-nav-computer/data/starwarsmap/hyperlanes_db.json",
-            summarize_modifications_for_file("sw5e-nav-computer/data/starwarsmap/hyperlanes_db.json"),
+            "kakeman89s-datacron/data/starwarsmap/hyperlanes_db.json",
+            summarize_modifications_for_file("kakeman89s-datacron/data/starwarsmap/hyperlanes_db.json"),
         ),
         (
-            "sw5e-nav-computer/data/starwarsmap/planet-name-aliases.json",
+            "kakeman89s-datacron/data/starwarsmap/planet-name-aliases.json",
             summarize_modifications_for_file(
-                "sw5e-nav-computer/data/starwarsmap/planet-name-aliases.json"
+                "kakeman89s-datacron/data/starwarsmap/planet-name-aliases.json"
             ),
         ),
         ("README.md", summarize_modifications_for_file("README.md")),

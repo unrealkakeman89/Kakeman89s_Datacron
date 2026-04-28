@@ -87,7 +87,7 @@ export function getPilotingCheckDC(
 ) {
   const modifiers = [];
   let dc = 10;
-  modifiers.push(game.i18n.localize("SW5ENAVCOMPUTER.Travel.DcModifierBase"));
+  modifiers.push(game.i18n.localize("KAKEMAN89SDATACRON.Travel.DcModifierBase"));
 
   const oi = REGION_ORDER.indexOf(originRegion ?? "");
   const di = REGION_ORDER.indexOf(destinationRegion ?? "");
@@ -97,7 +97,7 @@ export function getPilotingCheckDC(
     const add = outwardSteps * 2;
     dc += add;
     modifiers.push(
-      game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierOutwardSteps", {
+      game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierOutwardSteps", {
         total: add,
         steps: outwardSteps
       })
@@ -106,7 +106,7 @@ export function getPilotingCheckDC(
 
   if (destinationRegion === "Wild Space" || destinationRegion === "Unknown Regions") {
     dc += 5;
-    modifiers.push(game.i18n.localize("SW5ENAVCOMPUTER.Travel.DcModifierRemoteDestination"));
+    modifiers.push(game.i18n.localize("KAKEMAN89SDATACRON.Travel.DcModifierRemoteDestination"));
   }
 
   if (mode !== "basic") {
@@ -118,14 +118,14 @@ export function getPilotingCheckDC(
       dc += hopAdd;
       if (rawHopDc > MAX_HOP_DC_CONTRIB) {
         modifiers.push(
-          game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierHyperspaceHopsCapped", {
+          game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierHyperspaceHopsCapped", {
             total: hopAdd,
             max: MAX_HOP_DC_CONTRIB
           })
         );
       } else {
         modifiers.push(
-          game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierHyperspaceHops", {
+          game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierHyperspaceHops", {
             total: hopAdd,
             curated,
             synthetic
@@ -142,21 +142,21 @@ export function getPilotingCheckDC(
       dc += dangerAdd;
       if (safeDangerRaw > MAX_DANGER_CONTRIB) {
         modifiers.push(
-          game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierLaneRouteBonusCapped", {
+          game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierLaneRouteBonusCapped", {
             total: dangerAdd,
             max: MAX_DANGER_CONTRIB
           })
         );
       } else {
         modifiers.push(
-          game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierLaneRouteBonus", { total: dangerAdd })
+          game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierLaneRouteBonus", { total: dangerAdd })
         );
       }
     }
     const maxT = Number(pathMaxTier);
     if (Number.isFinite(maxT) && maxT >= 1) {
       modifiers.push(
-        game.i18n.format("SW5ENAVCOMPUTER.Travel.DcModifierPathMaxTierNote", { tier: maxT })
+        game.i18n.format("KAKEMAN89SDATACRON.Travel.DcModifierPathMaxTierNote", { tier: maxT })
       );
     }
   }

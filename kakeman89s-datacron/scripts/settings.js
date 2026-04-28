@@ -15,21 +15,20 @@ export const SETTING_KEYS = {
 
 export function registerSettings() {
   game.settings.register(MODULE_ID, SETTING_KEYS.calculationMode, {
-    name: "SW5ENAVCOMPUTER.Settings.CalculationMode.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.CalculationMode.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.CalculationMode.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.CalculationMode.Hint",
     scope: "world",
-    config: true,
+    config: false,
     type: String,
     choices: {
-      basic: "SW5ENAVCOMPUTER.Settings.CalculationMode.Choices.Basic",
-      advanced: "SW5ENAVCOMPUTER.Settings.CalculationMode.Choices.Advanced"
+      basic: "KAKEMAN89SDATACRON.Settings.CalculationMode.Choices.Basic"
     },
     default: "basic"
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.enableRandomEvents, {
-    name: "SW5ENAVCOMPUTER.Settings.EnableRandomEvents.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.EnableRandomEvents.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.EnableRandomEvents.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.EnableRandomEvents.Hint",
     scope: "world",
     config: true,
     type: Boolean,
@@ -37,8 +36,8 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.randomEventChance, {
-    name: "SW5ENAVCOMPUTER.Settings.RandomEventChance.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.RandomEventChance.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.RandomEventChance.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.RandomEventChance.Hint",
     scope: "world",
     config: true,
     type: Number,
@@ -51,8 +50,8 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.fuelPerHour, {
-    name: "SW5ENAVCOMPUTER.Settings.FuelPerHour.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.FuelPerHour.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.FuelPerHour.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.FuelPerHour.Hint",
     scope: "world",
     config: true,
     type: Number,
@@ -60,8 +59,8 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.foodPerCrewPerDay, {
-    name: "SW5ENAVCOMPUTER.Settings.FoodPerCrewPerDay.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.FoodPerCrewPerDay.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.FoodPerCrewPerDay.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.FoodPerCrewPerDay.Hint",
     scope: "world",
     config: true,
     type: Number,
@@ -69,8 +68,8 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.pilotingFallbackSkill, {
-    name: "SW5ENAVCOMPUTER.Settings.PilotingFallbackSkill.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.PilotingFallbackSkill.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.PilotingFallbackSkill.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.PilotingFallbackSkill.Hint",
     scope: "world",
     config: true,
     type: String,
@@ -78,8 +77,8 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.debugMode, {
-    name: "SW5ENAVCOMPUTER.Settings.DebugMode.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.DebugMode.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.DebugMode.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.DebugMode.Hint",
     scope: "client",
     config: true,
     type: Boolean,
@@ -87,29 +86,29 @@ export function registerSettings() {
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.advancedMaxTier, {
-    name: "SW5ENAVCOMPUTER.Settings.AdvancedMaxTier.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.AdvancedMaxTier.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.AdvancedMaxTier.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.AdvancedMaxTier.Hint",
     scope: "world",
-    config: true,
+    config: false,
     type: Number,
     default: 3,
     range: { min: 1, max: 5, step: 1 }
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.advancedIncludeObscureRoutes, {
-    name: "SW5ENAVCOMPUTER.Settings.AdvancedIncludeObscureRoutes.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.AdvancedIncludeObscureRoutes.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.AdvancedIncludeObscureRoutes.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.AdvancedIncludeObscureRoutes.Hint",
     scope: "world",
-    config: true,
+    config: false,
     type: Boolean,
     default: false
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.advancedTier5ExtraDc, {
-    name: "SW5ENAVCOMPUTER.Settings.AdvancedTier5ExtraDc.Name",
-    hint: "SW5ENAVCOMPUTER.Settings.AdvancedTier5ExtraDc.Hint",
+    name: "KAKEMAN89SDATACRON.Settings.AdvancedTier5ExtraDc.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.AdvancedTier5ExtraDc.Hint",
     scope: "world",
-    config: true,
+    config: false,
     type: Number,
     default: 0,
     range: { min: 0, max: 10, step: 1 }

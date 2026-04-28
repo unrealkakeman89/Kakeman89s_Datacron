@@ -6,11 +6,11 @@
 export function formatTravelTime(totalHours) {
   const unknown =
     typeof game !== "undefined" && game?.i18n?.localize
-      ? game.i18n.localize("SWNAVCOMP.Results.UnknownTime")
+      ? game.i18n.localize("KAKEMAN89SDATACRON.Results.UnknownTime")
       : "Unknown duration";
   const lessThanOne =
     typeof game !== "undefined" && game?.i18n?.localize
-      ? game.i18n.localize("SWNAVCOMP.Results.LessThanOneMinute")
+      ? game.i18n.localize("KAKEMAN89SDATACRON.Results.LessThanOneMinute")
       : "Less than 1 minute";
 
   const h = Number(totalHours);

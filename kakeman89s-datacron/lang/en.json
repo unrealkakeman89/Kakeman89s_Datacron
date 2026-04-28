@@ -1,18 +1,14 @@
 {
-  "SWNAVCOMP": {
-    "Results": {
-      "UnknownTime": "Unknown duration",
-      "LessThanOneMinute": "Less than 1 minute",
-      "SuppliesUnit": "Supply Packs"
-    }
-  },
-  "SW5ENAVCOMPUTER": {
-    "ModuleTitle": "SW5e Nav Computer",
+  "KAKEMAN89SDATACRON": {
+    "ModuleTitle": "Kakeman89s Datacron",
     "SceneControl": {
-      "Open": "Open Nav Computer"
+      "Open": "Open Kakeman89s Datacron",
+      "OpenHyperspace": "Open Hyperspace Navigation",
+      "OpenDroidAlly": "Open Droid Ally Pricing"
     },
     "App": {
-      "Title": "SW5e Nav Computer",
+      "Title": "Kakeman89s Datacron",
+      "HyperspaceTitle": "Hyperspace Navigation",
       "Subtitle": "Hyperspace Navigation Uplink",
       "ModeLabel": "Mode",
       "OriginLabel": "Origin Planet",
@@ -38,15 +34,15 @@
       "StatusLabel": "Status",
       "StatusPlaceholder": "Awaiting origin, destination, and crew selection.",
       "StatusRouteCalculated": "Route calculated (Basic mode).",
-      "StatusRouteCalculatedAdvanced": "Route calculated (Advanced — curated hyperlanes).",
-      "StatusRouteCalculatedAdvancedFallback": "Route calculated (Basic estimate; no curated hyperlane path).",
+      "StatusRouteCalculatedAdvanced": "Route calculated (Advanced - curated hyperlanes).",
+      "StatusRouteCalculatedAdvancedFallback": "Route calculated (regional estimate; no curated hyperlane path).",
       "RouteErrorSelectBoth": "Select both an origin and a destination before calculating.",
       "RouteErrorUnknownPlanet": "No planet named {name} was found in navigation data.",
       "AdvancedFallbackBanner": "No curated hyperspace lane route found. Falling back to region-based estimate.",
       "AdvancedFallback": {
         "NoLanePath": "No continuous hyperlane path connects these worlds on the current map. Travel time uses a regional estimate instead of a lane-by-lane route.",
         "MissingCoordinates": "One or both worlds are not on the hyperspace lane network in this dataset. Travel time uses a regional estimate.",
-        "FilteredLanesOnly": "A lane-graph path exists only through routes filtered out by your Advanced settings (tier or obscure lanes). Travel time uses a regional estimate—try relaxing those filters if you expected a hyperlane route.",
+        "FilteredLanesOnly": "A lane-graph path exists only through routes filtered out by your Advanced settings (tier or obscure lanes). Travel time uses a regional estimate - try relaxing those filters if you expected a hyperlane route.",
         "DataError": "Hyperspace route data could not be loaded. Travel time uses a regional estimate only.",
         "LongDistanceEstimateWarning": "This route used a regional estimate because no valid lane-graph path was found. The map may be incomplete for this corridor."
       },
@@ -72,6 +68,66 @@
       "ResultPlanetsPassedNone": "None (same region or no intermediate regions).",
       "ResultDescription": "Route summary",
       "ResultWarnings": "Warnings"
+    },
+    "DroidAlly": {
+      "Title": "Droid Ally Pricing",
+      "Subtitle": "Companion Cost Estimator",
+      "GmGuidance": "GM-only tool. This estimates a purchase price for a droid ally using SW5E companion assumptions; it does not bypass prerequisites, one-companion limits, or GM approval.",
+      "DefaultDroidName": "Unnamed Droid",
+      "NameLabel": "Droid name",
+      "ClassLabel": "Droid class",
+      "LevelLabel": "Companion Level / CR Override",
+      "SystemsCostLabel": "Systems / factory cost (credits)",
+      "AbilityTotalLabel": "Total ability modifiers",
+      "TraitProtocolLabel": "Droid traits / protocols",
+      "ProficiencyLabel": "Trained skills / tools",
+      "FeatUpgradeLabel": "Feats / upgrades",
+      "Calculate": "Calculate Droid Price",
+      "ShareToChat": "Share to Chat",
+      "PriceResultTitle": "Estimated Buy Price",
+      "SubtotalLabel": "Subtotal before conversion",
+      "FinalCostLabel": "Final buy price",
+      "ResultDisclaimer": "Optional SW5E-adapted estimate. The GM decides availability, legality, condition, and whether the droid is equipment, a helper NPC, or a full companion.",
+      "ChatTitle": "Droid Ally Price Quote",
+      "ChatPosted": "Droid ally price quote posted to chat.",
+      "ChatNoResult": "Calculate a droid price before sharing it to chat.",
+      "Help": {
+        "Name": "Optional. Enter the droid's name or model designation for the quote.",
+        "Class": "Choose the closest SW5E droid role or chassis category. This sets the base chassis value.",
+        "Level": "For a full companion, enter the companion level. For a helper NPC, enter a CR-style value the GM feels matches its stat block.",
+        "Systems": "Enter the credit value of installed systems, gear, weapons, tools, armor, or a factory package.",
+        "Abilities": "Add the droid's final ability modifiers together. Negative totals are allowed, but only positive value increases price.",
+        "Traits": "Count notable droid traits, protocols, special actions, or built-in features that matter in play.",
+        "Proficiencies": "Count trained skills and tool proficiencies the droid can meaningfully use.",
+        "Feats": "Count feats, major upgrades, premium modifications, or equivalent enhancements."
+      },
+      "Class": {
+        "ClassI": "Class I (medical/science)",
+        "ClassII": "Class II (astromech/technical)",
+        "ClassIII": "Class III (protocol/service)",
+        "ClassIV": "Class IV (battle/security)",
+        "ClassV": "Class V (labor/industrial)",
+        "Tracker": "Tracker Droid Companion",
+        "Custom": "Custom droid"
+      },
+      "ClassHelp": {
+        "ClassI": "Scientific, medical, analysis, mathematics, and research droids.",
+        "ClassII": "Astromech, engineering, exploration, environmental, and maintenance droids.",
+        "ClassIII": "Protocol, etiquette, translation, tutoring, service, and social droids.",
+        "ClassIV": "Military, assassin, gladiator, bodyguard, and security droids.",
+        "ClassV": "Labor, mining, hauling, sanitation, construction, and transportation droids.",
+        "Tracker": "A specialized SW5E tracker droid companion, commonly tied to tech-focused characters.",
+        "Custom": "Use this when pricing an unusual droid that does not map cleanly to Class I-V."
+      },
+      "Breakdown": {
+        "BaseChassis": "Base chassis",
+        "Systems": "Systems and equipment",
+        "Abilities": "Ability modifier value",
+        "Traits": "Droid traits / protocols",
+        "Proficiencies": "Skills and tools",
+        "Feats": "Feats and upgrades",
+        "Level": "Companion level / CR"
+      }
     },
     "Warning": {
       "MissingSw5e": "SW5E companion content was not detected as active. The module can still load, but SW5E-specific integrations may be unavailable.",
@@ -130,17 +186,22 @@
         "Hint": "If pil / piloting are missing on the pilot actor, rolls use this skill id (e.g. acr). SW5E also tries tec before failing."
       },
       "AdvancedMaxTier": {
-        "Name": "Advanced mode — maximum hyperspace tier",
+        "Name": "Advanced mode - maximum hyperspace tier",
         "Hint": "Lanes above this tier are excluded from pathfinding except segments marked essential for connectivity (transit corridors, regional connectors). 1 = broadest major routes, 5 = narrowest."
       },
       "AdvancedIncludeObscureRoutes": {
-        "Name": "Advanced mode — include obscure routes",
+        "Name": "Advanced mode - include obscure routes",
         "Hint": "When enabled, lanes marked obscure (e.g. regional connectors, back routes) can appear in pathfinding."
       },
       "AdvancedTier5ExtraDc": {
-        "Name": "Advanced mode — extra DC per tier-5 hop",
+        "Name": "Advanced mode - extra DC per tier-5 hop",
         "Hint": "Added to the piloting DC once for each hop that uses a tier-5 lane, on top of any per-lane DC bonus in the data. Use 0 to rely on data only."
       }
+    },
+    "Results": {
+      "UnknownTime": "Unknown duration",
+      "LessThanOneMinute": "Less than 1 minute",
+      "SuppliesUnit": "Supply Packs"
     }
   }
 }

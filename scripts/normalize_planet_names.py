@@ -21,7 +21,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 OUT_DIR = REPO / "scripts" / "output"
 DEFAULT_SW_ROOT = REPO / "StarWarsMap"
-LOCAL_PLANETS = REPO / "sw5e-nav-computer" / "data" / "planets.json"
+LOCAL_PLANETS = REPO / "kakeman89s-datacron" / "data" / "planets.json"
 
 # Unicode -> ASCII (apostrophes, quotes, dashes only)
 _APOSTROPHE_LIKE = (

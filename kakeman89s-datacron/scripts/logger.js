@@ -1,5 +1,5 @@
-export const MODULE_ID = "sw5e-nav-computer";
-export const LOG_PREFIX = "[SW5e Nav Computer]";
+export const MODULE_ID = "kakeman89s-datacron";
+export const LOG_PREFIX = "[Kakeman89s Datacron]";
 
 function formatArgs(args) {
   return [LOG_PREFIX, ...args];

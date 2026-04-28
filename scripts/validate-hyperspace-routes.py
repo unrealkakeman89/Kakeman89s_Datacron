@@ -24,11 +24,11 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
-PLANETS_PATH = REPO / "sw5e-nav-computer" / "data" / "planets.json"
-ROUTES_PATH = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.json"
+PLANETS_PATH = REPO / "kakeman89s-datacron" / "data" / "planets.json"
+ROUTES_PATH = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.json"
 OUT_REPORT = REPO / "scripts" / "output" / "hyperspace_validation_report.json"
 
-# Must match sw5e-nav-computer/scripts/route-calculator.js REGION_ORDER
+# Must match kakeman89s-datacron/scripts/route-calculator.js REGION_ORDER
 REGION_ORDER = [
     "Deep Core",
     "Core",

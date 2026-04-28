@@ -1,5 +1,5 @@
 (function phase0RuntimeInspector() {
-  const PREFIX = "[SW5e Nav Computer][Phase 0]";
+  const PREFIX = "[Kakeman89s Datacron][Phase 0]";
   const MAX_PREVIEW_ACTORS = 2;
 
   if (typeof game === "undefined") {

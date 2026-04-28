@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Merge SW5e Nav Computer planets.json with Star Wars Galaxy Map Grid Coordinates.xlsx.
+Merge Kakeman89s Datacron planets.json with Star Wars Galaxy Map Grid Coordinates.xlsx.
 
 Rules:
 - Every spreadsheet row (sheet "planets") becomes a planet record; name uses the sheet "Planet" cell.
@@ -24,8 +24,8 @@ import openpyxl
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 XLSX_PATH = REPO_ROOT / "Star Wars Galaxy Map Grid Coordinates.xlsx"
-PLANETS_JSON = REPO_ROOT / "sw5e-nav-computer" / "data" / "planets.json"
-REPORT_PATH = REPO_ROOT / "sw5e-nav-computer" / "data" / "planets-merge-report.txt"
+PLANETS_JSON = REPO_ROOT / "kakeman89s-datacron" / "data" / "planets.json"
+REPORT_PATH = REPO_ROOT / "kakeman89s-datacron" / "data" / "planets-merge-report.txt"
 
 
 def is_empty(val: object) -> bool:

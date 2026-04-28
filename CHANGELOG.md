@@ -1,12 +1,19 @@
 # Changelog
 
-All notable changes to **SW5e Nav Computer** are documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+All notable changes to **Kakeman89s Datacron** are documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Unreleased
+
+### Changed
+
+- Renamed the Foundry module id and display name to **`kakeman89s-datacron`** / **Kakeman89s Datacron**.
+- Temporarily disabled user-facing Advanced hyperlane routing; runtime calculations now use Basic regional estimates while the graph data and validation tooling remain available for refinement.
 
 ## [1.0.1] - 2026-04-10
 
 ### Added
 
-- **`scripts/merge-planet-data.py`** — Merges repo-root `Star Wars Galaxy Map Grid Coordinates.xlsx` (sheet `planets`) into `sw5e-nav-computer/data/planets.json`: spreadsheet is primary for `grid`, `sector`, and `region` when non-empty; blank sheet cells use matching `planets.json` values; grid values normalized to hyphen form (e.g. `M10` → `M-10`); JSON-only worlds (no sheet row) are appended. Writes a timestamped backup and **`sw5e-nav-computer/data/planets-merge-report.txt`** when geographic fields disagree between sources.
+- **`scripts/merge-planet-data.py`** — Merges repo-root `Star Wars Galaxy Map Grid Coordinates.xlsx` (sheet `planets`) into `kakeman89s-datacron/data/planets.json`: spreadsheet is primary for `grid`, `sector`, and `region` when non-empty; blank sheet cells use matching `planets.json` values; grid values normalized to hyphen form (e.g. `M10` → `M-10`); JSON-only worlds (no sheet row) are appended. Writes a timestamped backup and **`kakeman89s-datacron/data/planets-merge-report.txt`** when geographic fields disagree between sources.
 - **`.gitignore`** — Ignores `planets.json.backup-*` under module `data/` so large re-merge backups are not committed by mistake.
 
 ### Changed
@@ -18,20 +25,20 @@ All notable changes to **SW5e Nav Computer** are documented in this file. The fo
 
 ### Added
 
-- **Foundry module** `sw5e-nav-computer` for **Foundry VTT 13** and **dnd5e 5.2.5**, with optional SW5e companion module support (`sw5e-module` / `sw5e`).
-- **Nav Computer application** (`ApplicationV2` + Handlebars): resizable window with origin/destination planet comboboxes, pilot and optional ship selectors, **Calculate Route** and **Roll Piloting Check** actions.
-- **Scene control** (GM-only) on the token controls to open the Nav Computer.
+- **Foundry module** `kakeman89s-datacron` for **Foundry VTT 13** and **dnd5e 5.2.5**, with optional SW5e companion module support (`sw5e-module` / `sw5e`).
+- **Datacron application** (`ApplicationV2` + Handlebars): resizable window with origin/destination planet comboboxes, pilot and optional ship selectors, **Calculate Route** and **Roll Piloting Check** actions.
+- **Scene control** (GM-only) on the token controls to open the Datacron.
 - **Curated planet dataset** (`data/planets.json`) for origin/destination selection and region metadata.
 - **Basic mode** route calculation: region-to-region travel time matrix, regions crossed, narrative route summary, and piloting DC helper based on regions.
 - **Advanced mode (prototype)**: curated hyperlane graph (`data/hyperspace-routes.json`), bidirectional edges from defined segments, **Dijkstra** shortest path with edge cost `travelTimeBase × hyperdrive multiplier`, path and per-hop lane names in the UI.
 - **Advanced fallback**: when no curated path exists (or route data fails to load), automatic **Basic** estimate with a visible banner and warnings: *“No curated hyperspace lane route found. Falling back to region-based estimate.”*
 - **Travel resources**: estimated fuel, food, and supplies from travel hours, module fuel/food settings, and **crew size** resolved from SW5e starship actor patterns when a ship is selected.
 - **Hyperdrive multiplier** for Advanced mode from Phase 0–aligned resolution: `system.attributes.equip.hyperdrive.class`, equipped item `hdclass`, legacy `travel.hyperdriveClass`, then text parse for “Class N”; defaults to **1.0** with a console warning when a ship is present but class cannot be resolved.
-- **Piloting skill roll** integration: prefers `pil`, then `piloting`, then configurable fallback skill; posts a **private GM** skill roll with custom flavor; attempts fast-forward / low-dialog roll shapes and refocuses the Nav window after rolling.
+- **Piloting skill roll** integration: prefers `pil`, then `piloting`, then configurable fallback skill; posts a **private GM** skill roll with custom flavor; attempts fast-forward / low-dialog roll shapes and refocuses the Datacron window after rolling.
 - **Actor helpers**: pilot list (character/npc excluding normalized starship shells), ship list (normalized starship, legacy starship vehicle, `starship` type).
 - **Module settings**: calculation mode (Basic/Advanced), fuel per hour, food per crew per day, piloting fallback skill, debug logging; placeholders for random travel events (registered for future use).
 - **English localization** (`lang/en.json`) for UI, warnings, travel DC modifiers, and settings labels.
-- **Styling** (`styles/nav-computer.css`) for a readable, dark, Star Wars–inspired layout, including Advanced fallback and lane list presentation.
+- **Styling** (`styles/datacron.css`) for a readable, dark, Star Wars–inspired layout, including Advanced fallback and lane list presentation.
 - **Documentation**: repository `README.md` with purpose, requirements, installation, usage, and settings overview.
 
 ### Changed

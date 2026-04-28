@@ -1,0 +1,180 @@
+<div class="datacron-shell" data-app-id="{{appId}}">
+  <header class="datacron-header">
+    <p class="datacron-kicker">{{subtitle}}</p>
+    <h1 class="datacron-title">{{title}}</h1>
+    <p class="datacron-meta">{{localize "KAKEMAN89SDATACRON.App.ModeLabel"}}: {{currentModeLabel}}</p>
+  </header>
+
+  {{#if planetLoadWarning}}
+    <section class="datacron-panel datacron-warning" role="alert">
+      <p class="datacron-warning-text">{{planetLoadWarning}}</p>
+    </section>
+  {{/if}}
+
+  <section class="datacron-panel datacron-panel-main">
+    <div class="datacron-grid">
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-origin">{{localize "KAKEMAN89SDATACRON.App.OriginLabel"}}</label>
+        <div class="datacron-combo" data-nav-combo="origin">
+          <input
+            type="text"
+            id="{{appId}}-origin"
+            class="datacron-combo-input"
+            data-nav-combo-input
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            {{#unless planets.length}}disabled{{/unless}}
+          />
+          <div class="datacron-combo-panel" data-nav-combo-panel hidden>
+            <ul class="datacron-combo-list" data-nav-combo-list role="listbox">
+              {{#each planets}}
+                <li class="datacron-combo-item" data-nav-combo-item data-value="{{name}}" role="option">{{name}}</li>
+              {{/each}}
+              <li class="datacron-combo-empty" data-nav-combo-empty hidden>{{comboNoMatches}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-destination">{{localize "KAKEMAN89SDATACRON.App.DestinationLabel"}}</label>
+        <div class="datacron-combo" data-nav-combo="destination">
+          <input
+            type="text"
+            id="{{appId}}-destination"
+            class="datacron-combo-input"
+            data-nav-combo-input
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            {{#unless planets.length}}disabled{{/unless}}
+          />
+          <div class="datacron-combo-panel" data-nav-combo-panel hidden>
+            <ul class="datacron-combo-list" data-nav-combo-list role="listbox">
+              {{#each planets}}
+                <li class="datacron-combo-item" data-nav-combo-item data-value="{{name}}" role="option">{{name}}</li>
+              {{/each}}
+              <li class="datacron-combo-empty" data-nav-combo-empty hidden>{{comboNoMatches}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="datacron-grid datacron-grid-actors">
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-pilot">{{localize "KAKEMAN89SDATACRON.App.PilotLabel"}}</label>
+        <select id="{{appId}}-pilot" class="datacron-select" data-nav-select-pilot>
+          <option value="">{{pilotPlaceholder}}</option>
+          {{#each pilotActorOptions}}
+            <option value="{{uuid}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-ship">{{localize "KAKEMAN89SDATACRON.App.ShipLabel"}}</label>
+        <select id="{{appId}}-ship" class="datacron-select" data-nav-select-ship>
+          <option value="">{{shipPlaceholder}}</option>
+          {{#each shipActorOptions}}
+            <option value="{{uuid}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    <div class="datacron-actions datacron-actions-row">
+      <button type="button" class="datacron-action-button" data-nav-calculate {{#unless canCalculate}}disabled{{/unless}}>
+        {{calculateLabel}}
+      </button>
+      <button type="button" class="datacron-action-button" data-nav-roll-piloting {{#unless canRollPiloting}}disabled{{/unless}}>
+        {{rollPilotingLabel}}
+      </button>
+    </div>
+  </section>
+
+  <section class="datacron-panel datacron-status">
+    <h2 class="datacron-section-title">{{localize "KAKEMAN89SDATACRON.App.ResultsLabel"}}</h2>
+    {{#if routeBasicResult}}
+      <dl class="datacron-route-result">
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultOrigin"}}</dt>
+        <dd>{{routeBasicResult.originPlanet.name}}</dd>
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultDestination"}}</dt>
+        <dd>{{routeBasicResult.destinationPlanet.name}}</dd>
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultOriginRegion"}}</dt>
+        <dd>{{routeBasicResult.originRegion}}</dd>
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultDestinationRegion"}}</dt>
+        <dd>{{routeBasicResult.destinationRegion}}</dd>
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultTravelHours"}}</dt>
+        <dd>
+          {{#if routeBasicResult.travelResources}}
+            {{routeBasicResult.travelResources.travelTimeFormatted}}
+          {{else}}
+            {{routeBasicResult.travelTimeHours}}
+          {{/if}}
+        </dd>
+        {{#if routeBasicResult.travelResources}}
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultCrewSize"}}</dt>
+          <dd>{{routeBasicResult.travelResources.crewSize}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultFuelRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.fuelRequired}} {{routeBasicResult.travelResources.fuelUnit}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultFoodRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.foodRequired}} {{routeBasicResult.travelResources.foodUnit}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultSuppliesRequired"}}</dt>
+          <dd>{{routeBasicResult.travelResources.suppliesRequired}} {{localize "KAKEMAN89SDATACRON.Results.SuppliesUnit"}}</dd>
+        {{/if}}
+        {{#if routeBasicResult.pilotingCheck}}
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultPilotingDc"}}</dt>
+          <dd>{{routeBasicResult.pilotingCheck.dc}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultPilotingDcModifiers"}}</dt>
+          <dd>
+            <ul class="datacron-dc-modifiers">
+              {{#each routeBasicResult.pilotingCheck.modifiers}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+        {{/if}}
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultRegionsCrossed"}}</dt>
+        <dd>
+          {{#if routeBasicResult.regionsJourneyArc}}
+            {{routeBasicResult.regionsJourneyArc}}
+          {{else}}
+            —
+          {{/if}}
+        </dd>
+        {{#if routeBasicResult.planetsPassed.length}}
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultPlanetsPassed"}}</dt>
+          <dd>
+            {{#each routeBasicResult.planetsPassed}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}
+          </dd>
+        {{/if}}
+        <dt>{{localize "KAKEMAN89SDATACRON.App.ResultDescription"}}</dt>
+        <dd class="datacron-route-description">{{routeBasicResult.routeDescription}}</dd>
+        {{#if showRouteWarnings}}
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultWarnings"}}</dt>
+          <dd>
+            <ul class="datacron-route-warnings">
+              {{#each routeBasicResult.warnings}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+        {{/if}}
+      </dl>
+    {{else if routeError}}
+      <p class="datacron-status-text datacron-route-error">{{routeError}}</p>
+    {{else}}
+      <p class="datacron-status-text">{{resultsPlaceholder}}</p>
+    {{/if}}
+  </section>
+
+  <section class="datacron-panel datacron-status">
+    <h2 class="datacron-section-title">{{localize "KAKEMAN89SDATACRON.App.StatusLabel"}}</h2>
+    <p class="datacron-status-text">{{statusText}}</p>
+  </section>
+</div>

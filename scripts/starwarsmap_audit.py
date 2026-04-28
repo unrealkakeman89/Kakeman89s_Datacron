@@ -23,8 +23,8 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 OUT_DIR = REPO / "scripts" / "output"
 DEFAULT_SW_ROOT = REPO / "StarWarsMap"
-LOCAL_PLANETS = REPO / "sw5e-nav-computer" / "data" / "planets.json"
-LOCAL_ROUTES = REPO / "sw5e-nav-computer" / "data" / "hyperspace-routes.json"
+LOCAL_PLANETS = REPO / "kakeman89s-datacron" / "data" / "planets.json"
+LOCAL_ROUTES = REPO / "kakeman89s-datacron" / "data" / "hyperspace-routes.json"
 
 
 def parse_grid(grid: str | None) -> tuple[float, float] | None:

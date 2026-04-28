@@ -488,7 +488,7 @@ function regionalAdvancedRouteFallback(
   const path = [originPlanet.name, destinationPlanet.name];
   const hopName =
     typeof game !== "undefined" && game?.i18n?.localize
-      ? game.i18n.localize("SW5ENAVCOMPUTER.Route.RegionalHyperspaceEstimate")
+      ? game.i18n.localize("KAKEMAN89SDATACRON.Route.RegionalHyperspaceEstimate")
       : "Regional hyperspace estimate (no lane-graph path)";
   const routeNames = [hopName];
   const routeHopsSynthetic = [true];

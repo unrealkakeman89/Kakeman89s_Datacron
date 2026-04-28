@@ -1,0 +1,149 @@
+<div class="droid-ally-shell" data-app-id="{{appId}}">
+  <header class="datacron-header">
+    <p class="datacron-kicker">{{subtitle}}</p>
+    <h1 class="datacron-title">{{title}}</h1>
+    <p class="datacron-meta">{{localize "KAKEMAN89SDATACRON.DroidAlly.GmGuidance"}}</p>
+  </header>
+
+  <section class="datacron-panel">
+    <div class="datacron-grid">
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-name">{{localize "KAKEMAN89SDATACRON.DroidAlly.NameLabel"}}</label>
+        <input
+          id="{{appId}}-droid-name"
+          class="datacron-input"
+          type="text"
+          value="{{input.droidName}}"
+          data-droid-ally-field="droidName"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Name"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-class">{{localize "KAKEMAN89SDATACRON.DroidAlly.ClassLabel"}}</label>
+        <select id="{{appId}}-droid-class" class="datacron-select" data-droid-ally-field="droidClass">
+          {{#each classes}}
+            <option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+          {{/each}}
+        </select>
+        <p class="datacron-help-text">{{selectedClassHelp}}</p>
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Class"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-level">{{localize "KAKEMAN89SDATACRON.DroidAlly.LevelLabel"}}</label>
+        <input
+          id="{{appId}}-droid-level"
+          class="datacron-input"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.companionLevel}}"
+          data-droid-ally-field="companionLevel"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Level"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-systems">{{localize "KAKEMAN89SDATACRON.DroidAlly.SystemsCostLabel"}}</label>
+        <input
+          id="{{appId}}-droid-systems"
+          class="datacron-input"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.systemsCost}}"
+          data-droid-ally-field="systemsCost"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Systems"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-abilities">{{localize "KAKEMAN89SDATACRON.DroidAlly.AbilityTotalLabel"}}</label>
+        <input
+          id="{{appId}}-droid-abilities"
+          class="datacron-input"
+          type="number"
+          step="1"
+          value="{{input.abilityModifierTotal}}"
+          data-droid-ally-field="abilityModifierTotal"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Abilities"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-traits">{{localize "KAKEMAN89SDATACRON.DroidAlly.TraitProtocolLabel"}}</label>
+        <input
+          id="{{appId}}-droid-traits"
+          class="datacron-input"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.traitProtocolCount}}"
+          data-droid-ally-field="traitProtocolCount"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Traits"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-proficiencies">{{localize "KAKEMAN89SDATACRON.DroidAlly.ProficiencyLabel"}}</label>
+        <input
+          id="{{appId}}-droid-proficiencies"
+          class="datacron-input"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.trainedSkillToolCount}}"
+          data-droid-ally-field="trainedSkillToolCount"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Proficiencies"}}</p>
+      </div>
+      <div class="datacron-field">
+        <label class="datacron-label" for="{{appId}}-droid-feats">{{localize "KAKEMAN89SDATACRON.DroidAlly.FeatUpgradeLabel"}}</label>
+        <input
+          id="{{appId}}-droid-feats"
+          class="datacron-input"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.featUpgradeCount}}"
+          data-droid-ally-field="featUpgradeCount"
+        />
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.Help.Feats"}}</p>
+      </div>
+    </div>
+
+    <div class="datacron-actions datacron-actions-row">
+      <button type="button" class="datacron-action-button" data-droid-ally-calculate>
+        {{calculateLabel}}
+      </button>
+      {{#if result}}
+        <button type="button" class="datacron-action-button" data-droid-ally-share>
+          {{shareLabel}}
+        </button>
+      {{/if}}
+    </div>
+
+    {{#if error}}
+      <p class="datacron-status-text datacron-route-error">{{error}}</p>
+    {{/if}}
+
+    {{#if result}}
+      <div class="datacron-droid-price-result">
+        <h2 class="datacron-section-title">{{localize "KAKEMAN89SDATACRON.DroidAlly.PriceResultTitle"}}</h2>
+        <dl class="datacron-route-result">
+          <dt>{{localize "KAKEMAN89SDATACRON.DroidAlly.NameLabel"}}</dt>
+          <dd>{{result.droidName}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.DroidAlly.ClassLabel"}}</dt>
+          <dd>{{result.droidClass}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.DroidAlly.LevelLabel"}}</dt>
+          <dd>{{result.companionLevel}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.DroidAlly.SubtotalLabel"}}</dt>
+          <dd>{{result.subtotalFormatted}}</dd>
+          <dt>{{localize "KAKEMAN89SDATACRON.DroidAlly.FinalCostLabel"}}</dt>
+          <dd class="datacron-price-total">{{result.finalCostFormatted}}</dd>
+        </dl>
+        <ul class="datacron-droid-breakdown">
+          {{#each result.breakdown}}
+            <li><span>{{label}} ({{formula}})</span><strong>{{amountFormatted}}</strong></li>
+          {{/each}}
+        </ul>
+        <p class="datacron-help-text">{{localize "KAKEMAN89SDATACRON.DroidAlly.ResultDisclaimer"}}</p>
+      </div>
+    {{/if}}
+  </section>
+</div>

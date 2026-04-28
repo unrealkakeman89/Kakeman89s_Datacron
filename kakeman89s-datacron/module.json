@@ -1,7 +1,7 @@
 {
-  "id": "sw5e-nav-computer",
-  "title": "SW5e Nav Computer",
-  "description": "A hyperspace navigation computer for SW5e beta campaigns. Calculate routes, travel times, travel resources, and optional random events across the Star Wars galaxy.",
+  "id": "kakeman89s-datacron",
+  "title": "Kakeman89s Datacron",
+  "description": "A Star Wars 5e datacron for SW5e beta campaigns. Calculate hyperspace travel estimates, travel resources, and optional random events across the Star Wars galaxy.",
   "version": "1.0.1",
   "authors": [
     {
@@ -38,7 +38,7 @@
     "scripts/main.js"
   ],
   "styles": [
-    "styles/nav-computer.css"
+    "styles/datacron.css"
   ],
   "languages": [
     {
@@ -48,5 +48,5 @@
     }
   ],
   "socket": true,
-  "url": "https://github.com/placeholder/sw5e-nav-computer"
+  "url": "https://github.com/placeholder/kakeman89s-datacron"
 }

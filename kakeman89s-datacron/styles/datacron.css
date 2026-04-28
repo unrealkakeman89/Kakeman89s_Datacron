@@ -1,0 +1,410 @@
+.datacron-shell,
+.droid-ally-shell {
+  color: #d8ecff;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top, rgba(54, 127, 214, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(7, 16, 26, 0.96), rgba(4, 10, 19, 0.98));
+}
+
+.datacron-shell,
+.droid-ally-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: min-content;
+  padding: 1rem;
+}
+
+.datacron-shell .datacron-header,
+.datacron-shell .datacron-panel,
+.droid-ally-shell .datacron-header,
+.droid-ally-shell .datacron-panel {
+  border: 1px solid rgba(106, 184, 255, 0.24);
+  border-radius: 10px;
+  background: rgba(10, 20, 34, 0.88);
+  box-shadow: 0 0 16px rgba(46, 126, 214, 0.12);
+}
+
+.datacron-shell .datacron-header,
+.droid-ally-shell .datacron-header {
+  padding: 1rem 1.1rem;
+}
+
+.datacron-shell .datacron-kicker,
+.droid-ally-shell .datacron-kicker {
+  margin: 0 0 0.25rem;
+  color: #78c3ff;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.datacron-shell .datacron-title,
+.datacron-shell .datacron-section-title,
+.datacron-shell .datacron-subsection-title,
+.droid-ally-shell .datacron-title,
+.droid-ally-shell .datacron-section-title,
+.droid-ally-shell .datacron-subsection-title {
+  margin: 0;
+  color: #ecf7ff;
+}
+
+.datacron-shell .datacron-subsection-title,
+.droid-ally-shell .datacron-subsection-title {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.datacron-shell .datacron-meta,
+.droid-ally-shell .datacron-meta {
+  margin: 0.5rem 0 0;
+  color: #9fceff;
+  font-size: 0.9rem;
+}
+
+.datacron-shell .datacron-panel,
+.droid-ally-shell .datacron-panel {
+  padding: 1rem 1.1rem;
+}
+
+.datacron-shell .datacron-grid,
+.droid-ally-shell .datacron-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.datacron-shell .datacron-field,
+.droid-ally-shell .datacron-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.datacron-shell .datacron-label,
+.droid-ally-shell .datacron-label {
+  color: #cbe5ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.datacron-shell .datacron-select,
+.datacron-shell .datacron-input,
+.droid-ally-shell .datacron-select,
+.droid-ally-shell .datacron-input {
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(120, 195, 255, 0.32);
+  border-radius: 8px;
+  background: rgba(7, 18, 30, 0.94);
+  color: #edf7ff;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.datacron-shell .datacron-input,
+.droid-ally-shell .datacron-input {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.datacron-shell .datacron-input[readonly],
+.droid-ally-shell .datacron-input[readonly] {
+  opacity: 0.78;
+}
+
+.datacron-shell .datacron-combo {
+  position: relative;
+  min-width: 0;
+}
+
+.datacron-shell .datacron-combo-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(120, 195, 255, 0.32);
+  border-radius: 8px;
+  background: rgba(7, 18, 30, 0.94);
+  color: #edf7ff;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  font-family: inherit;
+}
+
+.datacron-shell .datacron-combo-input:focus {
+  outline: none;
+  border-color: rgba(140, 210, 255, 0.65);
+  box-shadow: 0 0 0 1px rgba(88, 171, 255, 0.35);
+}
+
+.datacron-shell .datacron-combo-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.datacron-shell .datacron-combo-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 20;
+  max-height: 220px;
+  overflow: hidden auto;
+  border: 1px solid rgba(120, 195, 255, 0.32);
+  border-radius: 8px;
+  background: rgba(7, 18, 30, 0.98);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.datacron-shell .datacron-combo-panel.is-open {
+  display: block;
+}
+
+.datacron-shell .datacron-combo-list {
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+}
+
+.datacron-shell .datacron-combo-item {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  color: #edf7ff;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.datacron-shell .datacron-combo-item:hover,
+.datacron-shell .datacron-combo-item:focus {
+  background: rgba(54, 127, 214, 0.28);
+}
+
+.datacron-shell .datacron-combo-empty {
+  padding: 0.5rem 0.75rem;
+  color: #9fceff;
+  font-size: 0.9rem;
+  font-style: italic;
+  list-style: none;
+}
+
+.datacron-shell .datacron-select:disabled,
+.datacron-shell .datacron-action-button:disabled,
+.droid-ally-shell .datacron-select:disabled,
+.droid-ally-shell .datacron-action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.datacron-shell .datacron-actions,
+.droid-ally-shell .datacron-actions {
+  margin-top: 1rem;
+}
+
+.datacron-shell .datacron-actions-row,
+.droid-ally-shell .datacron-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.datacron-shell .datacron-actions-row .datacron-action-button,
+.droid-ally-shell .datacron-actions-row .datacron-action-button {
+  flex: 1 1 auto;
+  min-width: 10rem;
+}
+
+.datacron-shell .datacron-warning {
+  border-color: rgba(255, 187, 76, 0.38);
+  background: rgba(47, 28, 8, 0.92);
+}
+
+.datacron-shell .datacron-warning-text {
+  margin: 0;
+  color: #ffd596;
+  line-height: 1.5;
+}
+
+.datacron-shell .datacron-help-text,
+.droid-ally-shell .datacron-help-text {
+  margin: 0.5rem 0 0;
+  color: #9fceff;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.datacron-shell .datacron-placeholder,
+.datacron-shell .datacron-status-text,
+.droid-ally-shell .datacron-placeholder,
+.droid-ally-shell .datacron-status-text {
+  margin: 0;
+  color: #bfdcff;
+  line-height: 1.5;
+}
+
+.datacron-shell .datacron-route-result,
+.droid-ally-shell .datacron-route-result {
+  display: grid;
+  grid-template-columns: minmax(7rem, 38%) 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.datacron-shell .datacron-route-result dt,
+.droid-ally-shell .datacron-route-result dt {
+  margin: 0;
+  color: #9fceff;
+  font-weight: 600;
+}
+
+.datacron-shell .datacron-route-result dd,
+.droid-ally-shell .datacron-route-result dd {
+  margin: 0;
+  color: #edf7ff;
+  line-height: 1.45;
+}
+
+.datacron-shell .datacron-route-warnings {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #ffd596;
+}
+
+.droid-ally-shell .datacron-droid-price-result {
+  margin-top: 1rem;
+}
+
+.droid-ally-shell .datacron-price-total {
+  color: #ffe0a8;
+  font-weight: 700;
+}
+
+.droid-ally-shell .datacron-droid-breakdown {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: #c8e6ff;
+  font-size: 0.88rem;
+}
+
+.droid-ally-shell .datacron-droid-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(120, 195, 255, 0.12);
+  padding-bottom: 0.25rem;
+}
+
+.kakeman89s-datacron-droid-quote {
+  color: #1f2933;
+}
+
+.kakeman89s-datacron-droid-quote ul {
+  margin: 0.5rem 0;
+  padding-left: 1.1rem;
+}
+
+.datacron-shell .datacron-dc-modifiers {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #c8e6ff;
+  line-height: 1.45;
+}
+
+.datacron-shell .datacron-route-error,
+.droid-ally-shell .datacron-route-error {
+  color: #ffb87a;
+}
+
+.datacron-shell .datacron-advanced-fallback-banner,
+.datacron-shell .datacron-inline-warning {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 196, 120, 0.45);
+  background: rgba(80, 48, 12, 0.35);
+  color: #ffd596;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.datacron-shell .datacron-inline-warning--emphasis {
+  border-color: rgba(255, 120, 72, 0.55);
+  background: rgba(72, 28, 12, 0.45);
+  color: #ffcca8;
+  font-weight: 600;
+}
+
+.datacron-shell .datacron-curated-note {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  color: #9fceff;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.datacron-shell .datacron-advanced-path {
+  line-height: 1.5;
+}
+
+.datacron-shell .datacron-lane-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #c8e6ff;
+}
+
+.datacron-shell .datacron-lane-named .datacron-lane-glyph {
+  color: #78c3ff;
+  margin-right: 0.35rem;
+}
+
+.datacron-shell .datacron-lane-synthetic {
+  opacity: 0.78;
+  color: #9aa8b8;
+}
+
+.datacron-shell .datacron-lane-synthetic .datacron-lane-glyph {
+  color: #7a8a9c;
+  margin-right: 0.35rem;
+}
+
+.datacron-shell .datacron-lane-label {
+  vertical-align: middle;
+}
+
+.datacron-shell .datacron-action-button:not(:disabled),
+.droid-ally-shell .datacron-action-button:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.datacron-shell .datacron-action-button,
+.droid-ally-shell .datacron-action-button {
+  border: 1px solid rgba(120, 195, 255, 0.38);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(28, 60, 100, 0.95), rgba(16, 33, 58, 0.98));
+  color: #edf7ff;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.datacron-shell .datacron-action-button:hover,
+.droid-ally-shell .datacron-action-button:hover {
+  border-color: rgba(140, 210, 255, 0.7);
+  box-shadow: 0 0 10px rgba(88, 171, 255, 0.22);
+}
+
+@media (max-width: 640px) {
+  .datacron-shell .datacron-grid,
+  .droid-ally-shell .datacron-grid {
+    grid-template-columns: 1fr;
+  }
+}

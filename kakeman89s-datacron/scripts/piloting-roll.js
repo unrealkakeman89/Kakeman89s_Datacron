@@ -25,7 +25,7 @@ function buildMessageOptions(actor, flavor, rollMode) {
 
 /**
  * Posts a normal dnd5e/SW5E skill check to chat as a private GM roll (players do not see the card).
- * Tries fast-forward / no-dialog roll shapes first so the Nav Computer window is not displaced by a roll prompt.
+ * Tries fast-forward / no-dialog roll shapes first so the Datacron window is not displaced by a roll prompt.
  * @param {Actor} actor
  * @param {string} skillKey
  * @returns {Promise<boolean>} true if rollSkill completed without throwing

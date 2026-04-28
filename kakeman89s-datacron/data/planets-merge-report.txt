@@ -60,4 +60,4 @@ Rows where both sources had non-empty grid/sector/region and values differed (sh
   Tatooine [sector] sheet='Arkanis' json='Arkanis Sector' -> kept sheet (effective 'Arkanis')
 
 Summary: xlsx data rows used=2022, json input=38, output planets=2027, json-only orphans appended=5, geographic disagreements logged=57.
-Backup: C:\Users\ckauble\OneDrive - Riverside Bank of Dublin\Documents\GitHub\NaviComputer\sw5e-nav-computer\data\planets.json.backup-20260410-140257
+Backup: C:\Users\ckauble\OneDrive - Riverside Bank of Dublin\Documents\GitHub\NaviComputer\kakeman89s-datacron\data\planets.json.backup-20260410-140257
