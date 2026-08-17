@@ -1,0 +1,12 @@
+{
+  "name": "kakeman89s-datacron",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only Node test and AstroCom generator scripts. Not a bundler.",
+  "scripts": {
+    "test": "node --test kakeman89s-datacron/scripts/astrocom/tests/astrocom-poc.test.js kakeman89s-datacron/scripts/astrocom/tests/astrocom-phase5.test.js",
+    "astrocom:generate": "node kakeman89s-datacron/scripts/astrocom/cli-generate.js",
+    "astrocom:analyze": "node kakeman89s-datacron/scripts/astrocom/pipeline/cli-analyze.js",
+    "astrocom:pilot": "node kakeman89s-datacron/scripts/astrocom/pipeline/cli-pilot-generate.js"
+  }
+}

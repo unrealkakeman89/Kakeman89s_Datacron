@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kakeman89s-datacron://astrocom-intermediate.v1.json",
+  "title": "AstroCom intermediate pipeline record schema",
+  "description": "Adapter and review-state records. Not Foundry JournalEntry output. Approved records convert to astrocom-source.v1 before pack emission.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "records"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "datasetId": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "notes": { "type": "string" },
+    "routes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/route" }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "presence": {
+      "type": "object",
+      "required": ["presence"],
+      "properties": {
+        "presence": {
+          "enum": ["present", "missing", "unknown", "notApplicable", "omitted"]
+        },
+        "value": { "type": "string" },
+        "rawValue": { "type": ["string", "null"] },
+        "normalizationRule": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "conflictFlag": {
+      "type": "object",
+      "required": ["code", "severity"],
+      "properties": {
+        "code": { "type": "string" },
+        "severity": { "enum": ["info", "warning", "blocking"] },
+        "message": { "type": "string" },
+        "fields": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "route": {
+      "type": "object",
+      "required": ["stableId", "name", "grids", "planetStableIds"],
+      "properties": {
+        "stableId": { "type": "string" },
+        "provisionalStableId": { "type": "string" },
+        "name": { "type": "string" },
+        "normalizedName": { "type": "string" },
+        "grids": { "type": "array", "items": { "type": "string" } },
+        "planetStableIds": { "type": "array", "items": { "type": "string" } },
+        "edges": { "type": "array" },
+        "tier": { "type": ["number", "null"] },
+        "obscure": { "type": ["boolean", "null"] },
+        "reviewStatus": { "enum": ["draft", "quarantined", "approved", "rejected"] },
+        "sourceMetadata": { "type": "object" },
+        "conflictFlags": { "type": "array", "items": { "$ref": "#/$defs/conflictFlag" } }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "provisionalStableId",
+        "name",
+        "normalizedName",
+        "reviewStatus",
+        "classification",
+        "astrography",
+        "sourceMetadata"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "stableId": { "type": ["string", "null"] },
+        "provisionalStableId": { "type": "string" },
+        "name": { "type": "string" },
+        "normalizedName": { "type": "string" },
+        "continuity": { "enum": ["canon", "legends", null] },
+        "continuityHint": { "type": ["object", "null"] },
+        "classification": { "enum": ["planet", "moon", "station", "phenomenon"] },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "conceptualId": { "type": ["string", "null"] },
+        "relatedContinuityStableId": { "type": ["string", "null"] },
+        "description": { "type": "string" },
+        "eraNotes": { "type": "array" },
+        "astrography": { "type": "object" },
+        "physical": { "type": "object" },
+        "societal": { "type": "object" },
+        "economics": { "type": "object" },
+        "sourceMetadata": { "type": "object" },
+        "externalLinks": { "type": "array" },
+        "reviewStatus": { "enum": ["draft", "quarantined", "approved", "rejected"] },
+        "conflictFlags": { "type": "array", "items": { "$ref": "#/$defs/conflictFlag" } },
+        "adapterSources": { "type": "array", "items": { "type": "string" } },
+        "normalizedFrom": { "type": "object" },
+        "rawSourceReferences": { "type": "array" },
+        "lastReviewedAt": { "type": ["string", "null"] },
+        "reviewedBy": { "type": ["string", "null"] },
+        "reviewNotes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

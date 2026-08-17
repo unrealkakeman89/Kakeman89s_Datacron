@@ -1,10 +1,21 @@
 import { logInfo, logWarn, MODULE_ID } from "./logger.js";
 import { DatacronApp } from "./datacron-app.js";
 import { DroidAllyApp } from "./droid-ally-app.js";
-import { registerSettings } from "./settings.js";
+import { AstroComApp } from "./astrocom/astrocom-app.js";
+import { loadGeneratedAstroCom, loadLiveAstroComIndex, openAstroComJournal, rebuildAstroCom, rebuildAstroComPilot, rebuildAstroComPoc, attemptBulkAstroComBuild } from "./astrocom/rebuild.js";
+import { registerSettings, SETTING_KEYS } from "./settings.js";
 
 let hyperspaceNavigationApp = null;
 let droidAllyPricingApp = null;
+let astroComApp = null;
+
+function isAstroComEnabled() {
+  try {
+    return Boolean(game.settings.get(MODULE_ID, SETTING_KEYS.featureAstroCom));
+  } catch (_error) {
+    return false;
+  }
+}
 
 function clearAppSingletonIfStale(appRef, clear) {
   if (!appRef) return;
@@ -58,6 +69,18 @@ export async function openDroidAllyPricingApp() {
   return droidAllyPricingApp;
 }
 
+export async function openAstroComApp() {
+  if (!game.user?.isGM) return null;
+  if (!isAstroComEnabled()) return null;
+  clearAppSingletonIfStale(astroComApp, () => {
+    astroComApp = null;
+  });
+  astroComApp ??= new AstroComApp();
+  await astroComApp.render(true);
+  if (astroComApp.rendered) astroComApp.bringToFront();
+  return astroComApp;
+}
+
 Hooks.once("init", () => {
   registerSettings();
   logInfo("Initializing module scaffold.");
@@ -68,6 +91,9 @@ Hooks.once("init", () => {
     }
     if (app === droidAllyPricingApp || app?.id === `${MODULE_ID}-droid-ally`) {
       droidAllyPricingApp = null;
+    }
+    if (app === astroComApp || app?.id === `${MODULE_ID}-astrocom`) {
+      astroComApp = null;
     }
   });
 });
@@ -110,9 +136,45 @@ Hooks.on("getSceneControlButtons", (controls) => {
       void openDroidAllyPricingApp();
     }
   };
+
+  if (!isAstroComEnabled()) return;
+
+  const astroComToolName = `${MODULE_ID}-open-astrocom`;
+  hostControl.tools[astroComToolName] = {
+    name: astroComToolName,
+    title: "KAKEMAN89SDATACRON.SceneControl.OpenAstroCom",
+    icon: "fa-solid fa-book-atlas",
+    order: Object.keys(hostControl.tools).length,
+    button: true,
+    visible: game.user?.isGM ?? false,
+    onChange: (_event, active) => {
+      if (active === false) return;
+      void openAstroComApp();
+    }
+  };
 });
 
 Hooks.once("ready", () => {
+  const module = game.modules.get(MODULE_ID);
+  if (module) {
+    module.api = {
+      openAstroComApp,
+      openHyperspaceNavigationApp,
+      openDroidAllyPricingApp,
+      rebuildAstroCom,
+      rebuildAstroComPoc,
+      rebuildAstroComPilot,
+      attemptBulkAstroComBuild,
+      loadGeneratedAstroCom,
+      loadLiveAstroComIndex,
+      openAstroComJournal,
+      getAstroComApp: () => astroComApp,
+      getNavComputerApp: () => hyperspaceNavigationApp,
+      getDroidApp: () => droidAllyPricingApp,
+      settingKeys: SETTING_KEYS
+    };
+  }
+
   const sw5e = getSw5eModuleSnapshot();
   const warnings = getEnvironmentWarnings();
 

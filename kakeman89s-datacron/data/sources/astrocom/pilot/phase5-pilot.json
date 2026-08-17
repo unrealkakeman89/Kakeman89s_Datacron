@@ -1,0 +1,3847 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "phase5-pilot",
+  "attribution": "Kakeman89",
+  "lastReviewedAt": "2026-08-17",
+  "notes": "Authored Phase 5 pilot. Quarantine demos are excluded from packs.",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:coruscant",
+      "provisionalStableId": "prov:coruscant:ASTRO-001:377",
+      "name": "Coruscant",
+      "normalizedName": "coruscant",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-9",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A galactic capital world covered by a planet-wide city.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Coruscant Sector",
+          "rawValue": "Coruscant Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Coruscant"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "L-9",
+          "rawValue": "L-9"
+        },
+        "routes": [
+          "rt:byss-run",
+          "rt:corellian-run",
+          "rt:namadii-corridor",
+          "rt:perlemian-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 12240,
+        "moons": 4,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 377,
+        "sourceName": "Coruscant"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Coruscant Sector disagrees with DATA-001 Corusca Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Coruscant",
+        "region": "Core",
+        "sector": "Coruscant Sector",
+        "grid": "L-9"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 377
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Coruscant"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:alderaan",
+      "provisionalStableId": "prov:alderaan:ASTRO-001:35",
+      "name": "Alderaan",
+      "normalizedName": "alderaan",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "M-10",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A peaceful Core World famed for diplomacy and natural beauty.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Alderaan Sector",
+          "rawValue": "Alderaan Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Alderaan"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "M-10",
+          "rawValue": "M-10"
+        },
+        "routes": [
+          "rt:commenor-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 12500,
+        "moons": 1,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 35,
+        "sourceName": "Alderaan"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Alderaan",
+        "region": "Core",
+        "sector": "Alderaan Sector",
+        "grid": "M-10"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 35
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Alderaan"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:corellia",
+      "provisionalStableId": "prov:corellia:ASTRO-001:370",
+      "name": "Corellia",
+      "normalizedName": "corellia",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "M-11",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A shipbuilding powerhouse and cultural anchor of the Corellian Run.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Corellian Sector",
+          "rawValue": "Corellian Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Corellian"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "M-11",
+          "rawValue": "M-11"
+        },
+        "routes": [
+          "rt:chasdemonus-route",
+          "rt:corellian-run",
+          "rt:corellian-trade-spine",
+          "rt:rimma-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 11000,
+        "moons": 3,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 370,
+        "sourceName": "Corellia"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Corellia",
+        "region": "Core",
+        "sector": "Corellian Sector",
+        "grid": "M-11"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 370
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Corellia"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:tatooine",
+      "provisionalStableId": "prov:tatooine:ASTRO-001:1714",
+      "name": "Tatooine",
+      "normalizedName": "tatooine",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-16",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A remote desert world on the edge of major hyperspace routes.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Arkanis",
+          "rawValue": "Arkanis",
+          "normalizationRule": null,
+          "matchValue": "Arkanis"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-16",
+          "rawValue": "R-16"
+        },
+        "routes": [
+          "rt:corellian-run",
+          "rt:triellus-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 10465,
+        "moons": 3,
+        "suns": 2
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1714,
+        "sourceName": "Tatooine"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Tatooine",
+        "region": "Outer Rim",
+        "sector": "Arkanis",
+        "grid": "R-16"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1714
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Tatooine"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Desert"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:ahch-to",
+      "provisionalStableId": "prov:ahch-to:ASTRO-001:27",
+      "name": "Ahch-To",
+      "normalizedName": "ahch-to",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "E-13",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A remote ocean world known for ancient Jedi lore.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Unknown Regions",
+          "rawValue": "Unknown Regions",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Ahch Sector",
+          "rawValue": "Ahch Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Ahch"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "E-13",
+          "rawValue": "E-13"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 1,
+        "suns": 2
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 27,
+        "sourceName": "Ahch-To"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Unknown Regions disagrees with DATA-001 Outer Rim. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Ahch Sector disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "geography-disagreement-grid",
+          "severity": "warning",
+          "message": "ASTRO-001 grid E-13 disagrees with DATA-001 Q-16. ASTRO-001 retained.",
+          "fields": [
+            "astrography.grid"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Ahch-To",
+        "region": "Unknown Regions",
+        "sector": "Ahch Sector",
+        "grid": "E-13"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 27
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Ahch-To"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Oceanic"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:csilla",
+      "provisionalStableId": "prov:csilla:ASTRO-001:393",
+      "name": "Csilla",
+      "normalizedName": "csilla",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "F-8",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "The icy redoubt of the Chiss in the Unknown Regions.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Unknown Regions",
+          "rawValue": "Unknown Regions",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Chiss Ascendancy",
+          "rawValue": "Chiss Ascendancy",
+          "normalizationRule": null,
+          "matchValue": "Chiss Ascendancy"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "F-8",
+          "rawValue": "F-8"
+        },
+        "routes": [
+          "rt:path-of-the-houses",
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 11080,
+        "moons": 3,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 393,
+        "sourceName": "Csilla"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Unknown Regions disagrees with DATA-001 Wild Space. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Chiss Ascendancy disagrees with DATA-001 Chiss Space. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Csilla",
+        "region": "Unknown Regions",
+        "sector": "Chiss Ascendancy",
+        "grid": "F-8"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 393
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Csilla"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Ice"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:bothawui",
+      "provisionalStableId": "prov:bothawui:ASTRO-001:239",
+      "name": "Bothawui",
+      "normalizedName": "bothawui",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-14",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "The homeworld of the Bothans and a major center of intelligence.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Mid Rim",
+          "rawValue": "Mid Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Bothan Space",
+          "rawValue": "Bothan Space",
+          "normalizationRule": null,
+          "matchValue": "Bothan Space"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-14",
+          "rawValue": "R-14"
+        },
+        "routes": [
+          "rt:bothan-run",
+          "rt:reena-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 9000,
+        "moons": 3,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 239,
+        "sourceName": "Bothawui"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Bothan Space disagrees with DATA-001 Bothan Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Bothawui",
+        "region": "Mid Rim",
+        "sector": "Bothan Space",
+        "grid": "R-14"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 239
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Bothawui"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:hosnian-prime",
+      "provisionalStableId": "prov:hosnian-prime:ASTRO-001:741",
+      "name": "Hosnian Prime",
+      "normalizedName": "hosnian prime",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "M-12",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A politically important Core World and later New Republic capital.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Hosnian Sector",
+          "rawValue": "Hosnian Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Hosnian"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "M-12",
+          "rawValue": "M-12"
+        },
+        "routes": [
+          "rt:corellian-trade-spine"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 1,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 741,
+        "sourceName": "Hosnian Prime"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Hosnian Sector disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Hosnian Prime",
+        "region": "Core",
+        "sector": "Hosnian Sector",
+        "grid": "M-12"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 741
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Hosnian Prime"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:byss",
+      "provisionalStableId": "prov:byss:ASTRO-001:264",
+      "name": "Byss",
+      "normalizedName": "byss",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-11",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A hidden Deep Core throne world associated with Imperial power.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Deep Core",
+          "rawValue": "Deep Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Byss Sector",
+          "rawValue": "Byss Sector",
+          "normalizationRule": "sector-suffix-stripped-for-match",
+          "matchValue": "Byss"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "K-11",
+          "rawValue": "K-11"
+        },
+        "routes": [
+          "rt:byss-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 21600,
+        "moons": 5,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 264,
+        "sourceName": "Byss"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Byss Sector disagrees with DATA-001 Deep Core Security Zone. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Byss",
+        "region": "Deep Core",
+        "sector": "Byss Sector",
+        "grid": "K-11"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 264
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Byss"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": "Terrestrial"
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:endor",
+      "provisionalStableId": "prov:endor:ASTRO-001:546",
+      "name": "Endor",
+      "normalizedName": "endor",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "H-16",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Moddell",
+          "rawValue": "Moddell",
+          "normalizationRule": null,
+          "matchValue": "Moddell"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "H-16",
+          "rawValue": "H-16"
+        },
+        "routes": [
+          "rt:shiritoku-way",
+          "rt:spar-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "2.5",
+        "diameter": 148000,
+        "moons": 9,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 546,
+        "sourceName": "Endor"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Moddell disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Endor",
+        "region": "Outer Rim",
+        "sector": "Moddell",
+        "grid": "H-16"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 546
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Endor"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:yavin-4",
+      "provisionalStableId": "prov:yavin-4:ASTRO-001:1985",
+      "name": "Yavin 4",
+      "normalizedName": "yavin 4",
+      "continuity": "canon",
+      "continuityHint": null,
+      "classification": "moon",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "A jungle moon remembered as the site of an early Rebel victory.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Gordian Reach",
+          "rawValue": "Gordian Reach",
+          "normalizationRule": null,
+          "matchValue": "Gordian Reach"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "V-12",
+          "rawValue": "V-12"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "missing"
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1985,
+        "sourceName": "Yavin 4"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001"
+      ],
+      "normalizedFrom": {
+        "name": "Yavin 4",
+        "region": "Outer Rim",
+        "sector": "Gordian Reach",
+        "grid": "V-12"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1985
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:dathomir",
+      "provisionalStableId": "prov:dathomir:ASTRO-001:435",
+      "name": "Dathomir",
+      "normalizedName": "dathomir",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "O-6",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Quelii",
+          "rawValue": "Quelii",
+          "normalizationRule": null,
+          "matchValue": "Quelii"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "O-6",
+          "rawValue": "O-6"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "0.9",
+        "diameter": 10460,
+        "moons": 4,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 435,
+        "sourceName": "Dathomir"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Dathomir",
+        "region": "Outer Rim",
+        "sector": "Quelii",
+        "grid": "O-6"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 435
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Dathomir"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:kailor",
+      "provisionalStableId": "prov:kailor:ASTRO-001:845",
+      "name": "Kailor",
+      "normalizedName": "kailor",
+      "continuity": "canon",
+      "continuityHint": null,
+      "classification": "planet",
+      "aliases": [
+        "Kailor V"
+      ],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "L-10",
+          "rawValue": "L-10"
+        },
+        "routes": [
+          "rt:corellian-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 845,
+        "sourceName": "Kailor"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Core disagrees with DATA-001 Deep Core. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "ALIAS",
+        "DATA-001"
+      ],
+      "normalizedFrom": {
+        "name": "Kailor",
+        "region": "Core",
+        "sector": null,
+        "grid": "L-10"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 845
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Kailor V"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:canon:korriban",
+      "provisionalStableId": "prov:korriban:ASTRO-001:957",
+      "name": "Korriban",
+      "normalizedName": "korriban",
+      "continuity": "canon",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-5",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": "concept:korriban",
+      "relatedContinuityStableId": "ac:legends:korriban",
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Sith Worlds",
+          "rawValue": "Sith Worlds",
+          "normalizationRule": null,
+          "matchValue": "Sith Worlds"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-5",
+          "rawValue": "R-5"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1.4",
+        "diameter": 16890,
+        "moons": 7,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 957,
+        "sourceName": "Korriban"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Korriban",
+        "region": "Outer Rim",
+        "sector": "Sith Worlds",
+        "grid": "R-5"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 957
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Korriban"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:aaeton",
+      "provisionalStableId": "prov:aaeton:ASTRO-001:1",
+      "name": "Aaeton",
+      "normalizedName": "aaeton",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-9",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "K-9",
+          "rawValue": "K-9"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1,
+        "sourceName": "Aaeton"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Aaeton",
+        "region": "Core",
+        "sector": null,
+        "grid": "K-9"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Aaeton"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:metellos",
+      "provisionalStableId": "prov:metellos:ASTRO-001:1111",
+      "name": "Metellos",
+      "normalizedName": "metellos",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-9",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Core",
+          "rawValue": "Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "K-9",
+          "rawValue": "K-9"
+        },
+        "routes": [
+          "rt:namadii-corridor"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 12600,
+        "moons": 3,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1111,
+        "sourceName": "Metellos"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-grid",
+          "severity": "warning",
+          "message": "ASTRO-001 grid K-9 disagrees with DATA-001 K-10. ASTRO-001 retained.",
+          "fields": [
+            "astrography.grid"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Metellos",
+        "region": "Core",
+        "sector": null,
+        "grid": "K-9"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1111
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Metellos"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:alee",
+      "provisionalStableId": "prov:alee:ASTRO-001:37",
+      "name": "Alee",
+      "normalizedName": "alee",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-9",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Hutt Space",
+          "rawValue": "Hutt Space",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Hutt Space",
+          "rawValue": "Hutt Space",
+          "normalizationRule": null,
+          "matchValue": "Hutt Space"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-9",
+          "rawValue": "R-9"
+        },
+        "routes": [
+          "rt:regional-connector"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 37,
+        "sourceName": "Alee"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "region-outside-matrix",
+          "severity": "warning",
+          "message": "Region Hutt Space is outside the NavComputer matrix set.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Hutt Space disagrees with DATA-001 Mid Rim. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Hutt Space disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Alee",
+        "region": "Hutt Space",
+        "sector": "Hutt Space",
+        "grid": "R-9"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 37
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Alee"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:eshan",
+      "provisionalStableId": "prov:eshan:ASTRO-001:566",
+      "name": "Eshan",
+      "normalizedName": "eshan",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "N-8",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Inner Rim",
+          "rawValue": "Inner RIm",
+          "normalizationRule": "region-capitalization"
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "N-8",
+          "rawValue": "N-8"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 566,
+        "sourceName": "Eshan"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "region-capitalization",
+          "severity": "warning",
+          "message": "Region capitalization corrected from Inner RIm.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Eshan",
+        "region": "Inner RIm",
+        "sector": null,
+        "grid": "N-8"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 566
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Eshan"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:galactic-center",
+      "provisionalStableId": "prov:galactic-center:ASTRO-001:626",
+      "name": "Galactic Center",
+      "normalizedName": "galactic center",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-11",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Deep Core",
+          "rawValue": "Deep Core",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "missing"
+        },
+        "routes": []
+      },
+      "physical": {
+        "presence": "missing"
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 626,
+        "sourceName": "Galactic Center"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-grid",
+          "severity": "info",
+          "message": "Grid is absent in ASTRO-001.",
+          "fields": [
+            "astrography.grid"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Galactic Center",
+        "region": "Deep Core",
+        "sector": null,
+        "grid": null
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 626
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:ossus",
+      "provisionalStableId": "prov:ossus:ASTRO-001:1311",
+      "name": "Ossus",
+      "normalizedName": "ossus",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-6",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Auril",
+          "rawValue": "Auril",
+          "normalizationRule": null,
+          "matchValue": "Auril"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-6",
+          "rawValue": "R-6"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 29000,
+        "moons": 2,
+        "suns": 2
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1311,
+        "sourceName": "Ossus"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Ossus",
+        "region": "Outer Rim",
+        "sector": "Auril",
+        "grid": "R-6"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1311
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Ossus"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:rekkiad",
+      "provisionalStableId": "prov:rekkiad:ASTRO-001:1458",
+      "name": "Rekkiad",
+      "normalizedName": "rekkiad",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "S-4",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Chorlian",
+          "rawValue": "Chorlian",
+          "normalizationRule": null,
+          "matchValue": "Chorlian"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "missing"
+        },
+        "routes": []
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1458,
+        "sourceName": "Rekkiad"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-grid",
+          "severity": "info",
+          "message": "Grid is absent in ASTRO-001.",
+          "fields": [
+            "astrography.grid"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Outer Rim disagrees with DATA-001 Wild Space. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Chorlian disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Rekkiad",
+        "region": "Outer Rim",
+        "sector": "Chorlian",
+        "grid": null
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1458
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Rekkiad"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:a-foroon",
+      "provisionalStableId": "prov:a-foroon:ASTRO-001:0",
+      "name": "A-Foroon",
+      "normalizedName": "a-foroon",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-16",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Arkanis",
+          "rawValue": "Arkanis",
+          "normalizationRule": null,
+          "matchValue": "Arkanis"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-16",
+          "rawValue": "R-16"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped",
+          "rt:triellus-trade-route"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 0,
+        "sourceName": "A-Foroon"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Outer Rim disagrees with DATA-001 Mid Rim. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Arkanis disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "A-Foroon",
+        "region": "Outer Rim",
+        "sector": "Arkanis",
+        "grid": "R-16"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 0
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "A-Foroon"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:lenico-iv",
+      "provisionalStableId": "prov:lenico-iv:ASTRO-001:1009",
+      "name": "Lenico IV",
+      "normalizedName": "lenico iv",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "L-6",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer RIm",
+          "normalizationRule": "region-capitalization"
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Cademimu",
+          "rawValue": "Cademimu",
+          "normalizationRule": null,
+          "matchValue": "Cademimu"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "L-6",
+          "rawValue": "L-6"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1009,
+        "sourceName": "Lenico IV"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "region-capitalization",
+          "severity": "warning",
+          "message": "Region capitalization corrected from Outer RIm.",
+          "fields": [
+            "astrography.region"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Cademimu disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Lenico IV",
+        "region": "Outer RIm",
+        "sector": "Cademimu",
+        "grid": "L-6"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1009
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Lenico IV"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:alashan",
+      "provisionalStableId": "prov:alashan:ASTRO-001:33",
+      "name": "Alashan",
+      "normalizedName": "alashan",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "J-5",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Wild Space",
+          "rawValue": "Wild Space",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "J-5",
+          "rawValue": "J-5"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 3,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 33,
+        "sourceName": "Alashan"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-region",
+          "severity": "warning",
+          "message": "ASTRO-001 region Wild Space disagrees with DATA-001 Outer Rim. ASTRO-001 retained.",
+          "fields": [
+            "astrography.region"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Alashan",
+        "region": "Wild Space",
+        "sector": null,
+        "grid": "J-5"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 33
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Alashan"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:byblos",
+      "provisionalStableId": "prov:byblos:ASTRO-001:263",
+      "name": "Byblos",
+      "normalizedName": "byblos",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "M-12",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Colonies",
+          "rawValue": "Colonies",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "missing",
+          "rawValue": null,
+          "normalizationRule": null
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "M-12",
+          "rawValue": "M-12"
+        },
+        "routes": [
+          "rt:corellian-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 263,
+        "sourceName": "Byblos"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-sector",
+          "severity": "info",
+          "message": "Sector is absent in ASTRO-001.",
+          "fields": [
+            "astrography.sector"
+          ]
+        },
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Byblos",
+        "region": "Colonies",
+        "sector": null,
+        "grid": "M-12"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 263
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Byblos"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:allanteen",
+      "provisionalStableId": "prov:allanteen:ASTRO-001:44",
+      "name": "Allanteen",
+      "normalizedName": "allanteen",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "O-14",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Expansion Region",
+          "rawValue": "Expansion Region",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Tynna",
+          "rawValue": "Tynna",
+          "normalizationRule": null,
+          "matchValue": "Tynna"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "O-14",
+          "rawValue": "O-14"
+        },
+        "routes": [
+          "rt:corellian-run",
+          "rt:shipwrights-trace"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 44,
+        "sourceName": "Allanteen"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "geography-disagreement-sector",
+          "severity": "warning",
+          "message": "ASTRO-001 sector Tynna disagrees with DATA-001 Zuma Sector. ASTRO-001 retained.",
+          "fields": [
+            "astrography.sector"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Allanteen",
+        "region": "Expansion Region",
+        "sector": "Tynna",
+        "grid": "O-14"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 44
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Allanteen"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac:legends:korriban",
+      "provisionalStableId": "prov:korriban:ASTRO-001:957",
+      "name": "Korriban",
+      "normalizedName": "korriban",
+      "continuity": "legends",
+      "continuityHint": {
+        "value": "canon",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "R-5",
+            "isCanon": true,
+            "hint": "canon"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": "concept:korriban",
+      "relatedContinuityStableId": "ac:canon:korriban",
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Outer Rim",
+          "rawValue": "Outer Rim",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Sith Worlds",
+          "rawValue": "Sith Worlds",
+          "normalizationRule": null,
+          "matchValue": "Sith Worlds"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "R-5",
+          "rawValue": "R-5"
+        },
+        "routes": [
+          "rt:transit-corridor-unmapped"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1.4",
+        "diameter": 16890,
+        "moons": 7,
+        "suns": 1
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 957,
+        "sourceName": "Korriban"
+      },
+      "externalLinks": [],
+      "reviewStatus": "approved",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Korriban",
+        "region": "Outer Rim",
+        "sector": "Sith Worlds",
+        "grid": "R-5"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 957
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Korriban"
+        }
+      ],
+      "lastReviewedAt": "2026-08-17",
+      "reviewedBy": "Kakeman89",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "typeHint": null
+    }
+  ],
+  "routeEdges": [
+    {
+      "name": "Bothan Run",
+      "from": "Bothawui",
+      "to": "Moonus",
+      "distance": 1,
+      "travelTimeBase": 47.82,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Byss Run",
+      "from": "Coruscant",
+      "to": "Foerost",
+      "distance": 1,
+      "travelTimeBase": 46.53,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": false
+    },
+    {
+      "name": "Byss Run",
+      "from": "Prakith",
+      "to": "Byss",
+      "distance": 1,
+      "travelTimeBase": 45.52,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": false
+    },
+    {
+      "name": "Chasdemonus Route",
+      "from": "Kuat",
+      "to": "Corellia",
+      "distance": 1,
+      "travelTimeBase": 47.51,
+      "classification": "Class 3",
+      "tier": 4,
+      "obscure": true
+    },
+    {
+      "name": "Commenor Run",
+      "from": "Alderaan",
+      "to": "Tyed Kant",
+      "distance": 1,
+      "travelTimeBase": 48.71,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Commenor Run",
+      "from": "Caamas",
+      "to": "Alderaan",
+      "distance": 1,
+      "travelTimeBase": 48.59,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Allanteen",
+      "to": "Gamor",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Byblos",
+      "to": "Pencael",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Corellia",
+      "to": "Ord Mantell",
+      "distance": 2,
+      "travelTimeBase": 40,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Corellia",
+      "to": "Tinnel",
+      "distance": 1,
+      "travelTimeBase": 49.97,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Coruscant",
+      "to": "Ixtlar",
+      "distance": 1,
+      "travelTimeBase": 46.53,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Kailor",
+      "to": "Xorth",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Loronar",
+      "to": "Byblos",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Malastare",
+      "to": "Tatooine",
+      "distance": 1,
+      "travelTimeBase": 22,
+      "classification": "Class 2",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Rydonni Prime",
+      "to": "Corellia",
+      "distance": 1,
+      "travelTimeBase": 49.82,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Tlactehon",
+      "to": "Allanteen",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Run",
+      "from": "Wukkar",
+      "to": "Kailor",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Trade Spine",
+      "from": "Commenor",
+      "to": "Corellia",
+      "distance": 1,
+      "travelTimeBase": 16,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Trade Spine",
+      "from": "Condular",
+      "to": "Hosnian Prime",
+      "distance": 1,
+      "travelTimeBase": 46.97,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Trade Spine",
+      "from": "Corellia",
+      "to": "Chasin",
+      "distance": 1,
+      "travelTimeBase": 49.97,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Corellian Trade Spine",
+      "from": "Hosnian Prime",
+      "to": "Gandeal",
+      "distance": 1,
+      "travelTimeBase": 46.97,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Namadii Corridor",
+      "from": "Coruscant",
+      "to": "Metellos",
+      "distance": 1,
+      "travelTimeBase": 18,
+      "classification": "Class 2",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Namadii Corridor",
+      "from": "Coruscant",
+      "to": "Tanjay",
+      "distance": 1,
+      "travelTimeBase": 42.02,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Namadii Corridor",
+      "from": "Metellos",
+      "to": "Brentaal IV",
+      "distance": 1,
+      "travelTimeBase": 18,
+      "classification": "Class 2",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Path of the Houses",
+      "from": "Csilla",
+      "to": "Cioral",
+      "distance": 1,
+      "travelTimeBase": 70.63,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Path of the Houses",
+      "from": "Sposia",
+      "to": "Csilla",
+      "distance": 1,
+      "travelTimeBase": 70.63,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Perlemian Trade Route",
+      "from": "Coruscant",
+      "to": "Alsakan",
+      "distance": 1,
+      "travelTimeBase": 46.4,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Perlemian Trade Route",
+      "from": "Coruscant",
+      "to": "Brentaal IV",
+      "distance": 1,
+      "travelTimeBase": 24,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Reena Trade Route",
+      "from": "Spirador",
+      "to": "Bothawui",
+      "distance": 1,
+      "travelTimeBase": 43.47,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Regional connector",
+      "from": "Kwookrrr",
+      "to": "Alee",
+      "distance": 1,
+      "travelTimeBase": 65.21,
+      "classification": "Class 3",
+      "tier": 4,
+      "obscure": true
+    },
+    {
+      "name": "Rimma Trade Route",
+      "from": "Corellia",
+      "to": "Sullust",
+      "distance": 2,
+      "travelTimeBase": 44,
+      "classification": "Class 1",
+      "tier": 1,
+      "obscure": false
+    },
+    {
+      "name": "Shipwrights' Trace",
+      "from": "Tynna",
+      "to": "Allanteen",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Shiritoku Way",
+      "from": "Sanyassa",
+      "to": "Endor",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Spar Trade Route",
+      "from": "Endor",
+      "to": "Trindello",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Aaeton",
+      "to": "Twith",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Ahch-To",
+      "to": "Csilla",
+      "distance": 1,
+      "travelTimeBase": 12.5,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Alashan",
+      "to": "Keitum",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Churruma",
+      "to": "Alashan",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Dathomir",
+      "to": "Harloen",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Eshan",
+      "to": "Relatta",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Exegol",
+      "to": "Ahch-To",
+      "distance": 1,
+      "travelTimeBase": 15.81,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Korriban",
+      "to": "Dromund Kaas",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Lenico IV",
+      "to": "Ebra",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Levian",
+      "to": "Eshan",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Mamendin",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Melnea's World",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Merakai",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Milarian",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Nouane",
+      "to": "Eshan",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Obana",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Obroa-skai",
+      "to": "Eshan",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Ord Cestus",
+      "to": "Dathomir",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Ossus",
+      "to": "Thanium",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Phateem",
+      "to": "Eshan",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Pii",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Quelii",
+      "to": "Dathomir",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Ragoon",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Raydonia",
+      "to": "Dathomir",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Utaruun",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Vactooine",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Vanquo",
+      "to": "Dathomir",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Venjagga",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Voon",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Xa Fel",
+      "to": "Aaeton",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Transit corridor (unmapped)",
+      "from": "Yavin 4",
+      "to": "Rhommamool",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 5,
+      "obscure": true
+    },
+    {
+      "name": "Triellus Trade Route",
+      "from": "A-Foroon",
+      "to": "B-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Triellus Trade Route",
+      "from": "Ooo-temiuk",
+      "to": "Tatooine",
+      "distance": 1,
+      "travelTimeBase": 18.76,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Triellus Trade Route",
+      "from": "Piroket",
+      "to": "A-Foroon",
+      "distance": 1,
+      "travelTimeBase": 8,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    },
+    {
+      "name": "Triellus Trade Route",
+      "from": "Tatooine",
+      "to": "Andooweel",
+      "distance": 1,
+      "travelTimeBase": 18.76,
+      "classification": "Class 3",
+      "tier": 3,
+      "obscure": false
+    }
+  ],
+  "quarantineDemos": [
+    {
+      "name": "Noe'ha'on",
+      "provisionalStableId": "prov:noehaon:ASTRO-001:1229",
+      "reviewStatus": "quarantined",
+      "reason": "duplicate-source-name",
+      "uncleanRoute": "Great Gran Run"
+    },
+    {
+      "name": "Noe'ha'on",
+      "provisionalStableId": "prov:noehaon:ASTRO-001:1230",
+      "reviewStatus": "quarantined",
+      "reason": "duplicate-source-name",
+      "uncleanRoute": "Great Gran Run"
+    }
+  ],
+  "unusedRouteEdges": 69
+}

@@ -1,0 +1,521 @@
+[
+  {
+    "_id": "f0a618b3694a47ed",
+    "name": "Test World Aurek (Canon)",
+    "folder": "033842f0592a5236",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.f0a618b3694a47ed",
+    "pages": [
+      {
+        "_id": "00dd88c131f1fe73",
+        "name": "Test World Aurek (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>A synthetic Coreward catalog world used only for Phase 4 architecture tests.</p><h3>Era notes</h3><ul><li><strong>Test Era One:</strong> During Test Era One the catalog listed a temporary beacon.</li></ul></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector One</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System One</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-A1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>Synthetic Route Alpha</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Atmosphere</dt><dd>thin</dd></div><div class=\"astrocom-field\"><dt>Climate</dt><dd>cool</dd></div><div class=\"astrocom-field\"><dt>Gravity</dt><dd>standard</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>catalog outpost</dd></div><div class=\"astrocom-field\"><dt>Government</dt><dd>none</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>beacon parts</dd></div><div class=\"astrocom-field\"><dt>Imports</dt><dd>fuel cells</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-aurek\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-aurek-canon",
+        "continuity": "canon",
+        "aliases": [
+          "Aurek Catalog Label"
+        ],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector One",
+        "system": "Example System One",
+        "grid": "Fixture-A1",
+        "gridPresence": "present",
+        "routes": [
+          "rt-synthetic-alpha"
+        ],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "38853d2297a0f65c",
+    "name": "Test World Besh (Legends)",
+    "folder": "5396ed2ad84aa1e0",
+    "packKey": "astrocom-poc-legends",
+    "uuid": "Compendium.world.astrocom-poc-legends.JournalEntry.38853d2297a0f65c",
+    "pages": [
+      {
+        "_id": "726dcee843bda6e2",
+        "name": "Test World Besh (Legends)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>A synthetic Rimward legends-only catalog world.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Rimward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Two</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Two</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-B1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>arid</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>sparse</dd></div></dl></section><section><h2>Planetary Economics</h2><p>not applicable</p></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-besh\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-besh-legends",
+        "continuity": "legends",
+        "aliases": [],
+        "region": "Test Region Rimward",
+        "sector": "Test Sector Two",
+        "system": "Example System Two",
+        "grid": "Fixture-B1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "8264b0882c54ee96",
+    "name": "Test World Cresh (Canon)",
+    "folder": "0de4ec5cc575b0f2",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.8264b0882c54ee96",
+    "pages": [
+      {
+        "_id": "02e450a2df15ff48",
+        "name": "Test World Cresh (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Canon catalog of the shared Cresh concept. Geography differs from the legends catalog.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Three</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Three</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-C1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>wet</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Government</dt><dd>archive council</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>records</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-cresh-canon\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-cresh-canon",
+        "continuity": "canon",
+        "aliases": [
+          "Cresh Catalog Canon"
+        ],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector Three",
+        "system": "Example System Three",
+        "grid": "Fixture-C1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": "ac-test-world-cresh-legends",
+        "conceptualId": "concept-test-world-cresh",
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "912ac97d4692f96f",
+    "name": "Test World Cresh (Legends)",
+    "folder": "0556656e1cbac37c",
+    "packKey": "astrocom-poc-legends",
+    "uuid": "Compendium.world.astrocom-poc-legends.JournalEntry.912ac97d4692f96f",
+    "pages": [
+      {
+        "_id": "bf080fe3b429943d",
+        "name": "Test World Cresh (Legends)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Legends catalog of the shared Cresh concept, treated as a moon in this continuity.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Rimward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Four</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Four</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-C2</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>frozen</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Government</dt><dd>none</dd></div></dl></section><section><h2>Planetary Economics</h2><p>unknown</p></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-cresh-legends\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-cresh-legends",
+        "continuity": "legends",
+        "aliases": [
+          "Cresh Catalog Legends"
+        ],
+        "region": "Test Region Rimward",
+        "sector": "Test Sector Four",
+        "system": "Example System Four",
+        "grid": "Fixture-C2",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": "ac-test-world-cresh-canon",
+        "conceptualId": "concept-test-world-cresh",
+        "classification": "moon",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "e5b3adcedd19b9e4",
+    "name": "Test World Forn (Canon)",
+    "folder": "033842f0592a5236",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.e5b3adcedd19b9e4",
+    "pages": [
+      {
+        "_id": "2324ba98baf85b8e",
+        "name": "Test World Forn (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Second world in Example System One, sharing Fixture-A1 with Test World Aurek.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector One</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System One</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-A1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>Synthetic Route Alpha</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>temperate</dd></div></dl></section><section><h2>Societal Information</h2><p>unknown</p></section><section><h2>Planetary Economics</h2><p>intentionally omitted</p></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.org/astrocom/test-world-forn\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-forn-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector One",
+        "system": "Example System One",
+        "grid": "Fixture-A1",
+        "gridPresence": "present",
+        "routes": [
+          "rt-synthetic-alpha"
+        ],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "e60564485eb9af62",
+    "name": "Test World Grek (Canon)",
+    "folder": "ad24cf149bce1a4e",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.e60564485eb9af62",
+    "pages": [
+      {
+        "_id": "9c24bc1eb1f4a708",
+        "name": "Test World Grek (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>A synthetic world associated with two catalog routes.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector One</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Five</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-A2</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>Synthetic Route Alpha, Synthetic Route Beta</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>stormy</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>waypoint crew</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>charts</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-grek\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-grek-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector One",
+        "system": "Example System Five",
+        "grid": "Fixture-A2",
+        "gridPresence": "present",
+        "routes": [
+          "rt-synthetic-alpha",
+          "rt-synthetic-beta"
+        ],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "6a27263afe6208d0",
+    "name": "Test World Herf (Canon)",
+    "folder": "d18184ec7e007582",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.6a27263afe6208d0",
+    "pages": [
+      {
+        "_id": "950eb50cf13929fa",
+        "name": "Test World Herf (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Renamed catalog entry. The prior label is preserved only as an alias.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Five</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Six</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-D1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Atmosphere</dt><dd>processed</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>crew rotation</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>docking fees</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-herf\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-herf-canon",
+        "continuity": "canon",
+        "aliases": [
+          "Former Name Isk"
+        ],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector Five",
+        "system": "Example System Six",
+        "grid": "Fixture-D1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "station",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "6ba35cd631a96890",
+    "name": "Test World Jenth (Canon)",
+    "folder": "5fe5dc61aba86017",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.6ba35cd631a96890",
+    "pages": [
+      {
+        "_id": "c65fe70c376de096",
+        "name": "Test World Jenth (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Physical information is missing and must not be invented.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Six</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Seven</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-E1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><p>not documented</p></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>unlisted</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>none recorded</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-jenth\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-jenth-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector Six",
+        "system": "Example System Seven",
+        "grid": "Fixture-E1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "92a5f983ca71110d",
+    "name": "Test World Krill (Canon)",
+    "folder": "a540ac35249d28e7",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.92a5f983ca71110d",
+    "pages": [
+      {
+        "_id": "444523715b969943",
+        "name": "Test World Krill (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Societal information is missing and must not be invented.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Rimward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Seven</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Eight</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-F1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>humid</dd></div></dl></section><section><h2>Societal Information</h2><p>not documented</p></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Imports</dt><dd>survey gear</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-krill\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-krill-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Rimward",
+        "sector": "Test Sector Seven",
+        "system": "Example System Eight",
+        "grid": "Fixture-F1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "09e7c5dbb7636b75",
+    "name": "Test World Leth (Legends)",
+    "folder": "3ef68a11f1d49bbf",
+    "packKey": "astrocom-poc-legends",
+    "uuid": "Compendium.world.astrocom-poc-legends.JournalEntry.09e7c5dbb7636b75",
+    "pages": [
+      {
+        "_id": "9b3333e18464dd9b",
+        "name": "Test World Leth (Legends)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Economic information is missing and must not be invented.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Rimward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Eight</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Nine</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-G1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>mild</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>seasonal</dd></div></dl></section><section><h2>Planetary Economics</h2><p>not documented</p></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-leth\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-leth-legends",
+        "continuity": "legends",
+        "aliases": [],
+        "region": "Test Region Rimward",
+        "sector": "Test Sector Eight",
+        "system": "Example System Nine",
+        "grid": "Fixture-G1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "86c0adb75fcca21d",
+    "name": "Test World Mern (Canon)",
+    "folder": "c3a8f1fb60f0e871",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.86c0adb75fcca21d",
+    "pages": [
+      {
+        "_id": "5d31ae41359a6277",
+        "name": "Test World Mern (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Grid coordinates are unknown. No grid square may be invented.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Nine</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Ten</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>unknown</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>variable</dd></div></dl></section><section><h2>Societal Information</h2><p>not applicable</p></section><section><h2>Planetary Economics</h2><p>not applicable</p></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-mern\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-mern-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector Nine",
+        "system": "Example System Ten",
+        "grid": null,
+        "gridPresence": "unknown",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "phenomenon",
+        "fixture": true
+      }
+    }
+  },
+  {
+    "_id": "b6f3b390724e43d6",
+    "name": "Test World Osk (Canon)",
+    "folder": "dbbe017a28079fe8",
+    "packKey": "astrocom-poc-canon",
+    "uuid": "Compendium.world.astrocom-poc-canon.JournalEntry.b6f3b390724e43d6",
+    "pages": [
+      {
+        "_id": "f1fabf42df595e50",
+        "name": "Test World Osk (Canon)",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<section><h2>Description</h2><p>Markup probe &lt;script&gt;alert(1)&lt;/script&gt; and &lt;b&gt;bold&lt;/b&gt;.</p></section><section><h2>Astrographical Information</h2><dl><div class=\"astrocom-field\"><dt>Region</dt><dd>Test Region Coreward</dd></div><div class=\"astrocom-field\"><dt>Sector</dt><dd>Test Sector Ten</dd></div><div class=\"astrocom-field\"><dt>System</dt><dd>Example System Eleven</dd></div><div class=\"astrocom-field\"><dt>Grid</dt><dd>Fixture-H1</dd></div><div class=\"astrocom-field\"><dt>Hyperspace routes</dt><dd>not documented</dd></div></dl></section><section><h2>Physical Information</h2><dl><div class=\"astrocom-field\"><dt>Climate</dt><dd>neutral</dd></div></dl></section><section><h2>Societal Information</h2><dl><div class=\"astrocom-field\"><dt>Population</dt><dd>none</dd></div></dl></section><section><h2>Planetary Economics</h2><dl><div class=\"astrocom-field\"><dt>Exports</dt><dd>none</dd></div></dl></section><section><h2>Sources</h2><p>phase4-synthetic-poc</p><ul><li><a href=\"https://example.com/astrocom/test-world-osk\" rel=\"noopener noreferrer\">Synthetic gazetteer</a></li></ul></section>"
+        }
+      }
+    ],
+    "flags": {
+      "kakeman89s-datacron": {
+        "schemaVersion": 1,
+        "domain": "astrocom",
+        "kind": "planet",
+        "stableId": "ac-test-world-osk-canon",
+        "continuity": "canon",
+        "aliases": [],
+        "region": "Test Region Coreward",
+        "sector": "Test Sector Ten",
+        "system": "Example System Eleven",
+        "grid": "Fixture-H1",
+        "gridPresence": "present",
+        "routes": [],
+        "relatedContinuityStableId": null,
+        "conceptualId": null,
+        "classification": "planet",
+        "fixture": true
+      }
+    }
+  }
+]

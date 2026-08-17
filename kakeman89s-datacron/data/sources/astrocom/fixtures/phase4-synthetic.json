@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "phase4-synthetic-poc",
+  "attribution": "Kakeman89",
+  "notes": "Independently authored synthetic fixture for Datacron Phase 4. Not production content.",
+  "routes": [
+    {
+      "stableId": "rt-synthetic-alpha",
+      "name": "Synthetic Route Alpha",
+      "grids": ["Fixture-A1", "Fixture-A2"],
+      "planetStableIds": [
+        "ac-test-world-aurek-canon",
+        "ac-test-world-forn-canon",
+        "ac-test-world-grek-canon"
+      ]
+    },
+    {
+      "stableId": "rt-synthetic-beta",
+      "name": "Synthetic Route Beta",
+      "grids": ["Fixture-A2"],
+      "planetStableIds": ["ac-test-world-grek-canon"]
+    }
+  ],
+  "records": [
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-aurek-canon",
+      "name": "Test World Aurek",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": ["Aurek Catalog Label"],
+      "eraNotes": [
+        {
+          "era": "Test Era One",
+          "note": "During Test Era One the catalog listed a temporary beacon."
+        }
+      ],
+      "description": "A synthetic Coreward catalog world used only for Phase 4 architecture tests.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": ["rt-synthetic-alpha"]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": "thin",
+        "climate": "cool",
+        "gravity": "standard"
+      },
+      "societal": {
+        "presence": "present",
+        "population": "catalog outpost",
+        "government": "none"
+      },
+      "economics": {
+        "presence": "present",
+        "exports": "beacon parts",
+        "imports": "fuel cells"
+      },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "canon-only-with-alias-era-and-single-route"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-aurek"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-forn-canon",
+      "name": "Test World Forn",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Second world in Example System One, sharing Fixture-A1 with Test World Aurek.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": ["rt-synthetic-alpha"]
+      },
+      "physical": { "presence": "present", "climate": "temperate" },
+      "societal": { "presence": "unknown" },
+      "economics": { "presence": "omitted" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "same-system-and-grid-as-aurek"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.org/astrocom/test-world-forn"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-besh-legends",
+      "name": "Test World Besh",
+      "continuity": "legends",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "A synthetic Rimward legends-only catalog world.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Rimward" },
+        "sector": { "presence": "present", "value": "Test Sector Two" },
+        "system": { "presence": "present", "value": "Example System Two" },
+        "grid": { "presence": "present", "value": "Fixture-B1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "arid" },
+      "societal": { "presence": "present", "population": "sparse" },
+      "economics": { "presence": "notApplicable" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "legends-only"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-besh"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-cresh-canon",
+      "name": "Test World Cresh",
+      "continuity": "canon",
+      "classification": "planet",
+      "conceptualId": "concept-test-world-cresh",
+      "relatedContinuityStableId": "ac-test-world-cresh-legends",
+      "aliases": ["Cresh Catalog Canon"],
+      "eraNotes": [],
+      "description": "Canon catalog of the shared Cresh concept. Geography differs from the legends catalog.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector Three" },
+        "system": { "presence": "present", "value": "Example System Three" },
+        "grid": { "presence": "present", "value": "Fixture-C1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "wet" },
+      "societal": { "presence": "present", "government": "archive council" },
+      "economics": { "presence": "present", "exports": "records" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "paired-canon"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-cresh-canon"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-cresh-legends",
+      "name": "Test World Cresh",
+      "continuity": "legends",
+      "classification": "moon",
+      "conceptualId": "concept-test-world-cresh",
+      "relatedContinuityStableId": "ac-test-world-cresh-canon",
+      "aliases": ["Cresh Catalog Legends"],
+      "eraNotes": [],
+      "description": "Legends catalog of the shared Cresh concept, treated as a moon in this continuity.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Rimward" },
+        "sector": { "presence": "present", "value": "Test Sector Four" },
+        "system": { "presence": "present", "value": "Example System Four" },
+        "grid": { "presence": "present", "value": "Fixture-C2" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "frozen" },
+      "societal": { "presence": "present", "government": "none" },
+      "economics": { "presence": "unknown" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "paired-legends"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-cresh-legends"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-grek-canon",
+      "name": "Test World Grek",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "A synthetic world associated with two catalog routes.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System Five" },
+        "grid": { "presence": "present", "value": "Fixture-A2" },
+        "routes": ["rt-synthetic-alpha", "rt-synthetic-beta"]
+      },
+      "physical": { "presence": "present", "climate": "stormy" },
+      "societal": { "presence": "present", "population": "waypoint crew" },
+      "economics": { "presence": "present", "exports": "charts" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "multiple-routes"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-grek"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-herf-canon",
+      "name": "Test World Herf",
+      "continuity": "canon",
+      "classification": "station",
+      "aliases": ["Former Name Isk"],
+      "eraNotes": [],
+      "description": "Renamed catalog entry. The prior label is preserved only as an alias.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector Five" },
+        "system": { "presence": "present", "value": "Example System Six" },
+        "grid": { "presence": "present", "value": "Fixture-D1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "atmosphere": "processed" },
+      "societal": { "presence": "present", "population": "crew rotation" },
+      "economics": { "presence": "present", "exports": "docking fees" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "rename-alias"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-herf"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-jenth-canon",
+      "name": "Test World Jenth",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Physical information is missing and must not be invented.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector Six" },
+        "system": { "presence": "present", "value": "Example System Seven" },
+        "grid": { "presence": "present", "value": "Fixture-E1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "present", "population": "unlisted" },
+      "economics": { "presence": "present", "exports": "none recorded" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "missing-physical"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-jenth"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-krill-canon",
+      "name": "Test World Krill",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Societal information is missing and must not be invented.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Rimward" },
+        "sector": { "presence": "present", "value": "Test Sector Seven" },
+        "system": { "presence": "present", "value": "Example System Eight" },
+        "grid": { "presence": "present", "value": "Fixture-F1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "humid" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "present", "imports": "survey gear" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "missing-societal"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-krill"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-leth-legends",
+      "name": "Test World Leth",
+      "continuity": "legends",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Economic information is missing and must not be invented.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Rimward" },
+        "sector": { "presence": "present", "value": "Test Sector Eight" },
+        "system": { "presence": "present", "value": "Example System Nine" },
+        "grid": { "presence": "present", "value": "Fixture-G1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "mild" },
+      "societal": { "presence": "present", "population": "seasonal" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "missing-economics"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-leth"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-mern-canon",
+      "name": "Test World Mern",
+      "continuity": "canon",
+      "classification": "phenomenon",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Grid coordinates are unknown. No grid square may be invented.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector Nine" },
+        "system": { "presence": "present", "value": "Example System Ten" },
+        "grid": { "presence": "unknown" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "variable" },
+      "societal": { "presence": "notApplicable" },
+      "economics": { "presence": "notApplicable" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "unknown-grid"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-mern"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-osk-canon",
+      "name": "Test World Osk",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Markup probe <script>alert(1)</script> and <b>bold</b>.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector Ten" },
+        "system": { "presence": "present", "value": "Example System Eleven" },
+        "grid": { "presence": "present", "value": "Fixture-H1" },
+        "routes": []
+      },
+      "physical": { "presence": "present", "climate": "neutral" },
+      "societal": { "presence": "present", "population": "none" },
+      "economics": { "presence": "present", "exports": "none" },
+      "sourceMetadata": {
+        "fixtureId": "phase4-synthetic-poc",
+        "recordRole": "html-escape-probe"
+      },
+      "externalLinks": [
+        {
+          "label": "Synthetic gazetteer",
+          "url": "https://example.com/astrocom/test-world-osk"
+        }
+      ]
+    }
+  ]
+}

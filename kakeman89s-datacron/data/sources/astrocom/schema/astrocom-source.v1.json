@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kakeman89s-datacron://astrocom-source.v1.json",
+  "title": "AstroCom source record schema",
+  "description": "Versioned authored source for Kakeman89's Datacron AstroCom. Separate from generated JournalEntry output.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "records"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "fixtureId": { "type": "string" },
+    "attribution": { "type": "string" },
+    "notes": { "type": "string" },
+    "routes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/route" }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "presence": {
+      "type": "object",
+      "required": ["presence"],
+      "properties": {
+        "presence": {
+          "enum": ["present", "missing", "unknown", "notApplicable", "omitted"]
+        },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "route": {
+      "type": "object",
+      "required": ["stableId", "name", "grids", "planetStableIds"],
+      "properties": {
+        "stableId": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "grids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "planetStableIds": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "stableId",
+        "name",
+        "continuity",
+        "classification",
+        "description",
+        "astrography",
+        "physical",
+        "societal",
+        "economics",
+        "sourceMetadata"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "stableId": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "continuity": { "enum": ["canon", "legends"] },
+        "classification": { "enum": ["planet", "moon", "station", "phenomenon"] },
+        "conceptualId": { "type": "string" },
+        "relatedContinuityStableId": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "eraNotes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["era", "note"],
+            "properties": {
+              "era": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "astrography": {
+          "type": "object",
+          "required": ["region", "sector", "system", "grid", "routes"],
+          "properties": {
+            "region": { "$ref": "#/$defs/presence" },
+            "sector": { "$ref": "#/$defs/presence" },
+            "system": { "$ref": "#/$defs/presence" },
+            "grid": { "$ref": "#/$defs/presence" },
+            "routes": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "physical": { "$ref": "#/$defs/presence" },
+        "societal": { "$ref": "#/$defs/presence" },
+        "economics": { "$ref": "#/$defs/presence" },
+        "sourceMetadata": { "type": "object" },
+        "externalLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "url"],
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

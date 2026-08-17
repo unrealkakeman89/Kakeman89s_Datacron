@@ -1,0 +1,44 @@
+[
+  {
+    "stableId": "ac-test-world-aurek-canon",
+    "name": "Test World Duplicate Id",
+    "reasons": [
+      "duplicate stableId"
+    ]
+  },
+  {
+    "stableId": "ac-test-world-bad-url",
+    "name": "Test World Bad Url",
+    "reasons": [
+      "externalLinks[0].url is not an allowed http(s) example URL"
+    ]
+  },
+  {
+    "stableId": "ac-test-world-duplicate-name-canon",
+    "name": "Test World Aurek",
+    "reasons": [
+      "duplicate display name for continuity"
+    ]
+  },
+  {
+    "stableId": "ac-test-world-invalid-class",
+    "name": "Test World Invalid Class",
+    "reasons": [
+      "classification is invalid"
+    ]
+  },
+  {
+    "stableId": "ac-test-world-invalid-continuity",
+    "name": "Test World Invalid Continuity",
+    "reasons": [
+      "continuity must be canon or legends"
+    ]
+  },
+  {
+    "stableId": "ac-test-world-malformed-url",
+    "name": "Test World Malformed Url",
+    "reasons": [
+      "externalLinks[0].url is not an allowed http(s) example URL"
+    ]
+  }
+]

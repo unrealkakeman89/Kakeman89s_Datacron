@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "schemaVersion": 1,
+      "stableId": null,
+      "provisionalStableId": "prov:noehaon:ASTRO-001:1229",
+      "name": "Noe'ha'on",
+      "normalizedName": "noe'ha'on",
+      "continuity": null,
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-16",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Expansion Region",
+          "rawValue": "Expansion Region",
+          "normalizationRule": null
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Piryn SHar",
+          "rawValue": "Piryn SHar",
+          "normalizationRule": null,
+          "matchValue": "Piryn SHar"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "K-16",
+          "rawValue": "K-16"
+        },
+        "routes": [
+          "rt:great-gran-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1229,
+        "sourceName": "Noe'ha'on"
+      },
+      "externalLinks": [],
+      "reviewStatus": "quarantined",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "duplicate-source-name",
+          "severity": "blocking",
+          "message": "Duplicate ASTRO-001 name Noe'ha'on.",
+          "fields": [
+            "name"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Noe'ha'on",
+        "region": "Expansion Region",
+        "sector": "Piryn SHar",
+        "grid": "K-16"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1229
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Noe'ha'on"
+        }
+      ],
+      "lastReviewedAt": null,
+      "reviewedBy": null,
+      "reviewNotes": null,
+      "typeHint": null
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": null,
+      "provisionalStableId": "prov:noehaon:ASTRO-001:1230",
+      "name": "Noe'ha'on",
+      "normalizedName": "noe'ha'on",
+      "continuity": null,
+      "continuityHint": {
+        "value": "legends",
+        "source": "STARWARSMAP-GRID",
+        "evidence": [
+          {
+            "grid": "K-16",
+            "isCanon": false,
+            "hint": "legends"
+          }
+        ]
+      },
+      "classification": "planet",
+      "aliases": [],
+      "conceptualId": null,
+      "relatedContinuityStableId": null,
+      "description": "No authored description is recorded in ASTRO-001.",
+      "eraNotes": [],
+      "astrography": {
+        "region": {
+          "presence": "present",
+          "value": "Expansion Region",
+          "rawValue": "Expansion Regions",
+          "normalizationRule": "data-region-alias"
+        },
+        "sector": {
+          "presence": "present",
+          "value": "Piryn SHar",
+          "rawValue": "Piryn SHar",
+          "normalizationRule": null,
+          "matchValue": "Piryn SHar"
+        },
+        "system": {
+          "presence": "missing"
+        },
+        "grid": {
+          "presence": "present",
+          "value": "K-16",
+          "rawValue": "K-16"
+        },
+        "routes": [
+          "rt:great-gran-run"
+        ]
+      },
+      "physical": {
+        "presence": "present",
+        "atmosphere": null,
+        "climate": null,
+        "gravity": "1",
+        "diameter": 0,
+        "moons": 0,
+        "suns": 0
+      },
+      "societal": {
+        "presence": "missing"
+      },
+      "economics": {
+        "presence": "missing"
+      },
+      "sourceMetadata": {
+        "datasetId": "ASTRO-001",
+        "sourceIndex": 1230,
+        "sourceName": "Noe'ha'on"
+      },
+      "externalLinks": [],
+      "reviewStatus": "quarantined",
+      "conflictFlags": [
+        {
+          "code": "missing-system",
+          "severity": "info",
+          "message": "System is absent in ASTRO-001 and is recorded as missing.",
+          "fields": [
+            "astrography.system"
+          ]
+        },
+        {
+          "code": "duplicate-source-name",
+          "severity": "blocking",
+          "message": "Duplicate ASTRO-001 name Noe'ha'on.",
+          "fields": [
+            "name"
+          ]
+        }
+      ],
+      "adapterSources": [
+        "ASTRO-001",
+        "DATA-001",
+        "STARWARSMAP-GRID"
+      ],
+      "normalizedFrom": {
+        "name": "Noe'ha'on",
+        "region": "Expansion Regions",
+        "sector": "Piryn SHar",
+        "grid": "K-16"
+      },
+      "rawSourceReferences": [
+        {
+          "datasetId": "ASTRO-001",
+          "index": 1230
+        },
+        {
+          "datasetId": "DATA-001",
+          "name": "Noe'ha'on"
+        }
+      ],
+      "lastReviewedAt": null,
+      "reviewedBy": null,
+      "reviewNotes": null,
+      "typeHint": null
+    }
+  ]
+}

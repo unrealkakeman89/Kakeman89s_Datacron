@@ -1,0 +1,56 @@
+.kakeman89s-datacron-astrocom .astrocom-shell {
+  color: #d8ecff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: min-content;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top, rgba(54, 127, 214, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(7, 16, 26, 0.96), rgba(4, 10, 19, 0.98));
+}
+
+.kakeman89s-datacron-astrocom .astrocom-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-search {
+  grid-column: 1 / -1;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="partial"] {
+  color: #ffd278;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="failure"] {
+  color: #ff9a9a;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-results li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-result,
+.kakeman89s-datacron-astrocom .astrocom-related,
+.kakeman89s-datacron-astrocom [data-astrocom-rebuild] {
+  min-height: 2rem;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-related {
+  font-size: 0.9em;
+}

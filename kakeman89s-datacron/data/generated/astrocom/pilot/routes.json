@@ -1,0 +1,210 @@
+[
+  {
+    "stableId": "rt:bothan-run",
+    "name": "Bothan Run",
+    "grids": [
+      "R-14"
+    ],
+    "planetStableIds": [
+      "ac:canon:bothawui"
+    ]
+  },
+  {
+    "stableId": "rt:byss-run",
+    "name": "Byss Run",
+    "grids": [
+      "L-9",
+      "K-11"
+    ],
+    "planetStableIds": [
+      "ac:canon:coruscant",
+      "ac:canon:byss"
+    ]
+  },
+  {
+    "stableId": "rt:chasdemonus-route",
+    "name": "Chasdemonus Route",
+    "grids": [
+      "M-11"
+    ],
+    "planetStableIds": [
+      "ac:canon:corellia"
+    ]
+  },
+  {
+    "stableId": "rt:commenor-run",
+    "name": "Commenor Run",
+    "grids": [
+      "M-10"
+    ],
+    "planetStableIds": [
+      "ac:canon:alderaan"
+    ]
+  },
+  {
+    "stableId": "rt:corellian-run",
+    "name": "Corellian Run",
+    "grids": [
+      "O-14",
+      "M-12",
+      "M-11",
+      "L-9",
+      "L-10",
+      "R-16"
+    ],
+    "planetStableIds": [
+      "ac:legends:allanteen",
+      "ac:legends:byblos",
+      "ac:canon:corellia",
+      "ac:canon:coruscant",
+      "ac:canon:kailor",
+      "ac:canon:tatooine"
+    ]
+  },
+  {
+    "stableId": "rt:corellian-trade-spine",
+    "name": "Corellian Trade Spine",
+    "grids": [
+      "M-11",
+      "M-12"
+    ],
+    "planetStableIds": [
+      "ac:canon:corellia",
+      "ac:canon:hosnian-prime"
+    ]
+  },
+  {
+    "stableId": "rt:namadii-corridor",
+    "name": "Namadii Corridor",
+    "grids": [
+      "L-9",
+      "K-9"
+    ],
+    "planetStableIds": [
+      "ac:canon:coruscant",
+      "ac:legends:metellos"
+    ]
+  },
+  {
+    "stableId": "rt:path-of-the-houses",
+    "name": "Path of the Houses",
+    "grids": [
+      "F-8"
+    ],
+    "planetStableIds": [
+      "ac:canon:csilla"
+    ]
+  },
+  {
+    "stableId": "rt:perlemian-trade-route",
+    "name": "Perlemian Trade Route",
+    "grids": [
+      "L-9"
+    ],
+    "planetStableIds": [
+      "ac:canon:coruscant"
+    ]
+  },
+  {
+    "stableId": "rt:reena-trade-route",
+    "name": "Reena Trade Route",
+    "grids": [
+      "R-14"
+    ],
+    "planetStableIds": [
+      "ac:canon:bothawui"
+    ]
+  },
+  {
+    "stableId": "rt:regional-connector",
+    "name": "Regional connector",
+    "grids": [
+      "R-9"
+    ],
+    "planetStableIds": [
+      "ac:legends:alee"
+    ]
+  },
+  {
+    "stableId": "rt:rimma-trade-route",
+    "name": "Rimma Trade Route",
+    "grids": [
+      "M-11"
+    ],
+    "planetStableIds": [
+      "ac:canon:corellia"
+    ]
+  },
+  {
+    "stableId": "rt:shipwrights-trace",
+    "name": "Shipwrights' Trace",
+    "grids": [
+      "O-14"
+    ],
+    "planetStableIds": [
+      "ac:legends:allanteen"
+    ]
+  },
+  {
+    "stableId": "rt:shiritoku-way",
+    "name": "Shiritoku Way",
+    "grids": [
+      "H-16"
+    ],
+    "planetStableIds": [
+      "ac:canon:endor"
+    ]
+  },
+  {
+    "stableId": "rt:spar-trade-route",
+    "name": "Spar Trade Route",
+    "grids": [
+      "H-16"
+    ],
+    "planetStableIds": [
+      "ac:canon:endor"
+    ]
+  },
+  {
+    "stableId": "rt:transit-corridor-unmapped",
+    "name": "Transit corridor (unmapped)",
+    "grids": [
+      "K-9",
+      "E-13",
+      "F-8",
+      "J-5",
+      "O-6",
+      "N-8",
+      "R-5",
+      "L-6",
+      "R-16",
+      "R-6",
+      "V-12"
+    ],
+    "planetStableIds": [
+      "ac:legends:aaeton",
+      "ac:canon:ahch-to",
+      "ac:canon:csilla",
+      "ac:legends:alashan",
+      "ac:canon:dathomir",
+      "ac:legends:eshan",
+      "ac:canon:korriban",
+      "ac:legends:korriban",
+      "ac:legends:lenico-iv",
+      "ac:legends:a-foroon",
+      "ac:legends:ossus",
+      "ac:canon:yavin-4"
+    ]
+  },
+  {
+    "stableId": "rt:triellus-trade-route",
+    "name": "Triellus Trade Route",
+    "grids": [
+      "R-16"
+    ],
+    "planetStableIds": [
+      "ac:legends:a-foroon",
+      "ac:canon:tatooine"
+    ]
+  }
+]

@@ -10,7 +10,8 @@ export const SETTING_KEYS = {
   debugMode: "debugMode",
   advancedMaxTier: "advancedMaxTier",
   advancedIncludeObscureRoutes: "advancedIncludeObscureRoutes",
-  advancedTier5ExtraDc: "advancedTier5ExtraDc"
+  advancedTier5ExtraDc: "advancedTier5ExtraDc",
+  featureAstroCom: "featureAstroCom"
 };
 
 export function registerSettings() {
@@ -112,5 +113,14 @@ export function registerSettings() {
     type: Number,
     default: 0,
     range: { min: 0, max: 10, step: 1 }
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.featureAstroCom, {
+    name: "KAKEMAN89SDATACRON.Settings.FeatureAstroCom.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.FeatureAstroCom.Hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
   });
 }

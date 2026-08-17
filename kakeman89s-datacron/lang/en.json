@@ -4,7 +4,24 @@
     "SceneControl": {
       "Open": "Open Kakeman89s Datacron",
       "OpenHyperspace": "Open Hyperspace Navigation",
-      "OpenDroidAlly": "Open Droid Ally Pricing"
+      "OpenDroidAlly": "Open Droid Ally Pricing",
+      "OpenAstroCom": "Open AstroCom"
+    },
+    "AstroCom": {
+      "Title": "AstroCom",
+      "FiltersLabel": "AstroCom filters",
+      "ResultsLabel": "AstroCom results",
+      "Continuity": "Continuity",
+      "Canon": "Canon",
+      "Legends": "Legends",
+      "Any": "Any",
+      "Region": "Region",
+      "Sector": "Sector",
+      "System": "System",
+      "Grid": "Grid",
+      "Route": "Route",
+      "Search": "Name or alias",
+      "Rebuild": "Rebuild PoC journals"
     },
     "App": {
       "Title": "Kakeman89s Datacron",
@@ -196,6 +213,10 @@
       "AdvancedTier5ExtraDc": {
         "Name": "Advanced mode - extra DC per tier-5 hop",
         "Hint": "Added to the piloting DC once for each hop that uses a tier-5 lane, on top of any per-lane DC bonus in the data. Use 0 to rely on data only."
+      },
+      "FeatureAstroCom": {
+        "Name": "Enable AstroCom",
+        "Hint": "Show the GM AstroCom scene-control tool."
       }
     },
     "Results": {

@@ -1,0 +1,93 @@
+<div class="astrocom-shell" data-app-id="{{appId}}">
+  <header class="datacron-header">
+    <h1 class="datacron-title">{{localize "KAKEMAN89SDATACRON.AstroCom.Title"}}</h1>
+    {{#if statusMessage}}
+      <p class="astrocom-status" data-status="{{status}}" role="status">{{statusMessage}}</p>
+    {{/if}}
+  </header>
+
+  <form class="datacron-panel astrocom-filters" aria-label="{{localize "KAKEMAN89SDATACRON.AstroCom.FiltersLabel"}}">
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-continuity">{{localize "KAKEMAN89SDATACRON.AstroCom.Continuity"}}</label>
+      <select id="{{appId}}-continuity" class="datacron-select" data-astrocom-filter="continuity">
+        <option value="" {{#if continuityAnySelected}}selected{{/if}}>{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        <option value="canon" {{#if continuityCanonSelected}}selected{{/if}}>{{localize "KAKEMAN89SDATACRON.AstroCom.Canon"}}</option>
+        <option value="legends" {{#if continuityLegendsSelected}}selected{{/if}}>{{localize "KAKEMAN89SDATACRON.AstroCom.Legends"}}</option>
+      </select>
+    </div>
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-region">{{localize "KAKEMAN89SDATACRON.AstroCom.Region"}}</label>
+      <select id="{{appId}}-region" class="datacron-select" data-astrocom-filter="region">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each regions}}
+          <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-sector">{{localize "KAKEMAN89SDATACRON.AstroCom.Sector"}}</label>
+      <select id="{{appId}}-sector" class="datacron-select" data-astrocom-filter="sector">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each sectors}}
+          <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-system">{{localize "KAKEMAN89SDATACRON.AstroCom.System"}}</label>
+      <select id="{{appId}}-system" class="datacron-select" data-astrocom-filter="system">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each systems}}
+          <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-grid">{{localize "KAKEMAN89SDATACRON.AstroCom.Grid"}}</label>
+      <select id="{{appId}}-grid" class="datacron-select" data-astrocom-filter="grid">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each grids}}
+          <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-route">{{localize "KAKEMAN89SDATACRON.AstroCom.Route"}}</label>
+      <select id="{{appId}}-route" class="datacron-select" data-astrocom-filter="route">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each routes}}
+          <option value="{{stableId}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field astrocom-search">
+      <label class="datacron-label" for="{{appId}}-search">{{localize "KAKEMAN89SDATACRON.AstroCom.Search"}}</label>
+      <input
+        id="{{appId}}-search"
+        class="datacron-input"
+        type="search"
+        value="{{nameOrAlias}}"
+        data-astrocom-filter="nameOrAlias"
+      />
+    </div>
+  </form>
+
+  <section class="datacron-panel" aria-label="{{localize "KAKEMAN89SDATACRON.AstroCom.ResultsLabel"}}">
+    <ul class="astrocom-results">
+      {{#each results}}
+        <li>
+          <button type="button" class="astrocom-result" data-astrocom-open="canonical" data-uuid="{{uuid}}">{{name}}</button>
+          {{#if relatedUuid}}
+            <button type="button" class="astrocom-related" data-astrocom-open="related" data-uuid="{{relatedUuid}}">{{relatedName}}</button>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{#if isGM}}
+    <footer class="datacron-panel">
+      <button type="button" data-astrocom-rebuild="true">{{localize "KAKEMAN89SDATACRON.AstroCom.Rebuild"}}</button>
+    </footer>
+  {{/if}}
+</div>

@@ -1,0 +1,17 @@
+{
+  "packArrangement": "separate-canon-and-legends-journal-packs",
+  "folderPattern": "Region -> Sector -> System",
+  "packFolderMaxDepth": 3,
+  "worldFolderMaxDepth": 4,
+  "optionAPackFits": false,
+  "optionBPackFits": true,
+  "routesAsFolders": false,
+  "gridAsFolders": false,
+  "duplicateCanonicalJournals": false,
+  "rationale": [
+    "Foundry v13 pack folder depth is 3.",
+    "Continuity -> Region -> Sector -> System is depth 4 and does not fit a pack.",
+    "Separate Canon and Legends packs keep continuity distinct while using Region -> Sector -> System at depth 3.",
+    "Grid and route browsing remain metadata indexes pointing at the same canonical journals."
+  ]
+}

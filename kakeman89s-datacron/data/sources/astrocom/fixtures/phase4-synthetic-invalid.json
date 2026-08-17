@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "phase4-synthetic-invalid",
+  "attribution": "Kakeman89",
+  "notes": "Intentionally invalid synthetic records for Phase 4 rejection tests.",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-aurek-canon",
+      "name": "Test World Duplicate Id",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Duplicate stable ID against the valid Aurek record.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "duplicate-stable-id" },
+      "externalLinks": []
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-duplicate-name-canon",
+      "name": "Test World Aurek",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Duplicate display name and continuity against the valid Aurek record.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "duplicate-display-name" },
+      "externalLinks": []
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-invalid-continuity",
+      "name": "Test World Invalid Continuity",
+      "continuity": "both",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Continuity both is not a permitted Phase 4 value.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "invalid-continuity" },
+      "externalLinks": []
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-invalid-class",
+      "name": "Test World Invalid Class",
+      "continuity": "canon",
+      "classification": "starship",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Classification starship is not permitted.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "invalid-classification" },
+      "externalLinks": []
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-bad-url",
+      "name": "Test World Bad Url",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Unsafe external link.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "invalid-url" },
+      "externalLinks": [
+        {
+          "label": "Unsafe",
+          "url": "javascript:alert(1)"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "stableId": "ac-test-world-malformed-url",
+      "name": "Test World Malformed Url",
+      "continuity": "canon",
+      "classification": "planet",
+      "aliases": [],
+      "eraNotes": [],
+      "description": "Malformed external link.",
+      "astrography": {
+        "region": { "presence": "present", "value": "Test Region Coreward" },
+        "sector": { "presence": "present", "value": "Test Sector One" },
+        "system": { "presence": "present", "value": "Example System One" },
+        "grid": { "presence": "present", "value": "Fixture-A1" },
+        "routes": []
+      },
+      "physical": { "presence": "missing" },
+      "societal": { "presence": "missing" },
+      "economics": { "presence": "missing" },
+      "sourceMetadata": { "fixtureId": "phase4-synthetic-invalid", "recordRole": "malformed-url" },
+      "externalLinks": [
+        {
+          "label": "Malformed",
+          "url": "not a url"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "stableId": "rt-synthetic-alpha",
+    "name": "Synthetic Route Alpha",
+    "grids": [
+      "Fixture-A1",
+      "Fixture-A2"
+    ],
+    "planetStableIds": [
+      "ac-test-world-aurek-canon",
+      "ac-test-world-forn-canon",
+      "ac-test-world-grek-canon"
+    ]
+  },
+  {
+    "stableId": "rt-synthetic-beta",
+    "name": "Synthetic Route Beta",
+    "grids": [
+      "Fixture-A2"
+    ],
+    "planetStableIds": [
+      "ac-test-world-grek-canon"
+    ]
+  }
+]

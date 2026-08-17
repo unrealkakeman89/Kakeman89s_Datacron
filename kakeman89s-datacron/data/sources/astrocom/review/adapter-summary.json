@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "astroCount": 2029,
+  "dataCount": 5444,
+  "routeEdgeCount": 2094,
+  "intermediateCount": 2029,
+  "namedRouteCount": 69,
+  "unresolvedRouteEndpoints": 0,
+  "ambiguousRouteEndpoints": 2,
+  "aliasCollisions": 0,
+  "dataAmbiguous": 2,
+  "statusCounts": {
+    "draft": 2027,
+    "quarantined": 2,
+    "approved": 0,
+    "rejected": 0
+  },
+  "quarantinedCount": 2,
+  "reviewQueueCount": 2029,
+  "emitCount": 0,
+  "imageFieldsIgnored": true,
+  "continuityNeverAutoApproved": true
+}
