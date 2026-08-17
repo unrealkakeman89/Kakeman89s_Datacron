@@ -1,7 +1,17 @@
 import { MODULE_ID } from "../logger.js";
-import { filterIndex, relatedEntry, uniqueValues } from "./index-query.js";
+import { resolveBrowserState } from "./browser-state.js";
+import { emptyBrowserFilters, filterIndex, relatedEntry, sortIndexEntries, uniqueValues } from "./index-query.js";
+import {
+  canBrowseAstroCom,
+  canRunAstroComDevRebuild,
+  canViewAstroComSourceDetail
+} from "./permissions.js";
 import { loadGeneratedAstroCom, loadLiveAstroComIndex, openAstroComJournal, rebuildAstroCom } from "./rebuild.js";
-import { resolveBrowserEntries } from "./runtime-guards.js";
+import {
+  ASTROCOM_PILOT_WORLD_ID,
+  ASTROCOM_POC_WORLD_ID,
+  resolveBrowserEntries
+} from "./runtime-guards.js";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -22,6 +32,8 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   route = "";
 
+  classification = "";
+
   nameOrAlias = "";
 
   /** @type {object | null} */
@@ -30,8 +42,20 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @type {object[]} */
   liveIndex = [];
 
+  /** @type {object[]} */
+  requestedPacks = [];
+
+  foundPacks = 0;
+
+  requestedPackCount = 0;
+
   /** @type {string} */
   statusMessage = "";
+
+  /** @type {string | null} */
+  loadError = null;
+
+  loading = false;
 
   /** @type {AbortController | null} */
   _abort = null;
@@ -64,10 +88,30 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
     return game.i18n.localize("KAKEMAN89SDATACRON.AstroCom.Title");
   }
 
+  _clearFilters() {
+    Object.assign(this, emptyBrowserFilters());
+    this._searchCaret = null;
+  }
+
   async _loadData() {
-    this.generated ??= await loadGeneratedAstroCom();
-    const live = await loadLiveAstroComIndex();
-    this.liveIndex = live.entries;
+    this.loading = true;
+    this.loadError = null;
+    try {
+      this.generated ??= await loadGeneratedAstroCom();
+      const live = await loadLiveAstroComIndex();
+      this.liveIndex = live.entries;
+      this.requestedPacks = live.requested ?? [];
+      this.foundPacks = live.foundPacks ?? this.requestedPacks.filter((pack) => pack.found !== false).length;
+      this.requestedPackCount = live.requestedPackCount ?? this.requestedPacks.length;
+    } catch (error) {
+      this.loadError = error;
+      this.liveIndex = [];
+      this.requestedPacks = [];
+      this.foundPacks = 0;
+      this.requestedPackCount = 0;
+    } finally {
+      this.loading = false;
+    }
   }
 
   _index() {
@@ -78,15 +122,27 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
     await this._loadData();
     const resolved = resolveBrowserEntries(this.liveIndex);
     const index = resolved.entries;
-    const filtered = filterIndex(index, {
-      continuity: this.continuity,
-      region: this.region,
-      sector: this.sector,
-      system: this.system,
-      grid: this.grid,
-      route: this.route,
-      nameOrAlias: this.nameOrAlias
-    }).map((entry) => {
+    const browserState = resolveBrowserState({
+      featureEnabled: true,
+      loading: this.loading,
+      error: this.loadError,
+      requestedPacks: this.requestedPacks,
+      foundPacks: this.foundPacks,
+      entryCount: index.length
+    });
+
+    const filtered = sortIndexEntries(
+      filterIndex(index, {
+        continuity: this.continuity,
+        region: this.region,
+        sector: this.sector,
+        system: this.system,
+        grid: this.grid,
+        route: this.route,
+        classification: this.classification,
+        nameOrAlias: this.nameOrAlias
+      })
+    ).map((entry) => {
       const related = relatedEntry(index, entry);
       return {
         name: entry.name,
@@ -96,12 +152,20 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
       };
     });
 
+    const statusFromState = browserState.messageKey
+      ? game.i18n.localize(browserState.messageKey)
+      : "";
+
     return {
       appId: this.id,
-      statusMessage:
-        this.statusMessage
-        || (resolved.source === "live" ? this.generated.summary?.message || "" : ""),
-      status: resolved.source === "live" ? this.generated.summary?.status ?? "" : "empty",
+      statusMessage: this.statusMessage || statusFromState || (this.generated?.summary?.message ?? ""),
+      status: browserState.state,
+      resultCountLabel: game.i18n.format("KAKEMAN89SDATACRON.AstroCom.ResultCount", {
+        count: filtered.length,
+        total: index.length
+      }),
+      resultCount: filtered.length,
+      totalCount: index.length,
       continuityCanonSelected: this.continuity === "canon",
       continuityLegendsSelected: this.continuity === "legends",
       continuityAnySelected: this.continuity === "",
@@ -109,15 +173,21 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
       sectors: optionList(uniqueValues(index, "sector"), this.sector),
       systems: optionList(uniqueValues(index, "system"), this.system),
       grids: optionList(uniqueValues(index, "grid"), this.grid),
-      routes: resolved.source === "live"
-        ? (this.generated.routes ?? []).map((route) => ({
+      classifications: optionList(uniqueValues(index, "classification"), this.classification),
+      routes: this.foundPacks > 0
+        ? (this.generated?.routes ?? []).map((route) => ({
           ...route,
           selected: route.stableId === this.route
         }))
         : [],
       nameOrAlias: this.nameOrAlias,
       results: filtered,
-      isGM: game.user?.isGM ?? false
+      canBrowse: canBrowseAstroCom(game.user),
+      canViewSourceDetail: canViewAstroComSourceDetail(game.user),
+      canRebuild: canRunAstroComDevRebuild(game.user, game.world?.id, {
+        pocWorldId: ASTROCOM_POC_WORLD_ID,
+        pilotWorldId: ASTROCOM_PILOT_WORLD_ID
+      })
     };
   }
 
@@ -128,6 +198,14 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   async _onRebuild() {
+    if (!canRunAstroComDevRebuild(game.user, game.world?.id, {
+      pocWorldId: ASTROCOM_POC_WORLD_ID,
+      pilotWorldId: ASTROCOM_PILOT_WORLD_ID
+    })) {
+      this.statusMessage = game.i18n.localize("KAKEMAN89SDATACRON.AstroCom.RebuildRefused");
+      await this.render(true);
+      return;
+    }
     this.statusMessage = "";
     try {
       const summary = await rebuildAstroCom();
@@ -135,6 +213,9 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
       this.generated = await loadGeneratedAstroCom();
       const live = await loadLiveAstroComIndex();
       this.liveIndex = live.entries;
+      this.requestedPacks = live.requested ?? [];
+      this.foundPacks = live.foundPacks ?? 0;
+      this.requestedPackCount = live.requestedPackCount ?? 0;
     } catch (error) {
       this.statusMessage = String(error?.message ?? error);
     }
@@ -185,6 +266,15 @@ export class AstroComApp extends HandlebarsApplicationMixin(ApplicationV2) {
         { signal }
       );
     }
+
+    element.querySelector("[data-astrocom-clear]")?.addEventListener(
+      "click",
+      () => {
+        this._clearFilters();
+        void this.render(true);
+      },
+      { signal }
+    );
 
     element.querySelector("[data-astrocom-rebuild]")?.addEventListener(
       "click",

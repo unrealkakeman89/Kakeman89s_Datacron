@@ -2,7 +2,7 @@
   {
     "_id": "736ff2c51f3ba8cb",
     "name": "Ahch-To (Canon)",
-    "folder": "bad081bd2d58a2d7",
+    "folder": "08c9a2a2fece189c",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.736ff2c51f3ba8cb",
     "flags": {
@@ -11,6 +11,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Unknown Regions",
+      "regionClassifications": [],
       "sector": "Ahch Sector",
       "system": null,
       "grid": "E-13",
@@ -29,7 +30,7 @@
   {
     "_id": "3e7b2a0fd1598fb9",
     "name": "Alderaan (Canon)",
-    "folder": "9e30005d836a709f",
+    "folder": "14553e6f0749b879",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.3e7b2a0fd1598fb9",
     "flags": {
@@ -38,8 +39,20 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [
+        {
+          "value": "Core",
+          "relation": "primary",
+          "presence": "present"
+        },
+        {
+          "value": "The Interior",
+          "relation": "subregion",
+          "presence": "present"
+        }
+      ],
       "sector": "Alderaan Sector",
-      "system": null,
+      "system": "Alderaan system",
       "grid": "M-10",
       "gridPresence": "present",
       "routes": [
@@ -56,7 +69,7 @@
   {
     "_id": "798b722e9003799c",
     "name": "Bothawui (Canon)",
-    "folder": "39f47630512ee676",
+    "folder": "f7b4f5254eee3243",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.798b722e9003799c",
     "flags": {
@@ -65,6 +78,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Mid Rim",
+      "regionClassifications": [],
       "sector": "Bothan Space",
       "system": null,
       "grid": "R-14",
@@ -85,7 +99,7 @@
   {
     "_id": "1af848dcc9c5a7f2",
     "name": "Byss (Canon)",
-    "folder": "34ad27b2af620b1c",
+    "folder": "1979707fd812c931",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.1af848dcc9c5a7f2",
     "flags": {
@@ -94,6 +108,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Deep Core",
+      "regionClassifications": [],
       "sector": "Byss Sector",
       "system": null,
       "grid": "K-11",
@@ -112,7 +127,7 @@
   {
     "_id": "8661b4ee0c0dd25c",
     "name": "Corellia (Canon)",
-    "folder": "6bb24bc2370cfca8",
+    "folder": "25aa4b0f5d29a6fd",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.8661b4ee0c0dd25c",
     "flags": {
@@ -121,6 +136,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [],
       "sector": "Corellian Sector",
       "system": null,
       "grid": "M-11",
@@ -145,7 +161,7 @@
   {
     "_id": "04da095f95652b2d",
     "name": "Coruscant (Canon)",
-    "folder": "1e95c6c989e4dfef",
+    "folder": "501f05bea1868c94",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.04da095f95652b2d",
     "flags": {
@@ -154,6 +170,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [],
       "sector": "Coruscant Sector",
       "system": null,
       "grid": "L-9",
@@ -178,7 +195,7 @@
   {
     "_id": "a522e02b0c0f1f5d",
     "name": "Csilla (Canon)",
-    "folder": "f0ea1940a1e0bf7a",
+    "folder": "4eb76d751046dc47",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.a522e02b0c0f1f5d",
     "flags": {
@@ -187,6 +204,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Unknown Regions",
+      "regionClassifications": [],
       "sector": "Chiss Ascendancy",
       "system": null,
       "grid": "F-8",
@@ -207,7 +225,7 @@
   {
     "_id": "5623aa7b7c65405d",
     "name": "Dathomir (Canon)",
-    "folder": "83fbbdcccff643ce",
+    "folder": "5a30dd213e52665b",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.5623aa7b7c65405d",
     "flags": {
@@ -216,6 +234,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Quelii",
       "system": null,
       "grid": "O-6",
@@ -234,7 +253,7 @@
   {
     "_id": "05cd175d2205cf87",
     "name": "Endor (Canon)",
-    "folder": "7b33729ca7c21536",
+    "folder": "32b8b7b189512483",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.05cd175d2205cf87",
     "flags": {
@@ -243,6 +262,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Moddell",
       "system": null,
       "grid": "H-16",
@@ -263,7 +283,7 @@
   {
     "_id": "e16990771bee73c9",
     "name": "Hosnian Prime (Canon)",
-    "folder": "555d53cfcaad3155",
+    "folder": "9df06f747cd3095a",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.e16990771bee73c9",
     "flags": {
@@ -272,6 +292,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [],
       "sector": "Hosnian Sector",
       "system": null,
       "grid": "M-12",
@@ -290,7 +311,7 @@
   {
     "_id": "92c90103daa41701",
     "name": "Kailor (Canon)",
-    "folder": "12fa32fcd8d5006e",
+    "folder": "a03ce080d00efc92",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.92c90103daa41701",
     "flags": {
@@ -301,6 +322,7 @@
         "Kailor V"
       ],
       "region": "Core",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "L-10",
@@ -319,7 +341,7 @@
   {
     "_id": "ad003ca5445ffdd7",
     "name": "Korriban (Canon)",
-    "folder": "7808ca5a2a58f724",
+    "folder": "0f1c09a700039619",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.ad003ca5445ffdd7",
     "flags": {
@@ -328,6 +350,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Sith Worlds",
       "system": null,
       "grid": "R-5",
@@ -346,7 +369,7 @@
   {
     "_id": "acad152c213d5f92",
     "name": "Tatooine (Canon)",
-    "folder": "89a22c185646599e",
+    "folder": "ff52c92d0359c32b",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.acad152c213d5f92",
     "flags": {
@@ -355,6 +378,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Arkanis",
       "system": null,
       "grid": "R-16",
@@ -375,7 +399,7 @@
   {
     "_id": "ede4f7abe3b3fca1",
     "name": "Yavin 4 (Canon)",
-    "folder": "1636227c483fb792",
+    "folder": "a8f6f21157e6315f",
     "packKey": "astrocom-canon",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-canon.JournalEntry.ede4f7abe3b3fca1",
     "flags": {
@@ -384,6 +408,7 @@
       "continuity": "canon",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Gordian Reach",
       "system": null,
       "grid": "V-12",
@@ -402,7 +427,7 @@
   {
     "_id": "ef35d2bf72aa35ad",
     "name": "A-Foroon (Legends)",
-    "folder": "f8be2d1bbbe7bfed",
+    "folder": "e2a6cf704b911c12",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.ef35d2bf72aa35ad",
     "flags": {
@@ -411,6 +436,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Arkanis",
       "system": null,
       "grid": "R-16",
@@ -431,7 +457,7 @@
   {
     "_id": "527b04166cfa1dd4",
     "name": "Aaeton (Legends)",
-    "folder": "9f58c6df16f127cd",
+    "folder": "2b3913a3ce222649",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.527b04166cfa1dd4",
     "flags": {
@@ -440,6 +466,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "K-9",
@@ -458,7 +485,7 @@
   {
     "_id": "c595bba0ed766552",
     "name": "Alashan (Legends)",
-    "folder": "7bf87d72ff350248",
+    "folder": "73d5ccc6b702a68c",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.c595bba0ed766552",
     "flags": {
@@ -467,6 +494,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Wild Space",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "J-5",
@@ -485,7 +513,7 @@
   {
     "_id": "a766f7d3c82f2611",
     "name": "Alee (Legends)",
-    "folder": "9faf4f83ed5a3fc9",
+    "folder": "77f1bbf8cf6980be",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.a766f7d3c82f2611",
     "flags": {
@@ -494,6 +522,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Hutt Space",
+      "regionClassifications": [],
       "sector": "Hutt Space",
       "system": null,
       "grid": "R-9",
@@ -512,7 +541,7 @@
   {
     "_id": "9112d118536c9faa",
     "name": "Allanteen (Legends)",
-    "folder": "c608bf50a989c512",
+    "folder": "88a9c8c5ff7971df",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.9112d118536c9faa",
     "flags": {
@@ -521,6 +550,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Expansion Region",
+      "regionClassifications": [],
       "sector": "Tynna",
       "system": null,
       "grid": "O-14",
@@ -541,7 +571,7 @@
   {
     "_id": "fb7a23995ddef0f7",
     "name": "Byblos (Legends)",
-    "folder": "441131d67dc1901c",
+    "folder": "ecc6ca7abe63f6a0",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.fb7a23995ddef0f7",
     "flags": {
@@ -550,6 +580,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Colonies",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "M-12",
@@ -568,7 +599,7 @@
   {
     "_id": "de5e8aaf0c1b72a9",
     "name": "Eshan (Legends)",
-    "folder": "39ef0f001829c306",
+    "folder": "18fd538491a74b2a",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.de5e8aaf0c1b72a9",
     "flags": {
@@ -577,6 +608,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Inner Rim",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "N-8",
@@ -595,7 +627,7 @@
   {
     "_id": "b8dcb07af866db0c",
     "name": "Galactic Center (Legends)",
-    "folder": "e3be53b50783cc8f",
+    "folder": "6a4d90718dae6d93",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.b8dcb07af866db0c",
     "flags": {
@@ -604,6 +636,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Deep Core",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": null,
@@ -618,7 +651,7 @@
   {
     "_id": "dce5365a4749cb98",
     "name": "Korriban (Legends)",
-    "folder": "7f6d382d4672c7b3",
+    "folder": "089a53d211472c28",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.dce5365a4749cb98",
     "flags": {
@@ -627,6 +660,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Sith Worlds",
       "system": null,
       "grid": "R-5",
@@ -645,7 +679,7 @@
   {
     "_id": "02acdf1499451f6e",
     "name": "Lenico IV (Legends)",
-    "folder": "6b5b306319cc7f9d",
+    "folder": "940c96d8e7c3af02",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.02acdf1499451f6e",
     "flags": {
@@ -654,6 +688,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Cademimu",
       "system": null,
       "grid": "L-6",
@@ -672,7 +707,7 @@
   {
     "_id": "dd88d7afa651bd25",
     "name": "Metellos (Legends)",
-    "folder": "9f58c6df16f127cd",
+    "folder": "2b3913a3ce222649",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.dd88d7afa651bd25",
     "flags": {
@@ -681,6 +716,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Core",
+      "regionClassifications": [],
       "sector": null,
       "system": null,
       "grid": "K-9",
@@ -699,7 +735,7 @@
   {
     "_id": "94b7cf47481bc931",
     "name": "Ossus (Legends)",
-    "folder": "eb2ee4a9be9a7b9f",
+    "folder": "4fa8a89e9aaf2c44",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.94b7cf47481bc931",
     "flags": {
@@ -708,6 +744,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Auril",
       "system": null,
       "grid": "R-6",
@@ -726,7 +763,7 @@
   {
     "_id": "3b9704fbe9e3ad31",
     "name": "Rekkiad (Legends)",
-    "folder": "5ba88f185a4b6586",
+    "folder": "9f60a22dff729c93",
     "packKey": "astrocom-legends",
     "uuid": "Compendium.kakeman89s-datacron.astrocom-legends.JournalEntry.3b9704fbe9e3ad31",
     "flags": {
@@ -735,6 +772,7 @@
       "continuity": "legends",
       "aliases": [],
       "region": "Outer Rim",
+      "regionClassifications": [],
       "sector": "Chorlian",
       "system": null,
       "grid": null,

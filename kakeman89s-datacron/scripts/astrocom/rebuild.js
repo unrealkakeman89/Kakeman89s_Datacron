@@ -5,6 +5,7 @@ import { summarizeIncremental } from "./incremental.js";
 import {
   ASTROCOM_PILOT_WORLD_ID,
   ASTROCOM_POC_WORLD_ID,
+  assertAstroComImmutablePackWorld,
   assertAstroComPilotWorld,
   assertAstroComPocWorld
 } from "./runtime-guards.js";
@@ -50,17 +51,43 @@ export async function loadGeneratedPilot() {
 }
 
 export async function loadGeneratedAstroCom() {
-  if (game.world?.id === ASTROCOM_PILOT_WORLD_ID) return loadGeneratedPilot();
-  return loadGeneratedPoc();
+  const worldId = game.world?.id;
+  if (worldId === ASTROCOM_POC_WORLD_ID) return loadGeneratedPoc();
+  // Pilot JSON backs route lists and status for Phase 5/6 module packs.
+  return loadGeneratedPilot();
 }
 
 function findPackByLabel(label) {
   return game.packs.find((pack) => pack.metadata?.label === label && pack.documentName === "JournalEntry") ?? null;
 }
 
-function livePackLabels() {
-  if (game.world?.id === ASTROCOM_PILOT_WORLD_ID) return Object.values(MODULE_PACK_LABELS);
-  return Object.values(POC_PACK_LABELS);
+function findPackByCollection(collection) {
+  return game.packs.get(collection) ?? null;
+}
+
+/**
+ * Prefer shipped module packs (Option A) whenever present.
+ * Fall back to Phase 4 PoC world packs only in the PoC world.
+ */
+export function resolveLivePackTargets(worldId = game.world?.id) {
+  const moduleTargets = Object.values(MODULE_PACK_KEYS).map((name) => ({
+    kind: "module",
+    name,
+    label: MODULE_PACK_LABELS[name],
+    collection: `${MODULE_ID}.${name}`
+  }));
+  const foundModule = moduleTargets.filter((target) => findPackByCollection(target.collection) || findPackByLabel(target.label));
+  if (foundModule.length > 0) return moduleTargets;
+
+  if (worldId === ASTROCOM_POC_WORLD_ID) {
+    return Object.entries(POC_PACK_LABELS).map(([name, label]) => ({
+      kind: "world",
+      name,
+      label,
+      collection: null
+    }));
+  }
+  return moduleTargets;
 }
 
 async function ensureWorldPack(packKey) {
@@ -125,6 +152,7 @@ export function normalizeIndexEntry(entry, pack) {
       continuity: raw.continuity ?? null,
       aliases: raw.aliases ?? [],
       region: raw.region ?? null,
+      regionClassifications: raw.regionClassifications ?? [],
       sector: raw.sector ?? null,
       system: raw.system ?? null,
       grid: raw.grid ?? null,
@@ -138,19 +166,34 @@ export function normalizeIndexEntry(entry, pack) {
 }
 
 export async function loadLiveAstroComIndex() {
+  const targets = resolveLivePackTargets();
   const entries = [];
   const requested = [];
-  for (const label of livePackLabels()) {
-    const pack = findPackByLabel(label);
+  let foundPacks = 0;
+
+  for (const target of targets) {
+    const pack = (target.collection && findPackByCollection(target.collection)) || findPackByLabel(target.label);
+    requested.push({
+      label: target.label,
+      collection: target.collection ?? pack?.collection ?? null,
+      found: Boolean(pack)
+    });
     if (!pack) continue;
+    foundPacks += 1;
     const index = await pack.getIndex({ fields: [...INDEX_FIELDS] });
-    requested.push({ collection: pack.collection, size: index.size, fields: [...INDEX_FIELDS] });
+    requested[requested.length - 1].size = index.size;
     for (const entry of index.contents) {
       const normalized = normalizeIndexEntry(entry, pack);
       if (normalized.flags.stableId) entries.push(normalized);
     }
   }
-  return { entries, requested };
+
+  return {
+    entries,
+    requested,
+    foundPacks,
+    requestedPackCount: targets.length
+  };
 }
 
 function snapshotWorld() {
@@ -369,6 +412,11 @@ export async function rebuildAstroComPilot() {
 
 export async function rebuildAstroCom() {
   const worldId = game.world?.id;
+  const immutable = assertAstroComImmutablePackWorld(worldId);
+  if (!immutable.ok) {
+    logWarn(immutable.message);
+    return immutable;
+  }
   if (worldId === ASTROCOM_POC_WORLD_ID) return rebuildAstroComPoc();
   if (worldId === ASTROCOM_PILOT_WORLD_ID) return rebuildAstroComPilot();
   const message = `AstroCom rebuild refused. Active world is ${worldId ?? "none"}.`;

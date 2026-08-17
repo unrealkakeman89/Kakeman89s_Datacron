@@ -60,6 +60,7 @@ function buildIndexEntry(journal, record, routeNames) {
       continuity: flags.continuity,
       aliases: flags.aliases,
       region: flags.region,
+      regionClassifications: flags.regionClassifications,
       sector: flags.sector,
       system: flags.system,
       grid: flags.grid,

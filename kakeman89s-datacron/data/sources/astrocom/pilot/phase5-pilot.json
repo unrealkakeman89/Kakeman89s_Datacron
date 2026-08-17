@@ -163,7 +163,8 @@
           "matchValue": "Alderaan"
         },
         "system": {
-          "presence": "missing"
+          "presence": "present",
+          "value": "Alderaan system"
         },
         "grid": {
           "presence": "present",
@@ -174,6 +175,18 @@
           "rt:commenor-run"
         ]
       },
+      "regionClassifications": [
+        {
+          "value": "Core",
+          "relation": "primary",
+          "presence": "present"
+        },
+        {
+          "value": "The Interior",
+          "relation": "subregion",
+          "presence": "present"
+        }
+      ],
       "physical": {
         "presence": "present",
         "atmosphere": null,
@@ -194,18 +207,40 @@
         "sourceIndex": 35,
         "sourceName": "Alderaan"
       },
+      "fieldProvenance": {
+        "astrography.system": [
+          {
+            "sourceId": "MAINTAINER-SCREENSHOT-2026-08-17",
+            "sourceLocator": "maintainer-supplied screenshot facts",
+            "method": "manual-curation",
+            "candidateValue": "Alderaan system",
+            "reviewStatus": "approved",
+            "reviewedBy": "Kakeman89",
+            "lastReviewedAt": "2026-08-17",
+            "notes": "Verified against maintainer-supplied screenshot facts.",
+            "continuityScope": "canon"
+          }
+        ],
+        "regionClassifications": [
+          {
+            "sourceId": "MAINTAINER-SCREENSHOT-2026-08-17",
+            "sourceLocator": "maintainer-supplied screenshot facts",
+            "method": "manual-curation",
+            "candidateValue": [
+              "Core",
+              "The Interior"
+            ],
+            "reviewStatus": "approved",
+            "reviewedBy": "Kakeman89",
+            "lastReviewedAt": "2026-08-17",
+            "notes": "Verified against maintainer-supplied screenshot facts.",
+            "continuityScope": "canon"
+          }
+        ]
+      },
       "externalLinks": [],
       "reviewStatus": "approved",
-      "conflictFlags": [
-        {
-          "code": "missing-system",
-          "severity": "info",
-          "message": "System is absent in ASTRO-001 and is recorded as missing.",
-          "fields": [
-            "astrography.system"
-          ]
-        }
-      ],
+      "conflictFlags": [],
       "adapterSources": [
         "ASTRO-001",
         "DATA-001",
@@ -229,7 +264,7 @@
       ],
       "lastReviewedAt": "2026-08-17",
       "reviewedBy": "Kakeman89",
-      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints.",
+      "reviewNotes": "Kakeman89 approved this ASTRO-001 record for the Phase 5 pilot. Geography follows ASTRO-001; DATA-001 disagreements remain as warnings. Continuity is reviewer-assigned, not inferred from hints. Phase 6 correction (2026-08-17): maintainer-supplied screenshot facts verified Alderaan system and The Interior subregion; prior missing-system flag cleared.",
       "typeHint": "Terrestrial"
     },
     {

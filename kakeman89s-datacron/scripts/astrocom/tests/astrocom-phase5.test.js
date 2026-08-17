@@ -270,7 +270,7 @@ test("module pack generation uses module collection IDs and fixture false", () =
   assert.equal(result.status, "success");
   assert.equal(result.journalsTwoPack[0].flags["kakeman89s-datacron"].fixture, false);
   assert.match(result.journalsTwoPack[0].uuid, /^Compendium\.kakeman89s-datacron\.astrocom-canon\.JournalEntry\./);
-  assert.match(result.journalsTwoPack[0].pages[0].text.content, /not documented/);
+  assert.match(result.journalsTwoPack[0].pages[0].text.content, /not yet sourced/);
 });
 
 test("generated pilot contains approved-only real records and both continuities", async () => {

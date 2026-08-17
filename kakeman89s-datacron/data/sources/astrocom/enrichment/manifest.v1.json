@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "ASTROCOM-MANUAL-ENRICHMENT-2026-08-17",
+  "attribution": "Kakeman89",
+  "records": [
+    {
+      "stableId": "ac:canon:alderaan",
+      "evidenceFile": "evidence/ac-canon-alderaan-system.v1.json",
+      "purpose": "Reviewed system and subregion correction"
+    }
+  ]
+}

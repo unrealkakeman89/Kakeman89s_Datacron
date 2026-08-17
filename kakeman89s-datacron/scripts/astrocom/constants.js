@@ -24,7 +24,7 @@ export const PRESENCE = Object.freeze({
 
 export const PRESENCE_LABEL = Object.freeze({
   present: null,
-  missing: "not documented",
+  missing: "not yet sourced",
   unknown: "unknown",
   notApplicable: "not applicable",
   omitted: "intentionally omitted"
@@ -46,6 +46,7 @@ export const INDEX_FIELDS = Object.freeze([
   "flags.kakeman89s-datacron.continuity",
   "flags.kakeman89s-datacron.aliases",
   "flags.kakeman89s-datacron.region",
+  "flags.kakeman89s-datacron.regionClassifications",
   "flags.kakeman89s-datacron.sector",
   "flags.kakeman89s-datacron.system",
   "flags.kakeman89s-datacron.grid",

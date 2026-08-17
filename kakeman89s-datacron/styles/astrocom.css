@@ -22,12 +22,20 @@
   grid-column: 1 / -1;
 }
 
-.kakeman89s-datacron-astrocom .astrocom-status[data-status="partial"] {
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="partial"],
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="stale"] {
   color: #ffd278;
 }
 
-.kakeman89s-datacron-astrocom .astrocom-status[data-status="failure"] {
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="failure"],
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="error"],
+.kakeman89s-datacron-astrocom .astrocom-status[data-status="unavailable"] {
   color: #ff9a9a;
+}
+
+.kakeman89s-datacron-astrocom .astrocom-result-count {
+  margin: 0 0 0.75rem;
+  opacity: 0.9;
 }
 
 .kakeman89s-datacron-astrocom .astrocom-results {

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "stableId": "ac:canon:alderaan",
+  "attribution": "Kakeman89",
+  "sourceId": "MAINTAINER-SCREENSHOT-2026-08-17",
+  "method": "manual-curation",
+  "reviewStatus": "approved",
+  "reviewedBy": "Kakeman89",
+  "lastReviewedAt": "2026-08-17",
+  "notes": "Values were verified against maintainer-supplied screenshot facts. No remote material was fetched or downloaded.",
+  "candidates": [
+    {
+      "fieldPath": "astrography.system",
+      "value": "Alderaan system",
+      "sourceId": "MAINTAINER-SCREENSHOT-2026-08-17",
+      "sourceLocator": "maintainer-supplied screenshot facts",
+      "method": "manual-curation",
+      "reviewStatus": "approved",
+      "reviewedBy": "Kakeman89",
+      "lastReviewedAt": "2026-08-17",
+      "continuityScope": "canon"
+    }
+  ],
+  "regionClassifications": [
+    {
+      "value": "Core",
+      "relation": "primary",
+      "presence": "present"
+    },
+    {
+      "value": "The Interior",
+      "relation": "subregion",
+      "presence": "present"
+    }
+  ]
+}

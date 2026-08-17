@@ -23,15 +23,15 @@
     "depth": 2
   },
   {
-    "_id": "9e30005d836a709f",
-    "name": "not documented",
+    "_id": "14553e6f0749b879",
+    "name": "Alderaan system",
     "type": "JournalEntry",
     "folder": "17e069393d116547",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
       "Alderaan Sector",
-      "not documented"
+      "Alderaan system"
     ],
     "depth": 3
   },
@@ -48,15 +48,15 @@
     "depth": 2
   },
   {
-    "_id": "6bb24bc2370cfca8",
-    "name": "not documented",
+    "_id": "25aa4b0f5d29a6fd",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "762df448b8fe5a12",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
       "Corellian Sector",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -73,15 +73,15 @@
     "depth": 2
   },
   {
-    "_id": "1e95c6c989e4dfef",
-    "name": "not documented",
+    "_id": "501f05bea1868c94",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "4f186ed565fe1297",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
       "Coruscant Sector",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -98,40 +98,40 @@
     "depth": 2
   },
   {
-    "_id": "555d53cfcaad3155",
-    "name": "not documented",
+    "_id": "9df06f747cd3095a",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "3bf556770befee81",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
       "Hosnian Sector",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
   {
-    "_id": "32eda3b61e0f5b54",
-    "name": "not documented",
+    "_id": "1ee2780345a06f09",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "8c2216acdf26ae1e",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "12fa32fcd8d5006e",
-    "name": "not documented",
+    "_id": "a03ce080d00efc92",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "32eda3b61e0f5b54",
+    "folder": "1ee2780345a06f09",
     "packKey": "astrocom-canon",
     "path": [
       "Core",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -159,15 +159,15 @@
     "depth": 2
   },
   {
-    "_id": "34ad27b2af620b1c",
-    "name": "not documented",
+    "_id": "1979707fd812c931",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "a7759278a756aad6",
     "packKey": "astrocom-canon",
     "path": [
       "Deep Core",
       "Byss Sector",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -195,15 +195,15 @@
     "depth": 2
   },
   {
-    "_id": "39f47630512ee676",
-    "name": "not documented",
+    "_id": "f7b4f5254eee3243",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "1b8dd4aa4d85a66c",
     "packKey": "astrocom-canon",
     "path": [
       "Mid Rim",
       "Bothan Space",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -231,15 +231,15 @@
     "depth": 2
   },
   {
-    "_id": "89a22c185646599e",
-    "name": "not documented",
+    "_id": "ff52c92d0359c32b",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "1c10c0829260ce84",
     "packKey": "astrocom-canon",
     "path": [
       "Outer Rim",
       "Arkanis",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -256,15 +256,15 @@
     "depth": 2
   },
   {
-    "_id": "1636227c483fb792",
-    "name": "not documented",
+    "_id": "a8f6f21157e6315f",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "83e10a36e8519bd8",
     "packKey": "astrocom-canon",
     "path": [
       "Outer Rim",
       "Gordian Reach",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -281,15 +281,15 @@
     "depth": 2
   },
   {
-    "_id": "7b33729ca7c21536",
-    "name": "not documented",
+    "_id": "32b8b7b189512483",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "8b4bf9569d14a32c",
     "packKey": "astrocom-canon",
     "path": [
       "Outer Rim",
       "Moddell",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -306,15 +306,15 @@
     "depth": 2
   },
   {
-    "_id": "83fbbdcccff643ce",
-    "name": "not documented",
+    "_id": "5a30dd213e52665b",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "9d44a3c68c8811b4",
     "packKey": "astrocom-canon",
     "path": [
       "Outer Rim",
       "Quelii",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -331,15 +331,15 @@
     "depth": 2
   },
   {
-    "_id": "7808ca5a2a58f724",
-    "name": "not documented",
+    "_id": "0f1c09a700039619",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "b0674a309059cb2e",
     "packKey": "astrocom-canon",
     "path": [
       "Outer Rim",
       "Sith Worlds",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -367,15 +367,15 @@
     "depth": 2
   },
   {
-    "_id": "bad081bd2d58a2d7",
-    "name": "not documented",
+    "_id": "08c9a2a2fece189c",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "34a44019adeb1c4f",
     "packKey": "astrocom-canon",
     "path": [
       "Unknown Regions",
       "Ahch Sector",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -392,15 +392,15 @@
     "depth": 2
   },
   {
-    "_id": "f0ea1940a1e0bf7a",
-    "name": "not documented",
+    "_id": "4eb76d751046dc47",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "ac3085fa5cbb2550",
     "packKey": "astrocom-canon",
     "path": [
       "Unknown Regions",
       "Chiss Ascendancy",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -416,27 +416,27 @@
     "depth": 1
   },
   {
-    "_id": "b544234ca3cf49d6",
-    "name": "not documented",
+    "_id": "6f28a5a19f3845a3",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "50014c46a681eb4c",
     "packKey": "astrocom-legends",
     "path": [
       "Colonies",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "441131d67dc1901c",
-    "name": "not documented",
+    "_id": "ecc6ca7abe63f6a0",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "b544234ca3cf49d6",
+    "folder": "6f28a5a19f3845a3",
     "packKey": "astrocom-legends",
     "path": [
       "Colonies",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -452,27 +452,27 @@
     "depth": 1
   },
   {
-    "_id": "efcbbd87babadc69",
-    "name": "not documented",
+    "_id": "aa93394c0bfba3de",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "fb0c453fa36b27f5",
     "packKey": "astrocom-legends",
     "path": [
       "Core",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "9f58c6df16f127cd",
-    "name": "not documented",
+    "_id": "2b3913a3ce222649",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "efcbbd87babadc69",
+    "folder": "aa93394c0bfba3de",
     "packKey": "astrocom-legends",
     "path": [
       "Core",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -488,27 +488,27 @@
     "depth": 1
   },
   {
-    "_id": "1cd1aa61f55ae537",
-    "name": "not documented",
+    "_id": "3cbdb0963e4b217c",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "9605c35daf5e5a2f",
     "packKey": "astrocom-legends",
     "path": [
       "Deep Core",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "e3be53b50783cc8f",
-    "name": "not documented",
+    "_id": "6a4d90718dae6d93",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "1cd1aa61f55ae537",
+    "folder": "3cbdb0963e4b217c",
     "packKey": "astrocom-legends",
     "path": [
       "Deep Core",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -536,15 +536,15 @@
     "depth": 2
   },
   {
-    "_id": "c608bf50a989c512",
-    "name": "not documented",
+    "_id": "88a9c8c5ff7971df",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "25cb344a1b5bbc58",
     "packKey": "astrocom-legends",
     "path": [
       "Expansion Region",
       "Tynna",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -572,15 +572,15 @@
     "depth": 2
   },
   {
-    "_id": "9faf4f83ed5a3fc9",
-    "name": "not documented",
+    "_id": "77f1bbf8cf6980be",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "d2ccfa8bb2fe29d5",
     "packKey": "astrocom-legends",
     "path": [
       "Hutt Space",
       "Hutt Space",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -596,27 +596,27 @@
     "depth": 1
   },
   {
-    "_id": "e428acbae13da0fc",
-    "name": "not documented",
+    "_id": "88686e07c5c31591",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "08bb5790dad54db6",
     "packKey": "astrocom-legends",
     "path": [
       "Inner Rim",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "39ef0f001829c306",
-    "name": "not documented",
+    "_id": "18fd538491a74b2a",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "e428acbae13da0fc",
+    "folder": "88686e07c5c31591",
     "packKey": "astrocom-legends",
     "path": [
       "Inner Rim",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -644,15 +644,15 @@
     "depth": 2
   },
   {
-    "_id": "f8be2d1bbbe7bfed",
-    "name": "not documented",
+    "_id": "e2a6cf704b911c12",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "d8c692332b93ae89",
     "packKey": "astrocom-legends",
     "path": [
       "Outer Rim",
       "Arkanis",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -669,15 +669,15 @@
     "depth": 2
   },
   {
-    "_id": "eb2ee4a9be9a7b9f",
-    "name": "not documented",
+    "_id": "4fa8a89e9aaf2c44",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "96ef0235514c7647",
     "packKey": "astrocom-legends",
     "path": [
       "Outer Rim",
       "Auril",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -694,15 +694,15 @@
     "depth": 2
   },
   {
-    "_id": "6b5b306319cc7f9d",
-    "name": "not documented",
+    "_id": "940c96d8e7c3af02",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "0c5e61eb1edaa579",
     "packKey": "astrocom-legends",
     "path": [
       "Outer Rim",
       "Cademimu",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -719,15 +719,15 @@
     "depth": 2
   },
   {
-    "_id": "5ba88f185a4b6586",
-    "name": "not documented",
+    "_id": "9f60a22dff729c93",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "a4065982fc15907c",
     "packKey": "astrocom-legends",
     "path": [
       "Outer Rim",
       "Chorlian",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -744,15 +744,15 @@
     "depth": 2
   },
   {
-    "_id": "7f6d382d4672c7b3",
-    "name": "not documented",
+    "_id": "089a53d211472c28",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "249447c9c58185bb",
     "packKey": "astrocom-legends",
     "path": [
       "Outer Rim",
       "Sith Worlds",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 3
   },
@@ -768,27 +768,27 @@
     "depth": 1
   },
   {
-    "_id": "78a780383f24c832",
-    "name": "not documented",
+    "_id": "2db29bcd13cb19ff",
+    "name": "not yet sourced",
     "type": "JournalEntry",
     "folder": "acda982228e1dbf8",
     "packKey": "astrocom-legends",
     "path": [
       "Wild Space",
-      "not documented"
+      "not yet sourced"
     ],
     "depth": 2
   },
   {
-    "_id": "7bf87d72ff350248",
-    "name": "not documented",
+    "_id": "73d5ccc6b702a68c",
+    "name": "not yet sourced",
     "type": "JournalEntry",
-    "folder": "78a780383f24c832",
+    "folder": "2db29bcd13cb19ff",
     "packKey": "astrocom-legends",
     "path": [
       "Wild Space",
-      "not documented",
-      "not documented"
+      "not yet sourced",
+      "not yet sourced"
     ],
     "depth": 3
   }

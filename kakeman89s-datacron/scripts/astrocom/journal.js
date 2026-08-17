@@ -104,6 +104,7 @@ export function buildFlags(record, routeIds, { fixture = true } = {}) {
       continuity: record.continuity,
       aliases: [...(record.aliases ?? [])],
       region: presentOrNull(record.astrography.region),
+      regionClassifications: [...(record.regionClassifications ?? [])],
       sector: presentOrNull(record.astrography.sector),
       system: presentOrNull(record.astrography.system),
       grid: grid.presence === PRESENCE.PRESENT ? grid.value : null,

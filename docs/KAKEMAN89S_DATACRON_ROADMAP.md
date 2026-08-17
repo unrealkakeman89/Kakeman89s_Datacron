@@ -1,13 +1,13 @@
-# Kakeman89's Datacron — Authoritative Project Roadmap
+# Kakeman89's Datacron ? Authoritative Project Roadmap
 
-- **Document title:** Kakeman89's Datacron — Authoritative Project Roadmap
+- **Document title:** Kakeman89's Datacron ? Authoritative Project Roadmap
 - **Creation date:** 2026-08-14
 - **Status:** Planning baseline
 - **Target versions (initial locked compatibility baseline):** Foundry Virtual Tabletop v13; dnd5e system v5.2.5; SW5e v1.4.2 (identity, package type, and exact APIs remain investigation items until Phase 1 verifies them in the live target)
 - **Repository branch observed:** `main` (tracks `origin/main`)
 - **Candidate implementation baseline:** `origin/v.next` (approved as a candidate baseline only; not an approved architecture, and not code that must be preserved)
 - **Planning-only statement:** This document is a planning and investigation baseline. It does not authorize implementation, content ingestion, packaging, or distribution.
-- **Scope summary:** One Foundry module named Kakeman89's Datacron, containing four related but isolated feature areas — AstroCom, Shipyard, NavComputer, and Droid Shop — plus shared platform services. Future route-based navigation and other enhancements are recorded as uncommitted backlog.
+- **Scope summary:** One Foundry module named Kakeman89's Datacron, containing four related but isolated feature areas ? AstroCom, Shipyard, NavComputer, and Droid Shop ? plus shared platform services. Future route-based navigation and other enhancements are recorded as uncommitted backlog.
 - **Implementation authorization:** Implementation has **not** been authorized. No phase below authorizes commits, pushes, pull requests, merges, tags, packages, or releases without a later explicit approval.
 - **Evidence policy:** Uncertain findings are investigation items, not facts. Verified repository evidence, working assumptions, and open questions are recorded in separate sections.
 - **Git constraint for this planning assignment:** No Git operations and no working-tree changes other than creating `KAKEMAN89S_DATACRON_ROADMAP.md`.
@@ -61,7 +61,7 @@ Do not describe `v.next` as the approved architecture. Do not describe `v.next` 
 - AstroCom: GM planetary and hyperspace reference, with JournalEntry investigation and a content-policy gate.
 - Shipyard: guided SW5e starship construction from a verified workbook, collaborative GM/player visibility, and gated Actor creation.
 - NavComputer: basic region-to-region hyperspace calculator using the exact supplied matrix, plus verified fuel and supplies calculations.
-- Droid Shop: companion pricing using verified Tier I–VI chassis, 10 percent class markup, and condition rules. Pricing only.
+- Droid Shop: companion pricing using verified Tier I?VI chassis, 10 percent class markup, and condition rules. Pricing only.
 - Shared platform: manifest, settings, feature isolation, localization, logging, permissions, security, tests, and release readiness.
 - A mandatory audit of everything on `origin/v.next` before feature implementation.
 
@@ -85,7 +85,7 @@ The four feature areas are related products inside one module. Their data models
 
 Inspection date: 2026-08-14. Inspection method: current working tree plus read-only `git show` / `git ls-tree` of `origin/v.next`. `v.next` was **not** checked out.
 
-### 4.1 Verified — current checkout
+### 4.1 Verified ? current checkout
 
 | Item | Finding | Status |
 | --- | --- | --- |
@@ -108,17 +108,17 @@ Inspection date: 2026-08-14. Inspection method: current working tree plus read-o
 | Untracked tree | `.cursor/` (ECC/Cursor install; pre-existing; not created by this assignment) | Verified |
 | Repository classification on `main` | Empty product checkout, not a Foundry scaffold | Verified |
 
-### 4.2 Verified — relevant local and remote branches
+### 4.2 Verified ? relevant local and remote branches
 
 - `main` / `origin/main`: empty product tree plus LICENSE and one-line README.
 - `origin/v.next` at `a01c1d7` ("Changed Direction", 2026-04-28): existing Foundry module codebase.
-- `v.next` history observed: `49244ad` initial commit → `e8fe50f` scaffold → `5e1b967` v1.0.0 → `7ed65e7` Advanced Routes → `a01c1d7` rename to Kakeman89s Datacron and droid app.
+- `v.next` history observed: `49244ad` initial commit ? `e8fe50f` scaffold ? `5e1b967` v1.0.0 ? `7ed65e7` Advanced Routes ? `a01c1d7` rename to Kakeman89s Datacron and droid app.
 
-### 4.3 Verified — `origin/v.next` exists as an existing codebase
+### 4.3 Verified ? `origin/v.next` exists as an existing codebase
 
 `origin/v.next` is not empty and is not a blank scaffold. It contains an installable module directory `kakeman89s-datacron/` plus data pipelines, docs, and assets. That fact does **not** make the implementation accepted.
 
-### 4.4 Verified — `origin/v.next` top-level inventory
+### 4.4 Verified ? `origin/v.next` top-level inventory
 
 Tracked paths observed on `origin/v.next`:
 
@@ -151,7 +151,7 @@ Module runtime paths observed under `kakeman89s-datacron/`:
 - `docs/compatibility-notes.md`
 - `data/` planet, route, StarWarsMap, and random-event JSON files
 
-### 4.5 Verified — module manifest on `origin/v.next`
+### 4.5 Verified ? module manifest on `origin/v.next`
 
 From `kakeman89s-datacron/module.json`:
 
@@ -171,7 +171,7 @@ From `kakeman89s-datacron/module.json`:
 - No `download` / `manifest` release URLs
 - No module-local LICENSE file inside `kakeman89s-datacron/`
 
-### 4.6 Verified — language, build, tests, localization, licensing on `origin/v.next`
+### 4.6 Verified ? language, build, tests, localization, licensing on `origin/v.next`
 
 - Runtime language: JavaScript ES modules with JSDoc. No TypeScript. No `package.json`.
 - Templates: Handlebars. Styles: CSS.
@@ -183,7 +183,7 @@ From `kakeman89s-datacron/module.json`:
 - Compendium packs: none.
 - Socket handlers: none found, despite `"socket": true`.
 
-### 4.7 Verified — existing feature coverage on `origin/v.next`
+### 4.7 Verified ? existing feature coverage on `origin/v.next`
 
 | Feature area | Present on `v.next`? | Notes |
 | --- | --- | --- |
@@ -193,7 +193,7 @@ From `kakeman89s-datacron/module.json`:
 | Shipyard | No | No ship-builder workbook. No ship-construction UI. Actor helpers exist for selecting existing starship actors. |
 | Route-based navigation | Partial / disabled | Graph data and Dijkstra/A* code exist; UI path is disabled. |
 
-### 4.8 Verified — assets and datasets on `origin/v.next`
+### 4.8 Verified ? assets and datasets on `origin/v.next`
 
 | Asset or dataset | Observation | Provenance / license |
 | --- | --- | --- |
@@ -205,11 +205,11 @@ From `kakeman89s-datacron/module.json`:
 | `StarWarsMap/` JSON | Vendored map API data | README cites Wason1797/StarWarsMap; license compliance not verified here |
 | Route graph JSON | Generated and hand-curated | Derived; provenance mixed |
 | `random-events.json` | Placeholder | Feature reserved |
-| Module icon / Foundry media pack | Absent | — |
+| Module icon / Foundry media pack | Absent | ? |
 
 Prior inclusion in the repository is **not** licensing evidence.
 
-### 4.9 Verified — existing planning and architecture files
+### 4.9 Verified ? existing planning and architecture files
 
 No Datacron roadmap existed before this file.
 
@@ -224,11 +224,11 @@ Closest substitutes on `origin/v.next`, which this roadmap does not overwrite:
 
 `ai/` and `ai/sessions/` do not exist. `docs/adr/` does not exist.
 
-### 4.10 Verified — Cursor rules, ECC, and agent instructions
+### 4.10 Verified ? Cursor rules, ECC, and agent instructions
 
 Observed on the current checkout (untracked `.cursor/` tree):
 
-- Always-on Foundry/SW5e rules `00`–`05`, copied with **SW5e-module identity**, which is incorrect for this repository.
+- Always-on Foundry/SW5e rules `00`?`05`, copied with **SW5e-module identity**, which is incorrect for this repository.
 - ECC common rules (testing 80%, TDD, REST/repository patterns, immutability) that conflict with Foundry module realities if applied blindly.
 - ECC 2.1.0 installed as a Cursor project copy; install state still points at a sibling `sw5e-module` path.
 - No `CLAUDE.md`, `AGENTS.md`, or `.claude/` directory in this repository.
@@ -298,9 +298,9 @@ The following are observations of current `v.next` behavior. They are not accept
 **Droid Ally app**
 
 - Separate GM-only ApplicationV2.
-- Class I–V / tracker / custom presets.
-- Chassis cost = class rank × 1000, plus several adders, then `finalCost = floor(subtotal / 2)`.
-- This is not the requested Tier I–VI + 10 percent class markup + condition model.
+- Class I?V / tracker / custom presets.
+- Chassis cost = class rank � 1000, plus several adders, then `finalCost = floor(subtotal / 2)`.
+- This is not the requested Tier I?VI + 10 percent class markup + condition model.
 
 **AstroCom-related prior work**
 
@@ -337,12 +337,12 @@ This roadmap defines the method and gates. It does **not** assign final RETAIN /
 
 For every relevant component, file group, dataset, asset, calculation, setting, application, template, style, hook, manifest entry, and disabled feature, assign exactly one **proposed** disposition:
 
-1. **RETAIN** — Verified as correct, compatible, maintainable, licensed, secure, and aligned with the roadmap.
-2. **REVISE** — Fundamentally useful but requires identifiable changes before acceptance.
-3. **REPLACE** — The requirement is valid, but the current implementation should be rebuilt using a verified design.
-4. **REMOVE** — Obsolete, duplicated, unsafe, unsupported, unlicensed, misleading, or outside approved scope.
-5. **QUARANTINE** — Potentially useful, but cannot be accepted until licensing, provenance, rules, compatibility, or security evidence is obtained.
-6. **DEFER** — Valid possible future work that is not part of the approved initial release.
+1. **RETAIN** ? Verified as correct, compatible, maintainable, licensed, secure, and aligned with the roadmap.
+2. **REVISE** ? Fundamentally useful but requires identifiable changes before acceptance.
+3. **REPLACE** ? The requirement is valid, but the current implementation should be rebuilt using a verified design.
+4. **REMOVE** ? Obsolete, duplicated, unsafe, unsupported, unlicensed, misleading, or outside approved scope.
+5. **QUARANTINE** ? Potentially useful, but cannot be accepted until licensing, provenance, rules, compatibility, or security evidence is obtained.
+6. **DEFER** ? Valid possible future work that is not part of the approved initial release.
 
 Proposed dispositions from Phase 3 are not final until the reuse decision gate is approved.
 
@@ -419,7 +419,7 @@ Evidence must cite repository paths, manifest fields, runtime observations, or t
 - Permissions
 - UI and data model
 - Whether any portion can support the requested Droid Shop
-- Comparison against the required Tier I–VI chassis, 10 percent class markup, and condition model
+- Comparison against the required Tier I?VI chassis, 10 percent class markup, and condition model
 
 #### 6.4.4 AstroCom-related prior work
 
@@ -507,9 +507,9 @@ The audit is not complete until:
 - Every required audit area has a written record.
 - No component is marked RETAIN without compatibility, rules, license, and security evidence.
 - Unlicensed or unprovenanced assets are QUARANTINE or REMOVE, not RETAIN by inertia.
-- Disabled Advanced routing is explicitly DEFER, QUARANTINE, REPLACE, or REMOVE — not silently left in the UI.
+- Disabled Advanced routing is explicitly DEFER, QUARANTINE, REPLACE, or REMOVE ? not silently left in the UI.
 - Shipyard absence is recorded as absence.
-- The reuse decision gate has a compared set of options A–D and a maintainer approval.
+- The reuse decision gate has a compared set of options A?D and a maintainer approval.
 
 ---
 
@@ -536,7 +536,7 @@ Do not put all four features into one application by default. Existing `v.next` 
 
 ---
 
-## 8. Feature area 1 — AstroCom
+## 8. Feature area 1 ? AstroCom
 
 ### 8.1 Purpose
 
@@ -556,7 +556,7 @@ Use the spelling **Canon**, never "Cannon."
 
 ### 8.3 Requested Canon and Legends hierarchy
 
-Canon or Legends → Region → Sector → System → Planetary Journal Entries, plus Hyperspace Lanes/Routes organization.
+Canon or Legends ? Region ? Sector ? System ? Planetary Journal Entries, plus Hyperspace Lanes/Routes organization.
 
 The original requirement describes a folder for each Region, Sector, and System, and a folder for Hyperspace Lanes/Routes.
 
@@ -699,7 +699,7 @@ Begin AstroCom phases by applying the approved disposition plan. Do not carry pl
 
 ---
 
-## 9. Feature area 2 — Shipyard
+## 9. Feature area 2 ? Shipyard
 
 ### 9.1 Purpose
 
@@ -788,7 +788,7 @@ Existing `"socket": true` without handlers is not a synchronization design.
 
 ---
 
-## 10. Feature area 3 — NavComputer
+## 10. Feature area 3 ? NavComputer
 
 Use the feature name **NavComputer** consistently in this roadmap and in future product copy, even if older `v.next` files use Datacron window titles.
 
@@ -826,7 +826,7 @@ Matrix values, preserved exactly as supplied. Do not correct, normalize, symmetr
 
 ### 10.3 Matrix observations that are not corrections
 
-- The matrix is direction-sensitive. Example: Deep Core → Core is 18; Core → Deep Core is 24.
+- The matrix is direction-sensitive. Example: Deep Core ? Core is 18; Core ? Deep Core is 24.
 - Same-region values are not uniform (Core 6, Colonies 12, Unknown Regions 48, and others).
 - `origin/v.next` `REGION_TRAVEL_MATRIX` matches these values exactly. Matching code is not source verification.
 
@@ -842,7 +842,7 @@ Required later:
 - Invalid-input handling
 - A data-driven matrix rather than hardcoded UI condition chains
 
-### 10.4 Basic navigation calculation — inputs to verify, not invent
+### 10.4 Basic navigation calculation ? inputs to verify, not invent
 
 Identify and verify all input variables, including:
 
@@ -867,7 +867,7 @@ Do not invent formulas. Every formula must be traceable to an authorized rule so
 
 Plan for a calculation breakdown that shows the GM why a result was produced rather than returning only a final number.
 
-### 10.5 Existing `v.next` calculations — unverified heuristics
+### 10.5 Existing `v.next` calculations ? unverified heuristics
 
 Observed in `travel-calculator.js` and `settings.js`:
 
@@ -914,7 +914,7 @@ Existing disabled Advanced graph code is candidate audit material. It is not an 
 
 ---
 
-## 11. Feature area 4 — Droid Shop
+## 11. Feature area 4 ? Droid Shop
 
 ### 11.1 Purpose
 
@@ -953,16 +953,16 @@ Phase 12, after Phase 1/2 source collection, must cover:
 - House-rule settings
 - Validation for incomplete selections
 
-### 11.4 Existing `v.next` droid app — not the requested model
+### 11.4 Existing `v.next` droid app ? not the requested model
 
 Observed in `droid-ally-pricing.js` and `docs/droid-allies-sw5e.md`:
 
-- Class I–V, tracker, and custom presets
+- Class I?V, tracker, and custom presets
 - `baseChassisCost = chassisCostRank * 1000`
 - Adders for systems, ability modifiers, traits/protocols, skills/tools, feats/upgrades, and companion level
 - `finalCost = floor(subtotal / 2)`
 - GM-only UI
-- Documentation describes a Saga Edition-inspired estimate, not a claim that this is the SW5e Tier I–VI shop
+- Documentation describes a Saga Edition-inspired estimate, not a claim that this is the SW5e Tier I?VI shop
 
 The audit must compare this against the required Droid Shop model and may propose RETAIN (unlikely without evidence), REVISE, REPLACE, REMOVE, QUARANTINE, or DEFER. This roadmap does not choose.
 
@@ -1117,7 +1117,7 @@ Additional testing rules from the reuse decision:
 
 ## 16. Phased plan
 
-Phase numbers 0–15 are preserved. Content is revised to include the `v.next` inventory, verification, and reuse gates.
+Phase numbers 0?15 are preserved. Content is revised to include the `v.next` inventory, verification, and reuse gates.
 
 Implementation tasks in later phases are **planned** tasks. They are not authorized by this document.
 
@@ -1125,7 +1125,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 0 — Repository, Governance, and `v.next` Baseline Inventory
+### Phase 0 ? Repository, Governance, and `v.next` Baseline Inventory
 
 **Purpose.** Establish the planning baseline, inventory `origin/v.next` without changing branches, and record that reuse is conditional.
 
@@ -1160,11 +1160,11 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 **Rollback.** Not applicable; read-only.
 
-**Approval gate.** Maintainer accepts the inventory as the input to Phase 1–3 audits. Phase 0 must not implement, delete, rewrite, or clean up anything.
+**Approval gate.** Maintainer accepts the inventory as the input to Phase 1?3 audits. Phase 0 must not implement, delete, rewrite, or clean up anything.
 
 ---
 
-### Phase 1 — Compatibility, API, and Existing-Code Verification
+### Phase 1 ? Compatibility, API, and Existing-Code Verification
 
 **Purpose.** Verify exact package APIs, document schemas, Actor types, item structures, Activities support, hooks, sheet classes, and system compatibility before implementation starts. Audit existing `v.next` assumptions against those verified targets.
 
@@ -1203,7 +1203,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 2 — Licensing, Provenance, and Existing-Asset Audit
+### Phase 2 ? Licensing, Provenance, and Existing-Asset Audit
 
 **Purpose.** Establish content policy and quarantine anything without sufficient rights.
 
@@ -1238,7 +1238,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 3 — Shared Architecture and `v.next` Disposition Plan
+### Phase 3 ? Shared Architecture and `v.next` Disposition Plan
 
 **Purpose.** Propose the modular architecture and an evidence-backed disposition plan. Identify whether reuse, salvage, or rebuild is justified.
 
@@ -1274,7 +1274,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 4 — AstroCom Data Model Proof of Concept
+### Phase 4 ? AstroCom Data Model Proof of Concept
 
 **Purpose.** Prove a Foundry-compatible planetary data model with a tiny fixture. No mass ingestion.
 
@@ -1302,7 +1302,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 5 — AstroCom Content Pipeline
+### Phase 5 ? AstroCom Content Pipeline
 
 **Purpose.** Design a reproducible, human-reviewed pipeline. No production ingestion before Phase 2 remains passed.
 
@@ -1330,13 +1330,13 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 6 — AstroCom Minimum Viable Feature
+### Phase 6 ? AstroCom Minimum Viable Feature
 
 **Purpose.** Ship a GM-usable reference slice, not a full galaxy dump.
 
 **Scope.** Journal compendium; search/browse plan; basic folder or index organization; external source links; GM snapshot; permissions; manual Foundry validation.
 
-**Prerequisites.** Phases 4–5; approved fixture or small approved content set.
+**Prerequisites.** Phases 4?5; approved fixture or small approved content set.
 
 **Investigation tasks.** UI entry point; GM-only vs observer visibility; search approach.
 
@@ -1358,7 +1358,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 7 — Shipyard Workbook Analysis
+### Phase 7 ? Shipyard Workbook Analysis
 
 **Purpose.** Inspect the actual SW5e ship-builder workbook before any builder logic is implemented.
 
@@ -1386,7 +1386,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 8 — Shipyard Calculation Engine
+### Phase 8 ? Shipyard Calculation Engine
 
 **Purpose.** Data-driven verified calculations only. No Actor creation.
 
@@ -1414,7 +1414,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 9 — Shipyard Collaborative UI
+### Phase 9 ? Shipyard Collaborative UI
 
 **Purpose.** GM-controlled builder with player-visible build state. No privileged player operations.
 
@@ -1442,13 +1442,13 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 10 — Shipyard Starship Actor Creation
+### Phase 10 ? Shipyard Starship Actor Creation
 
 **Purpose.** Create-new Starship Actor from a completed, authorized build.
 
 **Scope.** Preview; verified schema mapping; GM authorization; duplicate handling; provenance flags; native sheet compatibility; rollback/error behavior.
 
-**Prerequisites.** Phase 1 schema verification; Phases 8–9.
+**Prerequisites.** Phase 1 schema verification; Phases 8?9.
 
 **Investigation tasks.** Confirm create APIs, ownership, folder selection, image/token defaults, Activities, and no overwrite of existing Actors.
 
@@ -1470,7 +1470,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 11 — NavComputer Basic Calculator
+### Phase 11 ? NavComputer Basic Calculator
 
 **Purpose.** Basic region calculator using the exact supplied matrix, plus verified travel time, fuel, and supplies, with explanation.
 
@@ -1486,7 +1486,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 **Automated validation.** All 81 matrix cells; direction-sensitive pairs; same-region cells; invalid region handling; fuel/supplies tests against verified formulas or labeled settings.
 
-**Manual Foundry validation.** GM and player: select regions or worlds; confirm asymmetric times (Deep Core→Core 18 vs Core→Deep Core 24); confirm breakdown visibility; confirm permissions.
+**Manual Foundry validation.** GM and player: select regions or worlds; confirm asymmetric times (Deep Core?Core 18 vs Core?Deep Core 24); confirm breakdown visibility; confirm permissions.
 
 **Exit criteria.** Matrix exact; formulas sourced or labeled house rules; Advanced routing still not required for release.
 
@@ -1498,9 +1498,9 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 12 — Droid Shop Calculator
+### Phase 12 ? Droid Shop Calculator
 
-**Purpose.** Pricing-only companion calculator from verified Tier I–VI, 10 percent class markup, and condition rules.
+**Purpose.** Pricing-only companion calculator from verified Tier I?VI, 10 percent class markup, and condition rules.
 
 **Scope.** Rounding, validation, GM override or house-rule strategy. No Actor creation.
 
@@ -1518,7 +1518,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 **Exit criteria.** Prices match sourced rules or labeled house rules. Scope remains pricing-only.
 
-**Blockers.** Missing Tier I–VI prices or condition table.
+**Blockers.** Missing Tier I?VI prices or condition table.
 
 **Rollback.** Disable Droid Shop flag; do not leave the old formula labeled as the new shop if it was replaced.
 
@@ -1526,7 +1526,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 13 — Cross-Feature Integration and UX
+### Phase 13 ? Cross-Feature Integration and UX
 
 **Purpose.** Shared navigation and consistent permissions without tight coupling.
 
@@ -1554,7 +1554,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 14 — Migration, Upgrade, and Existing-World Safety
+### Phase 14 ? Migration, Upgrade, and Existing-World Safety
 
 **Purpose.** Make upgrades safe for worlds that may already contain `kakeman89s-datacron` 1.0.x data.
 
@@ -1582,7 +1582,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ---
 
-### Phase 15 — Packaging, Documentation, and Release Readiness
+### Phase 15 ? Packaging, Documentation, and Release Readiness
 
 **Purpose.** Release checklist only. Publishing is not authorized by completing the draft checklist.
 
@@ -1612,7 +1612,7 @@ Every implementation-bearing phase ends at an explicit maintainer approval gate.
 
 ## 17. Future work (not committed scope)
 
-### Future Phase — Route-Based Hyperspace Navigation
+### Future Phase ? Route-Based Hyperspace Navigation
 
 Graph architecture; AstroCom route integration; era-aware routing; time/fuel/safety objectives; route explanation; optional visualization. Must remain separate from the initial release unless explicitly approved.
 
@@ -1684,7 +1684,7 @@ AstroCom route data is a dependency for route-based NavComputer.
 Droid Shop rules verification precedes pricing code.  
 Every implementation phase ends at a manual approval gate.  
 Release requires all required compatibility, licensing, security, migration, and packaging gates.  
-The Phase 3 reuse decision gate precedes feature implementation phases 4–12.  
+The Phase 3 reuse decision gate precedes feature implementation phases 4?12.  
 Feature phases begin by applying the approved disposition plan.
 
 ```mermaid
@@ -1793,33 +1793,33 @@ Proposed disposition values in this matrix are **blank / Investigating** unless 
 
 | ID | Feature | Requirement | Source | Proposed phase | Dependency | Verification | Status | Open question | Existing `v.next` component | Existing behavior | Verification state | Proposed disposition | Evidence required | Replacement requirement | Regression test requirement |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ASTRO-001 | AstroCom | GM planetary/hyperspace reference | Assignment | 4–6 | Phase 1–3 | Foundry GM workflow | Planned | Browser vs journals | Planet combo + JSON | Name search for travel, not a gazetteer | Unverified vs vision | Investigating | Phase 4 PoC | Likely new UI | If any selector retained, regress search |
-| ASTRO-002 | AstroCom | One JournalEntry compendium | Assignment | 4–6 | Folder APIs | Pack load | Investigating | One vs many packs | None | No packs | Absent | Investigating | Foundry pack APIs | Create pack pipeline | Pack build tests |
+| ASTRO-001 | AstroCom | GM planetary/hyperspace reference | Assignment | 4?6 | Phase 1?3 | Foundry GM workflow | Planned | Browser vs journals | Planet combo + JSON | Name search for travel, not a gazetteer | Unverified vs vision | Investigating | Phase 4 PoC | Likely new UI | If any selector retained, regress search |
+| ASTRO-002 | AstroCom | One JournalEntry compendium | Assignment | 4?6 | Folder APIs | Pack load | Investigating | One vs many packs | None | No packs | Absent | Investigating | Foundry pack APIs | Create pack pipeline | Pack build tests |
 | ASTRO-003 | AstroCom | Top-level Canon / Legends / Grid | Assignment | 4 | Folder depth | PoC | Investigating | Depth limits | Planet JSON `region`/`grid` | No continuity split | Missing Canon/Legends | Investigating | Schema + PoC | Add continuity model | Classification tests |
 | ASTRO-004 | AstroCom | Region/sector/system folder hierarchy | Assignment | 4 | ASTRO-002 | Folder PoC | Investigating | Max depth | JSON fields only | Flat records | Unverified | Investigating | Folder PoC | Metadata browser possible | Folder export/import |
-| ASTRO-005 | AstroCom | Hyperspace lanes/routes organization | Assignment | 4–5, future | Route model ADR | PoC | Investigating | Folder level | Route JSON + GeoJSON | Graph for Advanced mode | Unverified / UI disabled | Investigating | License + model | Structured routes vs journals | If retained, graph tests |
+| ASTRO-005 | AstroCom | Hyperspace lanes/routes organization | Assignment | 4?5, future | Route model ADR | PoC | Investigating | Folder level | Route JSON + GeoJSON | Graph for Advanced mode | Unverified / UI disabled | Investigating | License + model | Structured routes vs journals | If retained, graph tests |
 | ASTRO-006 | AstroCom | Grid access to Canon, Legends, routes | Assignment | 4 | One-folder issue | PoC comparison | Investigating | Dual index design | `grid` field | Single geography field | Incomplete | Investigating | ADR-003 | Index vs aliases | Dual-index tests |
-| ASTRO-007 | AstroCom | Naming `Planet Name (Canon/Legends)` | Assignment | 4–6 | Stable IDs | Duplicate tests | Planned | Identical names | `name` only | Display name is identity | Insufficient | Investigating | ID scheme | Separate slug/ID | Duplicate detection |
-| ASTRO-008 | AstroCom | GM snapshot fields when available | Assignment | 5–6 | Provenance | Content review | Planned | Not-documented policy wording | Some `description` fields | Incomplete vs required sections | Incomplete | Investigating | Schema | Snapshot templates | Missing-field tests |
-| ASTRO-009 | AstroCom | No invented facts | Assignment | 5–6 | Legal | Review | Planned | — | Dataset completeness unknown | Unknown | Unverified | Investigating | Review workflow | Omit vs "not documented" | False-completeness tests |
-| ASTRO-010 | AstroCom | External source link per journal | Assignment | 5–6 | URL safety | Link tests | Planned | Safe HTML | None | No journal links | Absent | Investigating | URL policy | New field | Sanitization tests |
+| ASTRO-007 | AstroCom | Naming `Planet Name (Canon/Legends)` | Assignment | 4?6 | Stable IDs | Duplicate tests | Planned | Identical names | `name` only | Display name is identity | Insufficient | Investigating | ID scheme | Separate slug/ID | Duplicate detection |
+| ASTRO-008 | AstroCom | GM snapshot fields when available | Assignment | 5?6 | Provenance | Content review | Planned | Not-documented policy wording | Some `description` fields | Incomplete vs required sections | Incomplete | Investigating | Schema | Snapshot templates | Missing-field tests |
+| ASTRO-009 | AstroCom | No invented facts | Assignment | 5?6 | Legal | Review | Planned | ? | Dataset completeness unknown | Unknown | Unverified | Investigating | Review workflow | Omit vs "not documented" | False-completeness tests |
+| ASTRO-010 | AstroCom | External source link per journal | Assignment | 5?6 | URL safety | Link tests | Planned | Safe HTML | None | No journal links | Absent | Investigating | URL policy | New field | Sanitization tests |
 | ASTRO-011 | AstroCom | Distinguish snapshot vs licensed text vs quotes vs media | Assignment | 2, 5 | Legal | Attribution tests | Investigating | Derivative summaries | Mixed undocumented data | Unclear | Unverified | Investigating | Provenance model | New metadata | Attribution tests |
-| ASTRO-012 | AstroCom | Moons, stations, aliases, unknown geography | Assignment | 4–5 | Schema | Fixtures | Planned | Body types | Planet-centric JSON | Planets only | Incomplete | Investigating | Schema | Body-type field | Fixture tests |
-| ASTRO-013 | AstroCom | Stable source IDs, slugs, search, sort | Assignment | 4–6 | Schema | Unit tests | Planned | Slug rules | Name keys | Name identity | Fragile | Investigating | ID design | Replace name keys | Search tests |
+| ASTRO-012 | AstroCom | Moons, stations, aliases, unknown geography | Assignment | 4?5 | Schema | Fixtures | Planned | Body types | Planet-centric JSON | Planets only | Incomplete | Investigating | Schema | Body-type field | Fixture tests |
+| ASTRO-013 | AstroCom | Stable source IDs, slugs, search, sort | Assignment | 4?6 | Schema | Unit tests | Planned | Slug rules | Name keys | Name identity | Fragile | Investigating | ID design | Replace name keys | Search tests |
 | ASTRO-014 | AstroCom | Folder-depth / shipping folders PoC | Assignment | 4 | Foundry APIs | Manual PoC | Investigating | Rebuild reliability | None | No packs | Absent | Investigating | v13 APIs | Custom browser | Pack round-trip |
-| ASTRO-015 | AstroCom | Existing JSON normalization candidate | Investigation | 3–5 | Phase 2 | Schema mapping | Investigating | License of JSON | `planets.json` | ~2029 worlds | Provenance unverified | Investigating | Provenance | May quarantine | Mapping tests if reused |
+| ASTRO-015 | AstroCom | Existing JSON normalization candidate | Investigation | 3?5 | Phase 2 | Schema mapping | Investigating | License of JSON | `planets.json` | ~2029 worlds | Provenance unverified | Investigating | Provenance | May quarantine | Mapping tests if reused |
 
 ### 22.2 Shipyard
 
 | ID | Feature | Requirement | Source | Proposed phase | Dependency | Verification | Status | Open question | Existing `v.next` component | Existing behavior | Verification state | Proposed disposition | Evidence required | Replacement requirement | Regression test requirement |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SHIP-001 | Shipyard | Guided builder from official workbook | Assignment | 7–9 | Workbook | Workbook vectors | Blocked | Workbook location/rights | None | Absent | Confirmed absent | Investigating | Obtain workbook | New domain | N/A until built |
+| SHIP-001 | Shipyard | Guided builder from official workbook | Assignment | 7?9 | Workbook | Workbook vectors | Blocked | Workbook location/rights | None | Absent | Confirmed absent | Investigating | Obtain workbook | New domain | N/A until built |
 | SHIP-002 | Shipyard | GM assists player; player can observe | Assignment | 9 | Permissions | Multi-client | Planned | Sync design | None | N/A | Absent | Investigating | Socket/doc APIs | New UI | Permission tests |
 | SHIP-003 | Shipyard | Calculate final construction cost | Assignment | 8 | SHIP-001 | Table tests | Blocked | Rounding | None | N/A | Absent | Investigating | Workbook | New engine | Vector tests |
 | SHIP-004 | Shipyard | Button creates Starship Actor | Assignment | 10 | Schema 1.4.2 | Create tests | Blocked | Actor type id | `actor-helpers.js` | Selects existing ships | Not a builder | Investigating | Live schema | New create service | Must not overwrite actors |
-| SHIP-005 | Shipyard | Players cannot configure, price-edit, or create | Assignment | 9–10 | SHIP-002 | Permission tests | Planned | — | N/A | N/A | Absent | Investigating | ACL design | GM-authoritative writes | Escalation tests |
+| SHIP-005 | Shipyard | Players cannot configure, price-edit, or create | Assignment | 9?10 | SHIP-002 | Permission tests | Planned | ? | N/A | N/A | Absent | Investigating | ACL design | GM-authoritative writes | Escalation tests |
 | SHIP-006 | Shipyard | Preview, duplicates, provenance, native sheet, rollback | Assignment | 10 | SHIP-004 | Manual sheet | Investigating | Undo path | None | N/A | Absent | Investigating | Sheet APIs | Flags for builder version | Sheet edit test |
-| SHIP-007 | Shipyard | Do not infer Shipyard from Actor helpers | Assignment / audit | 0, 7 | — | Inventory | Planned | — | `actor-helpers.js` | Travel ship picker | Not Shipyard | Investigating | Code reading | Keep only if NavComputer needs it | If retained, picker tests |
+| SHIP-007 | Shipyard | Do not infer Shipyard from Actor helpers | Assignment / audit | 0, 7 | ? | Inventory | Planned | ? | `actor-helpers.js` | Travel ship picker | Not Shipyard | Investigating | Code reading | Keep only if NavComputer needs it | If retained, picker tests |
 
 ### 22.3 NavComputer
 
@@ -1830,7 +1830,7 @@ Proposed disposition values in this matrix are **blank / Investigating** unless 
 | NAV-003 | NavComputer | Travel time, fuel, supplies | Assignment | 11 | Rules | Formula tests | Investigating | SW5e units | `travel-calculator.js` | Settings + 0.5 supplies heuristic | Unverified | Investigating | Rule pages | Replace or label house rules | If replaced, prove old heuristic gone |
 | NAV-004 | NavComputer | Hyperdrive and other inputs verified, not invented | Assignment | 1, 11 | Schema | Source trace | Investigating | Size/tier relevance | `getHyperdriveMultiplierFromShipActor` | Class as multiplier in Advanced | Unverified for 1.4.2 | Investigating | Live schema + rules | May replace path | Multiplier tests if retained |
 | NAV-005 | NavComputer | Calculation breakdown for GM | Assignment | 11 | NAV-003 | UI review | Planned | How much detail | Narrative route string | Partial explanation | Incomplete | Investigating | UX | Breakdown component | Snapshot tests |
-| NAV-006 | NavComputer | Invalid input handling | Assignment | 11 | NAV-001 | Unit tests | Planned | — | Basic mode warnings | Missing region warnings | Partial | Investigating | Full matrix of failures | Harden validation | Invalid-input tests |
+| NAV-006 | NavComputer | Invalid input handling | Assignment | 11 | NAV-001 | Unit tests | Planned | ? | Basic mode warnings | Missing region warnings | Partial | Investigating | Full matrix of failures | Harden validation | Invalid-input tests |
 | NAV-007 | NavComputer | Data-driven matrix | Assignment | 11 | NAV-002 | Code review | Planned | Storage format | Hardcoded JS object | Not a separate data file | Partial | Investigating | ADR | Extract data | Load tests |
 | NAV-008 | NavComputer | Route-based navigation later only | Assignment | Future | AstroCom routes | Future gates | Deferred | Graph quality | Advanced graph + disabled UI | Dijkstra/A*; UI off | Unverified; not initial release | Investigating | License + tests | Future phase | Must not re-enable accidentally |
 | NAV-009 | NavComputer | Consistent feature name NavComputer | Assignment | 3, 11, 13 | Localization | Copy review | Planned | Datacron vs NavComputer | App title Datacron | Mixed naming | Mismatch | Investigating | Product copy | Rename UI strings | i18n tests |
@@ -1840,12 +1840,12 @@ Proposed disposition values in this matrix are **blank / Investigating** unless 
 
 | ID | Feature | Requirement | Source | Proposed phase | Dependency | Verification | Status | Open question | Existing `v.next` component | Existing behavior | Verification state | Proposed disposition | Evidence required | Replacement requirement | Regression test requirement |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DROID-001 | Droid Shop | Price companion with Tier I–VI chassis | Assignment | 12 | Rules | Table tests | Blocked | Prices | Droid Ally class ranks I–V | Rank × 1000 | Different model | Investigating | SW5e source | New price table | If old formula removed, replacement tests |
+| DROID-001 | Droid Shop | Price companion with Tier I?VI chassis | Assignment | 12 | Rules | Table tests | Blocked | Prices | Droid Ally class ranks I?V | Rank � 1000 | Different model | Investigating | SW5e source | New price table | If old formula removed, replacement tests |
 | DROID-002 | Droid Shop | 10 percent class markup | Assignment | 12 | DROID-001 | Order tests | Blocked | Before/after condition | None | Not implemented | Absent | Investigating | Source | New math | Markup tests |
 | DROID-003 | Droid Shop | Condition modifiers | Assignment | 12 | DROID-001 | Table tests | Blocked | Categories | None | Not implemented | Absent | Investigating | Source | New math | Condition tests |
-| DROID-004 | Droid Shop | No invented rounding/stacking | Assignment | 12 | Source | Traceability | Investigating | — | `floor(subtotal / 2)` | Halving | Unverified vs shop rules | Investigating | Source | Replace if not the rule | Prove removal if replaced |
-| DROID-005 | Droid Shop | Pricing-only initial scope | Assignment | 12 | — | Code review | Planned | — | Pricing-only today | No Actor create | Matches scope | Investigating | Keep scope | Do not add Actor create | Scope tests |
-| DROID-006 | Droid Shop | GM override / house rules / incomplete validation | Assignment | 12 | Settings | UI tests | Planned | — | GM-entered systems cost | Partial | Incomplete | Investigating | Settings ADR | Validation | Incomplete-selection tests |
+| DROID-004 | Droid Shop | No invented rounding/stacking | Assignment | 12 | Source | Traceability | Investigating | ? | `floor(subtotal / 2)` | Halving | Unverified vs shop rules | Investigating | Source | Replace if not the rule | Prove removal if replaced |
+| DROID-005 | Droid Shop | Pricing-only initial scope | Assignment | 12 | ? | Code review | Planned | ? | Pricing-only today | No Actor create | Matches scope | Investigating | Keep scope | Do not add Actor create | Scope tests |
+| DROID-006 | Droid Shop | GM override / house rules / incomplete validation | Assignment | 12 | Settings | UI tests | Planned | ? | GM-entered systems cost | Partial | Incomplete | Investigating | Settings ADR | Validation | Incomplete-selection tests |
 | DROID-007 | Droid Shop | Existing GM-only app permissions | Audit | 3, 12 | Product | Permission tests | Investigating | Player visibility desired? | `DroidAllyApp` GM-only | Players cannot open | Unverified vs new UX | Investigating | Product decision | May revise visibility | Permission tests |
 
 ### 22.5 Shared, legal, migration, release
@@ -1853,25 +1853,25 @@ Proposed disposition values in this matrix are **blank / Investigating** unless 
 | ID | Feature | Requirement | Source | Proposed phase | Dependency | Verification | Status | Open question | Existing `v.next` component | Existing behavior | Verification state | Proposed disposition | Evidence required | Replacement requirement | Regression test requirement |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SHARED-001 | Shared | One module, isolated domains | Assignment | 3, 13 | Reuse gate | Architecture review | Planned | Rebuild vs salvage | Two apps + shared scripts | Partial isolation | Incomplete | Investigating | Phase 3 | Possible rebuild | Flag tests |
-| SHARED-002 | Shared | Feature flags | Assignment | 3, 13 | Settings | Flag tests | Planned | — | Some settings `config: false` | Advanced hidden | Partial | Investigating | Settings plan | Per-domain flags | Disable tests |
+| SHARED-002 | Shared | Feature flags | Assignment | 3, 13 | Settings | Flag tests | Planned | ? | Some settings `config: false` | Advanced hidden | Partial | Investigating | Settings plan | Per-domain flags | Disable tests |
 | SHARED-003 | Shared | ApplicationV2 compatibility | Assignment | 1, 3 | Live APIs | Runtime | Investigating | Required vs preferred | ApplicationV2 apps | In use | Unverified vs 1.4.2/v13 exact | Investigating | Phase 1 | May revise | Render tests |
 | SHARED-004 | Shared | Localization | Assignment | 3, 13 | i18n | Key coverage | Planned | Other languages later | `lang/en.json` | English; some hardcoded | Partial | Investigating | Audit strings | Move leftovers | i18n tests |
-| SHARED-005 | Shared | Logging, errors, no silent success | Assignment | 3, 14 | — | Failure tests | Planned | — | `logger.js` | Console prefix | Partial | Investigating | Error policy | User-facing failures | Failure tests |
-| SHARED-006 | Shared | Security gates (HTML, URL, sockets, no scrape at startup) | Assignment | 1, 3, 9, 14 | — | Security review | Planned | — | Socket unused; local JSON | README claims no external calls | Unverified | Investigating | Code audit | Validate sockets before use | Security tests |
-| SHARED-007 | Shared | Accessibility and no unapproved helper tooltips | Assignment | 13 | UX | Manual a11y | Planned | — | Custom CSS apps | Unknown a11y | Unverified | Investigating | Keyboard audit | Remediate | A11y checks |
-| SHARED-008 | Shared | JS default; no core file edits | Assignment | 0–3 | — | Review | Planned | TS later? | JS ESM | JS established | Verified language | Investigating | Keep JS unless justified | — | — |
+| SHARED-005 | Shared | Logging, errors, no silent success | Assignment | 3, 14 | ? | Failure tests | Planned | ? | `logger.js` | Console prefix | Partial | Investigating | Error policy | User-facing failures | Failure tests |
+| SHARED-006 | Shared | Security gates (HTML, URL, sockets, no scrape at startup) | Assignment | 1, 3, 9, 14 | ? | Security review | Planned | ? | Socket unused; local JSON | README claims no external calls | Unverified | Investigating | Code audit | Validate sockets before use | Security tests |
+| SHARED-007 | Shared | Accessibility and no unapproved helper tooltips | Assignment | 13 | UX | Manual a11y | Planned | ? | Custom CSS apps | Unknown a11y | Unverified | Investigating | Keyboard audit | Remediate | A11y checks |
+| SHARED-008 | Shared | JS default; no core file edits | Assignment | 0?3 | ? | Review | Planned | TS later? | JS ESM | JS established | Verified language | Investigating | Keep JS unless justified | ? | ? |
 | SHARED-009 | Shared | Kakeman89 attribution only | Assignment | 0, 15 | Manifest | Metadata grep | Planned | Existing authors field | `module.json` authors | Personal name present | Noncompliant if shipped | Investigating | Replace with Kakeman89 | Metadata fix | Grep test |
-| SHARED-010 | Shared | `v.next` candidate baseline; components unaccepted | Maintainer 2026-08-14 | 0–3 | Audit | Disposition records | Accepted-for-planning | Reuse outcome A–D | Entire `v.next` tree | Existing module 1.0.1 | Unaccepted | Investigating | Full audit | Options A–D | Per retained component |
-| LEGAL-001 | Legal | Wookieepedia license/attribution/share-alike | Assignment | 2, 5 | — | Legal review | Investigating | Derivative summaries | Not currently ingested | N/A | Unverified | Investigating | License text | Policy | Attribution tests |
-| LEGAL-002 | Legal | No unlicensed images; no wiki image ingest | Assignment | 2, 15 | — | Asset audit | Planned | Map.jpg rights | `Galactic Map.jpg` | Present | Unverified | Investigating | License | Quarantine/remove likely | Package exclusion test |
-| LEGAL-003 | Legal | SW5e and Foundry distribution constraints | Assignment | 2, 15 | — | Legal review | Investigating | — | README/GPL-3 | Code license only | Incomplete | Investigating | Counsel | Notices | Checklist |
-| LEGAL-004 | Legal | Takedown and correction process | Assignment | 2, 15 | — | Process doc | Planned | — | None | None | Absent | Investigating | Draft process | New process | — |
-| LEGAL-005 | Legal | Existing datasets not licensed by presence | Audit | 2 | — | Provenance register | Planned | StarWarsMap license | StarWarsMap JSON, planets, lanes | Vendored | Unverified | Investigating | Upstream licenses | Quarantine | Exclusion tests |
+| SHARED-010 | Shared | `v.next` candidate baseline; components unaccepted | Maintainer 2026-08-14 | 0?3 | Audit | Disposition records | Accepted-for-planning | Reuse outcome A?D | Entire `v.next` tree | Existing module 1.0.1 | Unaccepted | Investigating | Full audit | Options A?D | Per retained component |
+| LEGAL-001 | Legal | Wookieepedia license/attribution/share-alike | Assignment | 2, 5 | ? | Legal review | Investigating | Derivative summaries | Not currently ingested | N/A | Unverified | Investigating | License text | Policy | Attribution tests |
+| LEGAL-002 | Legal | No unlicensed images; no wiki image ingest | Assignment | 2, 15 | ? | Asset audit | Planned | Map.jpg rights | `Galactic Map.jpg` | Present | Unverified | Investigating | License | Quarantine/remove likely | Package exclusion test |
+| LEGAL-003 | Legal | SW5e and Foundry distribution constraints | Assignment | 2, 15 | ? | Legal review | Investigating | ? | README/GPL-3 | Code license only | Incomplete | Investigating | Counsel | Notices | Checklist |
+| LEGAL-004 | Legal | Takedown and correction process | Assignment | 2, 15 | ? | Process doc | Planned | ? | None | None | Absent | Investigating | Draft process | New process | ? |
+| LEGAL-005 | Legal | Existing datasets not licensed by presence | Audit | 2 | ? | Provenance register | Planned | StarWarsMap license | StarWarsMap JSON, planets, lanes | Vendored | Unverified | Investigating | Upstream licenses | Quarantine | Exclusion tests |
 | MIG-001 | Migration | Idempotent, tracked, recoverable, non-destructive | Assignment | 14 | Version flags | Migration tests | Planned | Existing 1.0.x worlds | No migrations | Settings only | Absent | Investigating | World samples | New framework | Interrupted-run tests |
-| MIG-002 | Migration | No artwork/token/journal wipes; no false success | Assignment | 14 | MIG-001 | Failure tests | Planned | — | None | N/A | Absent | Investigating | Policy | Fail closed | Failure taxonomy tests |
+| MIG-002 | Migration | No artwork/token/journal wipes; no false success | Assignment | 14 | MIG-001 | Failure tests | Planned | ? | None | N/A | Absent | Investigating | Policy | Fail closed | Failure taxonomy tests |
 | REL-001 | Release | Guides, attribution, manifest, install/upgrade | Assignment | 15 | All gates | Checklists | Planned | Package URL | README/CHANGELOG | Partial docs | Incomplete | Investigating | Phase 15 | Complete docs | Install tests |
-| REL-002 | Release | Explicit approval before publish; no Git ops implied | Assignment | 15 | REL-001 | Maintainer | Planned | — | Placeholder URL | Not publishable | Incomplete | Investigating | Approval | Real URLs | — |
-| VNEXT-001 | Audit | Disposition audit of all `v.next` components | Maintainer 2026-08-14 | 0–3 | Inventory | Audit records | Planned | Outcome A–D | All listed audit areas | Mixed | Unverified | Investigating | Section 6 method | Per component | Retention regressions |
+| REL-002 | Release | Explicit approval before publish; no Git ops implied | Assignment | 15 | REL-001 | Maintainer | Planned | ? | Placeholder URL | Not publishable | Incomplete | Investigating | Approval | Real URLs | ? |
+| VNEXT-001 | Audit | Disposition audit of all `v.next` components | Maintainer 2026-08-14 | 0?3 | Inventory | Audit records | Planned | Outcome A?D | All listed audit areas | Mixed | Unverified | Investigating | Section 6 method | Per component | Retention regressions |
 | VNEXT-002 | Audit | Reuse decision gate A/B/C/D | Maintainer 2026-08-14 | 3 | VNEXT-001 | Maintainer | Planned | Which outcome | N/A | N/A | Not selected | Investigating | Comparison table | Follow outcome | Depends on outcome |
 
 ---
@@ -1891,7 +1891,7 @@ A phase is done only when its deliverables exist, its automated and manual valid
 - Shared architecture and reuse decision approved
 - AstroCom MVP with a small approved content set, Canon/Legends naming, source links, and no invented facts
 - NavComputer basic calculator with the exact matrix and sourced or labeled fuel/supplies math
-- Droid Shop pricing-only calculator from verified Tier I–VI, markup, and condition rules
+- Droid Shop pricing-only calculator from verified Tier I?VI, markup, and condition rules
 - Shipyard only if workbook rights and schema mapping pass; otherwise Shipyard may be cut from initial release by explicit decision
 - Security, migration, packaging, and Kakeman89-only attribution
 
@@ -1997,7 +1997,7 @@ Flagged as missing or unverified in this repository:
 - Rules source for the supplied hyperspace matrix
 - Rules source for fuel consumption
 - Rules source for supplies or food portions
-- Rules source for Droid Shop Tier I–VI pricing
+- Rules source for Droid Shop Tier I?VI pricing
 - Rules source for the 10 percent class markup
 - Rules source for droid condition pricing
 - Any approved original or licensed AstroCom artwork
@@ -2083,7 +2083,7 @@ Phase 0 must not implement, delete, rewrite, or clean up anything.
 
 ---
 
-## Addendum — 2026-08-14 — Phase 0 inventory executed
+## Addendum ? 2026-08-14 ? Phase 0 inventory executed
 
 ### Reason
 
@@ -2093,9 +2093,9 @@ The superseded header git constraint and the working-tree notes in Section 4.1 /
 
 ### Supersedes
 
-- Header bullet “Git constraint for this planning assignment: No Git operations and no working-tree changes other than creating `KAKEMAN89S_DATACRON_ROADMAP.md`.”
+- Header bullet ?Git constraint for this planning assignment: No Git operations and no working-tree changes other than creating `KAKEMAN89S_DATACRON_ROADMAP.md`.?
 - Section 4.1 untracked-tree row that listed only `.cursor/` (true before this roadmap existed).
-- Verified fact 18, which described the planning assignment’s single created file.
+- Verified fact 18, which described the planning assignment?s single created file.
 
 ### Revised decision or behavior
 
@@ -2107,7 +2107,7 @@ The superseded header git constraint and the working-tree notes in Section 4.1 /
 
 ### Implementation impact
 
-None. Investigation artifact only. All `v.next` components remain UNASSESSED. Reuse gate A–D remains unselected.
+None. Investigation artifact only. All `v.next` components remain UNASSESSED. Reuse gate A?D remains unselected.
 
 ### Validation impact
 
@@ -2119,7 +2119,7 @@ Implemented as investigation. Awaiting Foundry / Phase 1 authorization. Not Clos
 
 ---
 
-## Addendum — 2026-08-14 — Phase 1 static compatibility verification
+## Addendum ? 2026-08-14 ? Phase 1 static compatibility verification
 
 ### Reason
 
@@ -2129,9 +2129,9 @@ The superseded statements above are retained as historical planning baseline and
 
 ### Supersedes
 
-- Header and §2.1 item 2 language that SW5e v1.4.2 identity, package type, and exact APIs “remain investigation items until Phase 1 verifies them in the live target,” insofar as **package type** and **local git identity** are now known. Live-target API verification remains incomplete.
+- Header and �2.1 item 2 language that SW5e v1.4.2 identity, package type, and exact APIs ?remain investigation items until Phase 1 verifies them in the live target,? insofar as **package type** and **local git identity** are now known. Live-target API verification remains incomplete.
 - Planning observation that public `sw5e-foundry/sw5e-module` latest release was 1.2.5, as the **local** installed checkout is git tag **1.4.2**. That public-release note remains historically true of the planning search; it is not the package found on this machine.
-- Phase 0 addendum status line “Phase 1 remains unauthorized until the maintainer accepts the inventory,” which applied before Phase 0 acceptance.
+- Phase 0 addendum status line ?Phase 1 remains unauthorized until the maintainer accepts the inventory,? which applied before Phase 0 acceptance.
 
 Does **not** supersede the locked compatibility *intent* of Foundry v13 / dnd5e 5.2.5. Those remain the roadmap target until the maintainer explicitly retargets.
 
@@ -2142,7 +2142,7 @@ Does **not** supersede the locked compatibility *intent* of Foundry v13 / dnd5e 
 - SW5e **1.4.2** is present as Foundry **module** `sw5e-module` (official repo checkout, `HEAD` = tag 1.4.2). Manifest `version` is unsubstituted `#{VERSION}#`. It is not a game system.
 - Starship current representation in that source: `vehicle` + `flags.sw5e.legacyStarshipActor.type === "starship"`. Character + `starshipCharacter.enabled` is treated as legacy input to normalize.
 - No world was opened. Existing worlds on core 13.351 must not be opened on this v14 host.
-- All `v.next` components remain UNASSESSED. Reuse gate A–D remains unselected.
+- All `v.next` components remain UNASSESSED. Reuse gate A?D remains unselected.
 
 ### Implementation impact
 
@@ -2158,7 +2158,7 @@ Implemented as static investigation. Awaiting maintainer approval. Not Closed. F
 
 ---
 
-## Addendum — 2026-08-14 — Foundry v13 installation located
+## Addendum ? 2026-08-14 ? Foundry v13 installation located
 
 ### Reason
 
@@ -2168,7 +2168,7 @@ The superseded statements above are retained as historical evidence and must not
 
 ### Supersedes
 
-- Phase 1 report finding and Phase 1 roadmap addendum language that there was “no Foundry v13 application and no dnd5e 5.2.5 system files,” **as a machine-wide statement**. Those files were absent from the v14 User Data path; they are present in the V13 portable tree.
+- Phase 1 report finding and Phase 1 roadmap addendum language that there was ?no Foundry v13 application and no dnd5e 5.2.5 system files,? **as a machine-wide statement**. Those files were absent from the v14 User Data path; they are present in the V13 portable tree.
 - Phase 1 matrix row treating Foundry v13 as absent.
 
 Does **not** supersede the locked compatibility intent of Foundry v13 / dnd5e 5.2.5 / SW5e 1.4.2. Does **not** authorize Phase 2, architecture, dispositions, or the reuse gate.
@@ -2182,7 +2182,7 @@ Does **not** supersede the locked compatibility intent of Foundry v13 / dnd5e 5.
 - V13 `Data\modules\sw5e-module` is a junction to `sw5e-module-1.4.1-remediation-runtime` with manifest version **`1.4.1-remediation-test`**, not SW5e 1.4.2.
 - SW5e 1.4.2 remains a separate git-tag checkout used by the v14 AppData junction.
 - No world was opened. No Foundry launch. No safe Datacron disposable world was identified.
-- Details: `KAKEMAN89S_DATACRON_PHASE_1_COMPATIBILITY_VERIFICATION.md` addendum “Foundry V13 Target Installation Continuation.”
+- Details: `KAKEMAN89S_DATACRON_PHASE_1_COMPATIBILITY_VERIFICATION.md` addendum ?Foundry V13 Target Installation Continuation.?
 
 ### Implementation impact
 
@@ -2198,7 +2198,7 @@ Implemented as investigation continuation. Not Closed. Combined 1.4.2-on-V13 run
 
 ---
 
-## Addendum — 2026-08-14 — Phase 2 licensing and provenance investigation executed
+## Addendum ? 2026-08-14 ? Phase 2 licensing and provenance investigation executed
 
 ### Reason
 
@@ -2206,10 +2206,10 @@ Phase 2 was explicitly authorized and executed as a read-only investigation. Sev
 
 ### Supersedes
 
-- The Foundry v13 continuation addendum statement that “Phase 2 remains unauthorized until explicit maintainer approval.” Phase 2 was subsequently authorized and completed as investigation only.
-- The Phase 2 section instruction to “Investigate Wookieepedia license…” as an open investigation item, to the extent Phase 2 has now recorded the evidence that was reachable on 2026-08-14.
-- The implication in `origin/v.next` documentation (quoted in Phase 0/2) that redistributors should “comply with that repository’s license” for Wason1797/StarWarsMap, insofar as that wording assumes a published license exists. GitHub API metadata for that repository reports `"license": null`.
-- The Phase 2 exit-criteria sentence in this roadmap that every existing asset would leave Phase 2 as “verified, quarantined, or recommended for removal.” Authorized Phase 2 assigned **evidence states only**. No component disposition (RETAIN / REVISE / REPLACE / REMOVE / QUARANTINE / DEFER) was assigned.
+- The Foundry v13 continuation addendum statement that ?Phase 2 remains unauthorized until explicit maintainer approval.? Phase 2 was subsequently authorized and completed as investigation only.
+- The Phase 2 section instruction to ?Investigate Wookieepedia license?? as an open investigation item, to the extent Phase 2 has now recorded the evidence that was reachable on 2026-08-14.
+- The implication in `origin/v.next` documentation (quoted in Phase 0/2) that redistributors should ?comply with that repository?s license? for Wason1797/StarWarsMap, insofar as that wording assumes a published license exists. GitHub API metadata for that repository reports `"license": null`.
+- The Phase 2 exit-criteria sentence in this roadmap that every existing asset would leave Phase 2 as ?verified, quarantined, or recommended for removal.? Authorized Phase 2 assigned **evidence states only**. No component disposition (RETAIN / REVISE / REPLACE / REMOVE / QUARANTINE / DEFER) was assigned.
 
 The superseded content above is retained as historical evidence and must not be deleted.
 
@@ -2219,8 +2219,8 @@ The superseded content above is retained as historical evidence and must not be 
 - Wookieepedia **text** is named CC BY-SA 3.0 Unported on FAQ/About pages; **media** is file-specific and is not treated as the text license. Fandom Terms of Use restrict scraping. The Copyrights page itself was not fully fetched (timeout). This is evidence, not legal advice.
 - Creative Commons lists GPLv3 as compatible with CC BY-SA **4.0** (one-way), not as a designated compatible license for BY-SA **3.0**. Combining adapted wiki text with GPL-3 code requires further review.
 - No directly applicable Star Wars fan-content permission was located. Public listing requires legal or platform review.
-- `Galactic Map.jpg`, planet JSON corpora, the geography workbook, StarWarsMap JSON, GeoJSON lanes (`cartodb_id` on all 1574 features; Wikia `link` URLs), the 9×9 matrix, fuel/food/supplies formulas, requested Droid Shop RAW tables, and the ship-builder workbook remain uncleared for public packaging. The matrix classification remains **SOURCE UNKNOWN, RULE AUTHORITY UNVERIFIED**.
-- All `v.next` components remain **UNASSESSED**. Reuse gate A–D remains unselected. Phase 3 is not authorized by this addendum.
+- `Galactic Map.jpg`, planet JSON corpora, the geography workbook, StarWarsMap JSON, GeoJSON lanes (`cartodb_id` on all 1574 features; Wikia `link` URLs), the 9�9 matrix, fuel/food/supplies formulas, requested Droid Shop RAW tables, and the ship-builder workbook remain uncleared for public packaging. The matrix classification remains **SOURCE UNKNOWN, RULE AUTHORITY UNVERIFIED**.
+- All `v.next` components remain **UNASSESSED**. Reuse gate A?D remains unselected. Phase 3 is not authorized by this addendum.
 
 ### Implementation impact
 
@@ -2228,7 +2228,7 @@ None. Investigation artifact only. No runtime, pack, test, localization, or modu
 
 ### Validation impact
 
-Phase 2 public-release gate A–F is recorded in the Phase 2 report. Phase 3 must consume those evidence states. Combined V13 + SW5e 1.4.2 runtime remains open. No world was opened.
+Phase 2 public-release gate A?F is recorded in the Phase 2 report. Phase 3 must consume those evidence states. Combined V13 + SW5e 1.4.2 runtime remains open. No world was opened.
 
 ### Status
 
@@ -2236,7 +2236,7 @@ Implemented as read-only investigation. Awaiting maintainer approval of the Phas
 
 ---
 
-## Addendum — 2026-08-14 — Phase 2 accepted; private-use policy; Phase 3 authorized
+## Addendum ? 2026-08-14 ? Phase 2 accepted; private-use policy; Phase 3 authorized
 
 ### Reason
 
@@ -2244,17 +2244,17 @@ The maintainer accepted Phase 2 as the licensing and provenance evidence baselin
 
 ### Supersedes
 
-- Phase 2 report status of “awaiting maintainer approval” and this roadmap’s Phase 2 addendum line that “Phase 3 is not authorized by this addendum.”
+- Phase 2 report status of ?awaiting maintainer approval? and this roadmap?s Phase 2 addendum line that ?Phase 3 is not authorized by this addendum.?
 - Treatment of licensing/provenance **unknown** states as implementation or architecture blockers for private development.
 - Treatment of Phase 2 public-release blockers as delays on the current private-use roadmap.
-- The implication that V13 `Data\modules\sw5e-module` already tracks SW5e 1.4.2. Phase 1 correctly observed a junction to `1.4.1-remediation-test`; the maintainer’s expected target is a different path.
+- The implication that V13 `Data\modules\sw5e-module` already tracks SW5e 1.4.2. Phase 1 correctly observed a junction to `1.4.1-remediation-test`; the maintainer?s expected target is a different path.
 
 The superseded content above is retained as historical evidence and must not be deleted.
 
 ### Revised decision or behavior
 
 - Phase 2 is **accepted**. Preserve the Phase 2 report for tracking, attribution, correction, replacement, takedown response, and any future public-distribution review.
-- Kakeman89's Datacron is a **private, noncommercial TTRPG tool for the maintainer’s own use**. The maintainer accepts risk for using material whose redistribution rights are not established.
+- Kakeman89's Datacron is a **private, noncommercial TTRPG tool for the maintainer?s own use**. The maintainer accepts risk for using material whose redistribution rights are not established.
 - Licensing evidence remains an **informational** field. It is not a veto on architecture, local implementation, local conversion, private Foundry use, testing, or selective `v.next` reuse. Do not repeatedly warn about licensing in later phases unless the release profile changes or the maintainer asks about distribution.
 - **Public packaging, Foundry listing, and broad redistribution are not in the current release profile.** This is not a finding that material is cleared for public distribution.
 - Artwork remains Kakeman89-controlled. Do not generate art, ingest Wookieepedia images, or block calculators on missing art.
@@ -2277,7 +2277,7 @@ Phase 2 Closed as accepted evidence baseline. Phase 3 planning executed; reuse g
 
 ---
 
-## Addendum — 2026-08-14 — V13 SW5e junction now targets 1.4.2 repository
+## Addendum ? 2026-08-14 ? V13 SW5e junction now targets 1.4.2 repository
 
 ### Reason
 
@@ -2313,7 +2313,7 @@ Junction repair complete as static configuration. Runtime still Awaiting Foundry
 
 ---
 
-## Addendum — 2026-08-14 — Phase 3 accepted; Phase 4 AstroCom PoC executed
+## Addendum ? 2026-08-14 ? Phase 3 accepted; Phase 4 AstroCom PoC executed
 
 ### Reason
 
@@ -2332,7 +2332,7 @@ The superseded content above is retained as historical evidence and must not be 
 - Phase 4 was authorized and executed on local `v.next` tracking `origin/v.next` at `a01c1d7b46a8ea62a7b1d95e39131aace3f6315b`.
 - Planning records remained at the repository root and were not deleted.
 - AstroCom PoC architecture: authored source records generate canonical JournalEntries; Canon and Legends stay separate; names are `Name (Canon)` / `Name (Legends)`; grid and route browsing use metadata, not duplicate Journals.
-- Recommended pack arrangement from PoC evidence: **separate Canon and Legends Journal packs** with folders `Region → Sector → System` (pack depth 3). Continuity → Region → Sector → System is depth 4 and does not fit a pack.
+- Recommended pack arrangement from PoC evidence: **separate Canon and Legends Journal packs** with folders `Region ? Sector ? System` (pack depth 3). Continuity ? Region ? Sector ? System is depth 4 and does not fit a pack.
 - Node tests: 13/13 passed. Combined fixture result is truthful **partial** (12 journals, 6 rejected invalid records).
 - Foundry runtime gates: **NOT RUN**. The development module is not present in `C:\Foundry\V13\Data\modules`, and no disposable world was created.
 - NavComputer, Droid Shop, Shipyard, and Advanced routing were not implemented or enabled.
@@ -2354,7 +2354,7 @@ Phase 3 accepted. Phase 4 Node/static PoC complete; Foundry gates NOT RUN. Phase
 
 ---
 
-## Addendum — 2026-08-14 — Phase 4 Foundry runtime continuation
+## Addendum ? 2026-08-14 ? Phase 4 Foundry runtime continuation
 
 ### Reason
 
@@ -2373,7 +2373,7 @@ The superseded content above is retained as historical evidence and must not be 
 - Runtime: Foundry V13.351, dnd5e 5.2.5, SW5e source 1.4.2 (`#{VERSION}#` left unchanged), Datacron 1.0.1 via junction, lib-wrapper 1.13.5.1.
 - Enabled in that world only: dnd5e, lib-wrapper, sw5e-module, kakeman89s-datacron.
 - Gate summary: 30/30 PASS after retest. Four original probe FAILs (Gates 3, 4, 28, 30) are preserved in the Phase 4 report and were PASS on corrected retest. 0 FAIL remaining, 0 BLOCKED, 0 NOT RUN.
-- PoC architecture result: separate Canon/Legends world packs (`world.astrocom-poc-canon` 9 journals / 17 folders; `world.astrocom-poc-legends` 3 journals / 7 folders); Region → Sector → System; metadata grid/route browsing; truthful partial rebuild (12 accepted, 6 rejected); live UUIDs resolved; second rebuild idempotent.
+- PoC architecture result: separate Canon/Legends world packs (`world.astrocom-poc-canon` 9 journals / 17 folders; `world.astrocom-poc-legends` 3 journals / 7 folders); Region ? Sector ? System; metadata grid/route browsing; truthful partial rebuild (12 accepted, 6 rejected); live UUIDs resolved; second rebuild idempotent.
 - Unresolved gate: none.
 - Phase 4 is **runtime complete**. Phase 5 was not started.
 
@@ -2383,7 +2383,7 @@ AstroCom world-ID rebuild guard and empty-index browser behavior remain in the u
 
 ### Validation impact
 
-Foundry Gates 1–30 executed in `datacron-phase4-poc`. Node tests 14/14. Deterministic generation `partial`.
+Foundry Gates 1?30 executed in `datacron-phase4-poc`. Node tests 14/14. Deterministic generation `partial`.
 
 ### Status
 
@@ -2391,7 +2391,7 @@ Phase 4 Foundry runtime validation complete. Phase 5 not started.
 
 ---
 
-## Addendum — 2026-08-17 — Phase 5 AstroCom content pipeline executed
+## Addendum ? 2026-08-17 ? Phase 5 AstroCom content pipeline executed
 
 ### Reason
 
@@ -2422,8 +2422,79 @@ New pipeline under `kakeman89s-datacron/scripts/astrocom/pipeline/`, intermediat
 
 ### Validation impact
 
-Existing Phase 4 gates and the Phase 4 report body are retained. Phase 5 Foundry gates 1–45 are recorded in the Phase 5 report, including the locked-pack failure and retest.
+Existing Phase 4 gates and the Phase 4 report body are retained. Phase 5 Foundry gates 1?45 are recorded in the Phase 5 report, including the locked-pack failure and retest.
 
 ### Status
 
 Phase 5 content pipeline complete for the authorized pilot. Full ingest not authorized. Phase 6 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 6 AstroCom MVP implementation in progress
+
+### Reason
+
+Phase 6 AstroCom MVP implementation was authorized and is delivering against the execution baseline in `KAKEMAN89S_DATACRON_PHASE_6_ASTROCOM_MVP_PLAN.md`. This addendum records that status. It does not delete the earlier status that Phase 6 was not started.
+
+### Supersedes
+
+- Prior addendum status that Phase 6 was not started.
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 6 AstroCom MVP implementation is **in progress**, delivering slices **6.0?6.10**.
+- Pack model: **Option A** immutable module packs (`astrocom-canon` / `astrocom-legends`); no in-world pack mutation in `datacron-phase6-mvp`.
+- Controlled **Alderaan System** correction pilot (`ac:canon:alderaan`) via manifest-led manual enrichment; automated parser remains unauthorized.
+- World setting `featureAstroCom`: default **true**, `requiresReload` **true**.
+- Bulk ingest remains blocked; `BULK_INGEST_AUTHORIZED.md` must not be created casually.
+- Operator docs added under `docs/`: GM guide, player guide, content review workflow, source enrichment guide, pack generation guide.
+- Attribution: Kakeman89 only.
+
+### Implementation impact
+
+AstroCom pipeline/runtime/docs under `kakeman89s-datacron/` and `docs/` per the Phase 6 plan. NavComputer, Droid Ally, and Shipyard remain out of Phase 6 scope.
+
+### Validation impact
+
+Existing Phase 0?5 reports and gates are retained. Phase 6 Foundry validation targets disposable world `datacron-phase6-mvp`.
+
+### Status
+
+Phase 6 AstroCom MVP implementation in progress / delivering slices 6.0?6.10. Phase 7 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 6 AstroCom MVP Foundry closeout
+
+### Reason
+
+Phase 6 Node suite and disposable-world Foundry gates completed. Record closeout without rewriting earlier ?in progress? history.
+
+### Supersedes
+
+- Prior addendum status that Phase 6 was only ?in progress.?
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 6 AstroCom MVP is **complete** for the authorized scope.
+- Node tests: **45/45** pass.
+- Foundry world `datacron-phase6-mvp`: automated GM gates **15/15 PASS** (Alderaan System correction, immutable rebuild refuse, bulk refuse, pack discovery, browser open).
+- Manual multi-role Foundry walkthrough: **NOT RUN** (Node permission predicates cover the matrix).
+- Report: `docs/KAKEMAN89S_DATACRON_PHASE_6_ASTROCOM_MVP.md`.
+- Bulk auth artifact remains absent. Full packs not emitted. Phase 7 not started. No commit/push by this phase.
+
+### Implementation impact
+
+No additional product scope beyond the Phase 6 plan deliverables already underway in the prior addendum.
+
+### Validation impact
+
+Phase 0?5 gates retained. Phase 6 Foundry evidence recorded in the Phase 6 implementation report.
+
+### Status
+
+Phase 6 AstroCom MVP complete for authorized scope. Phase 7 not started.

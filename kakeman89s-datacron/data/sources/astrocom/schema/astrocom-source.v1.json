@@ -32,6 +32,32 @@
       },
       "additionalProperties": true
     },
+    "regionClassification": {
+      "type": "object",
+      "required": ["value", "relation", "presence"],
+      "properties": {
+        "value": { "type": "string", "minLength": 1 },
+        "relation": { "enum": ["primary", "subregion", "alternate"] },
+        "presence": { "enum": ["present", "missing", "unknown", "notApplicable", "omitted"] }
+      },
+      "additionalProperties": false
+    },
+    "fieldProvenanceEntry": {
+      "type": "object",
+      "required": ["sourceId", "method", "candidateValue", "reviewStatus"],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceLocator": { "type": ["string", "null"] },
+        "method": { "type": "string", "minLength": 1 },
+        "candidateValue": {},
+        "reviewStatus": { "enum": ["draft", "quarantined", "approved", "rejected"] },
+        "reviewedBy": { "type": ["string", "null"] },
+        "lastReviewedAt": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] },
+        "continuityScope": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
     "route": {
       "type": "object",
       "required": ["stableId", "name", "grids", "planetStableIds"],
@@ -87,6 +113,17 @@
             "system": { "$ref": "#/$defs/presence" },
             "grid": { "$ref": "#/$defs/presence" },
             "routes": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "regionClassifications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/regionClassification" }
+        },
+        "fieldProvenance": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/fieldProvenanceEntry" }
           }
         },
         "physical": { "$ref": "#/$defs/presence" },

@@ -20,8 +20,19 @@
       "System": "System",
       "Grid": "Grid",
       "Route": "Route",
+      "Classification": "Classification",
       "Search": "Name or alias",
-      "Rebuild": "Rebuild PoC journals"
+      "ClearFilters": "Clear filters",
+      "ResultCount": "{count} of {total} locations",
+      "Rebuild": "Rebuild development journals",
+      "RebuildRefused": "Pack rebuild is not available in this world.",
+      "StateLoading": "Loading AstroCom index…",
+      "StateEmpty": "No AstroCom locations are available.",
+      "StatePartial": "Some AstroCom packs are unavailable. Showing partial results.",
+      "StateUnavailable": "AstroCom packs are unavailable.",
+      "StateError": "AstroCom index could not be loaded.",
+      "StateStale": "AstroCom index may be stale. Reload the world if results look wrong.",
+      "StateDisabled": "AstroCom is disabled for this world."
     },
     "App": {
       "Title": "Kakeman89s Datacron",
@@ -216,7 +227,7 @@
       },
       "FeatureAstroCom": {
         "Name": "Enable AstroCom",
-        "Hint": "Show the GM AstroCom scene-control tool."
+        "Hint": "When enabled, players and GMs can open AstroCom. Changing this setting reloads the world."
       }
     },
     "Results": {

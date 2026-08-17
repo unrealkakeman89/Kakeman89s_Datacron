@@ -2,6 +2,7 @@ import { logInfo, logWarn, MODULE_ID } from "./logger.js";
 import { DatacronApp } from "./datacron-app.js";
 import { DroidAllyApp } from "./droid-ally-app.js";
 import { AstroComApp } from "./astrocom/astrocom-app.js";
+import { canBrowseAstroCom } from "./astrocom/permissions.js";
 import { loadGeneratedAstroCom, loadLiveAstroComIndex, openAstroComJournal, rebuildAstroCom, rebuildAstroComPilot, rebuildAstroComPoc, attemptBulkAstroComBuild } from "./astrocom/rebuild.js";
 import { registerSettings, SETTING_KEYS } from "./settings.js";
 
@@ -70,7 +71,7 @@ export async function openDroidAllyPricingApp() {
 }
 
 export async function openAstroComApp() {
-  if (!game.user?.isGM) return null;
+  if (!canBrowseAstroCom(game.user)) return null;
   if (!isAstroComEnabled()) return null;
   clearAppSingletonIfStale(astroComApp, () => {
     astroComApp = null;
@@ -99,8 +100,6 @@ Hooks.once("init", () => {
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
-  if (!game.user?.isGM) return;
-
   const hostControl = controls.tokens ?? controls.token ?? null;
   if (!hostControl) {
     logWarn("No token scene control was available to register the Datacron button.");
@@ -109,35 +108,37 @@ Hooks.on("getSceneControlButtons", (controls) => {
 
   hostControl.tools ??= {};
 
-  const hyperspaceToolName = `${MODULE_ID}-open-hyperspace`;
-  hostControl.tools[hyperspaceToolName] = {
-    name: hyperspaceToolName,
-    title: "KAKEMAN89SDATACRON.SceneControl.OpenHyperspace",
-    icon: "fa-solid fa-route",
-    order: Object.keys(hostControl.tools).length,
-    button: true,
-    visible: game.user?.isGM ?? false,
-    onChange: (_event, active) => {
-      if (active === false) return;
-      void openHyperspaceNavigationApp();
-    }
-  };
+  if (game.user?.isGM) {
+    const hyperspaceToolName = `${MODULE_ID}-open-hyperspace`;
+    hostControl.tools[hyperspaceToolName] = {
+      name: hyperspaceToolName,
+      title: "KAKEMAN89SDATACRON.SceneControl.OpenHyperspace",
+      icon: "fa-solid fa-route",
+      order: Object.keys(hostControl.tools).length,
+      button: true,
+      visible: true,
+      onChange: (_event, active) => {
+        if (active === false) return;
+        void openHyperspaceNavigationApp();
+      }
+    };
 
-  const droidToolName = `${MODULE_ID}-open-droid-ally`;
-  hostControl.tools[droidToolName] = {
-    name: droidToolName,
-    title: "KAKEMAN89SDATACRON.SceneControl.OpenDroidAlly",
-    icon: "fa-solid fa-robot",
-    order: Object.keys(hostControl.tools).length,
-    button: true,
-    visible: game.user?.isGM ?? false,
-    onChange: (_event, active) => {
-      if (active === false) return;
-      void openDroidAllyPricingApp();
-    }
-  };
+    const droidToolName = `${MODULE_ID}-open-droid-ally`;
+    hostControl.tools[droidToolName] = {
+      name: droidToolName,
+      title: "KAKEMAN89SDATACRON.SceneControl.OpenDroidAlly",
+      icon: "fa-solid fa-robot",
+      order: Object.keys(hostControl.tools).length,
+      button: true,
+      visible: true,
+      onChange: (_event, active) => {
+        if (active === false) return;
+        void openDroidAllyPricingApp();
+      }
+    };
+  }
 
-  if (!isAstroComEnabled()) return;
+  if (!isAstroComEnabled() || !canBrowseAstroCom(game.user)) return;
 
   const astroComToolName = `${MODULE_ID}-open-astrocom`;
   hostControl.tools[astroComToolName] = {
@@ -146,7 +147,7 @@ Hooks.on("getSceneControlButtons", (controls) => {
     icon: "fa-solid fa-book-atlas",
     order: Object.keys(hostControl.tools).length,
     button: true,
-    visible: game.user?.isGM ?? false,
+    visible: true,
     onChange: (_event, active) => {
       if (active === false) return;
       void openAstroComApp();

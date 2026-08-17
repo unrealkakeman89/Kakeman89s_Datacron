@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "recordCount": 27,
+  "missing": {
+    "region": 0,
+    "sector": 7,
+    "system": 26,
+    "grid": 2,
+    "physical": 2,
+    "societal": 27,
+    "economics": 27,
+    "description": 0,
+    "continuity": 0,
+    "provenance": 0
+  },
+  "pendingReview": 0,
+  "geographyConflicts": 21,
+  "unresolvedRoutes": 0,
+  "duplicateNames": 1,
+  "aliasConflicts": 0
+}

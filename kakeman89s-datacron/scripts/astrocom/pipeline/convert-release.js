@@ -14,6 +14,33 @@ function clonePresence(field, fallback = { presence: "missing" }) {
   return copy;
 }
 
+function cloneRegionClassifications(classifications) {
+  if (!Array.isArray(classifications)) return undefined;
+  return classifications.map((item) => ({
+    value: item.value,
+    relation: item.relation,
+    presence: item.presence
+  }));
+}
+
+function compactFieldProvenance(fieldProvenance) {
+  if (!fieldProvenance || typeof fieldProvenance !== "object") return undefined;
+  return Object.fromEntries(Object.entries(fieldProvenance).map(([path, entries]) => [
+    path,
+    (entries ?? []).map((entry) => ({
+      sourceId: entry.sourceId,
+      sourceLocator: entry.sourceLocator ?? null,
+      method: entry.method,
+      candidateValue: entry.candidateValue,
+      reviewStatus: entry.reviewStatus,
+      reviewedBy: entry.reviewedBy ?? null,
+      lastReviewedAt: entry.lastReviewedAt ?? null,
+      notes: entry.notes ?? null,
+      continuityScope: entry.continuityScope ?? null
+    }))
+  ]));
+}
+
 export function toReleaseRecord(intermediate) {
   return {
     schemaVersion: SCHEMA_VERSION,
@@ -33,6 +60,8 @@ export function toReleaseRecord(intermediate) {
       grid: clonePresence(intermediate.astrography.grid),
       routes: [...(intermediate.astrography.routes ?? [])]
     },
+    regionClassifications: cloneRegionClassifications(intermediate.regionClassifications),
+    fieldProvenance: compactFieldProvenance(intermediate.fieldProvenance),
     physical: clonePresence(intermediate.physical),
     societal: clonePresence(intermediate.societal),
     economics: clonePresence(intermediate.economics),

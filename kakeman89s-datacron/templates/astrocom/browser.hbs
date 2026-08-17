@@ -1,8 +1,8 @@
-<div class="astrocom-shell" data-app-id="{{appId}}">
+<div class="astrocom-shell" data-app-id="{{appId}}" data-status="{{status}}">
   <header class="datacron-header">
     <h1 class="datacron-title">{{localize "KAKEMAN89SDATACRON.AstroCom.Title"}}</h1>
     {{#if statusMessage}}
-      <p class="astrocom-status" data-status="{{status}}" role="status">{{statusMessage}}</p>
+      <p class="astrocom-status" data-status="{{status}}" role="status" aria-live="polite">{{statusMessage}}</p>
     {{/if}}
   </header>
 
@@ -52,6 +52,15 @@
       </select>
     </div>
     <div class="datacron-field">
+      <label class="datacron-label" for="{{appId}}-classification">{{localize "KAKEMAN89SDATACRON.AstroCom.Classification"}}</label>
+      <select id="{{appId}}-classification" class="datacron-select" data-astrocom-filter="classification">
+        <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
+        {{#each classifications}}
+          <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="datacron-field">
       <label class="datacron-label" for="{{appId}}-route">{{localize "KAKEMAN89SDATACRON.AstroCom.Route"}}</label>
       <select id="{{appId}}-route" class="datacron-select" data-astrocom-filter="route">
         <option value="">{{localize "KAKEMAN89SDATACRON.AstroCom.Any"}}</option>
@@ -70,9 +79,13 @@
         data-astrocom-filter="nameOrAlias"
       />
     </div>
+    <div class="datacron-field">
+      <button type="button" class="datacron-button" data-astrocom-clear="true">{{localize "KAKEMAN89SDATACRON.AstroCom.ClearFilters"}}</button>
+    </div>
   </form>
 
   <section class="datacron-panel" aria-label="{{localize "KAKEMAN89SDATACRON.AstroCom.ResultsLabel"}}">
+    <p class="astrocom-result-count" role="status" aria-live="polite">{{resultCountLabel}}</p>
     <ul class="astrocom-results">
       {{#each results}}
         <li>
@@ -85,7 +98,7 @@
     </ul>
   </section>
 
-  {{#if isGM}}
+  {{#if canRebuild}}
     <footer class="datacron-panel">
       <button type="button" data-astrocom-rebuild="true">{{localize "KAKEMAN89SDATACRON.AstroCom.Rebuild"}}</button>
     </footer>

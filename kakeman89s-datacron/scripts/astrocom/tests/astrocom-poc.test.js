@@ -88,9 +88,9 @@ test("alias, era notes, and optional-field presence are preserved", async () => 
   const html = aurek.pages[0].text.content;
   assert.deepEqual(aurek.flags["kakeman89s-datacron"].aliases, ["Aurek Catalog Label"]);
   assert.match(html, /Test Era One/);
-  assert.match(jenth.pages[0].text.content, /Physical Information[\s\S]*not documented/);
-  assert.match(krill.pages[0].text.content, /Societal Information[\s\S]*not documented/);
-  assert.match(leth.pages[0].text.content, /Planetary Economics[\s\S]*not documented/);
+  assert.match(jenth.pages[0].text.content, /Physical Information[\s\S]*not yet sourced/);
+  assert.match(krill.pages[0].text.content, /Societal Information[\s\S]*not yet sourced/);
+  assert.match(leth.pages[0].text.content, /Planetary Economics[\s\S]*not yet sourced/);
 });
 
 test("region, sector, system, grid, and multiple routes are in metadata", async () => {
@@ -211,7 +211,7 @@ test("generator does not modify unrelated module content and writes only generat
   assert.equal(written.journalCount, 12);
   assert.equal(result.recommendation.packArrangement, "separate-canon-and-legends-journal-packs");
   assert.equal(result.schemaVersion, SCHEMA_VERSION);
-  assert.equal(PRESENCE_LABEL.missing, "not documented");
+  assert.equal(PRESENCE_LABEL.missing, "not yet sourced");
 });
 
 test("rebuild world guard and empty browser index", async () => {

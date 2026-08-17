@@ -9,6 +9,8 @@ import {
 import { isBlank } from "./html.js";
 
 const PRESENCE_VALUES = new Set(Object.values(PRESENCE));
+const REGION_RELATIONS = new Set(["primary", "subregion", "alternate"]);
+const REVIEW_STATUSES = new Set(["draft", "quarantined", "approved", "rejected"]);
 
 export function journalNameFor(name, continuity) {
   const label = continuity === CONTINUITY.CANON ? "Canon" : continuity === CONTINUITY.LEGENDS ? "Legends" : null;
@@ -53,6 +55,46 @@ function requiredPresentText(path, field) {
     return `${path} must be a present string`;
   }
   return null;
+}
+
+function validateRegionClassifications(classifications) {
+  if (classifications == null) return [];
+  if (!Array.isArray(classifications)) return ["regionClassifications must be an array"];
+  const errors = [];
+  let primaryCount = 0;
+  for (const [index, item] of classifications.entries()) {
+    if (!item || typeof item !== "object" || isBlank(item.value)) errors.push(`regionClassifications[${index}].value is required`);
+    if (!REGION_RELATIONS.has(item?.relation)) errors.push(`regionClassifications[${index}].relation is invalid`);
+    if (!PRESENCE_VALUES.has(item?.presence)) errors.push(`regionClassifications[${index}].presence is invalid`);
+    if (item?.relation === "primary") primaryCount += 1;
+  }
+  if (primaryCount > 1) errors.push("regionClassifications may only contain one primary");
+  return errors;
+}
+
+function validateFieldProvenance(fieldProvenance) {
+  if (fieldProvenance == null) return [];
+  if (!fieldProvenance || typeof fieldProvenance !== "object" || Array.isArray(fieldProvenance)) {
+    return ["fieldProvenance must be an object"];
+  }
+  const errors = [];
+  for (const [path, entries] of Object.entries(fieldProvenance)) {
+    if (!Array.isArray(entries)) {
+      errors.push(`fieldProvenance.${path} must be an array`);
+      continue;
+    }
+    for (const [index, entry] of entries.entries()) {
+      if (!entry || typeof entry !== "object") {
+        errors.push(`fieldProvenance.${path}[${index}] must be an object`);
+        continue;
+      }
+      if (isBlank(entry.sourceId)) errors.push(`fieldProvenance.${path}[${index}].sourceId is required`);
+      if (isBlank(entry.method)) errors.push(`fieldProvenance.${path}[${index}].method is required`);
+      if (!("candidateValue" in entry)) errors.push(`fieldProvenance.${path}[${index}].candidateValue is required`);
+      if (!REVIEW_STATUSES.has(entry.reviewStatus)) errors.push(`fieldProvenance.${path}[${index}].reviewStatus is invalid`);
+    }
+  }
+  return errors;
 }
 
 export function validateExternalLinks(links, path = "externalLinks") {
@@ -110,6 +152,8 @@ export function validateRecordShape(record) {
     if (gridError) errors.push(gridError);
     if (astro.routes != null && !Array.isArray(astro.routes)) errors.push("astrography.routes must be an array");
   }
+  errors.push(...validateRegionClassifications(record.regionClassifications));
+  errors.push(...validateFieldProvenance(record.fieldProvenance));
 
   for (const group of ["physical", "societal", "economics"]) {
     if (!record[group] || !PRESENCE_VALUES.has(record[group].presence)) {
