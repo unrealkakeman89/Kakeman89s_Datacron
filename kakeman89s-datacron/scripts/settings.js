@@ -13,7 +13,9 @@ export const SETTING_KEYS = {
   advancedTier5ExtraDc: "advancedTier5ExtraDc",
   featureAstroCom: "featureAstroCom",
   featureShipyard: "featureShipyard",
-  shipyardDraftSnapshot: "shipyardDraftSnapshot"
+  shipyardDraftSnapshot: "shipyardDraftSnapshot",
+  shipyardCanonicalDraft: "shipyardCanonicalDraft",
+  shipyardPhase10TestHooks: "shipyardPhase10TestHooks"
 };
 
 export function registerSettings() {
@@ -144,5 +146,23 @@ export function registerSettings() {
     config: false,
     type: Object,
     default: {}
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.shipyardCanonicalDraft, {
+    name: "KAKEMAN89SDATACRON.Settings.ShipyardCanonicalDraft.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.ShipyardCanonicalDraft.Hint",
+    scope: "world",
+    config: false,
+    type: Object,
+    default: {}
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.shipyardPhase10TestHooks, {
+    name: "KAKEMAN89SDATACRON.Settings.ShipyardPhase10TestHooks.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.ShipyardPhase10TestHooks.Hint",
+    scope: "world",
+    config: false,
+    type: Object,
+    default: { enabled: false }
   });
 }

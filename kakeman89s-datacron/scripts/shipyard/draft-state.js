@@ -220,3 +220,46 @@ export function hydrateDraftFromProjection(projection, options = {}) {
 export function serializeDraft(draft) {
   return structuredClone(draft);
 }
+
+/**
+ * GM-only canonical persistence. Stores inputs, not player projection totals.
+ * @param {object} draft
+ */
+export function serializeCanonicalDraft(draft) {
+  if (!draft || typeof draft !== "object") return null;
+  return {
+    schemaVersion: 1,
+    revision: Number(draft.revision ?? 0),
+    sessionOwnerId: draft.sessionOwnerId ?? null,
+    cleared: Boolean(draft.cleared),
+    input: structuredClone(draft.input ?? createEmptyDraftInput()),
+    updatedAt: draft.updatedAt ?? null
+  };
+}
+
+/**
+ * Restore a GM draft from canonical persistence. Recalculates via calculateBuild.
+ * @param {object|null|undefined} serialized
+ * @param {{ sessionOwnerId?: string|null, revision?: number }} [options]
+ */
+export function hydrateCanonicalDraft(serialized, options = {}) {
+  if (!serialized || typeof serialized !== "object") {
+    return createEmptyDraft(options);
+  }
+  if (serialized.cleared || !serialized.input) {
+    return createEmptyDraft({
+      sessionOwnerId: options.sessionOwnerId ?? serialized.sessionOwnerId ?? null
+    });
+  }
+  const input = draftInputToBuildInput(serialized.input);
+  const calculation = calculateBuild(input);
+  return deepFreeze({
+    revision: Number(options.revision ?? serialized.revision ?? 1),
+    sessionOwnerId:
+      options.sessionOwnerId ?? serialized.sessionOwnerId ?? null,
+    cleared: false,
+    input: structuredClone(input),
+    calculation: structuredClone(calculation),
+    updatedAt: serialized.updatedAt ?? null
+  });
+}

@@ -397,7 +397,6 @@ test("Phase 9 UI modules contain no Actor APIs or credit arithmetic", () => {
     const text = fs.readFileSync(file, "utf8");
     assert.doesNotMatch(text, /Actor\.create|Item\.create|Token\.create|Folder\.create/);
     assert.doesNotMatch(text, /createEmbeddedDocuments/);
-    assert.doesNotMatch(text, /Phase 10|Create Starship Actor/i);
     assert.doesNotMatch(text, /grandTotal\s*\+|totalNoMisc\s*\+\s*miscTotal/);
     assert.match(text, /calculateBuild|buildProjection|broadcastShipyardProjection|updateDraftField/);
   }
@@ -405,7 +404,7 @@ test("Phase 9 UI modules contain no Actor APIs or credit arithmetic", () => {
     path.resolve(HERE, "../../../templates/shipyard/shipyard-app.hbs"),
     "utf8"
   );
-  assert.doesNotMatch(template, /Actor\.create|Create Starship|Phase 10/i);
+  assert.doesNotMatch(template, /Actor\.create/);
 });
 
 test("localization keys include Shipyard namespace", () => {

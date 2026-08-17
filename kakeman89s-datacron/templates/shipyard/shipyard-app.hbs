@@ -111,6 +111,71 @@
       <button type="button" data-shipyard-reset>{{labels.reset}}</button>
     </div>
   </section>
+
+  <section class="kakeman89s-shipyard__create" aria-label="{{labels.createStarship}}">
+    <h3>{{labels.createStarship}}</h3>
+    <div class="kakeman89s-shipyard__grid">
+      <label>
+        <span>{{labels.actorName}}</span>
+        <input data-shipyard-actor-name name="actorName" type="text" value="{{actorName}}" />
+      </label>
+      <label>
+        <span>{{labels.folder}}</span>
+        <select data-shipyard-folder name="folder">
+          {{#each folders}}
+          <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+          {{/each}}
+        </select>
+      </label>
+      <label>
+        <span>{{labels.image}}</span>
+        <input data-shipyard-image name="imagePath" type="text" value="{{imagePath}}" />
+      </label>
+    </div>
+    <fieldset class="kakeman89s-shipyard__ownership">
+      <legend>{{labels.ownership}}</legend>
+      {{#each ownershipUsers}}
+      <div class="kakeman89s-shipyard__ownership-row">
+        <span>{{this.name}}</span>
+        <label>
+          <input type="checkbox" data-shipyard-owner value="{{this.id}}" {{#if this.ownerSelected}}checked{{/if}} />
+          <span>{{../labels.owner}}</span>
+        </label>
+        <label>
+          <input type="checkbox" data-shipyard-observer value="{{this.id}}" {{#if this.observerSelected}}checked{{/if}} />
+          <span>{{../labels.observer}}</span>
+        </label>
+      </div>
+      {{/each}}
+    </fieldset>
+    <div class="kakeman89s-shipyard__actions">
+      <button type="button" data-shipyard-preview>{{labels.preview}}</button>
+      <button type="button" data-shipyard-create {{#unless createEnabled}}disabled{{/unless}}>{{labels.createStarship}}</button>
+      {{#if createStatus}}
+      <button type="button" data-shipyard-retry>{{labels.retry}}</button>
+      {{/if}}
+    </div>
+    {{#if createStatusLabel}}
+    <p class="kakeman89s-shipyard__create-status" role="status">{{createStatusLabel}}</p>
+    {{/if}}
+    {{#if preview}}
+    <dl class="kakeman89s-shipyard__preview">
+      <div><dt>{{labels.actorName}}</dt><dd>{{preview.actorName}}</dd></div>
+      <div><dt>{{labels.createStarship}}</dt><dd>{{preview.actorType}} / {{preview.starshipIdentity}}</dd></div>
+      <div><dt>{{labels.folder}}</dt><dd>{{preview.folderId}}</dd></div>
+      <div><dt>{{labels.image}}</dt><dd>{{preview.image}}</dd></div>
+      <div><dt>{{labels.grandTotal}}</dt><dd>{{preview.cost}}</dd></div>
+      <div><dt>{{labels.buildDays}}</dt><dd>{{preview.buildTime}}</dd></div>
+    </dl>
+    {{#if preview.unmappedFields.length}}
+    <ul class="kakeman89s-shipyard__unmapped">
+      {{#each preview.unmappedFields}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{/if}}
+  </section>
   {{else}}
   <section class="kakeman89s-shipyard__selections" aria-label="{{labels.selections}}">
     <h3>{{labels.selections}}</h3>
@@ -125,6 +190,9 @@
       <div><dt>{{labels.armor}}</dt><dd>{{input.armor}}</dd></div>
       <div><dt>{{labels.quartersLiving}}</dt><dd>{{input.quartersLiving}}</dd></div>
     </dl>
+    {{#if actorName}}
+    <p class="kakeman89s-shipyard__create-status" role="status">{{createStatusLabel}} {{actorName}}</p>
+    {{/if}}
     {{/if}}
   </section>
   {{/if}}

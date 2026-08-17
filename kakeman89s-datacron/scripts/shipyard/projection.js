@@ -154,6 +154,8 @@ export function buildProjection(parts = {}) {
     else if (status === "success") displayState = "calculated";
     else displayState = "empty";
   }
+  if (parts.creationStatus === "created") displayState = "created";
+  if (parts.creationStatus === "failed") displayState = "createFailed";
 
   return Object.freeze({
     protocolVersion: PROJECTION_PROTOCOL_VERSION,
@@ -166,6 +168,8 @@ export function buildProjection(parts = {}) {
     ok: Boolean(calculation?.ok),
     selections,
     totals,
+    creationStatus: parts.creationStatus ?? null,
+    createdActorName: parts.createdActorName ?? null,
     warnings: Array.isArray(calculation?.warnings)
       ? structuredClone(calculation.warnings)
       : [],
@@ -198,6 +202,9 @@ export function validateProjection(projection) {
   const blob = JSON.stringify(projection);
   if (/workbookPath|SotG Shipbuilder|capturedBy|Actor\.create|Item\.create/i.test(blob)) {
     errors.push("projection contains prohibited private or document-create content");
+  }
+  if (projection.createdActorUuid != null || projection.actorUuid != null || projection.uuid != null) {
+    errors.push("projection must not include Actor UUID");
   }
   return { ok: errors.length === 0, errors };
 }

@@ -74,3 +74,12 @@ export function canPublishShipyardProjection(user, options = {}) {
 export function canRequestShipyardSnapshot(user, options = {}) {
   return canOpenShipyard(user, options);
 }
+
+/**
+ * Only full GM may finalize a build into a new Starship Actor.
+ * @param {object|null|undefined} user
+ * @param {{ featureEnabled?: boolean }} [options]
+ */
+export function canFinalizeShipyardBuild(user, options = {}) {
+  return canEditShipyardDraft(user, options);
+}

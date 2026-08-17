@@ -96,7 +96,10 @@
   margin-top: 0.65rem;
 }
 
-.kakeman89s-shipyard button[data-shipyard-reset] {
+.kakeman89s-shipyard button[data-shipyard-reset],
+.kakeman89s-shipyard button[data-shipyard-preview],
+.kakeman89s-shipyard button[data-shipyard-create],
+.kakeman89s-shipyard button[data-shipyard-retry] {
   min-height: 2rem;
   padding: 0.35rem 0.85rem;
   border: 1px solid #5a4a28;
@@ -106,8 +109,64 @@
   cursor: pointer;
 }
 
-.kakeman89s-shipyard button[data-shipyard-reset]:hover {
+.kakeman89s-shipyard button[data-shipyard-reset]:hover,
+.kakeman89s-shipyard button[data-shipyard-preview]:hover,
+.kakeman89s-shipyard button[data-shipyard-create]:hover,
+.kakeman89s-shipyard button[data-shipyard-retry]:hover {
   background: #3a321c;
+}
+
+.kakeman89s-shipyard button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.kakeman89s-shipyard input[type="text"] {
+  width: 100%;
+  min-height: 1.9rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #3a4758;
+  border-radius: 3px;
+  background: #0f141a;
+  color: #e8e4d9;
+}
+
+.kakeman89s-shipyard__create,
+.kakeman89s-shipyard__ownership,
+.kakeman89s-shipyard__preview {
+  margin-top: 0.5rem;
+}
+
+.kakeman89s-shipyard__ownership {
+  border: 1px solid #243040;
+  padding: 0.45rem 0.55rem;
+}
+
+.kakeman89s-shipyard__ownership-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.kakeman89s-shipyard__preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.4rem 0.75rem;
+}
+
+.kakeman89s-shipyard__create-status {
+  margin: 0.4rem 0 0;
+  color: #f0c75e;
+}
+
+.kakeman89s-shipyard__status[data-display-state="created"] {
+  border-color: #3d6b4f;
+}
+
+.kakeman89s-shipyard__status[data-display-state="createFailed"] {
+  border-color: #8a4b2f;
 }
 
 .kakeman89s-shipyard__totals,

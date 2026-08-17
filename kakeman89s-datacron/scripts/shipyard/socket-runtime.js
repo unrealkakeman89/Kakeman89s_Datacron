@@ -26,11 +26,15 @@ let getAuthoritativeProjection = null;
 /** @type {(() => { revision: number, sessionOwnerId: string|null }) | null} */
 let getSessionMeta = null;
 
+/** @type {((payload: { status: string, actorName: string, revision?: number }) => void) | null} */
+let onActorCreated = null;
+
 /**
  * @param {{
  *   onProjectionReceived?: (projection: object|null, meta?: object) => void,
  *   getAuthoritativeProjection?: () => object|null,
- *   getSessionMeta?: () => { revision: number, sessionOwnerId: string|null }
+ *   getSessionMeta?: () => { revision: number, sessionOwnerId: string|null },
+ *   onActorCreated?: (payload: object) => void
  * }} handlers
  */
 export function configureShipyardSocketHandlers(handlers = {}) {
@@ -38,6 +42,7 @@ export function configureShipyardSocketHandlers(handlers = {}) {
   getAuthoritativeProjection =
     handlers.getAuthoritativeProjection ?? getAuthoritativeProjection;
   getSessionMeta = handlers.getSessionMeta ?? getSessionMeta;
+  onActorCreated = handlers.onActorCreated ?? onActorCreated;
 }
 
 function isFeatureEnabled() {
@@ -113,6 +118,15 @@ function handleInbound(message, senderUserId) {
         fromSnapshot: true
       }
     );
+    return;
+  }
+
+  if (message.type === SHIPYARD_MESSAGE_TYPES.ACTOR_CREATED) {
+    onActorCreated?.({
+      status: message.status ?? null,
+      actorName: message.actorName ?? "",
+      revision: message.revision ?? null
+    });
   }
 }
 
@@ -150,6 +164,17 @@ export function broadcastShipyardProjection(projection, sessionMeta = {}) {
 export function requestShipyardSnapshot() {
   emitShipyardMessage(
     createShipyardSocketMessage(SHIPYARD_MESSAGE_TYPES.REQUEST_SNAPSHOT, {})
+  );
+}
+
+export function broadcastActorCreated(payload = {}) {
+  if (!game.user?.isGM) return;
+  emitShipyardMessage(
+    createShipyardSocketMessage(SHIPYARD_MESSAGE_TYPES.ACTOR_CREATED, {
+      status: payload.status ?? "created",
+      actorName: payload.actorName ?? "",
+      revision: payload.revision ?? null
+    })
   );
 }
 

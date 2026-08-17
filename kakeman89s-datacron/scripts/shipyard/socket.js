@@ -21,8 +21,22 @@ export const SHIPYARD_MESSAGE_TYPES = Object.freeze({
   DRAFT_UPDATED: "shipyard-draft-updated",
   DRAFT_CLEARED: "shipyard-draft-cleared",
   REQUEST_SNAPSHOT: "shipyard-request-snapshot",
-  SNAPSHOT: "shipyard-snapshot"
+  SNAPSHOT: "shipyard-snapshot",
+  ACTOR_CREATED: "shipyard-actor-created"
 });
+
+export const REJECTED_PHASE10_MESSAGE_TYPES = Object.freeze([
+  "shipyard-create",
+  "shipyard-create-actor",
+  "shipyard-retry",
+  "shipyard-rollback",
+  "shipyard-undo",
+  "shipyard-folder",
+  "shipyard-ownership",
+  "shipyard-item",
+  "shipyard-actor-update",
+  "shipyard-actor-delete"
+]);
 
 /**
  * @param {object|null|undefined} user
@@ -90,6 +104,9 @@ export function validateShipyardSocketMessage(message, context) {
   }
 
   const type = message.type;
+  if (REJECTED_PHASE10_MESSAGE_TYPES.includes(type)) {
+    return { ok: false, errors: ["phase10-request-rejected"] };
+  }
   const known = Object.values(SHIPYARD_MESSAGE_TYPES);
   if (!known.includes(type)) {
     return { ok: false, errors: ["unknown message type"] };
@@ -110,6 +127,15 @@ export function validateShipyardSocketMessage(message, context) {
     message.itemCreate != null
   ) {
     errors.push("document-creation request rejected");
+  }
+  if (
+    message.retry != null ||
+    message.rollback != null ||
+    message.undo != null ||
+    message.folderMutation != null ||
+    message.ownershipMutation != null
+  ) {
+    errors.push("phase10-request-rejected");
   }
 
   const feature = { featureEnabled: Boolean(context.featureEnabled) };
@@ -154,6 +180,18 @@ export function validateShipyardSocketMessage(message, context) {
     }
     if (message.projection != null || message.mutation != null) {
       errors.push("snapshot request must not carry mutation payload");
+    }
+  }
+
+  if (type === SHIPYARD_MESSAGE_TYPES.ACTOR_CREATED) {
+    if (!canPublishShipyardProjection(context.senderUser, feature)) {
+      errors.push("non-GM actor-created rejected");
+    }
+    if (message.actorSource != null || message.mapping != null || message.uuid != null || message.actorUuid != null) {
+      errors.push("actor-created payload must be sanitized");
+    }
+    if (message.status == null || message.actorName == null) {
+      errors.push("actor-created status and name required");
     }
   }
 

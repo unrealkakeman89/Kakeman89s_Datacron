@@ -1,1 +1,6 @@
-2026/08/17-11:21:29.963 d640 Delete type=3 #1
+2026/08/17-16:11:49.048 fa24 Log #6: 26 ops saved to Table #7 OK
+2026/08/17-16:11:49.052 fa24 Archiving ..\Data\modules\kakeman89s-datacron\packs\astrocom-legends/000006.log: OK
+2026/08/17-16:11:49.053 fa24 Table #5: 58 entries OK
+2026/08/17-16:11:49.054 fa24 Table #7: 26 entries OK
+2026/08/17-16:11:49.061 fa24 Archiving ..\Data\modules\kakeman89s-datacron\packs\astrocom-legends/MANIFEST-000004: OK
+2026/08/17-16:11:49.073 fa24 **** Repaired leveldb ..\Data\modules\kakeman89s-datacron\packs\astrocom-legends; recovered 2 files; 17640 bytes. Some data may have been lost. ****

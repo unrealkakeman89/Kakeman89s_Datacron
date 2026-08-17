@@ -1,1 +1,6 @@
-2026/08/17-11:21:29.921 39b4 Delete type=3 #1
+2026/08/17-16:11:48.978 bf70 Log #6: 28 ops saved to Table #7 OK
+2026/08/17-16:11:48.981 bf70 Archiving ..\Data\modules\kakeman89s-datacron\packs\astrocom-canon/000006.log: OK
+2026/08/17-16:11:48.982 bf70 Table #5: 61 entries OK
+2026/08/17-16:11:48.983 bf70 Table #7: 28 entries OK
+2026/08/17-16:11:48.991 bf70 Archiving ..\Data\modules\kakeman89s-datacron\packs\astrocom-canon/MANIFEST-000004: OK
+2026/08/17-16:11:49.001 bf70 **** Repaired leveldb ..\Data\modules\kakeman89s-datacron\packs\astrocom-canon; recovered 2 files; 21124 bytes. Some data may have been lost. ****

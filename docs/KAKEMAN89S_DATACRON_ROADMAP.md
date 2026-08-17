@@ -2636,3 +2636,40 @@ Node 91/91. Foundry gates G1?G20 recorded in the Phase 9 report, including G9 or
 
 Phase 9 Shipyard collaborative UI complete. Phase 10 not started.
 
+---
+
+## Addendum ? 2026-08-17 ? Phase 10 Shipyard Starship Actor creation executed
+
+### Reason
+
+The maintainer authorized Phase 10 execution (create-new native SW5e Starship Actor from a completed Shipyard build). This addendum records that work. It does not delete the earlier status that Phase 10 had not started.
+
+### Supersedes
+
+- Prior addendum status that Phase 10 Starship Actor creation was **not started**.
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 10 was authorized and executed on `v.next` at HEAD `999bc118ba5c16f75271d99f3f26452e6d9b1686`. Nothing was staged, committed, or pushed.
+- Live identity confirmed: `vehicle` + `flags.sw5e.legacyStarshipActor.type === "starship"`. Character-backed starships were not created.
+- `calculateBuild` remains the sole cost authority. `actor-helpers.js` was not expanded.
+- Node suite: **120/120**.
+- Disposable world: `datacron-phase10-actor`. Foundry gates are recorded in `docs/KAKEMAN89S_DATACRON_PHASE_10_SHIPYARD_STARSHIP_ACTOR_CREATION.md`.
+- Foundry V13 was returned to setup and the V13 process was stopped.
+- Phase 11 was not started.
+- Workbook packaging/commit: still **not authorized**.
+
+### Implementation impact
+
+New files under `kakeman89s-datacron/scripts/shipyard/actor/` and Phase 10 tests; additive Shipyard UI/socket/settings changes; implementation report cited above. Plan document retained.
+
+### Validation impact
+
+Node 120/120. Foundry create, identity, native-sheet, rollback, player-boundary, reload, and shutdown gates recorded in the Phase 10 report. Existing Phase 8/9 history was not rewritten.
+
+### Status
+
+Phase 10 Shipyard Starship Actor creation complete for the authorized create-new scope. Phase 11 not started.
+

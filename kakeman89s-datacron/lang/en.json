@@ -22,7 +22,9 @@
         "unsupported": "Unsupported",
         "disconnected": "Disconnected",
         "warning": "Warning",
-        "error": "Error"
+        "error": "Error",
+        "created": "Created",
+        "createFailed": "Create failed"
       },
       "Sync": {
         "Live": "Sync live"
@@ -63,6 +65,22 @@
       },
       "Action": {
         "Reset": "Reset draft"
+      },
+      "Create": {
+        "Preview": "Preview",
+        "CreateStarship": "Create Starship",
+        "ActorName": "Actor Name",
+        "Folder": "Folder",
+        "Ownership": "Ownership",
+        "Image": "Image",
+        "Creating": "Creating…",
+        "Created": "Created",
+        "Failed": "Create failed",
+        "PreviewStale": "Preview stale",
+        "DuplicateName": "Duplicate name",
+        "Retry": "Retry",
+        "Owner": "Owner",
+        "Observer": "Observer"
       },
       "Error": {
         "UpdateFailed": "Shipyard draft update failed."
@@ -297,6 +315,14 @@
       "ShipyardDraftSnapshot": {
         "Name": "Shipyard draft snapshot",
         "Hint": "GM-owned sanitized projection snapshot for reconnect recovery. Not editable in Configure Settings."
+      },
+      "ShipyardCanonicalDraft": {
+        "Name": "Shipyard canonical draft",
+        "Hint": "GM-owned authoritative draft persistence. Not editable in Configure Settings."
+      },
+      "ShipyardPhase10TestHooks": {
+        "Name": "Shipyard Phase 10 test hooks",
+        "Hint": "Guarded test-only failure injection. Not editable in Configure Settings."
       }
     },
     "Results": {
