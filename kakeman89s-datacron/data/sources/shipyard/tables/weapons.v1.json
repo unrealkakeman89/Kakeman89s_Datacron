@@ -1,0 +1,12 @@
+{
+  "tableId": "shipyard-weapons.v1",
+  "workbookSha256": "090770BAEB5EBE2CFE2D45F3653A2193691111D20D1AD092FE387BB62C3DE1ED",
+  "sheet": "Starship Sheet",
+  "validationSource": "H27 list validation (Phase 8 subset)",
+  "privateAnalysisSource": true,
+  "authoredBy": "Kakeman89",
+  "options": [
+    { "key": "none", "display": "Weapon Selection:", "grandTotalContribution": 0 },
+    { "key": "twin_laser_cannon", "display": "Twin laser cannon", "grandTotalContribution": 0, "notes": "At tier 0 Small with Installed/Unlocked, Grand Total unchanged vs bare in Phase 8 vectors." }
+  ]
+}

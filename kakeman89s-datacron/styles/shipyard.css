@@ -1,0 +1,169 @@
+/* Shipyard ApplicationV2 — dark SW-inspired, matches module apps */
+
+.kakeman89s-shipyard-app .window-content {
+  padding: 0;
+}
+
+.kakeman89s-shipyard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem 1rem;
+  color: #e8e4d9;
+  background: linear-gradient(180deg, #12161c 0%, #0b0e12 100%);
+}
+
+.kakeman89s-shipyard__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: #f0c75e;
+}
+
+.kakeman89s-shipyard__mode {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #9aa7b5;
+}
+
+.kakeman89s-shipyard__status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #2a3544;
+  border-radius: 4px;
+  background: #151b24;
+  font-size: 0.85rem;
+}
+
+.kakeman89s-shipyard__status[data-display-state="invalid"],
+.kakeman89s-shipyard__status[data-display-state="unsupported"],
+.kakeman89s-shipyard__status[data-display-state="disconnected"] {
+  border-color: #8a4b2f;
+}
+
+.kakeman89s-shipyard__status[data-display-state="calculated"] {
+  border-color: #3d6b4f;
+}
+
+.kakeman89s-shipyard h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: #c9d4e0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.kakeman89s-shipyard__grid,
+.kakeman89s-shipyard__abilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.55rem;
+}
+
+.kakeman89s-shipyard label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.kakeman89s-shipyard label span {
+  color: #aeb9c6;
+}
+
+.kakeman89s-shipyard select,
+.kakeman89s-shipyard input[type="number"] {
+  width: 100%;
+  min-height: 1.9rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #3a4758;
+  border-radius: 3px;
+  background: #0f141a;
+  color: #e8e4d9;
+}
+
+.kakeman89s-shipyard select:focus,
+.kakeman89s-shipyard input:focus,
+.kakeman89s-shipyard button:focus {
+  outline: 2px solid #f0c75e;
+  outline-offset: 1px;
+}
+
+.kakeman89s-shipyard__actions {
+  margin-top: 0.65rem;
+}
+
+.kakeman89s-shipyard button[data-shipyard-reset] {
+  min-height: 2rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid #5a4a28;
+  border-radius: 3px;
+  background: #2a2414;
+  color: #f0c75e;
+  cursor: pointer;
+}
+
+.kakeman89s-shipyard button[data-shipyard-reset]:hover {
+  background: #3a321c;
+}
+
+.kakeman89s-shipyard__totals,
+.kakeman89s-shipyard__summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.4rem 0.75rem;
+  margin: 0;
+}
+
+.kakeman89s-shipyard__totals div,
+.kakeman89s-shipyard__summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid #243040;
+  border-radius: 3px;
+  background: #10151c;
+}
+
+.kakeman89s-shipyard dt {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #8f9bab;
+}
+
+.kakeman89s-shipyard dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f0c75e;
+}
+
+.kakeman89s-shipyard__errors {
+  border: 1px solid #8a3b3b;
+  border-radius: 4px;
+  padding: 0.5rem 0.65rem;
+  background: #241414;
+}
+
+.kakeman89s-shipyard__warnings {
+  border: 1px solid #8a6b2f;
+  border-radius: 4px;
+  padding: 0.5rem 0.65rem;
+  background: #241e14;
+}
+
+.kakeman89s-shipyard__explanation ol,
+.kakeman89s-shipyard__errors ul,
+.kakeman89s-shipyard__warnings ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.kakeman89s-shipyard__explanation li {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}

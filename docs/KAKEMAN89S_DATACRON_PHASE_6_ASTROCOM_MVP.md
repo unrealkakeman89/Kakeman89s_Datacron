@@ -137,3 +137,23 @@ Foundry remained available after gates for operator shutdown. Preferred shutdown
 ## 10. Closeout statement
 
 **PHASE 6 COMPLETE** for the authorized AstroCom MVP. Bulk auth artifact remains absent. Full packs were not emitted. Phase 7 was not started. Nothing was staged or committed by this phase.
+
+---
+
+## Addendum — 2026-08-17 — Unused architecture draft superseded
+
+### Reason
+
+A planning-exploration draft proposed materially different Phase 6 work (schema v2, second provenance Journal page, 100–150 curated records). That draft was not the accepted execution baseline.
+
+### Supersedes
+
+The unused “Draft Phase 6 architecture” exploration output. Historical content in this report and the accepted plan remain retained.
+
+### Revised decision or behavior
+
+Phase 6 executed against the accepted plan and implementation report only. No code or architecture change is required from the unused draft.
+
+### Status
+
+Superseded / closed as planning exploration only.

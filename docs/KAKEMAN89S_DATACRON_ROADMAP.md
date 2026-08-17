@@ -299,7 +299,7 @@ The following are observations of current `v.next` behavior. They are not accept
 
 - Separate GM-only ApplicationV2.
 - Class I?V / tracker / custom presets.
-- Chassis cost = class rank × 1000, plus several adders, then `finalCost = floor(subtotal / 2)`.
+- Chassis cost = class rank ? 1000, plus several adders, then `finalCost = floor(subtotal / 2)`.
 - This is not the requested Tier I?VI + 10 percent class markup + condition model.
 
 **AstroCom-related prior work**
@@ -1840,7 +1840,7 @@ Proposed disposition values in this matrix are **blank / Investigating** unless 
 
 | ID | Feature | Requirement | Source | Proposed phase | Dependency | Verification | Status | Open question | Existing `v.next` component | Existing behavior | Verification state | Proposed disposition | Evidence required | Replacement requirement | Regression test requirement |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DROID-001 | Droid Shop | Price companion with Tier I?VI chassis | Assignment | 12 | Rules | Table tests | Blocked | Prices | Droid Ally class ranks I?V | Rank × 1000 | Different model | Investigating | SW5e source | New price table | If old formula removed, replacement tests |
+| DROID-001 | Droid Shop | Price companion with Tier I?VI chassis | Assignment | 12 | Rules | Table tests | Blocked | Prices | Droid Ally class ranks I?V | Rank ? 1000 | Different model | Investigating | SW5e source | New price table | If old formula removed, replacement tests |
 | DROID-002 | Droid Shop | 10 percent class markup | Assignment | 12 | DROID-001 | Order tests | Blocked | Before/after condition | None | Not implemented | Absent | Investigating | Source | New math | Markup tests |
 | DROID-003 | Droid Shop | Condition modifiers | Assignment | 12 | DROID-001 | Table tests | Blocked | Categories | None | Not implemented | Absent | Investigating | Source | New math | Condition tests |
 | DROID-004 | Droid Shop | No invented rounding/stacking | Assignment | 12 | Source | Traceability | Investigating | ? | `floor(subtotal / 2)` | Halving | Unverified vs shop rules | Investigating | Source | Replace if not the rule | Prove removal if replaced |
@@ -2129,7 +2129,7 @@ The superseded statements above are retained as historical planning baseline and
 
 ### Supersedes
 
-- Header and §2.1 item 2 language that SW5e v1.4.2 identity, package type, and exact APIs ?remain investigation items until Phase 1 verifies them in the live target,? insofar as **package type** and **local git identity** are now known. Live-target API verification remains incomplete.
+- Header and ?2.1 item 2 language that SW5e v1.4.2 identity, package type, and exact APIs ?remain investigation items until Phase 1 verifies them in the live target,? insofar as **package type** and **local git identity** are now known. Live-target API verification remains incomplete.
 - Planning observation that public `sw5e-foundry/sw5e-module` latest release was 1.2.5, as the **local** installed checkout is git tag **1.4.2**. That public-release note remains historically true of the planning search; it is not the package found on this machine.
 - Phase 0 addendum status line ?Phase 1 remains unauthorized until the maintainer accepts the inventory,? which applied before Phase 0 acceptance.
 
@@ -2219,7 +2219,7 @@ The superseded content above is retained as historical evidence and must not be 
 - Wookieepedia **text** is named CC BY-SA 3.0 Unported on FAQ/About pages; **media** is file-specific and is not treated as the text license. Fandom Terms of Use restrict scraping. The Copyrights page itself was not fully fetched (timeout). This is evidence, not legal advice.
 - Creative Commons lists GPLv3 as compatible with CC BY-SA **4.0** (one-way), not as a designated compatible license for BY-SA **3.0**. Combining adapted wiki text with GPL-3 code requires further review.
 - No directly applicable Star Wars fan-content permission was located. Public listing requires legal or platform review.
-- `Galactic Map.jpg`, planet JSON corpora, the geography workbook, StarWarsMap JSON, GeoJSON lanes (`cartodb_id` on all 1574 features; Wikia `link` URLs), the 9×9 matrix, fuel/food/supplies formulas, requested Droid Shop RAW tables, and the ship-builder workbook remain uncleared for public packaging. The matrix classification remains **SOURCE UNKNOWN, RULE AUTHORITY UNVERIFIED**.
+- `Galactic Map.jpg`, planet JSON corpora, the geography workbook, StarWarsMap JSON, GeoJSON lanes (`cartodb_id` on all 1574 features; Wikia `link` URLs), the 9?9 matrix, fuel/food/supplies formulas, requested Droid Shop RAW tables, and the ship-builder workbook remain uncleared for public packaging. The matrix classification remains **SOURCE UNKNOWN, RULE AUTHORITY UNVERIFIED**.
 - All `v.next` components remain **UNASSESSED**. Reuse gate A?D remains unselected. Phase 3 is not authorized by this addendum.
 
 ### Implementation impact
@@ -2498,3 +2498,141 @@ Phase 0?5 gates retained. Phase 6 Foundry evidence recorded in the Phase 6 imple
 ### Status
 
 Phase 6 AstroCom MVP complete for authorized scope. Phase 7 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 7 Shipyard workbook analysis started
+
+### Reason
+
+Maintainer authorized Phase 7 investigation (Shipyard workbook analysis) after Phase 6 closeout. Record start without rewriting Phase 6 history.
+
+### Supersedes
+
+- Prior addendum status that Phase 7 was not started.
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 7 Shipyard workbook analysis is **in progress** (investigation only).
+- HOLD applies only if the ship-builder workbook cannot be located or identified ? not for licensing uncertainty alone on this private-use project.
+- Private local analysis may proceed without copying the workbook binary into Datacron and without treating redistribution/packaging as authorized.
+- Phases 8?10 (calculator, collaborative UI, Actor creation) are not started by this authorization.
+
+### Status
+
+Phase 7 investigation started. Phases 8?10 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 7 workbook analysis complete
+
+### Reason
+
+Phase 7 located and privately analyzed `SotG Shipbuilder and Shipyard.xlsx`. Record closeout without rewriting the earlier ?started? addendum.
+
+### Supersedes
+
+- Prior addendum status that Phase 7 was only ?in progress / started.?
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 7 status: **complete** (investigation). Report: `docs/KAKEMAN89S_DATACRON_PHASE_7_SHIPYARD_WORKBOOK_ANALYSIS.md`.
+- HOLD was **not** applied: the ship-builder workbook was located and identified.
+- Private analysis cited local path(s); SHA256 recorded; VBA absent; Starship Sheet formula/validation inventory documented.
+- Packaging/redistribution into Datacron remains **not authorized**; untracked `docs/SotG Shipbuilder and Shipyard.xlsx` must not be committed as module content under current stance.
+- Phases 8?10 remain not started. No Shipyard product calculator/UI/Actor creation was implemented.
+
+### Implementation impact
+
+Documentation only under `docs/`. No Shipyard runtime code.
+
+### Validation impact
+
+Phase 0?6 reports retained. Phase 7 section 9.3 checklist recorded in the Phase 7 report (some live Excel numeric samples NOT RUN due to COM open failure).
+
+### Status
+
+Phase 7 Shipyard workbook analysis complete. Phases 8?10 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 8 Shipyard calculation engine complete
+
+### Reason
+
+Maintainer authorized Phase 8 execution (calculation engine after vector capture). Record closeout without rewriting Phase 7 history.
+
+### Supersedes
+
+- Roadmap / Phase 7 closeout statements that Phases 8?10 were not started, insofar as **Phase 8** has now completed.
+- Phase 7 live Grand Total sampling **NOT RUN** status for cost vectors (superseded by Phase 8 capture; historical NOT RUN text retained in Phase 7 report).
+
+Phase 9 and Phase 10 remain not started. Prior addenda are retained.
+
+### Revised decision or behavior
+
+- Phase 8 authorization: pure JS Shipyard calculation engine + authored Excel vectors + Node parity tests.
+- Hygiene: untracked Datacron `docs/SotG Shipbuilder and Shipyard.xlsx` removed after hash match; geography workbook kept; authoritative SW5e Docs workbook unchanged.
+- Vector gate: **PASSED** (`phase8-vectors.v1.json`, 5 valid + 1 invalid).
+- Calculation engine: **PASSED** Node parity (exact credit totals for captured vectors).
+- Full Node suite: **70/70** pass.
+- Phase 8 status: **complete** (calc-only). Report: `docs/KAKEMAN89S_DATACRON_PHASE_8_SHIPYARD_CALCULATION_ENGINE.md`.
+- Phase 9 collaborative UI: **not started**.
+- Phase 10 Starship Actor creation: **not started**.
+- Workbook packaging/commit: still **not authorized**.
+- Checkpoint commit: recommended in Phase 8 report; **not executed** (no separate commit authorization).
+
+### Implementation impact
+
+New files under `kakeman89s-datacron/scripts/shipyard/` and `kakeman89s-datacron/data/sources/shipyard/`; `package.json` test script extended. No Foundry UI/sockets/Actors.
+
+### Validation impact
+
+Node parity + invalid-input tests only. Foundry calculation UI gate deferred to Phase 9 entry.
+
+### Status
+
+Phase 8 Shipyard calculation engine complete. Phases 9?10 not started.
+
+---
+
+## Addendum ? 2026-08-17 ? Phase 9 Shipyard collaborative UI complete
+
+### Reason
+
+Maintainer authorized Phase 9 execution (collaborative ApplicationV2 wrapping Phase 8 `calculateBuild`). Record closeout without rewriting Phase 8 history.
+
+### Supersedes
+
+- Roadmap / Phase 8 closeout statements that Phases 9?10 were not started, insofar as **Phase 9** has now completed.
+
+Phase 10 remains not started. Prior addenda are retained.
+
+### Revised decision or behavior
+
+- Phase 9 authorization: GM-authoritative draft, player read-only projection, module sockets, world snapshot reconnect, disposable two-client Foundry gates.
+- `calculateBuild` remains the sole cost authority. No Phase 8 formula expansion.
+- `featureShipyard` default false; `shipyardDraftSnapshot` is GM-written sanitized projection only.
+- Live socket channel is `module.kakeman89s-datacron` with typed `shipyard-*` messages.
+- Original live-reset FAIL (player retained 32000) is preserved in the Phase 9 report and was retested PASS after session-owner + channel fixes.
+- Phase 9 status: **complete**. Report: `docs/KAKEMAN89S_DATACRON_PHASE_9_SHIPYARD_COLLABORATIVE_UI.md`.
+- Phase 10 Starship Actor creation: **not started**.
+- Workbook packaging/commit: still **not authorized**.
+- Checkpoint commit: still **not executed**.
+
+### Implementation impact
+
+New Shipyard UI/socket/draft/projection modules, template, CSS, i18n, settings, scene control. Node suite 91/91. Disposable world `datacron-phase9-shipyard` left on disk.
+
+### Validation impact
+
+Node 91/91. Foundry gates G1?G20 recorded in the Phase 9 report, including G9 original FAIL and retest PASS.
+
+### Status
+
+Phase 9 Shipyard collaborative UI complete. Phase 10 not started.
+

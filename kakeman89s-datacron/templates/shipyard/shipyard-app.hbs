@@ -1,0 +1,180 @@
+<section class="kakeman89s-shipyard" data-app-id="{{appId}}" aria-labelledby="{{appId}}-title">
+  <header class="kakeman89s-shipyard__header">
+    <h2 id="{{appId}}-title">{{title}}</h2>
+    <p class="kakeman89s-shipyard__mode">{{modeLabel}}</p>
+  </header>
+
+  <div
+    class="kakeman89s-shipyard__status"
+    role="status"
+    aria-live="polite"
+    data-display-state="{{displayState}}"
+  >
+    <span>{{labels.status}}: {{displayStateLabel}}</span>
+    <span>{{syncLabel}} · r{{revision}}</span>
+  </div>
+
+  {{#if isEditor}}
+  <section class="kakeman89s-shipyard__inputs" aria-label="{{labels.inputs}}">
+    <h3>{{labels.inputs}}</h3>
+    <div class="kakeman89s-shipyard__grid">
+      <label>
+        <span>{{labels.size}}</span>
+        <select data-shipyard-field="size" name="size">
+          {{#each sizes}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.tier}}</span>
+        <input data-shipyard-field="tier" name="tier" type="number" min="0" max="5" step="1" value="{{input.tier}}" />
+      </label>
+
+      <label>
+        <span>{{labels.role}}</span>
+        <select data-shipyard-field="role" name="role">
+          {{#each roles}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.weapon}}</span>
+        <select data-shipyard-field="primaryWeapon" name="primaryWeapon">
+          {{#each weapons}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.install}}</span>
+        <select data-shipyard-field="installState" name="installState">
+          {{#each installStates}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.lock}}</span>
+        <select data-shipyard-field="lockState" name="lockState">
+          {{#each lockStates}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.armor}}</span>
+        <select data-shipyard-field="armor" name="armor">
+          {{#each armorOptions}}
+          <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+      <label>
+        <span>{{labels.quartersLiving}}</span>
+        <input
+          data-shipyard-field="quartersLiving"
+          name="quartersLiving"
+          type="number"
+          min="0"
+          step="1"
+          value="{{input.quartersLiving}}"
+        />
+      </label>
+    </div>
+
+    <div class="kakeman89s-shipyard__abilities" role="group" aria-label="{{labels.inputs}}">
+      {{#each abilities}}
+      <label>
+        <span>{{this.label}}</span>
+        <input
+          data-shipyard-ability="{{this.key}}"
+          name="ability-{{this.key}}"
+          type="number"
+          min="1"
+          max="30"
+          step="1"
+          value="{{this.value}}"
+        />
+      </label>
+      {{/each}}
+    </div>
+
+    <div class="kakeman89s-shipyard__actions">
+      <button type="button" data-shipyard-reset>{{labels.reset}}</button>
+    </div>
+  </section>
+  {{else}}
+  <section class="kakeman89s-shipyard__selections" aria-label="{{labels.selections}}">
+    <h3>{{labels.selections}}</h3>
+    {{#if input}}
+    <dl class="kakeman89s-shipyard__summary">
+      <div><dt>{{labels.size}}</dt><dd>{{input.size}}</dd></div>
+      <div><dt>{{labels.tier}}</dt><dd>{{input.tier}}</dd></div>
+      <div><dt>{{labels.role}}</dt><dd>{{input.role}}</dd></div>
+      <div><dt>{{labels.weapon}}</dt><dd>{{input.primaryWeapon}}</dd></div>
+      <div><dt>{{labels.install}}</dt><dd>{{input.installState}}</dd></div>
+      <div><dt>{{labels.lock}}</dt><dd>{{input.lockState}}</dd></div>
+      <div><dt>{{labels.armor}}</dt><dd>{{input.armor}}</dd></div>
+      <div><dt>{{labels.quartersLiving}}</dt><dd>{{input.quartersLiving}}</dd></div>
+    </dl>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  <section class="kakeman89s-shipyard__results" aria-label="{{labels.results}}">
+    <h3>{{labels.results}}</h3>
+    <dl class="kakeman89s-shipyard__totals">
+      <div><dt>{{labels.grandTotal}}</dt><dd data-result="grandTotal">{{totals.grandTotal}}</dd></div>
+      <div><dt>{{labels.totalNoMisc}}</dt><dd data-result="totalNoMisc">{{totals.totalNoMisc}}</dd></div>
+      <div><dt>{{labels.miscTotal}}</dt><dd data-result="miscTotal">{{totals.miscTotal}}</dd></div>
+      <div><dt>{{labels.buildDays}}</dt><dd data-result="buildDays">{{totals.buildDays}}</dd></div>
+      <div><dt>{{labels.hull}}</dt><dd data-result="hull">{{totals.hullPoints}}</dd></div>
+      <div><dt>{{labels.shields}}</dt><dd data-result="shields">{{totals.shieldPoints}}</dd></div>
+    </dl>
+  </section>
+
+  {{#if errors.length}}
+  <section class="kakeman89s-shipyard__errors" aria-label="{{labels.errors}}" role="alert">
+    <h3>{{labels.errors}}</h3>
+    <ul>
+      {{#each errors}}
+      <li>{{this.code}}{{#if this.message}}: {{this.message}}{{/if}}</li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{#if warnings.length}}
+  <section class="kakeman89s-shipyard__warnings" aria-label="{{labels.warnings}}">
+    <h3>{{labels.warnings}}</h3>
+    <ul>
+      {{#each warnings}}
+      <li>{{this.code}}{{#if this.message}}: {{this.message}}{{/if}}</li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{#if explanation.length}}
+  <section class="kakeman89s-shipyard__explanation" aria-label="{{labels.explanation}}">
+    <h3>{{labels.explanation}}</h3>
+    <ol>
+      {{#each explanation}}
+      <li>
+        <strong>{{this.label}}</strong>
+        {{#if this.amount}} — {{this.amount}}{{/if}}
+        {{#if this.runningTotal}} ({{this.runningTotal}}){{/if}}
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  {{/if}}
+</section>

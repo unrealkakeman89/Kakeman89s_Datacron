@@ -1,0 +1,16 @@
+{
+  "tableId": "shipyard-sizes.v1",
+  "workbookSha256": "090770BAEB5EBE2CFE2D45F3653A2193691111D20D1AD092FE387BB62C3DE1ED",
+  "sheet": "Starship Sheet",
+  "validationSource": "B5 list validation",
+  "privateAnalysisSource": true,
+  "authoredBy": "Kakeman89",
+  "options": [
+    { "key": "tiny", "display": "Tiny" },
+    { "key": "small", "display": "Small" },
+    { "key": "medium", "display": "Medium" },
+    { "key": "large", "display": "Large" },
+    { "key": "huge", "display": "Huge" },
+    { "key": "gargantuan", "display": "Gargantuan" }
+  ]
+}

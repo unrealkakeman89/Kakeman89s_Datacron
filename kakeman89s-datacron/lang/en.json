@@ -5,7 +5,68 @@
       "Open": "Open Kakeman89s Datacron",
       "OpenHyperspace": "Open Hyperspace Navigation",
       "OpenDroidAlly": "Open Droid Ally Pricing",
-      "OpenAstroCom": "Open AstroCom"
+      "OpenAstroCom": "Open AstroCom",
+      "OpenShipyard": "Open Shipyard"
+    },
+    "Shipyard": {
+      "Title": "Shipyard",
+      "Mode": {
+        "Edit": "GM edit",
+        "Observe": "Player observe"
+      },
+      "State": {
+        "empty": "Empty",
+        "cleared": "Cleared",
+        "calculated": "Calculated",
+        "invalid": "Invalid",
+        "unsupported": "Unsupported",
+        "disconnected": "Disconnected",
+        "warning": "Warning",
+        "error": "Error"
+      },
+      "Sync": {
+        "Live": "Sync live"
+      },
+      "Field": {
+        "Size": "Size",
+        "Tier": "Tier",
+        "Role": "Role",
+        "Weapon": "Primary weapon",
+        "Install": "Install state",
+        "Lock": "Lock state",
+        "Armor": "Armor",
+        "QuartersLiving": "Living quarters"
+      },
+      "Ability": {
+        "str": "STR",
+        "dex": "DEX",
+        "con": "CON",
+        "int": "INT",
+        "wis": "WIS"
+      },
+      "Result": {
+        "GrandTotal": "Grand total",
+        "TotalNoMisc": "Total (no misc)",
+        "MiscTotal": "Miscellaneous",
+        "BuildDays": "Build time",
+        "Hull": "Hull points",
+        "Shields": "Shield points"
+      },
+      "Section": {
+        "Status": "Status",
+        "Inputs": "Build inputs",
+        "Selections": "Selections",
+        "Results": "Results",
+        "Warnings": "Warnings",
+        "Errors": "Errors",
+        "Explanation": "Explanation"
+      },
+      "Action": {
+        "Reset": "Reset draft"
+      },
+      "Error": {
+        "UpdateFailed": "Shipyard draft update failed."
+      }
     },
     "AstroCom": {
       "Title": "AstroCom",
@@ -228,6 +289,14 @@
       "FeatureAstroCom": {
         "Name": "Enable AstroCom",
         "Hint": "When enabled, players and GMs can open AstroCom. Changing this setting reloads the world."
+      },
+      "FeatureShipyard": {
+        "Name": "Enable Shipyard",
+        "Hint": "When enabled, GMs can edit Shipyard drafts and players can observe synchronized projections. Changing this setting reloads the world."
+      },
+      "ShipyardDraftSnapshot": {
+        "Name": "Shipyard draft snapshot",
+        "Hint": "GM-owned sanitized projection snapshot for reconnect recovery. Not editable in Configure Settings."
       }
     },
     "Results": {

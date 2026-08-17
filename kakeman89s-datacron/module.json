@@ -39,7 +39,8 @@
   ],
   "styles": [
     "styles/datacron.css",
-    "styles/astrocom.css"
+    "styles/astrocom.css",
+    "styles/shipyard.css"
   ],
   "languages": [
     {

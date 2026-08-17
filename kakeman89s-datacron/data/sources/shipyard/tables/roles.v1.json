@@ -1,0 +1,14 @@
+{
+  "tableId": "shipyard-roles.v1",
+  "workbookSha256": "090770BAEB5EBE2CFE2D45F3653A2193691111D20D1AD092FE387BB62C3DE1ED",
+  "sheet": "Starship Sheet",
+  "validationSource": "F9 list validation (Phase 8 subset)",
+  "privateAnalysisSource": true,
+  "authoredBy": "Kakeman89",
+  "notes": "Phase 8 supports only roles exercised by captured vectors.",
+  "options": [
+    { "key": "superiority_fighter", "display": "Superiority Fighter", "sizeFamily": "small" },
+    { "key": "freighter", "display": "Freighter", "sizeFamily": "medium" },
+    { "key": "corvette", "display": "Corvette", "sizeFamily": "large" }
+  ]
+}

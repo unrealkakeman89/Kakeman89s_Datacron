@@ -11,7 +11,9 @@ export const SETTING_KEYS = {
   advancedMaxTier: "advancedMaxTier",
   advancedIncludeObscureRoutes: "advancedIncludeObscureRoutes",
   advancedTier5ExtraDc: "advancedTier5ExtraDc",
-  featureAstroCom: "featureAstroCom"
+  featureAstroCom: "featureAstroCom",
+  featureShipyard: "featureShipyard",
+  shipyardDraftSnapshot: "shipyardDraftSnapshot"
 };
 
 export function registerSettings() {
@@ -123,5 +125,24 @@ export function registerSettings() {
     type: Boolean,
     default: true,
     requiresReload: true
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.featureShipyard, {
+    name: "KAKEMAN89SDATACRON.Settings.FeatureShipyard.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.FeatureShipyard.Hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+    requiresReload: true
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.shipyardDraftSnapshot, {
+    name: "KAKEMAN89SDATACRON.Settings.ShipyardDraftSnapshot.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.ShipyardDraftSnapshot.Hint",
+    scope: "world",
+    config: false,
+    type: Object,
+    default: {}
   });
 }

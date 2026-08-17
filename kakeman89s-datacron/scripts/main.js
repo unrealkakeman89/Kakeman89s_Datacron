@@ -5,14 +5,26 @@ import { AstroComApp } from "./astrocom/astrocom-app.js";
 import { canBrowseAstroCom } from "./astrocom/permissions.js";
 import { loadGeneratedAstroCom, loadLiveAstroComIndex, openAstroComJournal, rebuildAstroCom, rebuildAstroComPilot, rebuildAstroComPoc, attemptBulkAstroComBuild } from "./astrocom/rebuild.js";
 import { registerSettings, SETTING_KEYS } from "./settings.js";
+import { ShipyardApp, openShipyardAppGate } from "./shipyard/shipyard-app.js";
+import { canOpenShipyard } from "./shipyard/permissions.js";
+import { registerShipyardSockets } from "./shipyard/socket-runtime.js";
 
 let hyperspaceNavigationApp = null;
 let droidAllyPricingApp = null;
 let astroComApp = null;
+let shipyardApp = null;
 
 function isAstroComEnabled() {
   try {
     return Boolean(game.settings.get(MODULE_ID, SETTING_KEYS.featureAstroCom));
+  } catch (_error) {
+    return false;
+  }
+}
+
+function isShipyardEnabled() {
+  try {
+    return Boolean(game.settings.get(MODULE_ID, SETTING_KEYS.featureShipyard));
   } catch (_error) {
     return false;
   }
@@ -82,6 +94,17 @@ export async function openAstroComApp() {
   return astroComApp;
 }
 
+export async function openShipyardApp() {
+  if (!(await openShipyardAppGate())) return null;
+  clearAppSingletonIfStale(shipyardApp, () => {
+    shipyardApp = null;
+  });
+  shipyardApp ??= new ShipyardApp();
+  await shipyardApp.render(true);
+  if (shipyardApp.rendered) shipyardApp.bringToFront();
+  return shipyardApp;
+}
+
 Hooks.once("init", () => {
   registerSettings();
   logInfo("Initializing module scaffold.");
@@ -95,6 +118,9 @@ Hooks.once("init", () => {
     }
     if (app === astroComApp || app?.id === `${MODULE_ID}-astrocom`) {
       astroComApp = null;
+    }
+    if (app === shipyardApp || app?.id === `${MODULE_ID}-shipyard`) {
+      shipyardApp = null;
     }
   });
 });
@@ -138,30 +164,49 @@ Hooks.on("getSceneControlButtons", (controls) => {
     };
   }
 
-  if (!isAstroComEnabled() || !canBrowseAstroCom(game.user)) return;
+  if (isAstroComEnabled() && canBrowseAstroCom(game.user)) {
+    const astroComToolName = `${MODULE_ID}-open-astrocom`;
+    hostControl.tools[astroComToolName] = {
+      name: astroComToolName,
+      title: "KAKEMAN89SDATACRON.SceneControl.OpenAstroCom",
+      icon: "fa-solid fa-book-atlas",
+      order: Object.keys(hostControl.tools).length,
+      button: true,
+      visible: true,
+      onChange: (_event, active) => {
+        if (active === false) return;
+        void openAstroComApp();
+      }
+    };
+  }
 
-  const astroComToolName = `${MODULE_ID}-open-astrocom`;
-  hostControl.tools[astroComToolName] = {
-    name: astroComToolName,
-    title: "KAKEMAN89SDATACRON.SceneControl.OpenAstroCom",
-    icon: "fa-solid fa-book-atlas",
-    order: Object.keys(hostControl.tools).length,
-    button: true,
-    visible: true,
-    onChange: (_event, active) => {
-      if (active === false) return;
-      void openAstroComApp();
-    }
-  };
+  if (isShipyardEnabled() && canOpenShipyard(game.user, { featureEnabled: true })) {
+    const shipyardToolName = `${MODULE_ID}-open-shipyard`;
+    hostControl.tools[shipyardToolName] = {
+      name: shipyardToolName,
+      title: "KAKEMAN89SDATACRON.SceneControl.OpenShipyard",
+      icon: "fa-solid fa-rocket",
+      order: Object.keys(hostControl.tools).length,
+      button: true,
+      visible: true,
+      onChange: (_event, active) => {
+        if (active === false) return;
+        void openShipyardApp();
+      }
+    };
+  }
 });
 
 Hooks.once("ready", () => {
+  registerShipyardSockets();
+
   const module = game.modules.get(MODULE_ID);
   if (module) {
     module.api = {
       openAstroComApp,
       openHyperspaceNavigationApp,
       openDroidAllyPricingApp,
+      openShipyardApp,
       rebuildAstroCom,
       rebuildAstroComPoc,
       rebuildAstroComPilot,
@@ -172,6 +217,7 @@ Hooks.once("ready", () => {
       getAstroComApp: () => astroComApp,
       getNavComputerApp: () => hyperspaceNavigationApp,
       getDroidApp: () => droidAllyPricingApp,
+      getShipyardApp: () => shipyardApp,
       settingKeys: SETTING_KEYS
     };
   }
