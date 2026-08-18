@@ -1,5 +1,7 @@
 import { logWarn, MODULE_ID } from "./logger.js";
 import { SETTING_KEYS } from "./settings.js";
+import { actorIsVisibleToUser } from "./navcomputer/permissions.js";
+import { RESOURCE_PROFILE_EXISTING_UNVERIFIED } from "./navcomputer/resource-profile.js";
 
 /** @param {Actor} actor */
 export function isNormalizedStarship(actor) {
@@ -26,8 +28,13 @@ export function isStarshipActor(actor) {
  */
 export function getPilotActorOptions() {
   const actors = game.actors?.contents ?? [];
+  const user = game.user ?? null;
   const list = actors.filter(
-    (a) => a && ["character", "npc"].includes(a.type) && !isNormalizedStarship(a)
+    (a) =>
+      a &&
+      ["character", "npc"].includes(a.type) &&
+      !isNormalizedStarship(a) &&
+      actorIsVisibleToUser(a, user)
   );
   return list
     .map((a) => ({ uuid: a.uuid, name: a.name ?? a.uuid }))
@@ -40,7 +47,8 @@ export function getPilotActorOptions() {
  */
 export function getShipActorOptions() {
   const actors = game.actors?.contents ?? [];
-  const list = actors.filter((a) => a && isStarshipActor(a));
+  const user = game.user ?? null;
+  const list = actors.filter((a) => a && isStarshipActor(a) && actorIsVisibleToUser(a, user));
   return list
     .map((a) => ({ uuid: a.uuid, name: a.name ?? a.uuid }))
     .sort((x, y) => x.name.localeCompare(y.name));
@@ -140,4 +148,141 @@ export function getHyperdriveMultiplierFromShipActor(shipActor) {
     "Could not resolve starship hyperdrive class from equip / items / travel; using multiplier 1.0."
   );
   return 1;
+}
+
+function asPlain(value) {
+  if (!value) return {};
+  if (typeof value.toObject === "function") return value.toObject();
+  return value;
+}
+
+function flagSystem(actor) {
+  return asPlain(actor?.flags?.sw5e?.legacyStarshipActor?.system);
+}
+
+function preparedSystem(actor) {
+  return asPlain(actor?.system);
+}
+
+function deploymentCrewCount(sys) {
+  const items = sys?.attributes?.deployment?.crew?.items;
+  if (Array.isArray(items) && items.length > 0) return items.length;
+  return null;
+}
+
+function crewMinWorkforce(sys) {
+  const n = Number(sys?.attributes?.equip?.size?.crewMinWorkforce);
+  if (Number.isFinite(n) && n > 0) return Math.ceil(n);
+  return null;
+}
+
+function vehicleCrewCount(sys) {
+  const value = sys?.attributes?.crew?.value;
+  if (Array.isArray(value) && value.length > 0) return value.length;
+  return null;
+}
+
+function firstFinitePositive(value) {
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+function readHyperdrive(actor) {
+  const flag = flagSystem(actor);
+  const prepared = preparedSystem(actor);
+  const flagEquip = firstFinitePositive(flag.attributes?.equip?.hyperdrive?.class);
+  if (flagEquip != null) return { hyperdrive: flagEquip, hyperdriveSource: "flag-equip" };
+  const flagTravel = firstFinitePositive(flag.attributes?.travel?.hyperdriveClass);
+  if (flagTravel != null) return { hyperdrive: flagTravel, hyperdriveSource: "flag-travel" };
+  const prepEquip = firstFinitePositive(prepared.attributes?.equip?.hyperdrive?.class);
+  if (prepEquip != null) return { hyperdrive: prepEquip, hyperdriveSource: "prepared-equip" };
+  const prepTravel = firstFinitePositive(prepared.attributes?.travel?.hyperdriveClass);
+  if (prepTravel != null) return { hyperdrive: prepTravel, hyperdriveSource: "prepared-travel" };
+  const items = actor?.items ? [...actor.items] : [];
+  for (const item of items) {
+    const itemSys = asPlain(item.system);
+    const hd = firstFinitePositive(itemSys?.attributes?.hdclass?.value);
+    if (hd != null) return { hyperdrive: hd, hyperdriveSource: "item-hdclass" };
+  }
+  return { hyperdrive: null, hyperdriveSource: "unresolved" };
+}
+
+function optionalCapacity(sys, pathParts) {
+  let cursor = sys;
+  for (const part of pathParts) {
+    cursor = cursor?.[part];
+  }
+  const n = Number(cursor);
+  return Number.isFinite(n) ? n : null;
+}
+
+/**
+ * NavComputer read-only adapter. Does not write Actor data.
+ * @param {object | null | undefined} shipActor
+ */
+export function readStarshipTravelAdapter(shipActor) {
+  const warnings = [];
+  if (!shipActor) {
+    return {
+      crew: RESOURCE_PROFILE_EXISTING_UNVERIFIED.crewFallback,
+      crewSource: "profile-default",
+      warnings: ["No ship selected; using profile default crew 4."],
+      hyperdrive: null,
+      hyperdriveSource: "unresolved",
+      fuelCapacity: null,
+      fuelSource: "unresolved",
+      suppliesCapacity: null,
+      suppliesSource: "unresolved"
+    };
+  }
+
+  const flag = flagSystem(shipActor);
+  const prepared = preparedSystem(shipActor);
+  let crew = deploymentCrewCount(flag);
+  let crewSource = "flag-deployment";
+  if (crew == null) {
+    crew = crewMinWorkforce(flag);
+    crewSource = "flag-crewMinWorkforce";
+  }
+  if (crew == null) {
+    crew = deploymentCrewCount(prepared);
+    crewSource = "prepared-deployment";
+  }
+  if (crew == null) {
+    crew = crewMinWorkforce(prepared);
+    crewSource = "prepared-crewMinWorkforce";
+  }
+  if (crew == null) {
+    crew = vehicleCrewCount(prepared);
+    crewSource = "vehicle-crew";
+  }
+  if (crew == null) {
+    crew = RESOURCE_PROFILE_EXISTING_UNVERIFIED.crewFallback;
+    crewSource = "profile-default";
+    warnings.push("Ship crew could not be resolved; using profile default 4.");
+  }
+
+  const hyper = readHyperdrive(shipActor);
+  if (hyper.hyperdriveSource === "unresolved") {
+    warnings.push("Ship hyperdrive could not be resolved.");
+  }
+
+  const fuelCapacity =
+    optionalCapacity(flag, ["attributes", "fuel", "fuelCap"]) ??
+    optionalCapacity(prepared, ["attributes", "fuel", "fuelCap"]);
+  const suppliesCapacity =
+    optionalCapacity(flag, ["attributes", "food", "foodCap"]) ??
+    optionalCapacity(prepared, ["attributes", "food", "foodCap"]);
+
+  return {
+    crew,
+    crewSource,
+    warnings,
+    hyperdrive: hyper.hyperdrive,
+    hyperdriveSource: hyper.hyperdriveSource,
+    fuelCapacity,
+    fuelSource: fuelCapacity == null ? "unresolved" : "capacity",
+    suppliesCapacity,
+    suppliesSource: suppliesCapacity == null ? "unresolved" : "capacity"
+  };
 }

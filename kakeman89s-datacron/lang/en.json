@@ -3,7 +3,7 @@
     "ModuleTitle": "Kakeman89s Datacron",
     "SceneControl": {
       "Open": "Open Kakeman89s Datacron",
-      "OpenHyperspace": "Open Hyperspace Navigation",
+      "OpenHyperspace": "Open NavComputer",
       "OpenDroidAlly": "Open Droid Ally Pricing",
       "OpenAstroCom": "Open AstroCom",
       "OpenShipyard": "Open Shipyard"
@@ -115,8 +115,8 @@
     },
     "App": {
       "Title": "Kakeman89s Datacron",
-      "HyperspaceTitle": "Hyperspace Navigation",
-      "Subtitle": "Hyperspace Navigation Uplink",
+      "HyperspaceTitle": "NavComputer",
+      "Subtitle": "NavComputer",
       "ModeLabel": "Mode",
       "OriginLabel": "Origin Planet",
       "DestinationLabel": "Destination Planet",
@@ -141,6 +141,8 @@
       "StatusLabel": "Status",
       "StatusPlaceholder": "Awaiting origin, destination, and crew selection.",
       "StatusRouteCalculated": "Route calculated (Basic mode).",
+      "StatusRouteUnsupported": "No Basic matrix route is available for these regions.",
+      "StatusRouteInvalid": "Origin or destination could not be used for a Basic calculation.",
       "StatusRouteCalculatedAdvanced": "Route calculated (Advanced - curated hyperlanes).",
       "StatusRouteCalculatedAdvancedFallback": "Route calculated (regional estimate; no curated hyperlane path).",
       "RouteErrorSelectBoth": "Select both an origin and a destination before calculating.",
@@ -174,6 +176,8 @@
       "ResultPlanetsPassed": "Notable worlds along the way",
       "ResultPlanetsPassedNone": "None (same region or no intermediate regions).",
       "ResultDescription": "Route summary",
+      "ResultExplanation": "Calculation explanation",
+      "ResultResourceProfile": "Resource profile",
       "ResultWarnings": "Warnings"
     },
     "DroidAlly": {
@@ -277,12 +281,12 @@
         "Hint": "Percentage chance that a random event occurs during a trip."
       },
       "FuelPerHour": {
-        "Name": "Fuel Per Hour",
-        "Hint": "Default fuel consumed per hour of travel."
+        "Name": "Fuel Per Hour (house-rule)",
+        "Hint": "House-rule fuel consumed per hour of Basic travel for profile existing-unverified.v1. Not SW5e RAW. Homebrew nonnegative values are allowed."
       },
       "FoodPerCrewPerDay": {
-        "Name": "Food Per Crew Per Day",
-        "Hint": "Default food consumed by each crew member per day."
+        "Name": "Food Per Crew Per Day (house-rule)",
+        "Hint": "House-rule food consumed by each crew member per day for profile existing-unverified.v1. Not SW5e RAW. Homebrew nonnegative values are allowed."
       },
       "DebugMode": {
         "Name": "Debug Logging",
@@ -311,6 +315,10 @@
       "FeatureShipyard": {
         "Name": "Enable Shipyard",
         "Hint": "When enabled, GMs can edit Shipyard drafts and players can observe synchronized projections. Changing this setting reloads the world."
+      },
+      "FeatureNavComputer": {
+        "Name": "Enable NavComputer",
+        "Hint": "When enabled, GMs and players can open the Basic NavComputer. Changing this setting reloads the world."
       },
       "ShipyardDraftSnapshot": {
         "Name": "Shipyard draft snapshot",

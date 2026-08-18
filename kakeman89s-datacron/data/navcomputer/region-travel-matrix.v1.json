@@ -1,0 +1,118 @@
+{
+  "profileId": "region-travel-matrix.v1",
+  "authority": "unverified",
+  "units": "hours",
+  "directional": true,
+  "regionOrder": [
+    "Deep Core",
+    "Core",
+    "Colonies",
+    "Inner Rim",
+    "Expansion Region",
+    "Mid Rim",
+    "Outer Rim",
+    "Wild Space",
+    "Unknown Regions"
+  ],
+  "matrix": {
+    "Deep Core": {
+      "Deep Core": 12,
+      "Core": 18,
+      "Colonies": 24,
+      "Inner Rim": 48,
+      "Expansion Region": 72,
+      "Mid Rim": 96,
+      "Outer Rim": 120,
+      "Wild Space": 144,
+      "Unknown Regions": 168
+    },
+    "Core": {
+      "Deep Core": 24,
+      "Core": 6,
+      "Colonies": 24,
+      "Inner Rim": 36,
+      "Expansion Region": 60,
+      "Mid Rim": 84,
+      "Outer Rim": 96,
+      "Wild Space": 120,
+      "Unknown Regions": 144
+    },
+    "Colonies": {
+      "Deep Core": 48,
+      "Core": 24,
+      "Colonies": 12,
+      "Inner Rim": 24,
+      "Expansion Region": 48,
+      "Mid Rim": 72,
+      "Outer Rim": 96,
+      "Wild Space": 120,
+      "Unknown Regions": 96
+    },
+    "Inner Rim": {
+      "Deep Core": 72,
+      "Core": 36,
+      "Colonies": 24,
+      "Inner Rim": 18,
+      "Expansion Region": 24,
+      "Mid Rim": 48,
+      "Outer Rim": 72,
+      "Wild Space": 96,
+      "Unknown Regions": 72
+    },
+    "Expansion Region": {
+      "Deep Core": 96,
+      "Core": 60,
+      "Colonies": 48,
+      "Inner Rim": 24,
+      "Expansion Region": 24,
+      "Mid Rim": 24,
+      "Outer Rim": 48,
+      "Wild Space": 72,
+      "Unknown Regions": 96
+    },
+    "Mid Rim": {
+      "Deep Core": 120,
+      "Core": 84,
+      "Colonies": 72,
+      "Inner Rim": 48,
+      "Expansion Region": 24,
+      "Mid Rim": 36,
+      "Outer Rim": 24,
+      "Wild Space": 48,
+      "Unknown Regions": 72
+    },
+    "Outer Rim": {
+      "Deep Core": 144,
+      "Core": 96,
+      "Colonies": 96,
+      "Inner Rim": 72,
+      "Expansion Region": 48,
+      "Mid Rim": 24,
+      "Outer Rim": 48,
+      "Wild Space": 24,
+      "Unknown Regions": 60
+    },
+    "Wild Space": {
+      "Deep Core": 168,
+      "Core": 120,
+      "Colonies": 120,
+      "Inner Rim": 96,
+      "Expansion Region": 72,
+      "Mid Rim": 48,
+      "Outer Rim": 24,
+      "Wild Space": 12,
+      "Unknown Regions": 120
+    },
+    "Unknown Regions": {
+      "Deep Core": 192,
+      "Core": 144,
+      "Colonies": 96,
+      "Inner Rim": 72,
+      "Expansion Region": 60,
+      "Mid Rim": 72,
+      "Outer Rim": 96,
+      "Wild Space": 120,
+      "Unknown Regions": 48
+    }
+  }
+}

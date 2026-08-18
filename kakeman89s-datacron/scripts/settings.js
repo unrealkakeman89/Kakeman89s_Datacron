@@ -11,6 +11,7 @@ export const SETTING_KEYS = {
   advancedMaxTier: "advancedMaxTier",
   advancedIncludeObscureRoutes: "advancedIncludeObscureRoutes",
   advancedTier5ExtraDc: "advancedTier5ExtraDc",
+  featureNavComputer: "featureNavComputer",
   featureAstroCom: "featureAstroCom",
   featureShipyard: "featureShipyard",
   shipyardDraftSnapshot: "shipyardDraftSnapshot",
@@ -117,6 +118,16 @@ export function registerSettings() {
     type: Number,
     default: 0,
     range: { min: 0, max: 10, step: 1 }
+  });
+
+  game.settings.register(MODULE_ID, SETTING_KEYS.featureNavComputer, {
+    name: "KAKEMAN89SDATACRON.Settings.FeatureNavComputer.Name",
+    hint: "KAKEMAN89SDATACRON.Settings.FeatureNavComputer.Hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+    requiresReload: true
   });
 
   game.settings.register(MODULE_ID, SETTING_KEYS.featureAstroCom, {

@@ -3,6 +3,9 @@
     <p class="datacron-kicker">{{subtitle}}</p>
     <h1 class="datacron-title">{{title}}</h1>
     <p class="datacron-meta">{{localize "KAKEMAN89SDATACRON.App.ModeLabel"}}: {{currentModeLabel}}</p>
+    {{#if resourceProfileName}}
+      <p class="datacron-meta">{{localize "KAKEMAN89SDATACRON.App.ResultResourceProfile"}}: {{resourceProfileName}}</p>
+    {{/if}}
   </header>
 
   {{#if planetLoadWarning}}
@@ -155,6 +158,16 @@
         {{/if}}
         <dt>{{localize "KAKEMAN89SDATACRON.App.ResultDescription"}}</dt>
         <dd class="datacron-route-description">{{routeBasicResult.routeDescription}}</dd>
+        {{#if routeBasicResult.explanation.lines}}
+          <dt>{{localize "KAKEMAN89SDATACRON.App.ResultExplanation"}}</dt>
+          <dd>
+            <ul class="datacron-route-explanation">
+              {{#each routeBasicResult.explanation.lines}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+        {{/if}}
         {{#if showRouteWarnings}}
           <dt>{{localize "KAKEMAN89SDATACRON.App.ResultWarnings"}}</dt>
           <dd>

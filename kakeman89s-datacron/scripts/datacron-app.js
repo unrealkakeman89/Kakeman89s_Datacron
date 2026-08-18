@@ -8,8 +8,10 @@ import { MODULE_ID } from "./logger.js";
 import { loadPlanetData, getPlanetList, getPlanetByName } from "./planet-data.js";
 import { attachPlanetCombos } from "./planet-combo.js";
 import { performPilotingSkillRoll } from "./piloting-roll.js";
-import { calculateRouteBasic } from "./route-calculator.js";
-import { calculateTravelResources, getPilotingCheckDC } from "./travel-calculator.js";
+import { getPilotingCheckDC } from "./travel-calculator.js";
+import { calculateNavComputerBasic } from "./navcomputer/calculate-basic.js";
+import { loadRegionMatrix } from "./navcomputer/region-matrix.js";
+import { SETTING_KEYS } from "./settings.js";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -70,15 +72,46 @@ export class DatacronApp extends HandlebarsApplicationMixin(ApplicationV2) {
     return game.i18n.localize("KAKEMAN89SDATACRON.App.HyperspaceTitle");
   }
 
-  _refreshTravelResourcesIfRoute() {
-    if (!this._routeBasicResult?.originPlanet) return;
-    const hours = this._routeBasicResult.travelTimeHours ?? 0;
-    const shipActor = getActorFromUuid(this.selectedShipUuid);
-    const travelResources = calculateTravelResources(hours, shipActor);
-    this._routeBasicResult = foundry.utils.mergeObject(
-      foundry.utils.deepClone(this._routeBasicResult),
-      { travelResources }
+  _readHouseRuleRates() {
+    const fuelPerHour = Number(game.settings?.get?.(MODULE_ID, SETTING_KEYS.fuelPerHour) ?? 1);
+    const foodPerCrewPerDay = Number(game.settings?.get?.(MODULE_ID, SETTING_KEYS.foodPerCrewPerDay) ?? 1);
+    return { fuelRate: fuelPerHour, foodRate: foodPerCrewPerDay };
+  }
+
+  _attachPilotingAndArc(result) {
+    const regionsJourneyArc = buildRegionsJourneyArc(result.regionsCrossed ?? []);
+    const pilotingCheck = getPilotingCheckDC(
+      result.originLookupRegion ?? result.originRegion,
+      result.destinationLookupRegion ?? result.destinationRegion,
+      "basic",
+      0,
+      0,
+      0,
+      0
     );
+    return foundry.utils.mergeObject(foundry.utils.deepClone(result), {
+      pilotingCheck,
+      routeLaneRows: [],
+      regionsJourneyArc,
+      advancedCuratedFallback: false,
+      usedRegionalAdvancedFallback: false,
+      advancedFallbackReason: null,
+      routeUiWarnings: []
+    });
+  }
+
+  _refreshTravelResourcesIfRoute() {
+    if (!this._routeBasicResult?.originPlanet || !this._routeBasicResult?.destinationPlanet) return;
+    const shipActor = getActorFromUuid(this.selectedShipUuid);
+    const { fuelRate, foodRate } = this._readHouseRuleRates();
+    const result = calculateNavComputerBasic({
+      originPlanet: this._routeBasicResult.originPlanet,
+      destinationPlanet: this._routeBasicResult.destinationPlanet,
+      shipActor,
+      fuelRate,
+      foodRate
+    });
+    this._routeBasicResult = this._attachPilotingAndArc(result);
   }
 
   async _prepareContext(_options) {
@@ -87,6 +120,7 @@ export class DatacronApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
     try {
       await loadPlanetData();
+      await loadRegionMatrix();
       planets = await getPlanetList();
     } catch (_error) {
       planetLoadWarning = game.i18n.localize("KAKEMAN89SDATACRON.Warning.PlanetDataLoadFailed");
@@ -101,7 +135,13 @@ export class DatacronApp extends HandlebarsApplicationMixin(ApplicationV2) {
     if (planetLoadWarning) statusText = planetLoadWarning;
     else if (this._routeError) statusText = this._routeError;
     else if (this._routeBasicResult) {
-      statusText = game.i18n.localize("KAKEMAN89SDATACRON.App.StatusRouteCalculated");
+      if (this._routeBasicResult.status === "unsupported") {
+        statusText = game.i18n.localize("KAKEMAN89SDATACRON.App.StatusRouteUnsupported");
+      } else if (this._routeBasicResult.status === "invalid") {
+        statusText = game.i18n.localize("KAKEMAN89SDATACRON.App.StatusRouteInvalid");
+      } else {
+        statusText = game.i18n.localize("KAKEMAN89SDATACRON.App.StatusRouteCalculated");
+      }
     } else statusText = game.i18n.localize("KAKEMAN89SDATACRON.App.StatusPlaceholder");
 
     return {
@@ -128,7 +168,11 @@ export class DatacronApp extends HandlebarsApplicationMixin(ApplicationV2) {
       canRollPiloting,
       routeBasicResult: this._routeBasicResult,
       routeError: this._routeError,
-      showRouteWarnings: Boolean(this._routeBasicResult?.warnings?.length)
+      showRouteWarnings: Boolean(this._routeBasicResult?.warnings?.length),
+      resourceProfileName: this._routeBasicResult?.travelResources?.resourceProfileName
+        ?? this._routeBasicResult?.resourceProfileId
+        ?? null,
+      showResources: Boolean(this._routeBasicResult?.resourcesApplied && this._routeBasicResult?.travelResources)
     };
   }
 
@@ -168,32 +212,16 @@ export class DatacronApp extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     const shipActor = getActorFromUuid(this.selectedShipUuid);
-
-    const result = foundry.utils.deepClone(calculateRouteBasic(originPlanet, destinationPlanet));
-    result.advancedCuratedFallback = false;
-    result.usedRegionalAdvancedFallback = false;
-    result.advancedFallbackReason = null;
-    result.routeUiWarnings = [];
-
-    const regionsJourneyArc = buildRegionsJourneyArc(result.regionsCrossed ?? []);
-
-    const travelResources = calculateTravelResources(result.travelTimeHours ?? 0, shipActor);
-    const pilotingCheck = getPilotingCheckDC(
-      result.originRegion,
-      result.destinationRegion,
-      "basic",
-      0,
-      0,
-      0,
-      0
-    );
-
-    this._routeBasicResult = foundry.utils.mergeObject(foundry.utils.deepClone(result), {
-      travelResources,
-      pilotingCheck,
-      routeLaneRows: [],
-      regionsJourneyArc
+    const { fuelRate, foodRate } = this._readHouseRuleRates();
+    const result = calculateNavComputerBasic({
+      originPlanet,
+      destinationPlanet,
+      shipActor,
+      fuelRate,
+      foodRate
     });
+
+    this._routeBasicResult = this._attachPilotingAndArc(result);
     this._routeError = null;
     await this.render(true);
   }

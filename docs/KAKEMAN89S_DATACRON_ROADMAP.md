@@ -2673,3 +2673,43 @@ Node 120/120. Foundry create, identity, native-sheet, rollback, player-boundary,
 
 Phase 10 Shipyard Starship Actor creation complete for the authorized create-new scope. Phase 11 not started.
 
+---
+
+## Addendum — 2026-08-17 — Phase 11 NavComputer Basic Calculator executed
+
+### Reason
+
+The maintainer authorized Phase 11 execution (NavComputer Basic Calculator) with Decisions A–D recommended defaults. This addendum records that work. It does not delete the earlier status that Phase 11 had not started.
+
+### Supersedes
+
+- Prior addendum status that Phase 11 was **not started**.
+
+The superseded content above is retained as historical evidence and must not be deleted.
+
+### Revised decision or behavior
+
+- Phase 11 was authorized and executed on `v.next` at HEAD `af1af00577308a825a672d774d984b26d7da142d`. Nothing was staged, committed, or pushed.
+- Matrix extracted to `kakeman89s-datacron/data/navcomputer/region-travel-matrix.v1.json` (`region-travel-matrix.v1`, authority unverified). All 81 cells matched; directionality preserved. Deep Core→Core 18, Core→Deep Core 24.
+- Basic hours ignore hyperdrive. Same-world identity uses stable id, then name+grid+region, then exact name.
+- Resource profile shipped: `existing-unverified.v1` (house-rule, not RAW). Inputs remain world settings `fuelPerHour` and `foodPerCrewPerDay`.
+- Inner RIm / Outer RIm normalize for lookup only. Hutt Space and Expansion Regions remain unsupported (`status: unsupported`, hours sentinel 0, not a successful journey).
+- Phase 10 Actor `TX0zPUJDj3lByDbD` appeared in the selector. Adapter crew source was `profile-default` (4) with unresolved hyperdrive. The Actor was not modified.
+- `featureNavComputer` (world Boolean, default true, requires reload) gates GM and player scene-control access. Calculations are local. No NavComputer sockets were added.
+- Node suite: **242/242**. Foundry gates recorded in `docs/KAKEMAN89S_DATACRON_PHASE_11_NAVCOMPUTER_BASIC_CALCULATOR.md`. Gate O (piloting roll) BLOCKED: no character Actor in the disposable world.
+- Foundry V13 was stopped. Process count 0. World `datacron-phase10-actor` left on disk.
+- Phase 12 was not started.
+- Advanced routing was not activated.
+
+### Implementation impact
+
+New NavComputer domain files (matrix JSON, loader, resource profile, permissions, Basic composer, Phase 11 tests). Narrow revisions to route-calculator Basic lookup, actor-helpers read adapter, travel-calculator crew wrap, datacron app/template/i18n/settings/main. Plan document retained. Implementation report cited above.
+
+### Validation impact
+
+Node 242/242 including all 81 matrix cells. Foundry gates A–T recorded in the Phase 11 report (O BLOCKED). AstroCom, Shipyard, and Droid Shop product source unchanged. Existing Phase 8/9/10 history was not rewritten.
+
+### Status
+
+Phase 11 NavComputer Basic Calculator complete for the authorized Basic scope. Phase 12 not started.
+

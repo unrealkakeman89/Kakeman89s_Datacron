@@ -8,11 +8,21 @@ import { registerSettings, SETTING_KEYS } from "./settings.js";
 import { ShipyardApp, openShipyardAppGate } from "./shipyard/shipyard-app.js";
 import { canOpenShipyard } from "./shipyard/permissions.js";
 import { registerShipyardSockets } from "./shipyard/socket-runtime.js";
+import { canOpenNavComputer } from "./navcomputer/permissions.js";
+import { loadRegionMatrix } from "./navcomputer/region-matrix.js";
 
 let hyperspaceNavigationApp = null;
 let droidAllyPricingApp = null;
 let astroComApp = null;
 let shipyardApp = null;
+
+function isNavComputerEnabled() {
+  try {
+    return Boolean(game.settings.get(MODULE_ID, SETTING_KEYS.featureNavComputer));
+  } catch (_error) {
+    return false;
+  }
+}
 
 function isAstroComEnabled() {
   try {
@@ -62,6 +72,7 @@ function getEnvironmentWarnings() {
 }
 
 export async function openHyperspaceNavigationApp() {
+  if (!canOpenNavComputer(game.user, { featureEnabled: isNavComputerEnabled() })) return null;
   clearAppSingletonIfStale(hyperspaceNavigationApp, () => {
     hyperspaceNavigationApp = null;
   });
@@ -134,7 +145,7 @@ Hooks.on("getSceneControlButtons", (controls) => {
 
   hostControl.tools ??= {};
 
-  if (game.user?.isGM) {
+  if (isNavComputerEnabled() && canOpenNavComputer(game.user, { featureEnabled: true })) {
     const hyperspaceToolName = `${MODULE_ID}-open-hyperspace`;
     hostControl.tools[hyperspaceToolName] = {
       name: hyperspaceToolName,
@@ -148,7 +159,9 @@ Hooks.on("getSceneControlButtons", (controls) => {
         void openHyperspaceNavigationApp();
       }
     };
+  }
 
+  if (game.user?.isGM) {
     const droidToolName = `${MODULE_ID}-open-droid-ally`;
     hostControl.tools[droidToolName] = {
       name: droidToolName,
@@ -199,6 +212,9 @@ Hooks.on("getSceneControlButtons", (controls) => {
 
 Hooks.once("ready", () => {
   registerShipyardSockets();
+  void loadRegionMatrix().catch((error) => {
+    logWarn("Region matrix failed to load.", error);
+  });
 
   const module = game.modules.get(MODULE_ID);
   if (module) {

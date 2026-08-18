@@ -2,6 +2,7 @@ import { MODULE_ID } from "./logger.js";
 import { REGION_ORDER } from "./route-calculator.js";
 import { SETTING_KEYS } from "./settings.js";
 import { formatTravelTime } from "./time-display.js";
+import { readStarshipTravelAdapter } from "./actor-helpers.js";
 
 export { formatTravelTime } from "./time-display.js";
 
@@ -13,19 +14,7 @@ const DEFAULT_CREW_SIZE = 4;
  * @returns {number | null} null if no usable crew data (caller defaults to 4)
  */
 export function getCrewSizeFromShipActor(shipActor) {
-  if (!shipActor?.system) return null;
-
-  const sys =
-    typeof shipActor.system.toObject === "function" ? shipActor.system.toObject() : shipActor.system;
-
-  const items = sys.attributes?.deployment?.crew?.items;
-  if (Array.isArray(items) && items.length > 0) return items.length;
-
-  const crewMin = sys.attributes?.equip?.size?.crewMinWorkforce;
-  const minNum = Number(crewMin);
-  if (Number.isFinite(minNum) && minNum > 0) return Math.ceil(minNum);
-
-  return null;
+  return readStarshipTravelAdapter(shipActor).crew;
 }
 
 /**

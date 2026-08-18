@@ -7,21 +7,19 @@ import {
 import { loadPlanetData } from "./planet-data.js";
 import { SETTING_KEYS } from "./settings.js";
 import { formatTravelTime } from "./time-display.js";
+import {
+  REGION_ORDER,
+  REGION_TRAVEL_MATRIX,
+  getCachedRegionMatrix,
+  loadRegionMatrix,
+  normalizeRegionForLookup,
+  planetsAreSameWorld
+} from "./navcomputer/region-matrix.js";
+
+export { REGION_ORDER, REGION_TRAVEL_MATRIX };
 
 /** Increase toward 1.0 for faster/more direct routes; decrease toward 0 for more optimal but slower pathfinding. At 0 this degrades to Dijkstra. */
 const HEURISTIC_WEIGHT = 0.5;
-
-export const REGION_ORDER = [
-  "Deep Core",
-  "Core",
-  "Colonies",
-  "Inner Rim",
-  "Expansion Region",
-  "Mid Rim",
-  "Outer Rim",
-  "Wild Space",
-  "Unknown Regions"
-];
 
 /** @typedef {'NO_LANE_PATH' | 'MISSING_COORDINATES' | 'FILTERED_LANES_ONLY' | 'DATA_ERROR'} AdvancedFallbackReason */
 
@@ -30,108 +28,6 @@ export const ADVANCED_FALLBACK_REASON = {
   MISSING_COORDINATES: "MISSING_COORDINATES",
   FILTERED_LANES_ONLY: "FILTERED_LANES_ONLY",
   DATA_ERROR: "DATA_ERROR"
-};
-
-export const REGION_TRAVEL_MATRIX = {
-  "Deep Core": {
-    "Deep Core": 12,
-    Core: 18,
-    Colonies: 24,
-    "Inner Rim": 48,
-    "Expansion Region": 72,
-    "Mid Rim": 96,
-    "Outer Rim": 120,
-    "Wild Space": 144,
-    "Unknown Regions": 168
-  },
-  Core: {
-    "Deep Core": 24,
-    Core: 6,
-    Colonies: 24,
-    "Inner Rim": 36,
-    "Expansion Region": 60,
-    "Mid Rim": 84,
-    "Outer Rim": 96,
-    "Wild Space": 120,
-    "Unknown Regions": 144
-  },
-  Colonies: {
-    "Deep Core": 48,
-    Core: 24,
-    Colonies: 12,
-    "Inner Rim": 24,
-    "Expansion Region": 48,
-    "Mid Rim": 72,
-    "Outer Rim": 96,
-    "Wild Space": 120,
-    "Unknown Regions": 96
-  },
-  "Inner Rim": {
-    "Deep Core": 72,
-    Core: 36,
-    Colonies: 24,
-    "Inner Rim": 18,
-    "Expansion Region": 24,
-    "Mid Rim": 48,
-    "Outer Rim": 72,
-    "Wild Space": 96,
-    "Unknown Regions": 72
-  },
-  "Expansion Region": {
-    "Deep Core": 96,
-    Core: 60,
-    Colonies: 48,
-    "Inner Rim": 24,
-    "Expansion Region": 24,
-    "Mid Rim": 24,
-    "Outer Rim": 48,
-    "Wild Space": 72,
-    "Unknown Regions": 96
-  },
-  "Mid Rim": {
-    "Deep Core": 120,
-    Core: 84,
-    Colonies: 72,
-    "Inner Rim": 48,
-    "Expansion Region": 24,
-    "Mid Rim": 36,
-    "Outer Rim": 24,
-    "Wild Space": 48,
-    "Unknown Regions": 72
-  },
-  "Outer Rim": {
-    "Deep Core": 144,
-    Core: 96,
-    Colonies: 96,
-    "Inner Rim": 72,
-    "Expansion Region": 48,
-    "Mid Rim": 24,
-    "Outer Rim": 48,
-    "Wild Space": 24,
-    "Unknown Regions": 60
-  },
-  "Wild Space": {
-    "Deep Core": 168,
-    Core: 120,
-    Colonies: 120,
-    "Inner Rim": 96,
-    "Expansion Region": 72,
-    "Mid Rim": 48,
-    "Outer Rim": 24,
-    "Wild Space": 12,
-    "Unknown Regions": 120
-  },
-  "Unknown Regions": {
-    "Deep Core": 192,
-    Core: 144,
-    Colonies: 96,
-    "Inner Rim": 72,
-    "Expansion Region": 60,
-    "Mid Rim": 72,
-    "Outer Rim": 96,
-    "Wild Space": 120,
-    "Unknown Regions": 48
-  }
 };
 
 function regionIndex(region) {
@@ -606,6 +502,7 @@ export async function calculateRouteAdvanced(originPlanet, destinationPlanet, hy
   /** @type {Map<string, { x: number, y: number }>} */
   const planetCoordMap = new Map();
   try {
+    await loadRegionMatrix();
     const planets = await loadPlanetData();
     for (const p of planets) {
       if (!p?.name) continue;
@@ -701,125 +598,156 @@ export async function calculateRouteAdvanced(originPlanet, destinationPlanet, hy
   };
 }
 
-/**
- * @param {object | null | undefined} originPlanet
- * @param {object | null | undefined} destinationPlanet
- * @returns {object}
- */
-export function calculateRouteBasic(originPlanet, destinationPlanet) {
-  const emptyResult = (extraWarnings = []) => ({
+function emptyBasicResult(originPlanet, destinationPlanet, extraWarnings = []) {
+  return {
     mode: "basic",
+    status: "invalid",
     originPlanet: originPlanet ?? null,
     destinationPlanet: destinationPlanet ?? null,
+    sameWorld: false,
+    rawOriginRegion: originPlanet?.region ?? null,
+    rawDestinationRegion: destinationPlanet?.region ?? null,
+    originLookupRegion: null,
+    destinationLookupRegion: null,
     originRegion: null,
     destinationRegion: null,
+    normalizationApplied: false,
+    matrixProfileId: "region-travel-matrix.v1",
+    matrixAuthority: "unverified",
+    matrixHours: null,
+    direction: null,
+    hyperdriveApplied: false,
     travelTimeHours: 0,
     regionsCrossed: [],
     planetsPassed: [],
+    completedJourney: false,
     routeDescription: "",
     warnings: [...extraWarnings]
-  });
+  };
+}
 
+/**
+ * @param {object | null | undefined} originPlanet
+ * @param {object | null | undefined} destinationPlanet
+ * @param {object | null | undefined} [matrixDoc]
+ * @returns {object}
+ */
+export function calculateRouteBasic(originPlanet, destinationPlanet, matrixDoc = getCachedRegionMatrix()) {
   if (!originPlanet?.name) {
-    return emptyResult(["Origin planet is missing or invalid."]);
+    return emptyBasicResult(originPlanet, destinationPlanet, ["Origin planet is missing or invalid."]);
   }
   if (!destinationPlanet?.name) {
-    return emptyResult(["Destination planet is missing or invalid."]);
+    return emptyBasicResult(originPlanet, destinationPlanet, ["Destination planet is missing or invalid."]);
   }
 
+  const originNorm = normalizeRegionForLookup(originPlanet.region);
+  const destNorm = normalizeRegionForLookup(destinationPlanet.region);
+  const regionOrder = matrixDoc?.regionOrder ?? REGION_ORDER;
+  const matrix = matrixDoc?.matrix ?? REGION_TRAVEL_MATRIX;
   const warnings = [];
-  const originRegion = originPlanet.region;
-  const destinationRegion = destinationPlanet.region;
+  const originSupported = Boolean(originNorm.lookup) && regionOrder.includes(originNorm.lookup);
+  const destSupported = Boolean(destNorm.lookup) && regionOrder.includes(destNorm.lookup);
+  const sameWorld = planetsAreSameWorld(originPlanet, destinationPlanet);
+  const normalizationApplied = originNorm.changed || destNorm.changed;
 
-  if (!originRegion || regionIndex(originRegion) < 0) {
-    warnings.push(`Origin world "${originPlanet.name}" has no recognized region for Basic mode.`);
-  }
-  if (!destinationRegion || regionIndex(destinationRegion) < 0) {
-    warnings.push(`Destination world "${destinationPlanet.name}" has no recognized region for Basic mode.`);
-  }
-
-  if (warnings.length) {
-    return {
-      mode: "basic",
-      originPlanet,
-      destinationPlanet,
-      originRegion: originRegion ?? null,
-      destinationRegion: destinationRegion ?? null,
-      travelTimeHours: 0,
-      regionsCrossed: [],
-      planetsPassed: [],
-      routeDescription: "Route could not be estimated because one or both worlds are outside the Basic mode regional chart.",
-      warnings
-    };
-  }
-
-  const sameLocation = originPlanet.name === destinationPlanet.name;
-
-  if (sameLocation) {
-    const regionsCrossed = [originRegion];
-    return {
-      mode: "basic",
-      originPlanet,
-      destinationPlanet,
-      originRegion,
-      destinationRegion,
-      travelTimeHours: 0,
-      regionsCrossed,
-      planetsPassed: [],
-      routeDescription: buildRouteDescription({
-        originName: originPlanet.name,
-        destName: destinationPlanet.name,
-        originRegion,
-        destRegion: destinationRegion,
-        travelTimeHours: 0,
-        regionsCrossed,
-        sameLocation: true
-      }),
-      warnings
-    };
-  }
-
-  const row = REGION_TRAVEL_MATRIX[originRegion];
-  const travelTimeHours = row?.[destinationRegion];
-
-  if (travelTimeHours == null || Number.isNaN(travelTimeHours)) {
-    warnings.push("No travel time is defined between these regions in the Basic mode matrix.");
-    return {
-      mode: "basic",
-      originPlanet,
-      destinationPlanet,
-      originRegion,
-      destinationRegion,
-      travelTimeHours: 0,
-      regionsCrossed: buildRegionsCrossed(originRegion, destinationRegion),
-      planetsPassed: [],
-      routeDescription: "Could not read travel time between these regions.",
-      warnings
-    };
-  }
-
-  const regionsCrossed = buildRegionsCrossed(originRegion, destinationRegion);
-
-  const routeDescription = buildRouteDescription({
-    originName: originPlanet.name,
-    destName: destinationPlanet.name,
-    originRegion,
-    destRegion: destinationRegion,
-    travelTimeHours,
-    regionsCrossed,
-    sameLocation: false
-  });
-
-  return {
+  const base = {
     mode: "basic",
     originPlanet,
     destinationPlanet,
-    originRegion,
-    destinationRegion,
+    sameWorld,
+    rawOriginRegion: originPlanet.region ?? null,
+    rawDestinationRegion: destinationPlanet.region ?? null,
+    originLookupRegion: originNorm.lookup,
+    destinationLookupRegion: destNorm.lookup,
+    originRegion: originNorm.lookup,
+    destinationRegion: destNorm.lookup,
+    normalizationApplied,
+    matrixProfileId: matrixDoc?.profileId ?? "region-travel-matrix.v1",
+    matrixAuthority: matrixDoc?.authority ?? "unverified",
+    hyperdriveApplied: false,
+    planetsPassed: [],
+    warnings
+  };
+
+  if (!originSupported) {
+    warnings.push(`Origin world "${originPlanet.name}" has no recognized region for Basic mode.`);
+  }
+  if (!destSupported) {
+    warnings.push(`Destination world "${destinationPlanet.name}" has no recognized region for Basic mode.`);
+  }
+
+  if (!originSupported || !destSupported) {
+    return {
+      ...base,
+      status: "unsupported",
+      sameWorld: false,
+      matrixHours: null,
+      direction: null,
+      travelTimeHours: 0,
+      regionsCrossed: [],
+      completedJourney: false,
+      routeDescription:
+        "Route could not be estimated because one or both worlds are outside the Basic mode regional chart."
+    };
+  }
+
+  if (sameWorld) {
+    const regionsCrossed = [originNorm.lookup];
+    return {
+      ...base,
+      status: "same-world",
+      sameWorld: true,
+      matrixHours: 0,
+      direction: `${originNorm.lookup} → ${destNorm.lookup}`,
+      travelTimeHours: 0,
+      regionsCrossed,
+      completedJourney: true,
+      routeDescription: buildRouteDescription({
+        originName: originPlanet.name,
+        destName: destinationPlanet.name,
+        originRegion: originNorm.lookup,
+        destRegion: destNorm.lookup,
+        travelTimeHours: 0,
+        regionsCrossed,
+        sameLocation: true
+      })
+    };
+  }
+
+  const travelTimeHours = matrix[originNorm.lookup]?.[destNorm.lookup];
+  if (travelTimeHours == null || Number.isNaN(Number(travelTimeHours))) {
+    warnings.push("No travel time is defined between these regions in the Basic mode matrix.");
+    return {
+      ...base,
+      status: "unsupported",
+      sameWorld: false,
+      matrixHours: null,
+      direction: `${originNorm.lookup} → ${destNorm.lookup}`,
+      travelTimeHours: 0,
+      regionsCrossed: buildRegionsCrossed(originNorm.lookup, destNorm.lookup),
+      completedJourney: false,
+      routeDescription: "Could not read travel time between these regions."
+    };
+  }
+
+  const regionsCrossed = buildRegionsCrossed(originNorm.lookup, destNorm.lookup);
+  return {
+    ...base,
+    status: "ok",
+    sameWorld: false,
+    matrixHours: travelTimeHours,
+    direction: `${originNorm.lookup} → ${destNorm.lookup}`,
     travelTimeHours,
     regionsCrossed,
-    planetsPassed: [],
-    routeDescription,
-    warnings
+    completedJourney: true,
+    routeDescription: buildRouteDescription({
+      originName: originPlanet.name,
+      destName: destinationPlanet.name,
+      originRegion: originNorm.lookup,
+      destRegion: destNorm.lookup,
+      travelTimeHours,
+      regionsCrossed,
+      sameLocation: false
+    })
   };
 }
