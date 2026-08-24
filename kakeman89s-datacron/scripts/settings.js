@@ -14,6 +14,7 @@ export const SETTING_KEYS = {
   featureNavComputer: "featureNavComputer",
   featureAstroCom: "featureAstroCom",
   featureShipyard: "featureShipyard",
+  featureDroidAllyPricing: "featureDroidAllyPricing",
   shipyardDraftSnapshot: "shipyardDraftSnapshot",
   shipyardCanonicalDraft: "shipyardCanonicalDraft",
   shipyardPhase10TestHooks: "shipyardPhase10TestHooks"
@@ -150,6 +151,16 @@ export function registerSettings() {
     requiresReload: true
   });
 
+  game.settings.register(MODULE_ID, SETTING_KEYS.featureDroidAllyPricing, {
+    name: "KAKEMAN89SDATACRON.DroidAllyPricing.SettingName",
+    hint: "KAKEMAN89SDATACRON.DroidAllyPricing.SettingHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+    requiresReload: true
+  });
+
   game.settings.register(MODULE_ID, SETTING_KEYS.shipyardDraftSnapshot, {
     name: "KAKEMAN89SDATACRON.Settings.ShipyardDraftSnapshot.Name",
     hint: "KAKEMAN89SDATACRON.Settings.ShipyardDraftSnapshot.Hint",
@@ -176,4 +187,12 @@ export function registerSettings() {
     type: Object,
     default: { enabled: false }
   });
+}
+
+export function isDroidAllyPricingEnabled() {
+  try {
+    return Boolean(game.settings.get(MODULE_ID, SETTING_KEYS.featureDroidAllyPricing));
+  } catch (_error) {
+    return false;
+  }
 }

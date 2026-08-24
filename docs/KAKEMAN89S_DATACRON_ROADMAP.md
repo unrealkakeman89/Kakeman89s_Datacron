@@ -2713,3 +2713,122 @@ Node 242/242 including all 81 matrix cells. Foundry gates A–T recorded in the 
 
 Phase 11 NavComputer Basic Calculator complete for the authorized Basic scope. Phase 12 not started.
 
+---
+
+## Addendum — 2026-08-18 — Phase 12 Droid Shop Calculator deferred
+
+### Reason
+
+The maintainer defers Phase 12. The authoritative Droid Shop pricing information previously used by the maintainer cannot currently be located. This addendum records that decision. It does not rewrite the historical Phase 12 plan or earlier Droid findings.
+
+### Supersedes
+
+- The Phase 11 closeout status that Phase 12 was simply **not started**, insofar as Phase 12 is now **DEFERRED** rather than queued as the next implementation phase.
+
+The superseded content above is retained as historical evidence and must not be deleted. Existing Droid files, the historical Phase 12 plan, and earlier findings are retained unchanged.
+
+### Revised decision or behavior
+
+- Phase 12 status: **DEFERRED**.
+- Reason: authoritative pricing source unavailable.
+- Do not implement Phase 12 until the maintainer supplies or identifies that source.
+- Do not reconstruct or infer Tier I–VI chassis prices, the 10 percent class markup, condition categories, condition modifiers, calculation order, or rounding behavior.
+- Do not use the existing Saga-inspired droid calculation as a fallback.
+- The existing calculator (`chassis rank × 1000`, additional modifiers, `floor(subtotal / 2)`) remains **unapproved prior art**. It is prior implementation evidence only. It is not the approved Droid Shop model and must not be presented as authoritative pricing.
+- No Droid Shop implementation is authorized by this deferral.
+- Phase 12 may resume only when the maintainer supplies or identifies the authoritative source.
+- Phase 12 deferral does **not** block Phase 13.
+- Initial release planning must **not** count Droid Shop as a completed feature.
+
+### Implementation impact
+
+None. No Droid, NavComputer, AstroCom, Shipyard, settings, or `module.json` files were changed.
+
+### Validation impact
+
+None. No Foundry session. No Node suite run required for this documentation step.
+
+### Status
+
+Phase 12 Droid Shop Calculator: **DEFERRED**. Phase 13 remains available as the next phase.
+
+---
+
+## Addendum — 2026-08-18 — Galaxy Map program planned (not Datacron Phase 12–15)
+
+### Reason
+
+The maintainer requested a Galaxy Map program: merge existing planet/lane sources, store 3D coordinates from the StarWarsMap/CARTO cartesian frame, ship a 2D Foundry map first, and add route overlay later. That work needed a controlling plan that does **not** reuse Datacron Phase 12 (Droid Shop, now DEFERRED), Phase 13 (cross-feature integration), Phase 14 (migration), or Phase 15 (packaging/release).
+
+### Supersedes
+
+- Program master §3.2 and §17 future-work bullets that listed **AstroCom visual map** and **route-based hyperspace navigation / optional visualization** as uncommitted backlog without a dedicated plan.
+
+The superseded content above is retained as historical evidence and must not be deleted. Datacron Phases 0–15, including the Phase 12 plan and the 2026-08-18 Phase 12 DEFERRED addendum, remain in place. This addendum does not start Phase 13.
+
+### Revised decision or behavior
+
+- Galaxy Map is a **fifth Datacron feature area** with its own numbering: **GM-0 … GM-10**.
+- Controlling documents:
+  - `docs/KAKEMAN89S_DATACRON_GALAXY_MAP_ROADMAP.md`
+  - `docs/KAKEMAN89S_DATACRON_GALAXY_MAP_PHASE_0_INVENTORY_CRS_PROVENANCE_PLAN.md` through `docs/KAKEMAN89S_DATACRON_GALAXY_MAP_PHASE_10_3D_VIEWER_PLAN.md`
+- First shippable slice is **GM-8** (2D pan/zoom map). **GM-9** is route overlay (later). **GM-10** is a 3D viewer (later).
+- JPEG (`docs/Galactic Map.jpg`) is calibration-only and must not enter the Foundry module package.
+- This addendum authorizes **planning documents only**. It does not authorize GM-0 implementation, runtime changes, commits, pushes, packaging, or public distribution.
+- NavComputer Basic (Phase 11) and Advanced deferral are unchanged. Galaxy Map must not modify the 81-cell matrix.
+- Datacron Phase 13 remains available as the next *Datacron-numbered* phase. Galaxy Map may be authorized independently and must not be relabeled as Phase 13.
+
+### Implementation impact
+
+New planning markdown under `docs/` only (Galaxy Map program master + GM-0–GM-10 plans). No runtime, pack, test, localization, `module.json`, or CHANGELOG changes in this documentation pass.
+
+### Validation impact
+
+None. No Foundry session. No Node suite run required for this documentation step.
+
+### Status
+
+Galaxy Map program: **planned, not implemented**. Datacron Phase 12: **DEFERRED** (unchanged). Datacron Phase 13: not started.
+
+---
+
+## Addendum — 2026-08-18 — Phase 12 Droid Ally Pricing reopened
+
+### Reason
+
+The maintainer located and reviewed the existing GM-only Droid Ally calculator and confirmed it is the intended private-use droid pricing feature. This addendum reopens Phase 12 on that baseline. It does not delete the earlier 2026-08-18 Phase 12 deferral.
+
+### Supersedes
+
+- Addendum **2026-08-18 — Phase 12 Droid Shop Calculator deferred**, including the statements that Phase 12 is **DEFERRED**, that the existing calculator is merely unapproved prior art, that the Saga-inspired formula must not be used as a fallback, and that Phase 12 may resume only after the missing Tier I–VI source is supplied.
+- The Galaxy Map addendum clause that Datacron Phase 12 remained **DEFERRED (unchanged)**.
+- Historical Phase 12 planning language that required Tier I–VI chassis prices, a 10 percent class markup, and condition modifiers as the Phase 12 requirement.
+- Phase 3 disposition **REPLACE** for `DROID-001` insofar as Phase 12 implementation direction is now to **productionize the existing calculator**, not replace it with the abandoned shop model.
+
+The superseded content above is retained as historical evidence and must not be deleted. The abandoned Tier I–VI / markup / condition design remains documented as an abandoned alternative. It is not the reopened Phase 12 requirement and must not be labeled as implemented.
+
+### Revised decision or behavior
+
+- Phase 12 status: **REOPENED** (planning only; implementation still requires separate authorization).
+- Approved Phase 12 direction: productionize the existing GM-only Droid Ally pricing model in `kakeman89s-datacron/scripts/droid-ally-pricing.js`.
+- The existing formula (`chassisCostRank × 1000`, listed adders, `Math.floor(subtotal / 2)`) is the approved behavioral baseline on its own terms.
+- Do not call that calculator a Tier I–VI Droid Shop. It does not include Tier I–VI chassis prices, a 10 percent class markup, or condition modifiers.
+- Formula provenance remains informational for private use and is not an implementation blocker. Do not label the formula RAW unless a repository source later establishes that status.
+- Controlling plan: `docs/KAKEMAN89S_DATACRON_PHASE_12_DROID_ALLY_PRICING_PLAN.md`.
+- No Droid pricing code, UI, or settings were changed by this documentation pass.
+- Phase 13 must treat Droid Ally Pricing as **reopened, not deferred**. `docs/KAKEMAN89S_DATACRON_PHASE_13_UX_INTEGRATION_PLAN.md` does not yet exist; the Phase 12 plan records the Phase 13 dependency.
+- Initial release planning may count Droid Ally Pricing as in-scope only after reopened Phase 12 implementation and runtime validation pass. Until then it is not a completed feature.
+- Galaxy Map numbering (GM-0 … GM-10) is unchanged and is not Datacron Phase 12.
+
+### Implementation impact
+
+Planning documents only. No runtime, pack, test, localization, `module.json`, or CHANGELOG changes in this documentation pass.
+
+### Validation impact
+
+None. No Foundry session. Node suite observed at planning: 242/242. No pricing tests added in this pass.
+
+### Status
+
+Phase 12 Droid Ally Pricing: **REOPENED for planning**. Implementation not started. Phase 13 not started.
+

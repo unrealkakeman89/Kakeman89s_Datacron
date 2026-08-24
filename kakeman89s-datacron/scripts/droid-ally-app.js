@@ -4,71 +4,54 @@ import {
   calculateDroidAllyPrice,
   defaultDroidAllyInput,
   formatCredits,
-  getDroidClassPreset,
   normalizeDroidAllyInput
 } from "./droid-ally-pricing.js";
+import {
+  canCalculateDroidAllyPricing,
+  canQuoteDroidAllyPricing,
+  droidAllyPermissionDenied
+} from "./droid-ally/permissions.js";
+import { buildDroidAllyQuoteHtml } from "./droid-ally/quote.js";
+import { isDroidAllyPricingEnabled } from "./settings.js";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+function accessOptions() {
+  return { featureEnabled: isDroidAllyPricingEnabled() };
+}
+
+function localizeKey(key) {
+  return game.i18n.localize(key);
+}
 
 function buildDroidClassOptions(selectedClass) {
   return DROID_CLASS_PRESETS.map((preset) => ({
     id: preset.id,
-    label: game.i18n.localize(preset.labelKey),
+    label: localizeKey(preset.labelKey),
     selected: preset.id === selectedClass
   }));
 }
 
 function localizeDroidPricingResult(result) {
   if (!result) return null;
+  const unnamed = localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.DefaultDroidName");
   return {
-    droidName: result.input.droidName || game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.DefaultDroidName"),
-    droidClass: game.i18n.localize(result.classPreset.labelKey),
-    companionLevel: result.input.companionLevel,
+    droidName: result.normalizedInput.droidName || unnamed,
+    droidClass: localizeKey(result.preset.labelKey),
+    companionLevel: result.normalizedInput.companionLevel,
+    status: result.status,
     subtotalFormatted: formatCredits(result.subtotal),
     finalCostFormatted: formatCredits(result.finalCost),
-    breakdown: result.breakdown.map((row) => ({
-      label: game.i18n.localize(row.labelKey),
+    rounding: result.rounding,
+    warnings: [...(result.warnings ?? [])],
+    errors: [...(result.errors ?? [])],
+    explanationLines: [...(result.explanation?.lines ?? [])],
+    breakdown: (result.lineItems ?? result.breakdown ?? []).map((row) => ({
+      label: localizeKey(row.labelKey),
       formula: row.formula,
       amountFormatted: formatCredits(row.amount)
     }))
   };
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function buildDroidAllyChatCard(localizedResult) {
-  const title = game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.ChatTitle");
-  const disclaimer = game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.ResultDisclaimer");
-  const breakdownItems = localizedResult.breakdown
-    .map(
-      (row) =>
-        `<li><span>${escapeHtml(row.label)} (${escapeHtml(row.formula)})</span>: <strong>${escapeHtml(
-          row.amountFormatted
-        )}</strong></li>`
-    )
-    .join("");
-
-  return `
-    <div class="kakeman89s-datacron-droid-quote">
-      <h2>${escapeHtml(title)}</h2>
-      <p><strong>${escapeHtml(localizedResult.droidName)}</strong></p>
-      <p>${escapeHtml(localizedResult.droidClass)}; ${escapeHtml(
-        game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.LevelLabel")
-      )}: ${escapeHtml(localizedResult.companionLevel)}</p>
-      <p><strong>${escapeHtml(game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.FinalCostLabel"))}:</strong> ${escapeHtml(
-        localizedResult.finalCostFormatted
-      )}</p>
-      <ul>${breakdownItems}</ul>
-      <p><em>${escapeHtml(disclaimer)}</em></p>
-    </div>
-  `;
 }
 
 export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
@@ -84,20 +67,24 @@ export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @type {string | null} */
   _error = null;
 
-  static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
-    id: `${MODULE_ID}-droid-ally`,
-    tag: "section",
-    classes: [MODULE_ID, "kakeman89s-datacron-app", "kakeman89s-droid-ally-app"],
-    position: {
-      width: 680,
-      height: 560
+  static DEFAULT_OPTIONS = foundry.utils.mergeObject(
+    super.DEFAULT_OPTIONS,
+    {
+      id: `${MODULE_ID}-droid-ally`,
+      tag: "section",
+      classes: [MODULE_ID, "kakeman89s-datacron-app", "kakeman89s-droid-ally-app"],
+      position: {
+        width: 680,
+        height: 560
+      },
+      window: {
+        icon: "fa-solid fa-robot",
+        title: "KAKEMAN89SDATACRON.DroidAllyPricing.Title",
+        resizable: true
+      }
     },
-    window: {
-      icon: "fa-solid fa-robot",
-      title: "KAKEMAN89SDATACRON.DroidAlly.Title",
-      resizable: true
-    }
-  });
+    { inplace: false }
+  );
 
   static PARTS = {
     content: {
@@ -106,24 +93,36 @@ export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
   };
 
   get title() {
-    return game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.Title");
+    return localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Title");
+  }
+
+  _initializeApplicationOptions(options) {
+    const opts = super._initializeApplicationOptions(options);
+    opts.id = `${MODULE_ID}-droid-ally`;
+    const classes = new Set(
+      (opts.classes ?? []).filter((cls) => !/shipyard|astrocom/.test(String(cls)))
+    );
+    classes.add(MODULE_ID);
+    classes.add("kakeman89s-datacron-app");
+    classes.add("kakeman89s-droid-ally-app");
+    opts.classes = [...classes];
+    return opts;
   }
 
   async _prepareContext(_options) {
     const input = normalizeDroidAllyInput(this._input);
-    const preset = getDroidClassPreset(input.droidClass);
 
     return {
       appId: `${MODULE_ID}-droid-ally`,
       title: this.title,
-      subtitle: game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.Subtitle"),
+      subtitle: localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Subtitle"),
       input,
       classes: buildDroidClassOptions(input.droidClass),
-      selectedClassHelp: game.i18n.localize(preset.helpKey),
       result: localizeDroidPricingResult(this._result),
       error: this._error,
-      calculateLabel: game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.Calculate"),
-      shareLabel: game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.ShareToChat")
+      calculateLabel: localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Calculate"),
+      resetLabel: localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Reset"),
+      quoteLabel: localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Quote")
     };
   }
 
@@ -141,33 +140,67 @@ export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
       ...this._input,
       [field]: element.value
     });
+  }
 
+  _denyIfUnauthorized(predicate) {
+    if (predicate(game.user, accessOptions())) return null;
+    this._error = localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.PermissionDenied");
     this._result = null;
-    this._error = null;
+    ui.notifications?.error?.(this._error);
+    return droidAllyPermissionDenied();
   }
 
   async _onCalculatePrice() {
-    if (!game.user?.isGM) return;
+    const denied = this._denyIfUnauthorized(canCalculateDroidAllyPricing);
+    if (denied) {
+      await this.render(true);
+      return denied;
+    }
     this._input = normalizeDroidAllyInput(this._input);
     this._result = calculateDroidAllyPrice(this._input);
-    this._error = null;
+    this._error = this._result.errors?.[0] ?? null;
     await this.render(true);
+    return this._result;
   }
 
-  async _onSharePrice() {
-    if (!game.user?.isGM) return;
+  async _onResetForm() {
+    const denied = this._denyIfUnauthorized(canCalculateDroidAllyPricing);
+    if (denied) {
+      await this.render(true);
+      return denied;
+    }
+    this._input = defaultDroidAllyInput();
+    this._result = null;
+    this._error = null;
+    await this.render(true);
+    return { ok: true, status: "reset" };
+  }
+
+  async _onQuotePrice() {
+    const denied = this._denyIfUnauthorized(canQuoteDroidAllyPricing);
+    if (denied) {
+      await this.render(true);
+      return denied;
+    }
     if (!this._result) {
-      ui.notifications?.warn?.(game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.ChatNoResult"));
-      return;
+      ui.notifications?.warn?.(localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.QuoteNoResult"));
+      return { ok: false, status: "quote-failed" };
     }
 
-    const localized = localizeDroidPricingResult(this._result);
-    await ChatMessage.create({
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker({ alias: game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.Title") }),
-      content: buildDroidAllyChatCard(localized)
-    });
-    ui.notifications?.info?.(game.i18n.localize("KAKEMAN89SDATACRON.DroidAlly.ChatPosted"));
+    try {
+      await ChatMessage.create({
+        user: game.user.id,
+        speaker: ChatMessage.getSpeaker({
+          alias: localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.Title")
+        }),
+        content: buildDroidAllyQuoteHtml(this._result, localizeKey)
+      });
+      ui.notifications?.info?.(localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.QuoteSent"));
+      return { ok: true, status: "quoted" };
+    } catch (error) {
+      ui.notifications?.error?.(localizeKey("KAKEMAN89SDATACRON.DroidAllyPricing.QuoteFailed"));
+      return { ok: false, status: "quote-failed", error };
+    }
   }
 
   _applyWindowContentScroll() {
@@ -202,7 +235,6 @@ export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
         "change",
         () => {
           this._syncInputFromElement(field);
-          if (field.dataset.droidAllyField === "droidClass") void this.render(true);
         },
         { signal }
       );
@@ -216,10 +248,18 @@ export class DroidAllyApp extends HandlebarsApplicationMixin(ApplicationV2) {
       { signal }
     );
 
-    element.querySelector("[data-droid-ally-share]")?.addEventListener(
+    element.querySelector("[data-droid-ally-reset]")?.addEventListener(
       "click",
       () => {
-        void this._onSharePrice();
+        void this._onResetForm();
+      },
+      { signal }
+    );
+
+    element.querySelector("[data-droid-ally-quote]")?.addEventListener(
+      "click",
+      () => {
+        void this._onQuotePrice();
       },
       { signal }
     );

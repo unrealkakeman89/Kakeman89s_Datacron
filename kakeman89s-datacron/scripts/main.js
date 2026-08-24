@@ -4,7 +4,8 @@ import { DroidAllyApp } from "./droid-ally-app.js";
 import { AstroComApp } from "./astrocom/astrocom-app.js";
 import { canBrowseAstroCom } from "./astrocom/permissions.js";
 import { loadGeneratedAstroCom, loadLiveAstroComIndex, openAstroComJournal, rebuildAstroCom, rebuildAstroComPilot, rebuildAstroComPoc, attemptBulkAstroComBuild } from "./astrocom/rebuild.js";
-import { registerSettings, SETTING_KEYS } from "./settings.js";
+import { registerSettings, SETTING_KEYS, isDroidAllyPricingEnabled } from "./settings.js";
+import { canOpenDroidAllyPricing } from "./droid-ally/permissions.js";
 import { ShipyardApp, openShipyardAppGate } from "./shipyard/shipyard-app.js";
 import { canOpenShipyard } from "./shipyard/permissions.js";
 import { registerShipyardSockets } from "./shipyard/socket-runtime.js";
@@ -83,7 +84,10 @@ export async function openHyperspaceNavigationApp() {
 }
 
 export async function openDroidAllyPricingApp() {
-  if (!game.user?.isGM) return null;
+  if (!canOpenDroidAllyPricing(game.user, { featureEnabled: isDroidAllyPricingEnabled() })) {
+    ui.notifications?.error?.(game.i18n.localize("KAKEMAN89SDATACRON.DroidAllyPricing.PermissionDenied"));
+    return null;
+  }
   clearAppSingletonIfStale(droidAllyPricingApp, () => {
     droidAllyPricingApp = null;
   });
@@ -161,11 +165,11 @@ Hooks.on("getSceneControlButtons", (controls) => {
     };
   }
 
-  if (game.user?.isGM) {
+  if (isDroidAllyPricingEnabled() && canOpenDroidAllyPricing(game.user, { featureEnabled: true })) {
     const droidToolName = `${MODULE_ID}-open-droid-ally`;
     hostControl.tools[droidToolName] = {
       name: droidToolName,
-      title: "KAKEMAN89SDATACRON.SceneControl.OpenDroidAlly",
+      title: "KAKEMAN89SDATACRON.DroidAllyPricing.SceneControl",
       icon: "fa-solid fa-robot",
       order: Object.keys(hostControl.tools).length,
       button: true,

@@ -1,0 +1,51 @@
+.kakeman89s-droid-ally-app .droid-ally-pricing .datacron-input:focus-visible,
+.kakeman89s-droid-ally-app .droid-ally-pricing .datacron-select:focus-visible,
+.kakeman89s-droid-ally-app .droid-ally-pricing .datacron-action-button:focus-visible {
+  outline: 2px solid #ffe0a8;
+  outline-offset: 2px;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing .datacron-droid-breakdown li,
+.kakeman89s-droid-ally-app .droid-ally-pricing .droid-ally-pricing-explanation li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing .datacron-price-total {
+  font-size: 1.05rem;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing-warnings,
+.kakeman89s-droid-ally-app .droid-ally-pricing-error {
+  margin: 0.75rem 0 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing-warnings {
+  list-style: none;
+  border: 1px dashed rgba(255, 196, 120, 0.7);
+  background: rgba(80, 48, 12, 0.35);
+  color: #ffd596;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing-error {
+  border: 2px solid rgba(255, 120, 72, 0.75);
+  background: rgba(72, 28, 12, 0.45);
+  color: #ffcca8;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing-status {
+  margin: 0.35rem 0 0.5rem;
+  color: #c8e6ff;
+}
+
+.kakeman89s-droid-ally-app .droid-ally-pricing-explanation {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: #c8e6ff;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}

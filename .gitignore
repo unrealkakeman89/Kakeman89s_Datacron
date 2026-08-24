@@ -1,4 +1,5 @@
 # Local backups from scripts/merge-planet-data.py (can be large after re-runs)
 kakeman89s-datacron/data/planets.json.backup-*
 .cursor/
-docs/
+# Private/prohibited workbook if ever dropped in docs. Do not ignore the docs/ tree.
+docs/SotG Shipbuilder and Shipyard.xlsx

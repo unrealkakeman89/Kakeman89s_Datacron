@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Dev-only Node test and AstroCom generator scripts. Not a bundler.",
   "scripts": {
-    "test": "node --test kakeman89s-datacron/scripts/astrocom/tests/astrocom-poc.test.js kakeman89s-datacron/scripts/astrocom/tests/astrocom-phase5.test.js kakeman89s-datacron/scripts/astrocom/tests/astrocom-phase6.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase8.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase9.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase10.test.js kakeman89s-datacron/scripts/navcomputer/tests/navcomputer-phase11.test.js",
+    "test": "node --test kakeman89s-datacron/scripts/astrocom/tests/astrocom-poc.test.js kakeman89s-datacron/scripts/astrocom/tests/astrocom-phase5.test.js kakeman89s-datacron/scripts/astrocom/tests/astrocom-phase6.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase8.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase9.test.js kakeman89s-datacron/scripts/shipyard/tests/shipyard-phase10.test.js kakeman89s-datacron/scripts/navcomputer/tests/navcomputer-phase11.test.js kakeman89s-datacron/scripts/droid-ally/tests/droid-ally-phase12.test.js scripts/galaxymap/tests/galaxymap-gm0.test.js",
     "astrocom:generate": "node kakeman89s-datacron/scripts/astrocom/cli-generate.js",
     "astrocom:analyze": "node kakeman89s-datacron/scripts/astrocom/pipeline/cli-analyze.js",
     "astrocom:pilot": "node kakeman89s-datacron/scripts/astrocom/pipeline/cli-pilot-generate.js",

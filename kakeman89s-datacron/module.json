@@ -40,7 +40,8 @@
   "styles": [
     "styles/datacron.css",
     "styles/astrocom.css",
-    "styles/shipyard.css"
+    "styles/shipyard.css",
+    "styles/droid-ally-pricing.css"
   ],
   "languages": [
     {
